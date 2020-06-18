@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/internship.MODA.fig1/src-gen" creationIcons="false"
+    editDirectory="/internship.MODA.fig1.edit/src-gen" editorDirectory="/internship.MODA.fig1.editor/src-gen"
+    modelPluginID="internship.MODA.fig1" modelName="Fig1" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>fig1.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Fig1" basePackage="internship.moda" disposableProviderFactory="true"
+      ecorePackage="fig1.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fig1.ecore#//NewEnum1"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fig1.ecore#//NewEnum2">
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/InputData"/>
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/OutputData"/>
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/ExternalData"/>
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/MeasuredData"/>
+    </genEnums>
+    <genClasses ecoreClass="fig1.ecore#//Data">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/software"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Data/dataType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/sociotechnicalsystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/modelrole"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//ModelRole">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//ModelRole/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModelRole/model"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModelRole/data"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//DescriptiveModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//DescriptiveModel/predictivemodel"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//PredictiveModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PredictiveModel/prescriptivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PredictiveModel/descriptivemodel"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//PrescriptiveModel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/software"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/sociotechnicalsystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/predictivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/prescriptivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/prescriptivemodeleOpposite"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//Software">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Software/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Software/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/data"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/prescriptivemodel"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//SocioTechnicalSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/data"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/prescriptivemodel"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//MODA">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/sociotechnicalsystem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/data"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/software"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//MODA/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model.1"/>
+    </genClasses>
+    <genClasses ecoreClass="fig1.ecore#//Model">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Model/modelrole"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
