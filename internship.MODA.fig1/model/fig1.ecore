@@ -4,11 +4,11 @@
   <eClassifiers xsi:type="ecore:EClass" name="Data">
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
         eOpposite="#//Software/data"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sociotechnicalsystem" eType="#//SocioTechnicalSystem"
         eOpposite="#//SocioTechnicalSystem/data"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelrole" eType="#//ModelRole"
         eOpposite="#//ModelRole/data"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="#//DataTypes"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelRole" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -67,7 +67,7 @@
         eType="#//Model" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum1"/>
-  <eClassifiers xsi:type="ecore:EEnum" name="NewEnum2">
+  <eClassifiers xsi:type="ecore:EEnum" name="DataTypes">
     <eLiterals name="InputData"/>
     <eLiterals name="OutputData" value="1"/>
     <eLiterals name="ExternalData" value="2"/>

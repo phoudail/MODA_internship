@@ -11,17 +11,17 @@
   <genPackages prefix="Fig1" basePackage="internship.moda" disposableProviderFactory="true"
       ecorePackage="fig1.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="fig1.ecore#//NewEnum1"/>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fig1.ecore#//NewEnum2">
-      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/InputData"/>
-      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/OutputData"/>
-      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/ExternalData"/>
-      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//NewEnum2/MeasuredData"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="fig1.ecore#//DataTypes">
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//DataTypes/InputData"/>
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//DataTypes/OutputData"/>
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//DataTypes/ExternalData"/>
+      <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//DataTypes/MeasuredData"/>
     </genEnums>
     <genClasses ecoreClass="fig1.ecore#//Data">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/software"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Data/dataType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/sociotechnicalsystem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/modelrole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Data/dataType"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//ModelRole">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//ModelRole/name"/>
