@@ -58,13 +58,13 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Data"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="model" upperBound="-1"
-        eType="#//ModelRole" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" upperBound="-1"
         eType="#//Model" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelrole" upperBound="-1"
+        eType="#//ModelRole" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum1"/>
   <eClassifiers xsi:type="ecore:EEnum" name="DataTypes">

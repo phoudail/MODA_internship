@@ -55,10 +55,10 @@
     <genClasses ecoreClass="fig1.ecore#//MODA">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/sociotechnicalsystem"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/data"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/software"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//MODA/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model.1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/modelrole"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Model">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Model/modelrole"/>
