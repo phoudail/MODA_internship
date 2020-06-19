@@ -4,6 +4,7 @@ package internship.moda.fig1;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -67,13 +68,49 @@ public interface Fig1Package extends EPackage {
 	int DATA = 0;
 
 	/**
+	 * The feature id for the '<em><b>Software</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__SOFTWARE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__SOCIOTECHNICALSYSTEM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Modelrole</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__MODELROLE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__DATA_TYPE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = 0;
+	int DATA_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Data</em>' class.
@@ -85,143 +122,59 @@ public interface Fig1Package extends EPackage {
 	int DATA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.InputDataImpl <em>Input Data</em>}' class.
+	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelRoleImpl <em>Model Role</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.InputDataImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getInputData()
+	 * @see internship.moda.fig1.impl.ModelRoleImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModelRole()
 	 * @generated
 	 */
-	int INPUT_DATA = 1;
+	int MODEL_ROLE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Input Data</em>' class.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 0;
+	int MODEL_ROLE__NAME = 0;
 
 	/**
-	 * The number of operations of the '<em>Input Data</em>' class.
+	 * The feature id for the '<em><b>Model</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_DATA_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
+	int MODEL_ROLE__MODEL = 1;
 
 	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.OutputDataImpl <em>Output Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.OutputDataImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getOutputData()
-	 * @generated
-	 */
-	int OUTPUT_DATA = 2;
-
-	/**
-	 * The feature id for the '<em><b>Software</b></em>' reference.
+	 * The feature id for the '<em><b>Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DATA__SOFTWARE = DATA_FEATURE_COUNT + 0;
+	int MODEL_ROLE__DATA = 2;
 
 	/**
-	 * The number of structural features of the '<em>Output Data</em>' class.
+	 * The number of structural features of the '<em>Model Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
+	int MODEL_ROLE_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Output Data</em>' class.
+	 * The number of operations of the '<em>Model Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OUTPUT_DATA_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.MeasuredDataImpl <em>Measured Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.MeasuredDataImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getMeasuredData()
-	 * @generated
-	 */
-	int MEASURED_DATA = 3;
-
-	/**
-	 * The feature id for the '<em><b>Software</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEASURED_DATA__SOFTWARE = DATA_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Measured Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEASURED_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Measured Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEASURED_DATA_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.ExternalDataImpl <em>External Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.ExternalDataImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getExternalData()
-	 * @generated
-	 */
-	int EXTERNAL_DATA = 4;
-
-	/**
-	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTERNAL_DATA__SOCIOTECHNICALSYSTEM = DATA_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>External Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTERNAL_DATA_FEATURE_COUNT = DATA_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>External Data</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXTERNAL_DATA_OPERATION_COUNT = DATA_OPERATION_COUNT + 0;
+	int MODEL_ROLE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
@@ -231,7 +184,37 @@ public interface Fig1Package extends EPackage {
 	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModel()
 	 * @generated
 	 */
-	int MODEL = 5;
+	int MODEL = 8;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.NewEnum1
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getNewEnum1()
+	 * @generated
+	 */
+	int NEW_ENUM1 = 9;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.DataTypes
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDataTypes()
+	 * @generated
+	 */
+	int DATA_TYPES = 10;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.DescriptiveModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDescriptiveModel()
+	 * @generated
+	 */
+	int DESCRIPTIVE_MODEL = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -240,7 +223,426 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL__NAME = 0;
+	int DESCRIPTIVE_MODEL__NAME = MODEL_ROLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTIVE_MODEL__MODEL = MODEL_ROLE__MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTIVE_MODEL__DATA = MODEL_ROLE__DATA;
+
+	/**
+	 * The feature id for the '<em><b>Predictivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTIVE_MODEL__PREDICTIVEMODEL = MODEL_ROLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Descriptive Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTIVE_MODEL_FEATURE_COUNT = MODEL_ROLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Descriptive Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTIVE_MODEL_OPERATION_COUNT = MODEL_ROLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.PredictiveModelImpl <em>Predictive Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.PredictiveModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPredictiveModel()
+	 * @generated
+	 */
+	int PREDICTIVE_MODEL = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL__NAME = MODEL_ROLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL__MODEL = MODEL_ROLE__MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL__DATA = MODEL_ROLE__DATA;
+
+	/**
+	 * The feature id for the '<em><b>Prescriptivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL__PRESCRIPTIVEMODEL = MODEL_ROLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Descriptivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL__DESCRIPTIVEMODEL = MODEL_ROLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Predictive Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL_FEATURE_COUNT = MODEL_ROLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Predictive Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PREDICTIVE_MODEL_OPERATION_COUNT = MODEL_ROLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.PrescriptiveModelImpl <em>Prescriptive Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.PrescriptiveModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPrescriptiveModel()
+	 * @generated
+	 */
+	int PRESCRIPTIVE_MODEL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__NAME = MODEL_ROLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__MODEL = MODEL_ROLE__MODEL;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__DATA = MODEL_ROLE__DATA;
+
+	/**
+	 * The feature id for the '<em><b>Software</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__SOFTWARE = MODEL_ROLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM = MODEL_ROLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Predictivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__PREDICTIVEMODEL = MODEL_ROLE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Prescriptivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL = MODEL_ROLE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Prescriptivemodele Opposite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE = MODEL_ROLE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>Prescriptive Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL_FEATURE_COUNT = MODEL_ROLE_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>Prescriptive Model</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESCRIPTIVE_MODEL_OPERATION_COUNT = MODEL_ROLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.SoftwareImpl <em>Software</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.SoftwareImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSoftware()
+	 * @generated
+	 */
+	int SOFTWARE = 5;
+
+	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE__STATE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE__NAME = 1;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE__DATA = 2;
+
+	/**
+	 * The feature id for the '<em><b>Prescriptivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE__PRESCRIPTIVEMODEL = 3;
+
+	/**
+	 * The number of structural features of the '<em>Software</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Software</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOFTWARE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.SocioTechnicalSystemImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSocioTechnicalSystem()
+	 * @generated
+	 */
+	int SOCIO_TECHNICAL_SYSTEM = 6;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIO_TECHNICAL_SYSTEM__DATA = 0;
+
+	/**
+	 * The feature id for the '<em><b>Prescriptivemodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL = 1;
+
+	/**
+	 * The number of structural features of the '<em>Socio Technical System</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIO_TECHNICAL_SYSTEM_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Socio Technical System</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SOCIO_TECHNICAL_SYSTEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.MODAImpl <em>MODA</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.MODAImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getMODA()
+	 * @generated
+	 */
+	int MODA = 7;
+
+	/**
+	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__SOCIOTECHNICALSYSTEM = 0;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__DATA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Software</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__SOFTWARE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__MODEL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Modelrole</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__MODELROLE = 5;
+
+	/**
+	 * The number of structural features of the '<em>MODA</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>MODA</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Modelrole</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODEL__MODELROLE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Model</em>' class.
@@ -261,254 +663,6 @@ public interface Fig1Package extends EPackage {
 	int MODEL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.DescriptiveModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDescriptiveModel()
-	 * @generated
-	 */
-	int DESCRIPTIVE_MODEL = 6;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESCRIPTIVE_MODEL__NAME = MODEL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Data</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESCRIPTIVE_MODEL__DATA = MODEL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Descriptive Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESCRIPTIVE_MODEL_FEATURE_COUNT = MODEL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Descriptive Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DESCRIPTIVE_MODEL_OPERATION_COUNT = MODEL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.PredictiveModelImpl <em>Predictive Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.PredictiveModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPredictiveModel()
-	 * @generated
-	 */
-	int PREDICTIVE_MODEL = 7;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICTIVE_MODEL__NAME = MODEL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Descriptivemodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICTIVE_MODEL__DESCRIPTIVEMODEL = MODEL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Predictive Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICTIVE_MODEL_FEATURE_COUNT = MODEL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Predictive Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PREDICTIVE_MODEL_OPERATION_COUNT = MODEL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.PrescriptiveModelImpl <em>Prescriptive Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.PrescriptiveModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPrescriptiveModel()
-	 * @generated
-	 */
-	int PRESCRIPTIVE_MODEL = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTIVE_MODEL__NAME = MODEL__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Model</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTIVE_MODEL__MODEL = MODEL_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Prescriptive Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTIVE_MODEL_FEATURE_COUNT = MODEL_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Prescriptive Model</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRESCRIPTIVE_MODEL_OPERATION_COUNT = MODEL_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.SoftwareImpl <em>Software</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.SoftwareImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSoftware()
-	 * @generated
-	 */
-	int SOFTWARE = 9;
-
-	/**
-	 * The feature id for the '<em><b>Prescriptivemodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE__PRESCRIPTIVEMODEL = 0;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE__STATE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Inputdata</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE__INPUTDATA = 2;
-
-	/**
-	 * The number of structural features of the '<em>Software</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Software</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOFTWARE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.SocioTechnicalSystemImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSocioTechnicalSystem()
-	 * @generated
-	 */
-	int SOCIO_TECHNICAL_SYSTEM = 10;
-
-	/**
-	 * The feature id for the '<em><b>Software</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIO_TECHNICAL_SYSTEM__SOFTWARE = 0;
-
-	/**
-	 * The feature id for the '<em><b>Externaldata</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIO_TECHNICAL_SYSTEM__EXTERNALDATA = 1;
-
-	/**
-	 * The feature id for the '<em><b>Prescriptivemodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL = 2;
-
-	/**
-	 * The number of structural features of the '<em>Socio Technical System</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIO_TECHNICAL_SYSTEM_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Socio Technical System</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIO_TECHNICAL_SYSTEM_OPERATION_COUNT = 0;
-
-	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.Data <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -519,77 +673,91 @@ public interface Fig1Package extends EPackage {
 	EClass getData();
 
 	/**
-	 * Returns the meta object for class '{@link internship.moda.fig1.InputData <em>Input Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Data</em>'.
-	 * @see internship.moda.fig1.InputData
-	 * @generated
-	 */
-	EClass getInputData();
-
-	/**
-	 * Returns the meta object for class '{@link internship.moda.fig1.OutputData <em>Output Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Output Data</em>'.
-	 * @see internship.moda.fig1.OutputData
-	 * @generated
-	 */
-	EClass getOutputData();
-
-	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.OutputData#getSoftware <em>Software</em>}'.
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getSoftware <em>Software</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Software</em>'.
-	 * @see internship.moda.fig1.OutputData#getSoftware()
-	 * @see #getOutputData()
+	 * @see internship.moda.fig1.Data#getSoftware()
+	 * @see #getData()
 	 * @generated
 	 */
-	EReference getOutputData_Software();
+	EReference getData_Software();
 
 	/**
-	 * Returns the meta object for class '{@link internship.moda.fig1.MeasuredData <em>Measured Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Measured Data</em>'.
-	 * @see internship.moda.fig1.MeasuredData
-	 * @generated
-	 */
-	EClass getMeasuredData();
-
-	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.MeasuredData#getSoftware <em>Software</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Software</em>'.
-	 * @see internship.moda.fig1.MeasuredData#getSoftware()
-	 * @see #getMeasuredData()
-	 * @generated
-	 */
-	EReference getMeasuredData_Software();
-
-	/**
-	 * Returns the meta object for class '{@link internship.moda.fig1.ExternalData <em>External Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>External Data</em>'.
-	 * @see internship.moda.fig1.ExternalData
-	 * @generated
-	 */
-	EClass getExternalData();
-
-	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.ExternalData#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Sociotechnicalsystem</em>'.
-	 * @see internship.moda.fig1.ExternalData#getSociotechnicalsystem()
-	 * @see #getExternalData()
+	 * @see internship.moda.fig1.Data#getSociotechnicalsystem()
+	 * @see #getData()
 	 * @generated
 	 */
-	EReference getExternalData_Sociotechnicalsystem();
+	EReference getData_Sociotechnicalsystem();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getModelrole <em>Modelrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Modelrole</em>'.
+	 * @see internship.moda.fig1.Data#getModelrole()
+	 * @see #getData()
+	 * @generated
+	 */
+	EReference getData_Modelrole();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Data#getDataType <em>Data Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Data Type</em>'.
+	 * @see internship.moda.fig1.Data#getDataType()
+	 * @see #getData()
+	 * @generated
+	 */
+	EAttribute getData_DataType();
+
+	/**
+	 * Returns the meta object for class '{@link internship.moda.fig1.ModelRole <em>Model Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model Role</em>'.
+	 * @see internship.moda.fig1.ModelRole
+	 * @generated
+	 */
+	EClass getModelRole();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.ModelRole#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see internship.moda.fig1.ModelRole#getName()
+	 * @see #getModelRole()
+	 * @generated
+	 */
+	EAttribute getModelRole_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.ModelRole#getModel <em>Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Model</em>'.
+	 * @see internship.moda.fig1.ModelRole#getModel()
+	 * @see #getModelRole()
+	 * @generated
+	 */
+	EReference getModelRole_Model();
+
+	/**
+	 * Returns the meta object for the reference list '{@link internship.moda.fig1.ModelRole#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Data</em>'.
+	 * @see internship.moda.fig1.ModelRole#getData()
+	 * @see #getModelRole()
+	 * @generated
+	 */
+	EReference getModelRole_Data();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.Model <em>Model</em>}'.
@@ -602,15 +770,35 @@ public interface Fig1Package extends EPackage {
 	EClass getModel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Model#getName <em>Name</em>}'.
+	 * Returns the meta object for the reference list '{@link internship.moda.fig1.Model#getModelrole <em>Modelrole</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see internship.moda.fig1.Model#getName()
+	 * @return the meta object for the reference list '<em>Modelrole</em>'.
+	 * @see internship.moda.fig1.Model#getModelrole()
 	 * @see #getModel()
 	 * @generated
 	 */
-	EAttribute getModel_Name();
+	EReference getModel_Modelrole();
+
+	/**
+	 * Returns the meta object for enum '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>New Enum1</em>'.
+	 * @see internship.moda.fig1.NewEnum1
+	 * @generated
+	 */
+	EEnum getNewEnum1();
+
+	/**
+	 * Returns the meta object for enum '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Data Types</em>'.
+	 * @see internship.moda.fig1.DataTypes
+	 * @generated
+	 */
+	EEnum getDataTypes();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.DescriptiveModel <em>Descriptive Model</em>}'.
@@ -623,15 +811,15 @@ public interface Fig1Package extends EPackage {
 	EClass getDescriptiveModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.DescriptiveModel#getData <em>Data</em>}'.
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.DescriptiveModel#getPredictivemodel <em>Predictivemodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Data</em>'.
-	 * @see internship.moda.fig1.DescriptiveModel#getData()
+	 * @return the meta object for the reference '<em>Predictivemodel</em>'.
+	 * @see internship.moda.fig1.DescriptiveModel#getPredictivemodel()
 	 * @see #getDescriptiveModel()
 	 * @generated
 	 */
-	EReference getDescriptiveModel_Data();
+	EReference getDescriptiveModel_Predictivemodel();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.PredictiveModel <em>Predictive Model</em>}'.
@@ -642,6 +830,17 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getPredictiveModel();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.PredictiveModel#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prescriptivemodel</em>'.
+	 * @see internship.moda.fig1.PredictiveModel#getPrescriptivemodel()
+	 * @see #getPredictiveModel()
+	 * @generated
+	 */
+	EReference getPredictiveModel_Prescriptivemodel();
 
 	/**
 	 * Returns the meta object for the reference '{@link internship.moda.fig1.PredictiveModel#getDescriptivemodel <em>Descriptivemodel</em>}'.
@@ -665,15 +864,59 @@ public interface Fig1Package extends EPackage {
 	EClass getPrescriptiveModel();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.PrescriptiveModel#getModel <em>Model</em>}'.
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.PrescriptiveModel#getSoftware <em>Software</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Model</em>'.
-	 * @see internship.moda.fig1.PrescriptiveModel#getModel()
+	 * @return the meta object for the reference '<em>Software</em>'.
+	 * @see internship.moda.fig1.PrescriptiveModel#getSoftware()
 	 * @see #getPrescriptiveModel()
 	 * @generated
 	 */
-	EReference getPrescriptiveModel_Model();
+	EReference getPrescriptiveModel_Software();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.PrescriptiveModel#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Sociotechnicalsystem</em>'.
+	 * @see internship.moda.fig1.PrescriptiveModel#getSociotechnicalsystem()
+	 * @see #getPrescriptiveModel()
+	 * @generated
+	 */
+	EReference getPrescriptiveModel_Sociotechnicalsystem();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.PrescriptiveModel#getPredictivemodel <em>Predictivemodel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Predictivemodel</em>'.
+	 * @see internship.moda.fig1.PrescriptiveModel#getPredictivemodel()
+	 * @see #getPrescriptiveModel()
+	 * @generated
+	 */
+	EReference getPrescriptiveModel_Predictivemodel();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prescriptivemodel</em>'.
+	 * @see internship.moda.fig1.PrescriptiveModel#getPrescriptivemodel()
+	 * @see #getPrescriptiveModel()
+	 * @generated
+	 */
+	EReference getPrescriptiveModel_Prescriptivemodel();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodeleOpposite <em>Prescriptivemodele Opposite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prescriptivemodele Opposite</em>'.
+	 * @see internship.moda.fig1.PrescriptiveModel#getPrescriptivemodeleOpposite()
+	 * @see #getPrescriptiveModel()
+	 * @generated
+	 */
+	EReference getPrescriptiveModel_PrescriptivemodeleOpposite();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.Software <em>Software</em>}'.
@@ -708,15 +951,26 @@ public interface Fig1Package extends EPackage {
 	EAttribute getSoftware_State();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.Software#getInputdata <em>Inputdata</em>}'.
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Software#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inputdata</em>'.
-	 * @see internship.moda.fig1.Software#getInputdata()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see internship.moda.fig1.Software#getName()
 	 * @see #getSoftware()
 	 * @generated
 	 */
-	EReference getSoftware_Inputdata();
+	EAttribute getSoftware_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link internship.moda.fig1.Software#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Data</em>'.
+	 * @see internship.moda.fig1.Software#getData()
+	 * @see #getSoftware()
+	 * @generated
+	 */
+	EReference getSoftware_Data();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.SocioTechnicalSystem <em>Socio Technical System</em>}'.
@@ -729,26 +983,15 @@ public interface Fig1Package extends EPackage {
 	EClass getSocioTechnicalSystem();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link internship.moda.fig1.SocioTechnicalSystem#getSoftware <em>Software</em>}'.
+	 * Returns the meta object for the reference list '{@link internship.moda.fig1.SocioTechnicalSystem#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Software</em>'.
-	 * @see internship.moda.fig1.SocioTechnicalSystem#getSoftware()
+	 * @return the meta object for the reference list '<em>Data</em>'.
+	 * @see internship.moda.fig1.SocioTechnicalSystem#getData()
 	 * @see #getSocioTechnicalSystem()
 	 * @generated
 	 */
-	EReference getSocioTechnicalSystem_Software();
-
-	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.SocioTechnicalSystem#getExternaldata <em>Externaldata</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Externaldata</em>'.
-	 * @see internship.moda.fig1.SocioTechnicalSystem#getExternaldata()
-	 * @see #getSocioTechnicalSystem()
-	 * @generated
-	 */
-	EReference getSocioTechnicalSystem_Externaldata();
+	EReference getSocioTechnicalSystem_Data();
 
 	/**
 	 * Returns the meta object for the reference '{@link internship.moda.fig1.SocioTechnicalSystem#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
@@ -760,6 +1003,82 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getSocioTechnicalSystem_Prescriptivemodel();
+
+	/**
+	 * Returns the meta object for class '{@link internship.moda.fig1.MODA <em>MODA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>MODA</em>'.
+	 * @see internship.moda.fig1.MODA
+	 * @generated
+	 */
+	EClass getMODA();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link internship.moda.fig1.MODA#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Sociotechnicalsystem</em>'.
+	 * @see internship.moda.fig1.MODA#getSociotechnicalsystem()
+	 * @see #getMODA()
+	 * @generated
+	 */
+	EReference getMODA_Sociotechnicalsystem();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link internship.moda.fig1.MODA#getData <em>Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Data</em>'.
+	 * @see internship.moda.fig1.MODA#getData()
+	 * @see #getMODA()
+	 * @generated
+	 */
+	EReference getMODA_Data();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link internship.moda.fig1.MODA#getSoftware <em>Software</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Software</em>'.
+	 * @see internship.moda.fig1.MODA#getSoftware()
+	 * @see #getMODA()
+	 * @generated
+	 */
+	EReference getMODA_Software();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.MODA#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see internship.moda.fig1.MODA#getName()
+	 * @see #getMODA()
+	 * @generated
+	 */
+	EAttribute getMODA_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link internship.moda.fig1.MODA#getModel <em>Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Model</em>'.
+	 * @see internship.moda.fig1.MODA#getModel()
+	 * @see #getMODA()
+	 * @generated
+	 */
+	EReference getMODA_Model();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link internship.moda.fig1.MODA#getModelrole <em>Modelrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Modelrole</em>'.
+	 * @see internship.moda.fig1.MODA#getModelrole()
+	 * @see #getMODA()
+	 * @generated
+	 */
+	EReference getMODA_Modelrole();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -795,60 +1114,12 @@ public interface Fig1Package extends EPackage {
 		EClass DATA = eINSTANCE.getData();
 
 		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.impl.InputDataImpl <em>Input Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.impl.InputDataImpl
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getInputData()
-		 * @generated
-		 */
-		EClass INPUT_DATA = eINSTANCE.getInputData();
-
-		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.impl.OutputDataImpl <em>Output Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.impl.OutputDataImpl
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getOutputData()
-		 * @generated
-		 */
-		EClass OUTPUT_DATA = eINSTANCE.getOutputData();
-
-		/**
 		 * The meta object literal for the '<em><b>Software</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference OUTPUT_DATA__SOFTWARE = eINSTANCE.getOutputData_Software();
-
-		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.impl.MeasuredDataImpl <em>Measured Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.impl.MeasuredDataImpl
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getMeasuredData()
-		 * @generated
-		 */
-		EClass MEASURED_DATA = eINSTANCE.getMeasuredData();
-
-		/**
-		 * The meta object literal for the '<em><b>Software</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MEASURED_DATA__SOFTWARE = eINSTANCE.getMeasuredData_Software();
-
-		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.impl.ExternalDataImpl <em>External Data</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.impl.ExternalDataImpl
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getExternalData()
-		 * @generated
-		 */
-		EClass EXTERNAL_DATA = eINSTANCE.getExternalData();
+		EReference DATA__SOFTWARE = eINSTANCE.getData_Software();
 
 		/**
 		 * The meta object literal for the '<em><b>Sociotechnicalsystem</b></em>' reference feature.
@@ -856,7 +1127,57 @@ public interface Fig1Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference EXTERNAL_DATA__SOCIOTECHNICALSYSTEM = eINSTANCE.getExternalData_Sociotechnicalsystem();
+		EReference DATA__SOCIOTECHNICALSYSTEM = eINSTANCE.getData_Sociotechnicalsystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Modelrole</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DATA__MODELROLE = eINSTANCE.getData_Modelrole();
+
+		/**
+		 * The meta object literal for the '<em><b>Data Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA__DATA_TYPE = eINSTANCE.getData_DataType();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.impl.ModelRoleImpl <em>Model Role</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.impl.ModelRoleImpl
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModelRole()
+		 * @generated
+		 */
+		EClass MODEL_ROLE = eINSTANCE.getModelRole();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODEL_ROLE__NAME = eINSTANCE.getModelRole_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Model</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_ROLE__MODEL = eINSTANCE.getModelRole_Model();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL_ROLE__DATA = eINSTANCE.getModelRole_Data();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
@@ -869,12 +1190,32 @@ public interface Fig1Package extends EPackage {
 		EClass MODEL = eINSTANCE.getModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Modelrole</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute MODEL__NAME = eINSTANCE.getModel_Name();
+		EReference MODEL__MODELROLE = eINSTANCE.getModel_Modelrole();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.NewEnum1
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getNewEnum1()
+		 * @generated
+		 */
+		EEnum NEW_ENUM1 = eINSTANCE.getNewEnum1();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.DataTypes
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDataTypes()
+		 * @generated
+		 */
+		EEnum DATA_TYPES = eINSTANCE.getDataTypes();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
@@ -887,12 +1228,12 @@ public interface Fig1Package extends EPackage {
 		EClass DESCRIPTIVE_MODEL = eINSTANCE.getDescriptiveModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Data</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Predictivemodel</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DESCRIPTIVE_MODEL__DATA = eINSTANCE.getDescriptiveModel_Data();
+		EReference DESCRIPTIVE_MODEL__PREDICTIVEMODEL = eINSTANCE.getDescriptiveModel_Predictivemodel();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.PredictiveModelImpl <em>Predictive Model</em>}' class.
@@ -903,6 +1244,14 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EClass PREDICTIVE_MODEL = eINSTANCE.getPredictiveModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescriptivemodel</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PREDICTIVE_MODEL__PRESCRIPTIVEMODEL = eINSTANCE.getPredictiveModel_Prescriptivemodel();
 
 		/**
 		 * The meta object literal for the '<em><b>Descriptivemodel</b></em>' reference feature.
@@ -923,12 +1272,45 @@ public interface Fig1Package extends EPackage {
 		EClass PRESCRIPTIVE_MODEL = eINSTANCE.getPrescriptiveModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Model</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Software</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PRESCRIPTIVE_MODEL__MODEL = eINSTANCE.getPrescriptiveModel_Model();
+		EReference PRESCRIPTIVE_MODEL__SOFTWARE = eINSTANCE.getPrescriptiveModel_Software();
+
+		/**
+		 * The meta object literal for the '<em><b>Sociotechnicalsystem</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM = eINSTANCE.getPrescriptiveModel_Sociotechnicalsystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Predictivemodel</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIPTIVE_MODEL__PREDICTIVEMODEL = eINSTANCE.getPrescriptiveModel_Predictivemodel();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescriptivemodel</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL = eINSTANCE.getPrescriptiveModel_Prescriptivemodel();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescriptivemodele Opposite</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE = eINSTANCE
+				.getPrescriptiveModel_PrescriptivemodeleOpposite();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.SoftwareImpl <em>Software</em>}' class.
@@ -957,12 +1339,20 @@ public interface Fig1Package extends EPackage {
 		EAttribute SOFTWARE__STATE = eINSTANCE.getSoftware_State();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputdata</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SOFTWARE__INPUTDATA = eINSTANCE.getSoftware_Inputdata();
+		EAttribute SOFTWARE__NAME = eINSTANCE.getSoftware_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOFTWARE__DATA = eINSTANCE.getSoftware_Data();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.
@@ -975,20 +1365,12 @@ public interface Fig1Package extends EPackage {
 		EClass SOCIO_TECHNICAL_SYSTEM = eINSTANCE.getSocioTechnicalSystem();
 
 		/**
-		 * The meta object literal for the '<em><b>Software</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Data</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SOCIO_TECHNICAL_SYSTEM__SOFTWARE = eINSTANCE.getSocioTechnicalSystem_Software();
-
-		/**
-		 * The meta object literal for the '<em><b>Externaldata</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SOCIO_TECHNICAL_SYSTEM__EXTERNALDATA = eINSTANCE.getSocioTechnicalSystem_Externaldata();
+		EReference SOCIO_TECHNICAL_SYSTEM__DATA = eINSTANCE.getSocioTechnicalSystem_Data();
 
 		/**
 		 * The meta object literal for the '<em><b>Prescriptivemodel</b></em>' reference feature.
@@ -997,6 +1379,64 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EReference SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL = eINSTANCE.getSocioTechnicalSystem_Prescriptivemodel();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.impl.MODAImpl <em>MODA</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.impl.MODAImpl
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getMODA()
+		 * @generated
+		 */
+		EClass MODA = eINSTANCE.getMODA();
+
+		/**
+		 * The meta object literal for the '<em><b>Sociotechnicalsystem</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODA__SOCIOTECHNICALSYSTEM = eINSTANCE.getMODA_Sociotechnicalsystem();
+
+		/**
+		 * The meta object literal for the '<em><b>Data</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODA__DATA = eINSTANCE.getMODA_Data();
+
+		/**
+		 * The meta object literal for the '<em><b>Software</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODA__SOFTWARE = eINSTANCE.getMODA_Software();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODA__NAME = eINSTANCE.getMODA_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Model</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODA__MODEL = eINSTANCE.getMODA_Model();
+
+		/**
+		 * The meta object literal for the '<em><b>Modelrole</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODA__MODELROLE = eINSTANCE.getMODA_Modelrole();
 
 	}
 

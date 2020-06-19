@@ -2,12 +2,13 @@
  */
 package internship.moda.fig1.impl;
 
-import internship.moda.fig1.Data;
 import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
 
+import internship.moda.fig1.PredictiveModel;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -21,21 +22,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.DescriptiveModelImpl#getData <em>Data</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DescriptiveModelImpl#getPredictivemodel <em>Predictivemodel</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel {
+public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveModel {
 	/**
-	 * The cached value of the '{@link #getData() <em>Data</em>}' reference.
+	 * The cached value of the '{@link #getPredictivemodel() <em>Predictivemodel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getData()
+	 * @see #getPredictivemodel()
 	 * @generated
 	 * @ordered
 	 */
-	protected Data data;
+	protected PredictiveModel predictivemodel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,17 +62,17 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data getData() {
-		if (data != null && data.eIsProxy()) {
-			InternalEObject oldData = (InternalEObject) data;
-			data = (Data) eResolveProxy(oldData);
-			if (data != oldData) {
+	public PredictiveModel getPredictivemodel() {
+		if (predictivemodel != null && predictivemodel.eIsProxy()) {
+			InternalEObject oldPredictivemodel = (InternalEObject) predictivemodel;
+			predictivemodel = (PredictiveModel) eResolveProxy(oldPredictivemodel);
+			if (predictivemodel != oldPredictivemodel) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DESCRIPTIVE_MODEL__DATA,
-							oldData, data));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL, oldPredictivemodel, predictivemodel));
 			}
 		}
-		return data;
+		return predictivemodel;
 	}
 
 	/**
@@ -79,8 +80,8 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Data basicGetData() {
-		return data;
+	public PredictiveModel basicGetPredictivemodel() {
+		return predictivemodel;
 	}
 
 	/**
@@ -88,11 +89,71 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setData(Data newData) {
-		Data oldData = data;
-		data = newData;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DESCRIPTIVE_MODEL__DATA, oldData, data));
+	public NotificationChain basicSetPredictivemodel(PredictiveModel newPredictivemodel, NotificationChain msgs) {
+		PredictiveModel oldPredictivemodel = predictivemodel;
+		predictivemodel = newPredictivemodel;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL, oldPredictivemodel, newPredictivemodel);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPredictivemodel(PredictiveModel newPredictivemodel) {
+		if (newPredictivemodel != predictivemodel) {
+			NotificationChain msgs = null;
+			if (predictivemodel != null)
+				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
+						Fig1Package.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, PredictiveModel.class, msgs);
+			if (newPredictivemodel != null)
+				msgs = ((InternalEObject) newPredictivemodel).eInverseAdd(this,
+						Fig1Package.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, PredictiveModel.class, msgs);
+			msgs = basicSetPredictivemodel(newPredictivemodel, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL,
+					newPredictivemodel, newPredictivemodel));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+			if (predictivemodel != null)
+				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
+						Fig1Package.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, PredictiveModel.class, msgs);
+			return basicSetPredictivemodel((PredictiveModel) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+			return basicSetPredictivemodel(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -103,10 +164,10 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__DATA:
+		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
 			if (resolve)
-				return getData();
-			return basicGetData();
+				return getPredictivemodel();
+			return basicGetPredictivemodel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,8 +180,8 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__DATA:
-			setData((Data) newValue);
+		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+			setPredictivemodel((PredictiveModel) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -134,8 +195,8 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__DATA:
-			setData((Data) null);
+		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+			setPredictivemodel((PredictiveModel) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -149,8 +210,8 @@ public class DescriptiveModelImpl extends ModelImpl implements DescriptiveModel 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__DATA:
-			return data != null;
+		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+			return predictivemodel != null;
 		}
 		return super.eIsSet(featureID);
 	}

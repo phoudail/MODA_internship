@@ -22,40 +22,13 @@ public interface Fig1Factory extends EFactory {
 	Fig1Factory eINSTANCE = internship.moda.fig1.impl.Fig1FactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Input Data</em>'.
+	 * Returns a new object of class '<em>Data</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Data</em>'.
+	 * @return a new object of class '<em>Data</em>'.
 	 * @generated
 	 */
-	InputData createInputData();
-
-	/**
-	 * Returns a new object of class '<em>Output Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Output Data</em>'.
-	 * @generated
-	 */
-	OutputData createOutputData();
-
-	/**
-	 * Returns a new object of class '<em>Measured Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Measured Data</em>'.
-	 * @generated
-	 */
-	MeasuredData createMeasuredData();
-
-	/**
-	 * Returns a new object of class '<em>External Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>External Data</em>'.
-	 * @generated
-	 */
-	ExternalData createExternalData();
+	Data createData();
 
 	/**
 	 * Returns a new object of class '<em>Descriptive Model</em>'.
@@ -101,6 +74,24 @@ public interface Fig1Factory extends EFactory {
 	 * @generated
 	 */
 	SocioTechnicalSystem createSocioTechnicalSystem();
+
+	/**
+	 * Returns a new object of class '<em>MODA</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>MODA</em>'.
+	 * @generated
+	 */
+	MODA createMODA();
+
+	/**
+	 * Returns a new object of class '<em>Model</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Model</em>'.
+	 * @generated
+	 */
+	Model createModel();
 
 	/**
 	 * Returns the package supported by this factory.

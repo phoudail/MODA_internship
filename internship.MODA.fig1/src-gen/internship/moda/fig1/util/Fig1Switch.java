@@ -73,45 +73,9 @@ public class Fig1Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Fig1Package.INPUT_DATA: {
-			InputData inputData = (InputData) theEObject;
-			T result = caseInputData(inputData);
-			if (result == null)
-				result = caseData(inputData);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.OUTPUT_DATA: {
-			OutputData outputData = (OutputData) theEObject;
-			T result = caseOutputData(outputData);
-			if (result == null)
-				result = caseData(outputData);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.MEASURED_DATA: {
-			MeasuredData measuredData = (MeasuredData) theEObject;
-			T result = caseMeasuredData(measuredData);
-			if (result == null)
-				result = caseData(measuredData);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.EXTERNAL_DATA: {
-			ExternalData externalData = (ExternalData) theEObject;
-			T result = caseExternalData(externalData);
-			if (result == null)
-				result = caseData(externalData);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.MODEL: {
-			Model model = (Model) theEObject;
-			T result = caseModel(model);
+		case Fig1Package.MODEL_ROLE: {
+			ModelRole modelRole = (ModelRole) theEObject;
+			T result = caseModelRole(modelRole);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -120,7 +84,7 @@ public class Fig1Switch<T> extends Switch<T> {
 			DescriptiveModel descriptiveModel = (DescriptiveModel) theEObject;
 			T result = caseDescriptiveModel(descriptiveModel);
 			if (result == null)
-				result = caseModel(descriptiveModel);
+				result = caseModelRole(descriptiveModel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -129,7 +93,7 @@ public class Fig1Switch<T> extends Switch<T> {
 			PredictiveModel predictiveModel = (PredictiveModel) theEObject;
 			T result = casePredictiveModel(predictiveModel);
 			if (result == null)
-				result = caseModel(predictiveModel);
+				result = caseModelRole(predictiveModel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -138,7 +102,7 @@ public class Fig1Switch<T> extends Switch<T> {
 			PrescriptiveModel prescriptiveModel = (PrescriptiveModel) theEObject;
 			T result = casePrescriptiveModel(prescriptiveModel);
 			if (result == null)
-				result = caseModel(prescriptiveModel);
+				result = caseModelRole(prescriptiveModel);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -153,6 +117,20 @@ public class Fig1Switch<T> extends Switch<T> {
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM: {
 			SocioTechnicalSystem socioTechnicalSystem = (SocioTechnicalSystem) theEObject;
 			T result = caseSocioTechnicalSystem(socioTechnicalSystem);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Fig1Package.MODA: {
+			MODA moda = (MODA) theEObject;
+			T result = caseMODA(moda);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case Fig1Package.MODEL: {
+			Model model = (Model) theEObject;
+			T result = caseModel(model);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -178,62 +156,17 @@ public class Fig1Switch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Data</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Model Role</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Data</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Model Role</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInputData(InputData object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Output Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Output Data</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseOutputData(OutputData object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Measured Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Measured Data</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMeasuredData(MeasuredData object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>External Data</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>External Data</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseExternalData(ExternalData object) {
+	public T caseModelRole(ModelRole object) {
 		return null;
 	}
 
@@ -324,6 +257,21 @@ public class Fig1Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSocioTechnicalSystem(SocioTechnicalSystem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MODA</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MODA</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMODA(MODA object) {
 		return null;
 	}
 

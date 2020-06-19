@@ -5,6 +5,7 @@ package internship.moda.fig1.impl;
 import internship.moda.fig1.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -55,14 +56,8 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case Fig1Package.INPUT_DATA:
-			return createInputData();
-		case Fig1Package.OUTPUT_DATA:
-			return createOutputData();
-		case Fig1Package.MEASURED_DATA:
-			return createMeasuredData();
-		case Fig1Package.EXTERNAL_DATA:
-			return createExternalData();
+		case Fig1Package.DATA:
+			return createData();
 		case Fig1Package.DESCRIPTIVE_MODEL:
 			return createDescriptiveModel();
 		case Fig1Package.PREDICTIVE_MODEL:
@@ -73,6 +68,10 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 			return createSoftware();
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM:
 			return createSocioTechnicalSystem();
+		case Fig1Package.MODA:
+			return createMODA();
+		case Fig1Package.MODEL:
+			return createModel();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -83,9 +82,16 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InputData createInputData() {
-		InputDataImpl inputData = new InputDataImpl();
-		return inputData;
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case Fig1Package.NEW_ENUM1:
+			return createNewEnum1FromString(eDataType, initialValue);
+		case Fig1Package.DATA_TYPES:
+			return createDataTypesFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
 	}
 
 	/**
@@ -93,9 +99,16 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public OutputData createOutputData() {
-		OutputDataImpl outputData = new OutputDataImpl();
-		return outputData;
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case Fig1Package.NEW_ENUM1:
+			return convertNewEnum1ToString(eDataType, instanceValue);
+		case Fig1Package.DATA_TYPES:
+			return convertDataTypesToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
 	}
 
 	/**
@@ -103,19 +116,9 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MeasuredData createMeasuredData() {
-		MeasuredDataImpl measuredData = new MeasuredDataImpl();
-		return measuredData;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExternalData createExternalData() {
-		ExternalDataImpl externalData = new ExternalDataImpl();
-		return externalData;
+	public Data createData() {
+		DataImpl data = new DataImpl();
+		return data;
 	}
 
 	/**
@@ -166,6 +169,70 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	public SocioTechnicalSystem createSocioTechnicalSystem() {
 		SocioTechnicalSystemImpl socioTechnicalSystem = new SocioTechnicalSystemImpl();
 		return socioTechnicalSystem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MODA createMODA() {
+		MODAImpl moda = new MODAImpl();
+		return moda;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Model createModel() {
+		ModelImpl model = new ModelImpl();
+		return model;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NewEnum1 createNewEnum1FromString(EDataType eDataType, String initialValue) {
+		NewEnum1 result = NewEnum1.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNewEnum1ToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataTypes createDataTypesFromString(EDataType eDataType, String initialValue) {
+		DataTypes result = DataTypes.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertDataTypesToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

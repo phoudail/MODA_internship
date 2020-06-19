@@ -15,8 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getExternaldata <em>Externaldata</em>}</li>
+ *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getData <em>Data</em>}</li>
  *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
  * </ul>
  *
@@ -26,51 +25,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface SocioTechnicalSystem extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Software</b></em>' containment reference list.
-	 * The list contents are of type {@link internship.moda.fig1.Software}.
+	 * Returns the value of the '<em><b>Data</b></em>' reference list.
+	 * The list contents are of type {@link internship.moda.fig1.Data}.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Data#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Software</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Data</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software</em>' containment reference list.
-	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_Software()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Software> getSoftware();
-
-	/**
-	 * Returns the value of the '<em><b>Externaldata</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.ExternalData#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Externaldata</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Externaldata</em>' reference.
-	 * @see #setExternaldata(ExternalData)
-	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_Externaldata()
-	 * @see internship.moda.fig1.ExternalData#getSociotechnicalsystem
+	 * @return the value of the '<em>Data</em>' reference list.
+	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_Data()
+	 * @see internship.moda.fig1.Data#getSociotechnicalsystem
 	 * @model opposite="sociotechnicalsystem"
 	 * @generated
 	 */
-	ExternalData getExternaldata();
-
-	/**
-	 * Sets the value of the '{@link internship.moda.fig1.SocioTechnicalSystem#getExternaldata <em>Externaldata</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Externaldata</em>' reference.
-	 * @see #getExternaldata()
-	 * @generated
-	 */
-	void setExternaldata(ExternalData value);
+	EList<Data> getData();
 
 	/**
 	 * Returns the value of the '<em><b>Prescriptivemodel</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Prescriptivemodel</em>' reference isn't clear,
@@ -80,7 +54,8 @@ public interface SocioTechnicalSystem extends EObject {
 	 * @return the value of the '<em>Prescriptivemodel</em>' reference.
 	 * @see #setPrescriptivemodel(PrescriptiveModel)
 	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_Prescriptivemodel()
-	 * @model
+	 * @see internship.moda.fig1.PrescriptiveModel#getSociotechnicalsystem
+	 * @model opposite="sociotechnicalsystem"
 	 * @generated
 	 */
 	PrescriptiveModel getPrescriptivemodel();

@@ -72,28 +72,8 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseInputData(InputData object) {
-			return createInputDataAdapter();
-		}
-
-		@Override
-		public Adapter caseOutputData(OutputData object) {
-			return createOutputDataAdapter();
-		}
-
-		@Override
-		public Adapter caseMeasuredData(MeasuredData object) {
-			return createMeasuredDataAdapter();
-		}
-
-		@Override
-		public Adapter caseExternalData(ExternalData object) {
-			return createExternalDataAdapter();
-		}
-
-		@Override
-		public Adapter caseModel(Model object) {
-			return createModelAdapter();
+		public Adapter caseModelRole(ModelRole object) {
+			return createModelRoleAdapter();
 		}
 
 		@Override
@@ -119,6 +99,16 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseSocioTechnicalSystem(SocioTechnicalSystem object) {
 			return createSocioTechnicalSystemAdapter();
+		}
+
+		@Override
+		public Adapter caseMODA(MODA object) {
+			return createMODAAdapter();
+		}
+
+		@Override
+		public Adapter caseModel(Model object) {
+			return createModelAdapter();
 		}
 
 		@Override
@@ -155,58 +145,16 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.InputData <em>Input Data</em>}'.
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.ModelRole <em>Model Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see internship.moda.fig1.InputData
+	 * @see internship.moda.fig1.ModelRole
 	 * @generated
 	 */
-	public Adapter createInputDataAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.OutputData <em>Output Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see internship.moda.fig1.OutputData
-	 * @generated
-	 */
-	public Adapter createOutputDataAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.MeasuredData <em>Measured Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see internship.moda.fig1.MeasuredData
-	 * @generated
-	 */
-	public Adapter createMeasuredDataAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.ExternalData <em>External Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see internship.moda.fig1.ExternalData
-	 * @generated
-	 */
-	public Adapter createExternalDataAdapter() {
+	public Adapter createModelRoleAdapter() {
 		return null;
 	}
 
@@ -291,6 +239,20 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSocioTechnicalSystemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.MODA <em>MODA</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.MODA
+	 * @generated
+	 */
+	public Adapter createMODAAdapter() {
 		return null;
 	}
 
