@@ -177,36 +177,6 @@ public interface Fig1Package extends EPackage {
 	int MODEL_ROLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.ModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModel()
-	 * @generated
-	 */
-	int MODEL = 8;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.NewEnum1
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getNewEnum1()
-	 * @generated
-	 */
-	int NEW_ENUM1 = 9;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.DataTypes
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDataTypes()
-	 * @generated
-	 */
-	int DATA_TYPES = 10;
-
-	/**
 	 * The meta object id for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -636,6 +606,16 @@ public interface Fig1Package extends EPackage {
 	int MODA_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.ModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModel()
+	 * @generated
+	 */
+	int MODEL = 8;
+
+	/**
 	 * The feature id for the '<em><b>Modelrole</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -661,6 +641,26 @@ public interface Fig1Package extends EPackage {
 	 * @ordered
 	 */
 	int MODEL_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.NewEnum1
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getNewEnum1()
+	 * @generated
+	 */
+	int NEW_ENUM1 = 9;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.DataTypes
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDataTypes()
+	 * @generated
+	 */
+	int DATA_TYPES = 10;
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.Data <em>Data</em>}'.
@@ -758,47 +758,6 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getModelRole_Data();
-
-	/**
-	 * Returns the meta object for class '{@link internship.moda.fig1.Model <em>Model</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Model</em>'.
-	 * @see internship.moda.fig1.Model
-	 * @generated
-	 */
-	EClass getModel();
-
-	/**
-	 * Returns the meta object for the reference list '{@link internship.moda.fig1.Model#getModelrole <em>Modelrole</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Modelrole</em>'.
-	 * @see internship.moda.fig1.Model#getModelrole()
-	 * @see #getModel()
-	 * @generated
-	 */
-	EReference getModel_Modelrole();
-
-	/**
-	 * Returns the meta object for enum '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>New Enum1</em>'.
-	 * @see internship.moda.fig1.NewEnum1
-	 * @generated
-	 */
-	EEnum getNewEnum1();
-
-	/**
-	 * Returns the meta object for enum '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Data Types</em>'.
-	 * @see internship.moda.fig1.DataTypes
-	 * @generated
-	 */
-	EEnum getDataTypes();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.DescriptiveModel <em>Descriptive Model</em>}'.
@@ -929,17 +888,6 @@ public interface Fig1Package extends EPackage {
 	EClass getSoftware();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.Software#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Prescriptivemodel</em>'.
-	 * @see internship.moda.fig1.Software#getPrescriptivemodel()
-	 * @see #getSoftware()
-	 * @generated
-	 */
-	EReference getSoftware_Prescriptivemodel();
-
-	/**
 	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Software#getState <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -971,6 +919,17 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getSoftware_Data();
+
+	/**
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.Software#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prescriptivemodel</em>'.
+	 * @see internship.moda.fig1.Software#getPrescriptivemodel()
+	 * @see #getSoftware()
+	 * @generated
+	 */
+	EReference getSoftware_Prescriptivemodel();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.SocioTechnicalSystem <em>Socio Technical System</em>}'.
@@ -1081,6 +1040,47 @@ public interface Fig1Package extends EPackage {
 	EReference getMODA_Modelrole();
 
 	/**
+	 * Returns the meta object for class '{@link internship.moda.fig1.Model <em>Model</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Model</em>'.
+	 * @see internship.moda.fig1.Model
+	 * @generated
+	 */
+	EClass getModel();
+
+	/**
+	 * Returns the meta object for the reference list '{@link internship.moda.fig1.Model#getModelrole <em>Modelrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Modelrole</em>'.
+	 * @see internship.moda.fig1.Model#getModelrole()
+	 * @see #getModel()
+	 * @generated
+	 */
+	EReference getModel_Modelrole();
+
+	/**
+	 * Returns the meta object for enum '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>New Enum1</em>'.
+	 * @see internship.moda.fig1.NewEnum1
+	 * @generated
+	 */
+	EEnum getNewEnum1();
+
+	/**
+	 * Returns the meta object for enum '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Data Types</em>'.
+	 * @see internship.moda.fig1.DataTypes
+	 * @generated
+	 */
+	EEnum getDataTypes();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1178,44 +1178,6 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EReference MODEL_ROLE__DATA = eINSTANCE.getModelRole_Data();
-
-		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.impl.ModelImpl
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModel()
-		 * @generated
-		 */
-		EClass MODEL = eINSTANCE.getModel();
-
-		/**
-		 * The meta object literal for the '<em><b>Modelrole</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODEL__MODELROLE = eINSTANCE.getModel_Modelrole();
-
-		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.NewEnum1
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getNewEnum1()
-		 * @generated
-		 */
-		EEnum NEW_ENUM1 = eINSTANCE.getNewEnum1();
-
-		/**
-		 * The meta object literal for the '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see internship.moda.fig1.DataTypes
-		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDataTypes()
-		 * @generated
-		 */
-		EEnum DATA_TYPES = eINSTANCE.getDataTypes();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
@@ -1323,14 +1285,6 @@ public interface Fig1Package extends EPackage {
 		EClass SOFTWARE = eINSTANCE.getSoftware();
 
 		/**
-		 * The meta object literal for the '<em><b>Prescriptivemodel</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SOFTWARE__PRESCRIPTIVEMODEL = eINSTANCE.getSoftware_Prescriptivemodel();
-
-		/**
 		 * The meta object literal for the '<em><b>State</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1353,6 +1307,14 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EReference SOFTWARE__DATA = eINSTANCE.getSoftware_Data();
+
+		/**
+		 * The meta object literal for the '<em><b>Prescriptivemodel</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SOFTWARE__PRESCRIPTIVEMODEL = eINSTANCE.getSoftware_Prescriptivemodel();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.
@@ -1437,6 +1399,44 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EReference MODA__MODELROLE = eINSTANCE.getMODA_Modelrole();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.impl.ModelImpl
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModel()
+		 * @generated
+		 */
+		EClass MODEL = eINSTANCE.getModel();
+
+		/**
+		 * The meta object literal for the '<em><b>Modelrole</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODEL__MODELROLE = eINSTANCE.getModel_Modelrole();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.NewEnum1
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getNewEnum1()
+		 * @generated
+		 */
+		EEnum NEW_ENUM1 = eINSTANCE.getNewEnum1();
+
+		/**
+		 * The meta object literal for the '{@link internship.moda.fig1.DataTypes <em>Data Types</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see internship.moda.fig1.DataTypes
+		 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDataTypes()
+		 * @generated
+		 */
+		EEnum DATA_TYPES = eINSTANCE.getDataTypes();
 
 	}
 

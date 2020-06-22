@@ -49,27 +49,6 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass modelEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum newEnum1EEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum dataTypesEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass descriptiveModelEClass = null;
 
 	/**
@@ -106,6 +85,27 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * @generated
 	 */
 	private EClass modaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum newEnum1EEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum dataTypesEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -257,42 +257,6 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getModel() {
-		return modelEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getModel_Modelrole() {
-		return (EReference) modelEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getNewEnum1() {
-		return newEnum1EEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getDataTypes() {
-		return dataTypesEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDescriptiveModel() {
 		return descriptiveModelEClass;
 	}
@@ -401,15 +365,6 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSoftware_Prescriptivemodel() {
-		return (EReference) softwareEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getSoftware_State() {
 		return (EAttribute) softwareEClass.getEStructuralFeatures().get(0);
 	}
@@ -430,6 +385,15 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 */
 	public EReference getSoftware_Data() {
 		return (EReference) softwareEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSoftware_Prescriptivemodel() {
+		return (EReference) softwareEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -520,6 +484,42 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 */
 	public EReference getMODA_Modelrole() {
 		return (EReference) modaEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModel() {
+		return modelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModel_Modelrole() {
+		return (EReference) modelEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getNewEnum1() {
+		return newEnum1EEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getDataTypes() {
+		return dataTypesEEnum;
 	}
 
 	/**

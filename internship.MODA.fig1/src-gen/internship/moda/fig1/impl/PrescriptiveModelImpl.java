@@ -5,12 +5,12 @@ package internship.moda.fig1.impl;
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.PredictiveModel;
 import internship.moda.fig1.PrescriptiveModel;
-
 import internship.moda.fig1.SocioTechnicalSystem;
 import internship.moda.fig1.Software;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -43,6 +43,7 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * @ordered
 	 */
 	protected Software software;
+
 	/**
 	 * The cached value of the '{@link #getSociotechnicalsystem() <em>Sociotechnicalsystem</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -52,6 +53,7 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * @ordered
 	 */
 	protected SocioTechnicalSystem sociotechnicalsystem;
+
 	/**
 	 * The cached value of the '{@link #getPredictivemodel() <em>Predictivemodel</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -61,6 +63,7 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * @ordered
 	 */
 	protected PredictiveModel predictivemodel;
+
 	/**
 	 * The cached value of the '{@link #getPrescriptivemodel() <em>Prescriptivemodel</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -70,6 +73,7 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * @ordered
 	 */
 	protected PrescriptiveModel prescriptivemodel;
+
 	/**
 	 * The cached value of the '{@link #getPrescriptivemodeleOpposite() <em>Prescriptivemodele Opposite</em>}' reference.
 	 * <!-- begin-user-doc -->

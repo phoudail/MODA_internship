@@ -3,6 +3,7 @@
 package internship.moda.fig1;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -25,34 +26,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Software extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Prescriptivemodel</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getSoftware <em>Software</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Prescriptivemodel</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #setPrescriptivemodel(PrescriptiveModel)
-	 * @see internship.moda.fig1.Fig1Package#getSoftware_Prescriptivemodel()
-	 * @see internship.moda.fig1.PrescriptiveModel#getSoftware
-	 * @model opposite="software"
-	 * @generated
-	 */
-	PrescriptiveModel getPrescriptivemodel();
-
-	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Software#getPrescriptivemodel <em>Prescriptivemodel</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #getPrescriptivemodel()
-	 * @generated
-	 */
-	void setPrescriptivemodel(PrescriptiveModel value);
-
 	/**
 	 * Returns the value of the '<em><b>State</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -122,5 +95,33 @@ public interface Software extends EObject {
 	 * @generated
 	 */
 	EList<Data> getData();
+
+	/**
+	 * Returns the value of the '<em><b>Prescriptivemodel</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getSoftware <em>Software</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prescriptivemodel</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prescriptivemodel</em>' reference.
+	 * @see #setPrescriptivemodel(PrescriptiveModel)
+	 * @see internship.moda.fig1.Fig1Package#getSoftware_Prescriptivemodel()
+	 * @see internship.moda.fig1.PrescriptiveModel#getSoftware
+	 * @model opposite="software"
+	 * @generated
+	 */
+	PrescriptiveModel getPrescriptivemodel();
+
+	/**
+	 * Sets the value of the '{@link internship.moda.fig1.Software#getPrescriptivemodel <em>Prescriptivemodel</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prescriptivemodel</em>' reference.
+	 * @see #getPrescriptivemodel()
+	 * @generated
+	 */
+	void setPrescriptivemodel(PrescriptiveModel value);
 
 } // Software

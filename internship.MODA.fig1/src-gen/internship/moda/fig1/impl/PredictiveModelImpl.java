@@ -5,11 +5,11 @@ package internship.moda.fig1.impl;
 import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.PredictiveModel;
-
 import internship.moda.fig1.PrescriptiveModel;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -39,6 +39,7 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	 * @ordered
 	 */
 	protected PrescriptiveModel prescriptivemodel;
+
 	/**
 	 * The cached value of the '{@link #getDescriptivemodel() <em>Descriptivemodel</em>}' reference.
 	 * <!-- begin-user-doc -->

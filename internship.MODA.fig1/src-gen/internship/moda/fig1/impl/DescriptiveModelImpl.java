@@ -4,11 +4,11 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
-
 import internship.moda.fig1.PredictiveModel;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 

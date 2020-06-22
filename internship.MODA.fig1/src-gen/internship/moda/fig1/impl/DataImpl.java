@@ -5,15 +5,16 @@ package internship.moda.fig1.impl;
 import internship.moda.fig1.Data;
 import internship.moda.fig1.DataTypes;
 import internship.moda.fig1.Fig1Package;
-
 import internship.moda.fig1.ModelRole;
 import internship.moda.fig1.SocioTechnicalSystem;
 import internship.moda.fig1.Software;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -43,6 +44,7 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * @ordered
 	 */
 	protected Software software;
+
 	/**
 	 * The cached value of the '{@link #getSociotechnicalsystem() <em>Sociotechnicalsystem</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -52,6 +54,7 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * @ordered
 	 */
 	protected SocioTechnicalSystem sociotechnicalsystem;
+
 	/**
 	 * The cached value of the '{@link #getModelrole() <em>Modelrole</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -61,6 +64,7 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * @ordered
 	 */
 	protected ModelRole modelrole;
+
 	/**
 	 * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,6 +74,7 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * @ordered
 	 */
 	protected static final DataTypes DATA_TYPE_EDEFAULT = DataTypes.INPUT_DATA;
+
 	/**
 	 * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
 	 * <!-- begin-user-doc -->

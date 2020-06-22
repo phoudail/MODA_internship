@@ -8,15 +8,18 @@ import internship.moda.fig1.PrescriptiveModel;
 import internship.moda.fig1.Software;
 
 import java.util.Collection;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -121,6 +124,61 @@ public class SoftwareImpl extends MinimalEObjectImpl.Container implements Softwa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getState() {
+		return state;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setState(String newState) {
+		String oldState = state;
+		state = newState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOFTWARE__STATE, oldState, state));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOFTWARE__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Data> getData() {
+		if (data == null) {
+			data = new EObjectWithInverseResolvingEList<Data>(Data.class, this, Fig1Package.SOFTWARE__DATA,
+					Fig1Package.DATA__SOFTWARE);
+		}
+		return data;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PrescriptiveModel getPrescriptivemodel() {
 		if (prescriptivemodel != null && prescriptivemodel.eIsProxy()) {
 			InternalEObject oldPrescriptivemodel = (InternalEObject) prescriptivemodel;
@@ -218,61 +276,6 @@ public class SoftwareImpl extends MinimalEObjectImpl.Container implements Softwa
 			return basicSetPrescriptivemodel(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getState() {
-		return state;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setState(String newState) {
-		String oldState = state;
-		state = newState;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOFTWARE__STATE, oldState, state));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOFTWARE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Data> getData() {
-		if (data == null) {
-			data = new EObjectWithInverseResolvingEList<Data>(Data.class, this, Fig1Package.SOFTWARE__DATA,
-					Fig1Package.DATA__SOFTWARE);
-		}
-		return data;
 	}
 
 	/**

@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Data extends EObject {
-
 	/**
 	 * Returns the value of the '<em><b>Software</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getData <em>Data</em>}'.
@@ -137,4 +136,5 @@ public interface Data extends EObject {
 	 * @generated
 	 */
 	void setDataType(DataTypes value);
+
 } // Data
