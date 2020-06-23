@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated fig1 -->
       <package
-            uri="http://www.example.org/fig1"
+            uri="http://www.irisa.fr/MODA/fig1"
             class="internship.moda.fig1.Fig1Package"
             genModel="model/fig1.genmodel"/>
    </extension>
