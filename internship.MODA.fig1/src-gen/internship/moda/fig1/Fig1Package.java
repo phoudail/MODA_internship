@@ -39,7 +39,7 @@ public interface Fig1Package extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.irisa.fr/MODA/fig1";
+	String eNS_URI = "http://www.example.org/fig1";
 
 	/**
 	 * The package namespace name.
@@ -65,158 +65,7 @@ public interface Fig1Package extends EPackage {
 	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getData()
 	 * @generated
 	 */
-	int DATA = 1;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelRoleImpl <em>Model Role</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.ModelRoleImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModelRole()
-	 * @generated
-	 */
-	int MODEL_ROLE = 2;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.DescriptiveModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDescriptiveModel()
-	 * @generated
-	 */
-	int DESCRIPTIVE_MODEL = 3;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.PredictiveModelImpl <em>Predictive Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.PredictiveModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPredictiveModel()
-	 * @generated
-	 */
-	int PREDICTIVE_MODEL = 4;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.PrescriptiveModelImpl <em>Prescriptive Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.PrescriptiveModelImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPrescriptiveModel()
-	 * @generated
-	 */
-	int PRESCRIPTIVE_MODEL = 5;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.SoftwareImpl <em>Software</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.SoftwareImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSoftware()
-	 * @generated
-	 */
-	int SOFTWARE = 6;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.SocioTechnicalSystemImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSocioTechnicalSystem()
-	 * @generated
-	 */
-	int SOCIO_TECHNICAL_SYSTEM = 7;
-
-	/**
-	 * The meta object id for the '{@link internship.moda.fig1.impl.MODAImpl <em>MODA</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see internship.moda.fig1.impl.MODAImpl
-	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getMODA()
-	 * @generated
-	 */
-	int MODA = 0;
-
-	/**
-	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA__SOCIOTECHNICALSYSTEM = 0;
-
-	/**
-	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA__DATA = 1;
-
-	/**
-	 * The feature id for the '<em><b>Software</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA__SOFTWARE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA__NAME = 3;
-
-	/**
-	 * The feature id for the '<em><b>Model</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA__MODEL = 4;
-
-	/**
-	 * The feature id for the '<em><b>Modelrole</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA__MODELROLE = 5;
-
-	/**
-	 * The number of structural features of the '<em>MODA</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>MODA</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODA_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DATA__NAME = 0;
+	int DATA = 0;
 
 	/**
 	 * The feature id for the '<em><b>Software</b></em>' reference.
@@ -225,7 +74,7 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__SOFTWARE = 1;
+	int DATA__SOFTWARE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' reference.
@@ -234,7 +83,7 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__SOCIOTECHNICALSYSTEM = 2;
+	int DATA__SOCIOTECHNICALSYSTEM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Modelrole</b></em>' reference.
@@ -243,7 +92,7 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__MODELROLE = 3;
+	int DATA__MODELROLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Data Type</b></em>' attribute.
@@ -252,7 +101,7 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__DATA_TYPE = 4;
+	int DATA__DATA_TYPE = 3;
 
 	/**
 	 * The number of structural features of the '<em>Data</em>' class.
@@ -261,7 +110,7 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = 5;
+	int DATA_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Data</em>' class.
@@ -271,6 +120,16 @@ public interface Fig1Package extends EPackage {
 	 * @ordered
 	 */
 	int DATA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelRoleImpl <em>Model Role</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.ModelRoleImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getModelRole()
+	 * @generated
+	 */
+	int MODEL_ROLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -316,6 +175,16 @@ public interface Fig1Package extends EPackage {
 	 * @ordered
 	 */
 	int MODEL_ROLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.DescriptiveModelImpl <em>Descriptive Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.DescriptiveModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getDescriptiveModel()
+	 * @generated
+	 */
+	int DESCRIPTIVE_MODEL = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -370,6 +239,16 @@ public interface Fig1Package extends EPackage {
 	 * @ordered
 	 */
 	int DESCRIPTIVE_MODEL_OPERATION_COUNT = MODEL_ROLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.PredictiveModelImpl <em>Predictive Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.PredictiveModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPredictiveModel()
+	 * @generated
+	 */
+	int PREDICTIVE_MODEL = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -433,6 +312,16 @@ public interface Fig1Package extends EPackage {
 	 * @ordered
 	 */
 	int PREDICTIVE_MODEL_OPERATION_COUNT = MODEL_ROLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.PrescriptiveModelImpl <em>Prescriptive Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.PrescriptiveModelImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getPrescriptiveModel()
+	 * @generated
+	 */
+	int PRESCRIPTIVE_MODEL = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -525,6 +414,16 @@ public interface Fig1Package extends EPackage {
 	int PRESCRIPTIVE_MODEL_OPERATION_COUNT = MODEL_ROLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.SoftwareImpl <em>Software</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.SoftwareImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSoftware()
+	 * @generated
+	 */
+	int SOFTWARE = 5;
+
+	/**
 	 * The feature id for the '<em><b>State</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -579,6 +478,16 @@ public interface Fig1Package extends EPackage {
 	int SOFTWARE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.SocioTechnicalSystemImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getSocioTechnicalSystem()
+	 * @generated
+	 */
+	int SOCIO_TECHNICAL_SYSTEM = 6;
+
+	/**
 	 * The feature id for the '<em><b>Data</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,22 +506,13 @@ public interface Fig1Package extends EPackage {
 	int SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SOCIO_TECHNICAL_SYSTEM__NAME = 2;
-
-	/**
 	 * The number of structural features of the '<em>Socio Technical System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOCIO_TECHNICAL_SYSTEM_FEATURE_COUNT = 3;
+	int SOCIO_TECHNICAL_SYSTEM_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Socio Technical System</em>' class.
@@ -622,6 +522,88 @@ public interface Fig1Package extends EPackage {
 	 * @ordered
 	 */
 	int SOCIO_TECHNICAL_SYSTEM_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link internship.moda.fig1.impl.MODAImpl <em>MODA</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see internship.moda.fig1.impl.MODAImpl
+	 * @see internship.moda.fig1.impl.Fig1PackageImpl#getMODA()
+	 * @generated
+	 */
+	int MODA = 7;
+
+	/**
+	 * The feature id for the '<em><b>Sociotechnicalsystem</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__SOCIOTECHNICALSYSTEM = 0;
+
+	/**
+	 * The feature id for the '<em><b>Data</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__DATA = 1;
+
+	/**
+	 * The feature id for the '<em><b>Software</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__SOFTWARE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__NAME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Model</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__MODEL = 4;
+
+	/**
+	 * The feature id for the '<em><b>Modelrole</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA__MODELROLE = 5;
+
+	/**
+	 * The number of structural features of the '<em>MODA</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>MODA</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODA_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link internship.moda.fig1.impl.ModelImpl <em>Model</em>}' class.
@@ -643,22 +625,13 @@ public interface Fig1Package extends EPackage {
 	int MODEL__MODELROLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODEL__NAME = 1;
-
-	/**
 	 * The number of structural features of the '<em>Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODEL_FEATURE_COUNT = 2;
+	int MODEL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Model</em>' class.
@@ -698,17 +671,6 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 */
 	EClass getData();
-
-	/**
-	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Data#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see internship.moda.fig1.Data#getName()
-	 * @see #getData()
-	 * @generated
-	 */
-	EAttribute getData_Name();
 
 	/**
 	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getSoftware <em>Software</em>}'.
@@ -1002,17 +964,6 @@ public interface Fig1Package extends EPackage {
 	EReference getSocioTechnicalSystem_Prescriptivemodel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link internship.moda.fig1.SocioTechnicalSystem#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see internship.moda.fig1.SocioTechnicalSystem#getName()
-	 * @see #getSocioTechnicalSystem()
-	 * @generated
-	 */
-	EAttribute getSocioTechnicalSystem_Name();
-
-	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.MODA <em>MODA</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1110,17 +1061,6 @@ public interface Fig1Package extends EPackage {
 	EReference getModel_Modelrole();
 
 	/**
-	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Model#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see internship.moda.fig1.Model#getName()
-	 * @see #getModel()
-	 * @generated
-	 */
-	EAttribute getModel_Name();
-
-	/**
 	 * Returns the meta object for enum '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1172,14 +1112,6 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EClass DATA = eINSTANCE.getData();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute DATA__NAME = eINSTANCE.getData_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Software</b></em>' reference feature.
@@ -1411,14 +1343,6 @@ public interface Fig1Package extends EPackage {
 		EReference SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL = eINSTANCE.getSocioTechnicalSystem_Prescriptivemodel();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SOCIO_TECHNICAL_SYSTEM__NAME = eINSTANCE.getSocioTechnicalSystem_Name();
-
-		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.MODAImpl <em>MODA</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1493,14 +1417,6 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EReference MODEL__MODELROLE = eINSTANCE.getModel_Modelrole();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute MODEL__NAME = eINSTANCE.getModel_Name();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.NewEnum1 <em>New Enum1</em>}' enum.

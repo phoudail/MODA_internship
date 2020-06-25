@@ -67,11 +67,6 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected Fig1Switch<Adapter> modelSwitch = new Fig1Switch<Adapter>() {
 		@Override
-		public Adapter caseMODA(MODA object) {
-			return createMODAAdapter();
-		}
-
-		@Override
 		public Adapter caseData(Data object) {
 			return createDataAdapter();
 		}
@@ -104,6 +99,11 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseSocioTechnicalSystem(SocioTechnicalSystem object) {
 			return createSocioTechnicalSystemAdapter();
+		}
+
+		@Override
+		public Adapter caseMODA(MODA object) {
+			return createMODAAdapter();
 		}
 
 		@Override

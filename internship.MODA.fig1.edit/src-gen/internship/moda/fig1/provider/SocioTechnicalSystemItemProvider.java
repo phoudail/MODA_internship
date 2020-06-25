@@ -4,7 +4,6 @@ package internship.moda.fig1.provider;
 
 import internship.moda.fig1.Fig1Package;
 
-import internship.moda.fig1.SocioTechnicalSystem;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,9 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link internship.moda.fig1.SocioTechnicalSystem} object.
@@ -55,7 +52,6 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 
 			addDataPropertyDescriptor(object);
 			addPrescriptivemodelPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,22 +87,6 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SocioTechnicalSystem_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_name_feature",
-								"_UI_SocioTechnicalSystem_type"),
-						Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
 	 * This returns SocioTechnicalSystem.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -135,9 +115,7 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SocioTechnicalSystem) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_SocioTechnicalSystem_type")
-				: getString("_UI_SocioTechnicalSystem_type") + " " + label;
+		return getString("_UI_SocioTechnicalSystem_type");
 	}
 
 	/**
@@ -150,12 +128,6 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(SocioTechnicalSystem.class)) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

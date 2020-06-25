@@ -3,6 +3,7 @@
 package internship.moda.fig1.provider;
 
 import internship.moda.fig1.Data;
+import internship.moda.fig1.DataTypes;
 import internship.moda.fig1.Fig1Package;
 
 import java.util.Collection;
@@ -53,28 +54,12 @@ public class DataItemProvider extends ItemProviderAdapter implements IEditingDom
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addSoftwarePropertyDescriptor(object);
 			addSociotechnicalsystemPropertyDescriptor(object);
 			addModelrolePropertyDescriptor(object);
 			addDataTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Data_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Data_name_feature", "_UI_Data_type"),
-						Fig1Package.Literals.DATA__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
 	}
 
 	/**
@@ -164,7 +149,8 @@ public class DataItemProvider extends ItemProviderAdapter implements IEditingDom
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Data) object).getName();
+		DataTypes labelValue = ((Data) object).getDataType();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_Data_type")
 				: getString("_UI_Data_type") + " " + label;
 	}
@@ -181,7 +167,6 @@ public class DataItemProvider extends ItemProviderAdapter implements IEditingDom
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Data.class)) {
-		case Fig1Package.DATA__NAME:
 		case Fig1Package.DATA__DATA_TYPE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

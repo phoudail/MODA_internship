@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
       <!-- @generated fig1 -->
       <factory
-            uri="http://www.irisa.fr/MODA/fig1"
+            uri="http://www.example.org/fig1"
             class="internship.moda.fig1.provider.Fig1ItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
