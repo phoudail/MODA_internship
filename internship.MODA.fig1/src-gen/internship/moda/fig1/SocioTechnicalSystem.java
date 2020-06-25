@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getData <em>Data</em>}</li>
  *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
+ *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem()
@@ -69,5 +70,31 @@ public interface SocioTechnicalSystem extends EObject {
 	 * @generated
 	 */
 	void setPrescriptivemodel(PrescriptiveModel value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link internship.moda.fig1.SocioTechnicalSystem#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 
 } // SocioTechnicalSystem

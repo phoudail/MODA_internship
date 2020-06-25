@@ -17,7 +17,16 @@
       <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//DataTypes/ExternalData"/>
       <genEnumLiterals ecoreEnumLiteral="fig1.ecore#//DataTypes/MeasuredData"/>
     </genEnums>
+    <genClasses ecoreClass="fig1.ecore#//MODA">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/sociotechnicalsystem"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/data"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/software"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//MODA/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/modelrole"/>
+    </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Data">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Data/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/software"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/sociotechnicalsystem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/modelrole"/>
@@ -51,17 +60,11 @@
     <genClasses ecoreClass="fig1.ecore#//SocioTechnicalSystem">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/data"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/prescriptivemodel"/>
-    </genClasses>
-    <genClasses ecoreClass="fig1.ecore#//MODA">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/sociotechnicalsystem"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/data"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/software"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//MODA/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/modelrole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//SocioTechnicalSystem/name"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Model">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Model/modelrole"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Model/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

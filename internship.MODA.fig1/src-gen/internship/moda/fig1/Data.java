@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link internship.moda.fig1.Data#getName <em>Name</em>}</li>
  *   <li>{@link internship.moda.fig1.Data#getSoftware <em>Software</em>}</li>
  *   <li>{@link internship.moda.fig1.Data#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
  *   <li>{@link internship.moda.fig1.Data#getModelrole <em>Modelrole</em>}</li>
@@ -24,6 +25,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Data extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see internship.moda.fig1.Fig1Package#getData_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link internship.moda.fig1.Data#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Software</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getData <em>Data</em>}'.

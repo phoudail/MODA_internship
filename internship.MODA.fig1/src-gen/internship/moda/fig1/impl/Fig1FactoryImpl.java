@@ -56,6 +56,8 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+		case Fig1Package.MODA:
+			return createMODA();
 		case Fig1Package.DATA:
 			return createData();
 		case Fig1Package.DESCRIPTIVE_MODEL:
@@ -68,8 +70,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 			return createSoftware();
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM:
 			return createSocioTechnicalSystem();
-		case Fig1Package.MODA:
-			return createMODA();
 		case Fig1Package.MODEL:
 			return createModel();
 		default:

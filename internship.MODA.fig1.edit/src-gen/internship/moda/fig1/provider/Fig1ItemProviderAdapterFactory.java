@@ -355,6 +355,8 @@ public class Fig1ItemProviderAdapterFactory extends Fig1AdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
+		if (modaItemProvider != null)
+			modaItemProvider.dispose();
 		if (dataItemProvider != null)
 			dataItemProvider.dispose();
 		if (descriptiveModelItemProvider != null)
@@ -367,8 +369,6 @@ public class Fig1ItemProviderAdapterFactory extends Fig1AdapterFactory
 			softwareItemProvider.dispose();
 		if (socioTechnicalSystemItemProvider != null)
 			socioTechnicalSystemItemProvider.dispose();
-		if (modaItemProvider != null)
-			modaItemProvider.dispose();
 		if (modelItemProvider != null)
 			modelItemProvider.dispose();
 	}

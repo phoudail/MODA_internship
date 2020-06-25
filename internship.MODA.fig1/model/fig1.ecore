@@ -15,6 +15,7 @@
         eType="#//ModelRole" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
         eOpposite="#//Software/data"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sociotechnicalsystem" eType="#//SocioTechnicalSystem"
@@ -65,6 +66,7 @@
         eOpposite="#//Data/sociotechnicalsystem"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptivemodel" eType="#//PrescriptiveModel"
         eOpposite="#//PrescriptiveModel/sociotechnicalsystem"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="NewEnum1"/>
   <eClassifiers xsi:type="ecore:EEnum" name="DataTypes">
@@ -76,5 +78,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelrole" upperBound="-1"
         eType="#//ModelRole" eOpposite="#//ModelRole/model"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
