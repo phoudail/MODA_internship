@@ -66,6 +66,13 @@ public class Fig1Switch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+		case Fig1Package.MODA: {
+			MODA moda = (MODA) theEObject;
+			T result = caseMODA(moda);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case Fig1Package.DATA: {
 			Data data = (Data) theEObject;
 			T result = caseData(data);
@@ -117,13 +124,6 @@ public class Fig1Switch<T> extends Switch<T> {
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM: {
 			SocioTechnicalSystem socioTechnicalSystem = (SocioTechnicalSystem) theEObject;
 			T result = caseSocioTechnicalSystem(socioTechnicalSystem);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.MODA: {
-			MODA moda = (MODA) theEObject;
-			T result = caseMODA(moda);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

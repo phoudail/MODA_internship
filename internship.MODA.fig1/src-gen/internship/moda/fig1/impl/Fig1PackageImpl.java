@@ -9,7 +9,6 @@ import internship.moda.fig1.Fig1Factory;
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.Model;
 import internship.moda.fig1.ModelRole;
-import internship.moda.fig1.NewEnum1;
 import internship.moda.fig1.PredictiveModel;
 import internship.moda.fig1.PrescriptiveModel;
 import internship.moda.fig1.SocioTechnicalSystem;
@@ -98,13 +97,6 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum newEnum1EEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum dataTypesEEnum = null;
 
 	/**
@@ -185,25 +177,16 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getData_Name() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getData_Software() {
-		return (EReference) dataEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getData_Sociotechnicalsystem() {
-		return (EReference) dataEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getData_Modelrole() {
 		return (EReference) dataEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -212,8 +195,26 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getData_Sociotechnicalsystem() {
+		return (EReference) dataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getData_Modelrole() {
+		return (EReference) dataEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EAttribute getData_DataType() {
-		return (EAttribute) dataEClass.getEStructuralFeatures().get(3);
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -428,6 +429,15 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSocioTechnicalSystem_Name() {
+		return (EAttribute) socioTechnicalSystemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMODA() {
 		return modaEClass;
 	}
@@ -509,8 +519,8 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getNewEnum1() {
-		return newEnum1EEnum;
+	public EAttribute getModel_Name() {
+		return (EAttribute) modelEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -551,11 +561,20 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		isCreated = true;
 
 		// Create classes and their features
+		modaEClass = createEClass(MODA);
+		createEReference(modaEClass, MODA__SOCIOTECHNICALSYSTEM);
+		createEReference(modaEClass, MODA__DATA);
+		createEReference(modaEClass, MODA__SOFTWARE);
+		createEAttribute(modaEClass, MODA__NAME);
+		createEReference(modaEClass, MODA__MODEL);
+		createEReference(modaEClass, MODA__MODELROLE);
+
 		dataEClass = createEClass(DATA);
+		createEAttribute(dataEClass, DATA__NAME);
+		createEAttribute(dataEClass, DATA__DATA_TYPE);
 		createEReference(dataEClass, DATA__SOFTWARE);
 		createEReference(dataEClass, DATA__SOCIOTECHNICALSYSTEM);
 		createEReference(dataEClass, DATA__MODELROLE);
-		createEAttribute(dataEClass, DATA__DATA_TYPE);
 
 		modelRoleEClass = createEClass(MODEL_ROLE);
 		createEAttribute(modelRoleEClass, MODEL_ROLE__NAME);
@@ -585,20 +604,13 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		socioTechnicalSystemEClass = createEClass(SOCIO_TECHNICAL_SYSTEM);
 		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__DATA);
 		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL);
-
-		modaEClass = createEClass(MODA);
-		createEReference(modaEClass, MODA__SOCIOTECHNICALSYSTEM);
-		createEReference(modaEClass, MODA__DATA);
-		createEReference(modaEClass, MODA__SOFTWARE);
-		createEAttribute(modaEClass, MODA__NAME);
-		createEReference(modaEClass, MODA__MODEL);
-		createEReference(modaEClass, MODA__MODELROLE);
+		createEAttribute(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__NAME);
 
 		modelEClass = createEClass(MODEL);
 		createEReference(modelEClass, MODEL__MODELROLE);
+		createEAttribute(modelEClass, MODEL__NAME);
 
 		// Create enums
-		newEnum1EEnum = createEEnum(NEW_ENUM1);
 		dataTypesEEnum = createEEnum(DATA_TYPES);
 	}
 
@@ -636,7 +648,31 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		prescriptiveModelEClass.getESuperTypes().add(this.getModelRole());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(modaEClass, internship.moda.fig1.MODA.class, "MODA", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMODA_Sociotechnicalsystem(), this.getSocioTechnicalSystem(), null, "sociotechnicalsystem",
+				null, 0, 1, internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMODA_Data(), this.getData(), null, "data", null, 0, -1, internship.moda.fig1.MODA.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMODA_Software(), this.getSoftware(), null, "software", null, 0, 1,
+				internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMODA_Name(), ecorePackage.getEString(), "name", null, 0, 1, internship.moda.fig1.MODA.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMODA_Model(), this.getModel(), null, "model", null, 0, -1, internship.moda.fig1.MODA.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMODA_Modelrole(), this.getModelRole(), null, "modelrole", null, 0, -1,
+				internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(dataEClass, Data.class, "Data", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getData_Name(), ecorePackage.getEString(), "name", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_DataType(), this.getDataTypes(), "dataType", null, 0, 1, Data.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getData_Software(), this.getSoftware(), this.getSoftware_Data(), "software", null, 0, 1,
 				Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -647,8 +683,6 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getData_Modelrole(), this.getModelRole(), this.getModelRole_Data(), "modelrole", null, 0, 1,
 				Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getData_DataType(), this.getDataTypes(), "dataType", null, 0, 1, Data.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelRoleEClass, ModelRole.class, "ModelRole", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -724,35 +758,18 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 				this.getPrescriptiveModel_Sociotechnicalsystem(), "prescriptivemodel", null, 0, 1,
 				SocioTechnicalSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(modaEClass, internship.moda.fig1.MODA.class, "MODA", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMODA_Sociotechnicalsystem(), this.getSocioTechnicalSystem(), null, "sociotechnicalsystem",
-				null, 0, 1, internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMODA_Data(), this.getData(), null, "data", null, 0, -1, internship.moda.fig1.MODA.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		initEAttribute(getSocioTechnicalSystem_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				SocioTechnicalSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMODA_Software(), this.getSoftware(), null, "software", null, 0, 1,
-				internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMODA_Name(), ecorePackage.getEString(), "name", null, 0, 1, internship.moda.fig1.MODA.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMODA_Model(), this.getModel(), null, "model", null, 0, -1, internship.moda.fig1.MODA.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMODA_Modelrole(), this.getModelRole(), null, "modelrole", null, 0, -1,
-				internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModel_Modelrole(), this.getModelRole(), this.getModelRole_Model(), "modelrole", null, 0, -1,
 				Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getModel_Name(), ecorePackage.getEString(), "name", null, 0, 1, Model.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(newEnum1EEnum, NewEnum1.class, "NewEnum1");
-
 		initEEnum(dataTypesEEnum, DataTypes.class, "DataTypes");
 		addEEnumLiteral(dataTypesEEnum, DataTypes.INPUT_DATA);
 		addEEnumLiteral(dataTypesEEnum, DataTypes.OUTPUT_DATA);

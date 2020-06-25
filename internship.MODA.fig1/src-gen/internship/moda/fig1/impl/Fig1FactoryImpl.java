@@ -56,6 +56,8 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+		case Fig1Package.MODA:
+			return createMODA();
 		case Fig1Package.DATA:
 			return createData();
 		case Fig1Package.DESCRIPTIVE_MODEL:
@@ -68,8 +70,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 			return createSoftware();
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM:
 			return createSocioTechnicalSystem();
-		case Fig1Package.MODA:
-			return createMODA();
 		case Fig1Package.MODEL:
 			return createModel();
 		default:
@@ -85,8 +85,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case Fig1Package.NEW_ENUM1:
-			return createNewEnum1FromString(eDataType, initialValue);
 		case Fig1Package.DATA_TYPES:
 			return createDataTypesFromString(eDataType, initialValue);
 		default:
@@ -102,8 +100,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case Fig1Package.NEW_ENUM1:
-			return convertNewEnum1ToString(eDataType, instanceValue);
 		case Fig1Package.DATA_TYPES:
 			return convertDataTypesToString(eDataType, instanceValue);
 		default:
@@ -189,28 +185,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	public Model createModel() {
 		ModelImpl model = new ModelImpl();
 		return model;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NewEnum1 createNewEnum1FromString(EDataType eDataType, String initialValue) {
-		NewEnum1 result = NewEnum1.get(initialValue);
-		if (result == null)
-			throw new IllegalArgumentException(
-					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertNewEnum1ToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

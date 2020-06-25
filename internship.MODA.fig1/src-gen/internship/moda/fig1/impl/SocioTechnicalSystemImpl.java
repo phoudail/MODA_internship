@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getData <em>Data</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +58,26 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected PrescriptiveModel prescriptivemodel;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,6 +185,28 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -209,6 +252,8 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 			if (resolve)
 				return getPrescriptivemodel();
 			return basicGetPrescriptivemodel();
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -229,6 +274,9 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
 			setPrescriptivemodel((PrescriptiveModel) newValue);
 			return;
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
+			setName((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -247,6 +295,9 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
 			setPrescriptivemodel((PrescriptiveModel) null);
 			return;
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -263,8 +314,27 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 			return data != null && !data.isEmpty();
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
 			return prescriptivemodel != null;
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //SocioTechnicalSystemImpl
