@@ -19,20 +19,16 @@
     <genClasses ecoreClass="fig1.ecore#//MODA">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/sociotechnicalsystem"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/data"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/software"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//MODA/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/modelrole"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Data">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Data/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Data/dataType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/software"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/sociotechnicalsystem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/modelrole"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//ModelRole">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//ModelRole/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModelRole/model"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModelRole/data"/>
     </genClasses>
@@ -44,7 +40,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PredictiveModel/descriptivemodel"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//PrescriptiveModel">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/software"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/runningSoftware"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/sociotechnicalsystem"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/predictivemodel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/prescriptivemodel"/>
@@ -52,18 +48,19 @@
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Software">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Software/state"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Software/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/data"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/prescriptivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/deployedModel"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//SocioTechnicalSystem">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/data"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/prescriptivemodel"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//SocioTechnicalSystem/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/software"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Model">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Model/modelrole"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//Model/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="fig1.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//AbstractElement/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
