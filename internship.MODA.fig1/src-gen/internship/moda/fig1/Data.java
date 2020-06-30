@@ -2,7 +2,7 @@
  */
 package internship.moda.fig1;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,155 +13,88 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.Data#getName <em>Name</em>}</li>
- *   <li>{@link internship.moda.fig1.Data#getDataType <em>Data Type</em>}</li>
- *   <li>{@link internship.moda.fig1.Data#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.Data#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
- *   <li>{@link internship.moda.fig1.Data#getModelrole <em>Modelrole</em>}</li>
+ *   <li>{@link internship.moda.fig1.Data#getOtherinterplay <em>Otherinterplay</em>}</li>
+ *   <li>{@link internship.moda.fig1.Data#getProcessing <em>Processing</em>}</li>
+ *   <li>{@link internship.moda.fig1.Data#getGeneralization <em>Generalization</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getData()
  * @model
  * @generated
  */
-public interface Data extends EObject {
+public interface Data extends ModaNode {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Otherinterplay</b></em>' reference list.
+	 * The list contents are of type {@link internship.moda.fig1.OtherInterplay}.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.OtherInterplay#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Otherinterplay</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see internship.moda.fig1.Fig1Package#getData_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Data#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Software</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getData <em>Data</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Software</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software</em>' reference.
-	 * @see #setSoftware(Software)
-	 * @see internship.moda.fig1.Fig1Package#getData_Software()
-	 * @see internship.moda.fig1.Software#getData
+	 * @return the value of the '<em>Otherinterplay</em>' reference list.
+	 * @see internship.moda.fig1.Fig1Package#getData_Otherinterplay()
+	 * @see internship.moda.fig1.OtherInterplay#getData
 	 * @model opposite="data"
 	 * @generated
 	 */
-	Software getSoftware();
+	EList<OtherInterplay> getOtherinterplay();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Data#getSoftware <em>Software</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Software</em>' reference.
-	 * @see #getSoftware()
-	 * @generated
-	 */
-	void setSoftware(Software value);
-
-	/**
-	 * Returns the value of the '<em><b>Sociotechnicalsystem</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.SocioTechnicalSystem#getData <em>Data</em>}'.
+	 * Returns the value of the '<em><b>Processing</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.DataPurpose#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sociotechnicalsystem</em>' reference isn't clear,
+	 * If the meaning of the '<em>Processing</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sociotechnicalsystem</em>' reference.
-	 * @see #setSociotechnicalsystem(SocioTechnicalSystem)
-	 * @see internship.moda.fig1.Fig1Package#getData_Sociotechnicalsystem()
-	 * @see internship.moda.fig1.SocioTechnicalSystem#getData
+	 * @return the value of the '<em>Processing</em>' reference.
+	 * @see #setProcessing(DataPurpose)
+	 * @see internship.moda.fig1.Fig1Package#getData_Processing()
+	 * @see internship.moda.fig1.DataPurpose#getData
 	 * @model opposite="data"
 	 * @generated
 	 */
-	SocioTechnicalSystem getSociotechnicalsystem();
+	DataPurpose getProcessing();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Data#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Data#getProcessing <em>Processing</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sociotechnicalsystem</em>' reference.
-	 * @see #getSociotechnicalsystem()
+	 * @param value the new value of the '<em>Processing</em>' reference.
+	 * @see #getProcessing()
 	 * @generated
 	 */
-	void setSociotechnicalsystem(SocioTechnicalSystem value);
+	void setProcessing(DataPurpose value);
 
 	/**
-	 * Returns the value of the '<em><b>Modelrole</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.ModelRole#getData <em>Data</em>}'.
+	 * Returns the value of the '<em><b>Generalization</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generalization#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Modelrole</em>' reference isn't clear,
+	 * If the meaning of the '<em>Generalization</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modelrole</em>' reference.
-	 * @see #setModelrole(ModelRole)
-	 * @see internship.moda.fig1.Fig1Package#getData_Modelrole()
-	 * @see internship.moda.fig1.ModelRole#getData
+	 * @return the value of the '<em>Generalization</em>' reference.
+	 * @see #setGeneralization(Generalization)
+	 * @see internship.moda.fig1.Fig1Package#getData_Generalization()
+	 * @see internship.moda.fig1.Generalization#getData
 	 * @model opposite="data"
 	 * @generated
 	 */
-	ModelRole getModelrole();
+	Generalization getGeneralization();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Data#getModelrole <em>Modelrole</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Data#getGeneralization <em>Generalization</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modelrole</em>' reference.
-	 * @see #getModelrole()
+	 * @param value the new value of the '<em>Generalization</em>' reference.
+	 * @see #getGeneralization()
 	 * @generated
 	 */
-	void setModelrole(ModelRole value);
-
-	/**
-	 * Returns the value of the '<em><b>Data Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link internship.moda.fig1.DataTypes}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Data Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Data Type</em>' attribute.
-	 * @see internship.moda.fig1.DataTypes
-	 * @see #setDataType(DataTypes)
-	 * @see internship.moda.fig1.Fig1Package#getData_DataType()
-	 * @model
-	 * @generated
-	 */
-	DataTypes getDataType();
-
-	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Data#getDataType <em>Data Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Data Type</em>' attribute.
-	 * @see internship.moda.fig1.DataTypes
-	 * @see #getDataType()
-	 * @generated
-	 */
-	void setDataType(DataTypes value);
+	void setGeneralization(Generalization value);
 
 } // Data

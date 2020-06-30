@@ -11,11 +11,10 @@ package internship.moda.fig1;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getPredictivemodel <em>Predictivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodeleOpposite <em>Prescriptivemodele Opposite</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getEnactment <em>Enactment</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getRunningSoftware <em>Running Software</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getAnalysisResult <em>Analysis Result</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getGeneration <em>Generation</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel()
@@ -24,143 +23,115 @@ package internship.moda.fig1;
  */
 public interface PrescriptiveModel extends ModelRole {
 	/**
-	 * Returns the value of the '<em><b>Software</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Enactment</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Enactment#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Software</em>' reference isn't clear,
+	 * If the meaning of the '<em>Enactment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software</em>' reference.
-	 * @see #setSoftware(Software)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Software()
-	 * @see internship.moda.fig1.Software#getPrescriptivemodel
+	 * @return the value of the '<em>Enactment</em>' reference.
+	 * @see #setEnactment(Enactment)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Enactment()
+	 * @see internship.moda.fig1.Enactment#getPrescriptivemodel
 	 * @model opposite="prescriptivemodel"
 	 * @generated
 	 */
-	Software getSoftware();
+	Enactment getEnactment();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getSoftware <em>Software</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getEnactment <em>Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Software</em>' reference.
-	 * @see #getSoftware()
+	 * @param value the new value of the '<em>Enactment</em>' reference.
+	 * @see #getEnactment()
 	 * @generated
 	 */
-	void setSoftware(Software value);
+	void setEnactment(Enactment value);
 
 	/**
-	 * Returns the value of the '<em><b>Sociotechnicalsystem</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.SocioTechnicalSystem#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Running Software</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Deployment#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sociotechnicalsystem</em>' reference isn't clear,
+	 * If the meaning of the '<em>Running Software</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sociotechnicalsystem</em>' reference.
-	 * @see #setSociotechnicalsystem(SocioTechnicalSystem)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Sociotechnicalsystem()
-	 * @see internship.moda.fig1.SocioTechnicalSystem#getPrescriptivemodel
+	 * @return the value of the '<em>Running Software</em>' reference.
+	 * @see #setRunningSoftware(Deployment)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_RunningSoftware()
+	 * @see internship.moda.fig1.Deployment#getPrescriptivemodel
 	 * @model opposite="prescriptivemodel"
 	 * @generated
 	 */
-	SocioTechnicalSystem getSociotechnicalsystem();
+	Deployment getRunningSoftware();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getRunningSoftware <em>Running Software</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sociotechnicalsystem</em>' reference.
-	 * @see #getSociotechnicalsystem()
+	 * @param value the new value of the '<em>Running Software</em>' reference.
+	 * @see #getRunningSoftware()
 	 * @generated
 	 */
-	void setSociotechnicalsystem(SocioTechnicalSystem value);
+	void setRunningSoftware(Deployment value);
 
 	/**
-	 * Returns the value of the '<em><b>Predictivemodel</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PredictiveModel#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Analysis Result</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Analysis#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Predictivemodel</em>' reference isn't clear,
+	 * If the meaning of the '<em>Analysis Result</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Predictivemodel</em>' reference.
-	 * @see #setPredictivemodel(PredictiveModel)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Predictivemodel()
-	 * @see internship.moda.fig1.PredictiveModel#getPrescriptivemodel
+	 * @return the value of the '<em>Analysis Result</em>' reference.
+	 * @see #setAnalysisResult(Analysis)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_AnalysisResult()
+	 * @see internship.moda.fig1.Analysis#getPrescriptivemodel
 	 * @model opposite="prescriptivemodel"
 	 * @generated
 	 */
-	PredictiveModel getPredictivemodel();
+	Analysis getAnalysisResult();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getPredictivemodel <em>Predictivemodel</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getAnalysisResult <em>Analysis Result</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Predictivemodel</em>' reference.
-	 * @see #getPredictivemodel()
+	 * @param value the new value of the '<em>Analysis Result</em>' reference.
+	 * @see #getAnalysisResult()
 	 * @generated
 	 */
-	void setPredictivemodel(PredictiveModel value);
+	void setAnalysisResult(Analysis value);
 
 	/**
-	 * Returns the value of the '<em><b>Prescriptivemodel</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodeleOpposite <em>Prescriptivemodele Opposite</em>}'.
+	 * Returns the value of the '<em><b>Generation</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generation#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescriptivemodel</em>' reference isn't clear,
+	 * If the meaning of the '<em>Generation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #setPrescriptivemodel(PrescriptiveModel)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Prescriptivemodel()
-	 * @see internship.moda.fig1.PrescriptiveModel#getPrescriptivemodeleOpposite
-	 * @model opposite="prescriptivemodeleOpposite"
-	 * @generated
-	 */
-	PrescriptiveModel getPrescriptivemodel();
-
-	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodel <em>Prescriptivemodel</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #getPrescriptivemodel()
-	 * @generated
-	 */
-	void setPrescriptivemodel(PrescriptiveModel value);
-
-	/**
-	 * Returns the value of the '<em><b>Prescriptivemodele Opposite</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Prescriptivemodele Opposite</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptivemodele Opposite</em>' reference.
-	 * @see #setPrescriptivemodeleOpposite(PrescriptiveModel)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_PrescriptivemodeleOpposite()
-	 * @see internship.moda.fig1.PrescriptiveModel#getPrescriptivemodel
+	 * @return the value of the '<em>Generation</em>' reference.
+	 * @see #setGeneration(Generation)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Generation()
+	 * @see internship.moda.fig1.Generation#getPrescriptivemodel
 	 * @model opposite="prescriptivemodel"
 	 * @generated
 	 */
-	PrescriptiveModel getPrescriptivemodeleOpposite();
+	Generation getGeneration();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getPrescriptivemodeleOpposite <em>Prescriptivemodele Opposite</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getGeneration <em>Generation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescriptivemodele Opposite</em>' reference.
-	 * @see #getPrescriptivemodeleOpposite()
+	 * @param value the new value of the '<em>Generation</em>' reference.
+	 * @see #getGeneration()
 	 * @generated
 	 */
-	void setPrescriptivemodeleOpposite(PrescriptiveModel value);
+	void setGeneration(Generation value);
 
 } // PrescriptiveModel

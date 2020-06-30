@@ -2,6 +2,7 @@
  */
 package internship.moda.fig1.provider;
 
+import internship.moda.fig1.Fig1Factory;
 import internship.moda.fig1.Fig1Package;
 
 import internship.moda.fig1.SocioTechnicalSystem;
@@ -10,18 +11,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -30,8 +22,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SocioTechnicalSystemItemProvider extends ModaNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -53,57 +44,70 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDataPropertyDescriptor(object);
-			addPrescriptivemodelPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
+			addOtherinterplayPropertyDescriptor(object);
+			addEnactmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Data feature.
+	 * This adds a property descriptor for the Otherinterplay feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDataPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SocioTechnicalSystem_data_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_data_feature",
-								"_UI_SocioTechnicalSystem_type"),
-						Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__DATA, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
+	protected void addOtherinterplayPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_SocioTechnicalSystem_prescriptivemodel_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_prescriptivemodel_feature",
+				getString("_UI_SocioTechnicalSystem_otherinterplay_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_otherinterplay_feature",
 						"_UI_SocioTechnicalSystem_type"),
-				Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
+				Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Enactment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addEnactmentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SocioTechnicalSystem_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_name_feature",
+						getResourceLocator(), getString("_UI_SocioTechnicalSystem_enactment_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_enactment_feature",
 								"_UI_SocioTechnicalSystem_type"),
-						Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__SOFTWARE);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -152,8 +156,8 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(SocioTechnicalSystem.class)) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -169,17 +173,9 @@ public class SocioTechnicalSystemItemProvider extends ItemProviderAdapter implem
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return Fig1EditPlugin.INSTANCE;
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__SOFTWARE,
+				Fig1Factory.eINSTANCE.createSoftware()));
 	}
 
 }

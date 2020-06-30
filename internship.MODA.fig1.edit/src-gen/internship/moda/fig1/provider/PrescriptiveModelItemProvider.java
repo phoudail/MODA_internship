@@ -42,89 +42,72 @@ public class PrescriptiveModelItemProvider extends ModelRoleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSoftwarePropertyDescriptor(object);
-			addSociotechnicalsystemPropertyDescriptor(object);
-			addPredictivemodelPropertyDescriptor(object);
-			addPrescriptivemodelPropertyDescriptor(object);
-			addPrescriptivemodeleOppositePropertyDescriptor(object);
+			addEnactmentPropertyDescriptor(object);
+			addRunningSoftwarePropertyDescriptor(object);
+			addAnalysisResultPropertyDescriptor(object);
+			addGenerationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Software feature.
+	 * This adds a property descriptor for the Enactment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSoftwarePropertyDescriptor(Object object) {
+	protected void addEnactmentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PrescriptiveModel_software_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_software_feature",
+						getResourceLocator(), getString("_UI_PrescriptiveModel_enactment_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_enactment_feature",
 								"_UI_PrescriptiveModel_type"),
-						Fig1Package.Literals.PRESCRIPTIVE_MODEL__SOFTWARE, true, false, true, null, null, null));
+						Fig1Package.Literals.PRESCRIPTIVE_MODEL__ENACTMENT, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Sociotechnicalsystem feature.
+	 * This adds a property descriptor for the Running Software feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSociotechnicalsystemPropertyDescriptor(Object object) {
+	protected void addRunningSoftwarePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PrescriptiveModel_sociotechnicalsystem_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_sociotechnicalsystem_feature",
+				getString("_UI_PrescriptiveModel_runningSoftware_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_runningSoftware_feature",
 						"_UI_PrescriptiveModel_type"),
-				Fig1Package.Literals.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM, true, false, true, null, null, null));
+				Fig1Package.Literals.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Predictivemodel feature.
+	 * This adds a property descriptor for the Analysis Result feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPredictivemodelPropertyDescriptor(Object object) {
+	protected void addAnalysisResultPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PrescriptiveModel_predictivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_predictivemodel_feature",
+						getResourceLocator(), getString("_UI_PrescriptiveModel_analysisResult_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_analysisResult_feature",
 								"_UI_PrescriptiveModel_type"),
-						Fig1Package.Literals.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
+	 * This adds a property descriptor for the Generation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PrescriptiveModel_prescriptivemodel_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_prescriptivemodel_feature",
-						"_UI_PrescriptiveModel_type"),
-				Fig1Package.Literals.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Prescriptivemodele Opposite feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrescriptivemodeleOppositePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PrescriptiveModel_prescriptivemodeleOpposite_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_PrescriptiveModel_prescriptivemodeleOpposite_feature", "_UI_PrescriptiveModel_type"),
-				Fig1Package.Literals.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, true, false, true, null, null,
-				null));
+	protected void addGenerationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_PrescriptiveModel_generation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_generation_feature",
+								"_UI_PrescriptiveModel_type"),
+						Fig1Package.Literals.PRESCRIPTIVE_MODEL__GENERATION, true, false, true, null, null, null));
 	}
 
 	/**

@@ -94,6 +94,78 @@ public interface Fig1Factory extends EFactory {
 	Model createModel();
 
 	/**
+	 * Returns a new object of class '<em>Other Interplay</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Other Interplay</em>'.
+	 * @generated
+	 */
+	OtherInterplay createOtherInterplay();
+
+	/**
+	 * Returns a new object of class '<em>Data Purpose</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Purpose</em>'.
+	 * @generated
+	 */
+	DataPurpose createDataPurpose();
+
+	/**
+	 * Returns a new object of class '<em>Enactment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Enactment</em>'.
+	 * @generated
+	 */
+	Enactment createEnactment();
+
+	/**
+	 * Returns a new object of class '<em>Deployment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Deployment</em>'.
+	 * @generated
+	 */
+	Deployment createDeployment();
+
+	/**
+	 * Returns a new object of class '<em>Preparation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Preparation</em>'.
+	 * @generated
+	 */
+	Preparation createPreparation();
+
+	/**
+	 * Returns a new object of class '<em>Analysis</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Analysis</em>'.
+	 * @generated
+	 */
+	Analysis createAnalysis();
+
+	/**
+	 * Returns a new object of class '<em>Generation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generation</em>'.
+	 * @generated
+	 */
+	Generation createGeneration();
+
+	/**
+	 * Returns a new object of class '<em>Generalization</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Generalization</em>'.
+	 * @generated
+	 */
+	Generalization createGeneralization();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

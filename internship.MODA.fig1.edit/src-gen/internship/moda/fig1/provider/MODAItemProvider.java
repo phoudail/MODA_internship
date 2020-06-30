@@ -11,20 +11,10 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -33,8 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MODAItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MODAItemProvider extends ModaNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -58,7 +47,6 @@ public class MODAItemProvider extends ItemProviderAdapter implements IEditingDom
 
 			addSociotechnicalsystemPropertyDescriptor(object);
 			addDataPropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -93,21 +81,6 @@ public class MODAItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MODA_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_MODA_name_feature", "_UI_MODA_type"),
-						Fig1Package.Literals.MODA__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-						null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -121,9 +94,9 @@ public class MODAItemProvider extends ItemProviderAdapter implements IEditingDom
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(Fig1Package.Literals.MODA__SOCIOTECHNICALSYSTEM);
 			childrenFeatures.add(Fig1Package.Literals.MODA__DATA);
-			childrenFeatures.add(Fig1Package.Literals.MODA__SOFTWARE);
 			childrenFeatures.add(Fig1Package.Literals.MODA__MODEL);
 			childrenFeatures.add(Fig1Package.Literals.MODA__MODELROLE);
+			childrenFeatures.add(Fig1Package.Literals.MODA__ABSTRACTRELATION);
 		}
 		return childrenFeatures;
 	}
@@ -187,14 +160,11 @@ public class MODAItemProvider extends ItemProviderAdapter implements IEditingDom
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MODA.class)) {
-		case Fig1Package.MODA__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
 		case Fig1Package.MODA__SOCIOTECHNICALSYSTEM:
 		case Fig1Package.MODA__DATA:
-		case Fig1Package.MODA__SOFTWARE:
 		case Fig1Package.MODA__MODEL:
 		case Fig1Package.MODA__MODELROLE:
+		case Fig1Package.MODA__ABSTRACTRELATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -219,9 +189,6 @@ public class MODAItemProvider extends ItemProviderAdapter implements IEditingDom
 				.add(createChildParameter(Fig1Package.Literals.MODA__DATA, Fig1Factory.eINSTANCE.createData()));
 
 		newChildDescriptors
-				.add(createChildParameter(Fig1Package.Literals.MODA__SOFTWARE, Fig1Factory.eINSTANCE.createSoftware()));
-
-		newChildDescriptors
 				.add(createChildParameter(Fig1Package.Literals.MODA__MODEL, Fig1Factory.eINSTANCE.createModel()));
 
 		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__MODELROLE,
@@ -232,17 +199,30 @@ public class MODAItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__MODELROLE,
 				Fig1Factory.eINSTANCE.createPrescriptiveModel()));
-	}
 
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return Fig1EditPlugin.INSTANCE;
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createOtherInterplay()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createDataPurpose()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createEnactment()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createDeployment()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createPreparation()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createAnalysis()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createGeneration()));
+
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+				Fig1Factory.eINSTANCE.createGeneralization()));
 	}
 
 }

@@ -4,8 +4,7 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.PredictiveModel;
-
+import internship.moda.fig1.Preparation;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,21 +21,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.DescriptiveModelImpl#getPredictivemodel <em>Predictivemodel</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DescriptiveModelImpl#getPreparation <em>Preparation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveModel {
 	/**
-	 * The cached value of the '{@link #getPredictivemodel() <em>Predictivemodel</em>}' reference.
+	 * The cached value of the '{@link #getPreparation() <em>Preparation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPredictivemodel()
+	 * @see #getPreparation()
 	 * @generated
 	 * @ordered
 	 */
-	protected PredictiveModel predictivemodel;
+	protected Preparation preparation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,17 +61,17 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel getPredictivemodel() {
-		if (predictivemodel != null && predictivemodel.eIsProxy()) {
-			InternalEObject oldPredictivemodel = (InternalEObject) predictivemodel;
-			predictivemodel = (PredictiveModel) eResolveProxy(oldPredictivemodel);
-			if (predictivemodel != oldPredictivemodel) {
+	public Preparation getPreparation() {
+		if (preparation != null && preparation.eIsProxy()) {
+			InternalEObject oldPreparation = (InternalEObject) preparation;
+			preparation = (Preparation) eResolveProxy(oldPreparation);
+			if (preparation != oldPreparation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL, oldPredictivemodel, predictivemodel));
+							Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, oldPreparation, preparation));
 			}
 		}
-		return predictivemodel;
+		return preparation;
 	}
 
 	/**
@@ -80,8 +79,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel basicGetPredictivemodel() {
-		return predictivemodel;
+	public Preparation basicGetPreparation() {
+		return preparation;
 	}
 
 	/**
@@ -89,12 +88,12 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPredictivemodel(PredictiveModel newPredictivemodel, NotificationChain msgs) {
-		PredictiveModel oldPredictivemodel = predictivemodel;
-		predictivemodel = newPredictivemodel;
+	public NotificationChain basicSetPreparation(Preparation newPreparation, NotificationChain msgs) {
+		Preparation oldPreparation = preparation;
+		preparation = newPreparation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL, oldPredictivemodel, newPredictivemodel);
+					Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, oldPreparation, newPreparation);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -108,21 +107,21 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPredictivemodel(PredictiveModel newPredictivemodel) {
-		if (newPredictivemodel != predictivemodel) {
+	public void setPreparation(Preparation newPreparation) {
+		if (newPreparation != preparation) {
 			NotificationChain msgs = null;
-			if (predictivemodel != null)
-				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, PredictiveModel.class, msgs);
-			if (newPredictivemodel != null)
-				msgs = ((InternalEObject) newPredictivemodel).eInverseAdd(this,
-						Fig1Package.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, PredictiveModel.class, msgs);
-			msgs = basicSetPredictivemodel(newPredictivemodel, msgs);
+			if (preparation != null)
+				msgs = ((InternalEObject) preparation).eInverseRemove(this, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
+						Preparation.class, msgs);
+			if (newPreparation != null)
+				msgs = ((InternalEObject) newPreparation).eInverseAdd(this, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
+						Preparation.class, msgs);
+			msgs = basicSetPreparation(newPreparation, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL,
-					newPredictivemodel, newPredictivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DESCRIPTIVE_MODEL__PREPARATION,
+					newPreparation, newPreparation));
 	}
 
 	/**
@@ -133,11 +132,11 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			if (predictivemodel != null)
-				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, PredictiveModel.class, msgs);
-			return basicSetPredictivemodel((PredictiveModel) otherEnd, msgs);
+		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
+			if (preparation != null)
+				msgs = ((InternalEObject) preparation).eInverseRemove(this, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
+						Preparation.class, msgs);
+			return basicSetPreparation((Preparation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,8 +149,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			return basicSetPredictivemodel(null, msgs);
+		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
+			return basicSetPreparation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,10 +163,10 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
 			if (resolve)
-				return getPredictivemodel();
-			return basicGetPredictivemodel();
+				return getPreparation();
+			return basicGetPreparation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,8 +179,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			setPredictivemodel((PredictiveModel) newValue);
+		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
+			setPreparation((Preparation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,8 +194,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			setPredictivemodel((PredictiveModel) null);
+		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
+			setPreparation((Preparation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -210,8 +209,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			return predictivemodel != null;
+		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
+			return preparation != null;
 		}
 		return super.eIsSet(featureID);
 	}

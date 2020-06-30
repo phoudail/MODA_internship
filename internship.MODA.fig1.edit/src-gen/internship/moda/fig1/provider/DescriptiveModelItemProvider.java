@@ -42,24 +42,24 @@ public class DescriptiveModelItemProvider extends ModelRoleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPredictivemodelPropertyDescriptor(object);
+			addPreparationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Predictivemodel feature.
+	 * This adds a property descriptor for the Preparation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPredictivemodelPropertyDescriptor(Object object) {
+	protected void addPreparationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DescriptiveModel_predictivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DescriptiveModel_predictivemodel_feature",
+						getResourceLocator(), getString("_UI_DescriptiveModel_preparation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DescriptiveModel_preparation_feature",
 								"_UI_DescriptiveModel_type"),
-						Fig1Package.Literals.DESCRIPTIVE_MODEL__PREDICTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.DESCRIPTIVE_MODEL__PREPARATION, true, false, true, null, null, null));
 	}
 
 	/**

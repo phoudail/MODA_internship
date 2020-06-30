@@ -2,12 +2,12 @@
  */
 package internship.moda.fig1.impl;
 
+import internship.moda.fig1.Analysis;
+import internship.moda.fig1.Deployment;
+import internship.moda.fig1.Enactment;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.PredictiveModel;
+import internship.moda.fig1.Generation;
 import internship.moda.fig1.PrescriptiveModel;
-import internship.moda.fig1.SocioTechnicalSystem;
-import internship.moda.fig1.Software;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -24,65 +24,54 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getPredictivemodel <em>Predictivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getPrescriptivemodeleOpposite <em>Prescriptivemodele Opposite</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getEnactment <em>Enactment</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getRunningSoftware <em>Running Software</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getAnalysisResult <em>Analysis Result</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getGeneration <em>Generation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PrescriptiveModelImpl extends ModelRoleImpl implements PrescriptiveModel {
 	/**
-	 * The cached value of the '{@link #getSoftware() <em>Software</em>}' reference.
+	 * The cached value of the '{@link #getEnactment() <em>Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSoftware()
+	 * @see #getEnactment()
 	 * @generated
 	 * @ordered
 	 */
-	protected Software software;
+	protected Enactment enactment;
 
 	/**
-	 * The cached value of the '{@link #getSociotechnicalsystem() <em>Sociotechnicalsystem</em>}' reference.
+	 * The cached value of the '{@link #getRunningSoftware() <em>Running Software</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSociotechnicalsystem()
+	 * @see #getRunningSoftware()
 	 * @generated
 	 * @ordered
 	 */
-	protected SocioTechnicalSystem sociotechnicalsystem;
+	protected Deployment runningSoftware;
 
 	/**
-	 * The cached value of the '{@link #getPredictivemodel() <em>Predictivemodel</em>}' reference.
+	 * The cached value of the '{@link #getAnalysisResult() <em>Analysis Result</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPredictivemodel()
+	 * @see #getAnalysisResult()
 	 * @generated
 	 * @ordered
 	 */
-	protected PredictiveModel predictivemodel;
+	protected Analysis analysisResult;
 
 	/**
-	 * The cached value of the '{@link #getPrescriptivemodel() <em>Prescriptivemodel</em>}' reference.
+	 * The cached value of the '{@link #getGeneration() <em>Generation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescriptivemodel()
+	 * @see #getGeneration()
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel prescriptivemodel;
-
-	/**
-	 * The cached value of the '{@link #getPrescriptivemodeleOpposite() <em>Prescriptivemodele Opposite</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrescriptivemodeleOpposite()
-	 * @generated
-	 * @ordered
-	 */
-	protected PrescriptiveModel prescriptivemodeleOpposite;
+	protected Generation generation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -108,17 +97,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Software getSoftware() {
-		if (software != null && software.eIsProxy()) {
-			InternalEObject oldSoftware = (InternalEObject) software;
-			software = (Software) eResolveProxy(oldSoftware);
-			if (software != oldSoftware) {
+	public Enactment getEnactment() {
+		if (enactment != null && enactment.eIsProxy()) {
+			InternalEObject oldEnactment = (InternalEObject) enactment;
+			enactment = (Enactment) eResolveProxy(oldEnactment);
+			if (enactment != oldEnactment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE,
-							oldSoftware, software));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT,
+							oldEnactment, enactment));
 			}
 		}
-		return software;
+		return enactment;
 	}
 
 	/**
@@ -126,8 +115,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Software basicGetSoftware() {
-		return software;
+	public Enactment basicGetEnactment() {
+		return enactment;
 	}
 
 	/**
@@ -135,12 +124,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSoftware(Software newSoftware, NotificationChain msgs) {
-		Software oldSoftware = software;
-		software = newSoftware;
+	public NotificationChain basicSetEnactment(Enactment newEnactment, NotificationChain msgs) {
+		Enactment oldEnactment = enactment;
+		enactment = newEnactment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE, oldSoftware, newSoftware);
+					Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT, oldEnactment, newEnactment);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -154,21 +143,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSoftware(Software newSoftware) {
-		if (newSoftware != software) {
+	public void setEnactment(Enactment newEnactment) {
+		if (newEnactment != enactment) {
 			NotificationChain msgs = null;
-			if (software != null)
-				msgs = ((InternalEObject) software).eInverseRemove(this, Fig1Package.SOFTWARE__PRESCRIPTIVEMODEL,
-						Software.class, msgs);
-			if (newSoftware != null)
-				msgs = ((InternalEObject) newSoftware).eInverseAdd(this, Fig1Package.SOFTWARE__PRESCRIPTIVEMODEL,
-						Software.class, msgs);
-			msgs = basicSetSoftware(newSoftware, msgs);
+			if (enactment != null)
+				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
+						Enactment.class, msgs);
+			if (newEnactment != null)
+				msgs = ((InternalEObject) newEnactment).eInverseAdd(this, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
+						Enactment.class, msgs);
+			msgs = basicSetEnactment(newEnactment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE, newSoftware,
-					newSoftware));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT,
+					newEnactment, newEnactment));
 	}
 
 	/**
@@ -176,88 +165,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SocioTechnicalSystem getSociotechnicalsystem() {
-		if (sociotechnicalsystem != null && sociotechnicalsystem.eIsProxy()) {
-			InternalEObject oldSociotechnicalsystem = (InternalEObject) sociotechnicalsystem;
-			sociotechnicalsystem = (SocioTechnicalSystem) eResolveProxy(oldSociotechnicalsystem);
-			if (sociotechnicalsystem != oldSociotechnicalsystem) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM, oldSociotechnicalsystem,
-							sociotechnicalsystem));
-			}
-		}
-		return sociotechnicalsystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SocioTechnicalSystem basicGetSociotechnicalsystem() {
-		return sociotechnicalsystem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSociotechnicalsystem(SocioTechnicalSystem newSociotechnicalsystem,
-			NotificationChain msgs) {
-		SocioTechnicalSystem oldSociotechnicalsystem = sociotechnicalsystem;
-		sociotechnicalsystem = newSociotechnicalsystem;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM, oldSociotechnicalsystem,
-					newSociotechnicalsystem);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSociotechnicalsystem(SocioTechnicalSystem newSociotechnicalsystem) {
-		if (newSociotechnicalsystem != sociotechnicalsystem) {
-			NotificationChain msgs = null;
-			if (sociotechnicalsystem != null)
-				msgs = ((InternalEObject) sociotechnicalsystem).eInverseRemove(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL, SocioTechnicalSystem.class, msgs);
-			if (newSociotechnicalsystem != null)
-				msgs = ((InternalEObject) newSociotechnicalsystem).eInverseAdd(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL, SocioTechnicalSystem.class, msgs);
-			msgs = basicSetSociotechnicalsystem(newSociotechnicalsystem, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM,
-					newSociotechnicalsystem, newSociotechnicalsystem));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PredictiveModel getPredictivemodel() {
-		if (predictivemodel != null && predictivemodel.eIsProxy()) {
-			InternalEObject oldPredictivemodel = (InternalEObject) predictivemodel;
-			predictivemodel = (PredictiveModel) eResolveProxy(oldPredictivemodel);
-			if (predictivemodel != oldPredictivemodel) {
+	public Deployment getRunningSoftware() {
+		if (runningSoftware != null && runningSoftware.eIsProxy()) {
+			InternalEObject oldRunningSoftware = (InternalEObject) runningSoftware;
+			runningSoftware = (Deployment) eResolveProxy(oldRunningSoftware);
+			if (runningSoftware != oldRunningSoftware) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL, oldPredictivemodel, predictivemodel));
+							Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, oldRunningSoftware, runningSoftware));
 			}
 		}
-		return predictivemodel;
+		return runningSoftware;
 	}
 
 	/**
@@ -265,8 +183,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel basicGetPredictivemodel() {
-		return predictivemodel;
+	public Deployment basicGetRunningSoftware() {
+		return runningSoftware;
 	}
 
 	/**
@@ -274,12 +192,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPredictivemodel(PredictiveModel newPredictivemodel, NotificationChain msgs) {
-		PredictiveModel oldPredictivemodel = predictivemodel;
-		predictivemodel = newPredictivemodel;
+	public NotificationChain basicSetRunningSoftware(Deployment newRunningSoftware, NotificationChain msgs) {
+		Deployment oldRunningSoftware = runningSoftware;
+		runningSoftware = newRunningSoftware;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL, oldPredictivemodel, newPredictivemodel);
+					Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, oldRunningSoftware, newRunningSoftware);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -293,21 +211,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPredictivemodel(PredictiveModel newPredictivemodel) {
-		if (newPredictivemodel != predictivemodel) {
+	public void setRunningSoftware(Deployment newRunningSoftware) {
+		if (newRunningSoftware != runningSoftware) {
 			NotificationChain msgs = null;
-			if (predictivemodel != null)
-				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__PRESCRIPTIVEMODEL, PredictiveModel.class, msgs);
-			if (newPredictivemodel != null)
-				msgs = ((InternalEObject) newPredictivemodel).eInverseAdd(this,
-						Fig1Package.PREDICTIVE_MODEL__PRESCRIPTIVEMODEL, PredictiveModel.class, msgs);
-			msgs = basicSetPredictivemodel(newPredictivemodel, msgs);
+			if (runningSoftware != null)
+				msgs = ((InternalEObject) runningSoftware).eInverseRemove(this,
+						Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, Deployment.class, msgs);
+			if (newRunningSoftware != null)
+				msgs = ((InternalEObject) newRunningSoftware).eInverseAdd(this,
+						Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, Deployment.class, msgs);
+			msgs = basicSetRunningSoftware(newRunningSoftware, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL,
-					newPredictivemodel, newPredictivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE,
+					newRunningSoftware, newRunningSoftware));
 	}
 
 	/**
@@ -315,18 +233,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getPrescriptivemodel() {
-		if (prescriptivemodel != null && prescriptivemodel.eIsProxy()) {
-			InternalEObject oldPrescriptivemodel = (InternalEObject) prescriptivemodel;
-			prescriptivemodel = (PrescriptiveModel) eResolveProxy(oldPrescriptivemodel);
-			if (prescriptivemodel != oldPrescriptivemodel) {
+	public Analysis getAnalysisResult() {
+		if (analysisResult != null && analysisResult.eIsProxy()) {
+			InternalEObject oldAnalysisResult = (InternalEObject) analysisResult;
+			analysisResult = (Analysis) eResolveProxy(oldAnalysisResult);
+			if (analysisResult != oldAnalysisResult) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL, oldPrescriptivemodel,
-							prescriptivemodel));
+							Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, oldAnalysisResult, analysisResult));
 			}
 		}
-		return prescriptivemodel;
+		return analysisResult;
 	}
 
 	/**
@@ -334,8 +251,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetPrescriptivemodel() {
-		return prescriptivemodel;
+	public Analysis basicGetAnalysisResult() {
+		return analysisResult;
 	}
 
 	/**
@@ -343,12 +260,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescriptivemodel(PrescriptiveModel newPrescriptivemodel, NotificationChain msgs) {
-		PrescriptiveModel oldPrescriptivemodel = prescriptivemodel;
-		prescriptivemodel = newPrescriptivemodel;
+	public NotificationChain basicSetAnalysisResult(Analysis newAnalysisResult, NotificationChain msgs) {
+		Analysis oldAnalysisResult = analysisResult;
+		analysisResult = newAnalysisResult;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL, oldPrescriptivemodel, newPrescriptivemodel);
+					Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, oldAnalysisResult, newAnalysisResult);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -362,21 +279,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescriptivemodel(PrescriptiveModel newPrescriptivemodel) {
-		if (newPrescriptivemodel != prescriptivemodel) {
+	public void setAnalysisResult(Analysis newAnalysisResult) {
+		if (newAnalysisResult != analysisResult) {
 			NotificationChain msgs = null;
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, PrescriptiveModel.class, msgs);
-			if (newPrescriptivemodel != null)
-				msgs = ((InternalEObject) newPrescriptivemodel).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, PrescriptiveModel.class, msgs);
-			msgs = basicSetPrescriptivemodel(newPrescriptivemodel, msgs);
+			if (analysisResult != null)
+				msgs = ((InternalEObject) analysisResult).eInverseRemove(this, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
+						Analysis.class, msgs);
+			if (newAnalysisResult != null)
+				msgs = ((InternalEObject) newAnalysisResult).eInverseAdd(this, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
+						Analysis.class, msgs);
+			msgs = basicSetAnalysisResult(newAnalysisResult, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL,
-					newPrescriptivemodel, newPrescriptivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT,
+					newAnalysisResult, newAnalysisResult));
 	}
 
 	/**
@@ -384,18 +301,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getPrescriptivemodeleOpposite() {
-		if (prescriptivemodeleOpposite != null && prescriptivemodeleOpposite.eIsProxy()) {
-			InternalEObject oldPrescriptivemodeleOpposite = (InternalEObject) prescriptivemodeleOpposite;
-			prescriptivemodeleOpposite = (PrescriptiveModel) eResolveProxy(oldPrescriptivemodeleOpposite);
-			if (prescriptivemodeleOpposite != oldPrescriptivemodeleOpposite) {
+	public Generation getGeneration() {
+		if (generation != null && generation.eIsProxy()) {
+			InternalEObject oldGeneration = (InternalEObject) generation;
+			generation = (Generation) eResolveProxy(oldGeneration);
+			if (generation != oldGeneration) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, oldPrescriptivemodeleOpposite,
-							prescriptivemodeleOpposite));
+							Fig1Package.PRESCRIPTIVE_MODEL__GENERATION, oldGeneration, generation));
 			}
 		}
-		return prescriptivemodeleOpposite;
+		return generation;
 	}
 
 	/**
@@ -403,8 +319,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetPrescriptivemodeleOpposite() {
-		return prescriptivemodeleOpposite;
+	public Generation basicGetGeneration() {
+		return generation;
 	}
 
 	/**
@@ -412,14 +328,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescriptivemodeleOpposite(PrescriptiveModel newPrescriptivemodeleOpposite,
-			NotificationChain msgs) {
-		PrescriptiveModel oldPrescriptivemodeleOpposite = prescriptivemodeleOpposite;
-		prescriptivemodeleOpposite = newPrescriptivemodeleOpposite;
+	public NotificationChain basicSetGeneration(Generation newGeneration, NotificationChain msgs) {
+		Generation oldGeneration = generation;
+		generation = newGeneration;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, oldPrescriptivemodeleOpposite,
-					newPrescriptivemodeleOpposite);
+					Fig1Package.PRESCRIPTIVE_MODEL__GENERATION, oldGeneration, newGeneration);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -433,22 +347,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescriptivemodeleOpposite(PrescriptiveModel newPrescriptivemodeleOpposite) {
-		if (newPrescriptivemodeleOpposite != prescriptivemodeleOpposite) {
+	public void setGeneration(Generation newGeneration) {
+		if (newGeneration != generation) {
 			NotificationChain msgs = null;
-			if (prescriptivemodeleOpposite != null)
-				msgs = ((InternalEObject) prescriptivemodeleOpposite).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL, PrescriptiveModel.class, msgs);
-			if (newPrescriptivemodeleOpposite != null)
-				msgs = ((InternalEObject) newPrescriptivemodeleOpposite).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL, PrescriptiveModel.class, msgs);
-			msgs = basicSetPrescriptivemodeleOpposite(newPrescriptivemodeleOpposite, msgs);
+			if (generation != null)
+				msgs = ((InternalEObject) generation).eInverseRemove(this, Fig1Package.GENERATION__PRESCRIPTIVEMODEL,
+						Generation.class, msgs);
+			if (newGeneration != null)
+				msgs = ((InternalEObject) newGeneration).eInverseAdd(this, Fig1Package.GENERATION__PRESCRIPTIVEMODEL,
+						Generation.class, msgs);
+			msgs = basicSetGeneration(newGeneration, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, newPrescriptivemodeleOpposite,
-					newPrescriptivemodeleOpposite));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__GENERATION,
+					newGeneration, newGeneration));
 	}
 
 	/**
@@ -459,31 +372,26 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE:
-			if (software != null)
-				msgs = ((InternalEObject) software).eInverseRemove(this, Fig1Package.SOFTWARE__PRESCRIPTIVEMODEL,
-						Software.class, msgs);
-			return basicSetSoftware((Software) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM:
-			if (sociotechnicalsystem != null)
-				msgs = ((InternalEObject) sociotechnicalsystem).eInverseRemove(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL, SocioTechnicalSystem.class, msgs);
-			return basicSetSociotechnicalsystem((SocioTechnicalSystem) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			if (predictivemodel != null)
-				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__PRESCRIPTIVEMODEL, PredictiveModel.class, msgs);
-			return basicSetPredictivemodel((PredictiveModel) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL:
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE, PrescriptiveModel.class, msgs);
-			return basicSetPrescriptivemodel((PrescriptiveModel) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE:
-			if (prescriptivemodeleOpposite != null)
-				msgs = ((InternalEObject) prescriptivemodeleOpposite).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL, PrescriptiveModel.class, msgs);
-			return basicSetPrescriptivemodeleOpposite((PrescriptiveModel) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
+			if (enactment != null)
+				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
+						Enactment.class, msgs);
+			return basicSetEnactment((Enactment) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
+			if (runningSoftware != null)
+				msgs = ((InternalEObject) runningSoftware).eInverseRemove(this,
+						Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, Deployment.class, msgs);
+			return basicSetRunningSoftware((Deployment) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
+			if (analysisResult != null)
+				msgs = ((InternalEObject) analysisResult).eInverseRemove(this, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
+						Analysis.class, msgs);
+			return basicSetAnalysisResult((Analysis) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
+			if (generation != null)
+				msgs = ((InternalEObject) generation).eInverseRemove(this, Fig1Package.GENERATION__PRESCRIPTIVEMODEL,
+						Generation.class, msgs);
+			return basicSetGeneration((Generation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -496,16 +404,14 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE:
-			return basicSetSoftware(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM:
-			return basicSetSociotechnicalsystem(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			return basicSetPredictivemodel(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL:
-			return basicSetPrescriptivemodel(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE:
-			return basicSetPrescriptivemodeleOpposite(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
+			return basicSetEnactment(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
+			return basicSetRunningSoftware(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
+			return basicSetAnalysisResult(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
+			return basicSetGeneration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -518,26 +424,22 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE:
+		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
 			if (resolve)
-				return getSoftware();
-			return basicGetSoftware();
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM:
+				return getEnactment();
+			return basicGetEnactment();
+		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
 			if (resolve)
-				return getSociotechnicalsystem();
-			return basicGetSociotechnicalsystem();
-		case Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL:
+				return getRunningSoftware();
+			return basicGetRunningSoftware();
+		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
 			if (resolve)
-				return getPredictivemodel();
-			return basicGetPredictivemodel();
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL:
+				return getAnalysisResult();
+			return basicGetAnalysisResult();
+		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
 			if (resolve)
-				return getPrescriptivemodel();
-			return basicGetPrescriptivemodel();
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE:
-			if (resolve)
-				return getPrescriptivemodeleOpposite();
-			return basicGetPrescriptivemodeleOpposite();
+				return getGeneration();
+			return basicGetGeneration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -550,20 +452,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE:
-			setSoftware((Software) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
+			setEnactment((Enactment) newValue);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM:
-			setSociotechnicalsystem((SocioTechnicalSystem) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
+			setRunningSoftware((Deployment) newValue);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			setPredictivemodel((PredictiveModel) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
+			setAnalysisResult((Analysis) newValue);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) newValue);
-			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE:
-			setPrescriptivemodeleOpposite((PrescriptiveModel) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
+			setGeneration((Generation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -577,20 +476,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE:
-			setSoftware((Software) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
+			setEnactment((Enactment) null);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM:
-			setSociotechnicalsystem((SocioTechnicalSystem) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
+			setRunningSoftware((Deployment) null);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			setPredictivemodel((PredictiveModel) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
+			setAnalysisResult((Analysis) null);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) null);
-			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE:
-			setPrescriptivemodeleOpposite((PrescriptiveModel) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
+			setGeneration((Generation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -604,16 +500,14 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOFTWARE:
-			return software != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM:
-			return sociotechnicalsystem != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PREDICTIVEMODEL:
-			return predictivemodel != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODEL:
-			return prescriptivemodel != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__PRESCRIPTIVEMODELE_OPPOSITE:
-			return prescriptivemodeleOpposite != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
+			return enactment != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
+			return runningSoftware != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
+			return analysisResult != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
+			return generation != null;
 		}
 		return super.eIsSet(featureID);
 	}

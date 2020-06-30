@@ -257,6 +257,190 @@ public class Fig1ItemProviderAdapterFactory extends Fig1AdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.OtherInterplay} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OtherInterplayItemProvider otherInterplayItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.OtherInterplay}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOtherInterplayAdapter() {
+		if (otherInterplayItemProvider == null) {
+			otherInterplayItemProvider = new OtherInterplayItemProvider(this);
+		}
+
+		return otherInterplayItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.DataPurpose} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataPurposeItemProvider dataPurposeItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.DataPurpose}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataPurposeAdapter() {
+		if (dataPurposeItemProvider == null) {
+			dataPurposeItemProvider = new DataPurposeItemProvider(this);
+		}
+
+		return dataPurposeItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Enactment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EnactmentItemProvider enactmentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.Enactment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEnactmentAdapter() {
+		if (enactmentItemProvider == null) {
+			enactmentItemProvider = new EnactmentItemProvider(this);
+		}
+
+		return enactmentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Deployment} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeploymentItemProvider deploymentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.Deployment}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeploymentAdapter() {
+		if (deploymentItemProvider == null) {
+			deploymentItemProvider = new DeploymentItemProvider(this);
+		}
+
+		return deploymentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Preparation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PreparationItemProvider preparationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.Preparation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPreparationAdapter() {
+		if (preparationItemProvider == null) {
+			preparationItemProvider = new PreparationItemProvider(this);
+		}
+
+		return preparationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Analysis} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AnalysisItemProvider analysisItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.Analysis}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnalysisAdapter() {
+		if (analysisItemProvider == null) {
+			analysisItemProvider = new AnalysisItemProvider(this);
+		}
+
+		return analysisItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Generation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GenerationItemProvider generationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.Generation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGenerationAdapter() {
+		if (generationItemProvider == null) {
+			generationItemProvider = new GenerationItemProvider(this);
+		}
+
+		return generationItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Generalization} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GeneralizationItemProvider generalizationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link internship.moda.fig1.Generalization}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGeneralizationAdapter() {
+		if (generalizationItemProvider == null) {
+			generalizationItemProvider = new GeneralizationItemProvider(this);
+		}
+
+		return generalizationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,6 +555,22 @@ public class Fig1ItemProviderAdapterFactory extends Fig1AdapterFactory
 			socioTechnicalSystemItemProvider.dispose();
 		if (modelItemProvider != null)
 			modelItemProvider.dispose();
+		if (otherInterplayItemProvider != null)
+			otherInterplayItemProvider.dispose();
+		if (dataPurposeItemProvider != null)
+			dataPurposeItemProvider.dispose();
+		if (enactmentItemProvider != null)
+			enactmentItemProvider.dispose();
+		if (deploymentItemProvider != null)
+			deploymentItemProvider.dispose();
+		if (preparationItemProvider != null)
+			preparationItemProvider.dispose();
+		if (analysisItemProvider != null)
+			analysisItemProvider.dispose();
+		if (generationItemProvider != null)
+			generationItemProvider.dispose();
+		if (generalizationItemProvider != null)
+			generalizationItemProvider.dispose();
 	}
 
 }

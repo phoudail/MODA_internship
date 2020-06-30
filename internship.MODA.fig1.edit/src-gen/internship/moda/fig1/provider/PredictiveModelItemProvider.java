@@ -42,40 +42,24 @@ public class PredictiveModelItemProvider extends ModelRoleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPrescriptivemodelPropertyDescriptor(object);
-			addDescriptivemodelPropertyDescriptor(object);
+			addPreparationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
+	 * This adds a property descriptor for the Preparation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
+	protected void addPreparationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PredictiveModel_prescriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PredictiveModel_prescriptivemodel_feature",
+						getResourceLocator(), getString("_UI_PredictiveModel_preparation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_PredictiveModel_preparation_feature",
 								"_UI_PredictiveModel_type"),
-						Fig1Package.Literals.PREDICTIVE_MODEL__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Descriptivemodel feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDescriptivemodelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PredictiveModel_descriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PredictiveModel_descriptivemodel_feature",
-								"_UI_PredictiveModel_type"),
-						Fig1Package.Literals.PREDICTIVE_MODEL__DESCRIPTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.PREDICTIVE_MODEL__PREPARATION, true, false, true, null, null, null));
 	}
 
 	/**

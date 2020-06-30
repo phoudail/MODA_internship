@@ -10,19 +10,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link internship.moda.fig1.Software} object.
@@ -30,8 +19,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SoftwareItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class SoftwareItemProvider extends ModaNodeItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -53,74 +41,40 @@ public class SoftwareItemProvider extends ItemProviderAdapter implements IEditin
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addStatePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
-			addDataPropertyDescriptor(object);
-			addPrescriptivemodelPropertyDescriptor(object);
+			addProcessingPropertyDescriptor(object);
+			addDeployedModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the State feature.
+	 * This adds a property descriptor for the Processing feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatePropertyDescriptor(Object object) {
+	protected void addProcessingPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Software_state_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Software_state_feature",
+						getResourceLocator(), getString("_UI_Software_processing_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Software_processing_feature",
 								"_UI_Software_type"),
-						Fig1Package.Literals.SOFTWARE__STATE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						Fig1Package.Literals.SOFTWARE__PROCESSING, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Deployed Model feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addDeployedModelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Software_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Software_name_feature",
+						getResourceLocator(), getString("_UI_Software_deployedModel_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Software_deployedModel_feature",
 								"_UI_Software_type"),
-						Fig1Package.Literals.SOFTWARE__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Data feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDataPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Software_data_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Software_data_feature",
-								"_UI_Software_type"),
-						Fig1Package.Literals.SOFTWARE__DATA, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Software_prescriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Software_prescriptivemodel_feature",
-								"_UI_Software_type"),
-						Fig1Package.Literals.SOFTWARE__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.SOFTWARE__DEPLOYED_MODEL, true, false, true, null, null, null));
 	}
 
 	/**
@@ -167,13 +121,6 @@ public class SoftwareItemProvider extends ItemProviderAdapter implements IEditin
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Software.class)) {
-		case Fig1Package.SOFTWARE__STATE:
-		case Fig1Package.SOFTWARE__NAME:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -187,17 +134,6 @@ public class SoftwareItemProvider extends ItemProviderAdapter implements IEditin
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return Fig1EditPlugin.INSTANCE;
 	}
 
 }

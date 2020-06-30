@@ -2,26 +2,18 @@
  */
 package internship.moda.fig1.impl;
 
-import internship.moda.fig1.Data;
+import internship.moda.fig1.Enactment;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.PrescriptiveModel;
+import internship.moda.fig1.OtherInterplay;
 import internship.moda.fig1.SocioTechnicalSystem;
 
-import java.util.Collection;
-
+import internship.moda.fig1.Software;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,53 +23,43 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getData <em>Data</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getSoftware <em>Software</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getOtherinterplay <em>Otherinterplay</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getEnactment <em>Enactment</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container implements SocioTechnicalSystem {
+public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechnicalSystem {
 	/**
-	 * The cached value of the '{@link #getData() <em>Data</em>}' reference list.
+	 * The cached value of the '{@link #getSoftware() <em>Software</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getData()
+	 * @see #getSoftware()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Data> data;
+	protected Software software;
 
 	/**
-	 * The cached value of the '{@link #getPrescriptivemodel() <em>Prescriptivemodel</em>}' reference.
+	 * The cached value of the '{@link #getOtherinterplay() <em>Otherinterplay</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescriptivemodel()
+	 * @see #getOtherinterplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel prescriptivemodel;
+	protected OtherInterplay otherinterplay;
 
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getEnactment() <em>Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getEnactment()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected Enactment enactment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,12 +85,8 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Data> getData() {
-		if (data == null) {
-			data = new EObjectWithInverseResolvingEList<Data>(Data.class, this,
-					Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA, Fig1Package.DATA__SOCIOTECHNICALSYSTEM);
-		}
-		return data;
+	public Software getSoftware() {
+		return software;
 	}
 
 	/**
@@ -116,40 +94,12 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getPrescriptivemodel() {
-		if (prescriptivemodel != null && prescriptivemodel.eIsProxy()) {
-			InternalEObject oldPrescriptivemodel = (InternalEObject) prescriptivemodel;
-			prescriptivemodel = (PrescriptiveModel) eResolveProxy(oldPrescriptivemodel);
-			if (prescriptivemodel != oldPrescriptivemodel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL, oldPrescriptivemodel,
-							prescriptivemodel));
-			}
-		}
-		return prescriptivemodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PrescriptiveModel basicGetPrescriptivemodel() {
-		return prescriptivemodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetPrescriptivemodel(PrescriptiveModel newPrescriptivemodel, NotificationChain msgs) {
-		PrescriptiveModel oldPrescriptivemodel = prescriptivemodel;
-		prescriptivemodel = newPrescriptivemodel;
+	public NotificationChain basicSetSoftware(Software newSoftware, NotificationChain msgs) {
+		Software oldSoftware = software;
+		software = newSoftware;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL, oldPrescriptivemodel, newPrescriptivemodel);
+					Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE, oldSoftware, newSoftware);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -163,21 +113,21 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescriptivemodel(PrescriptiveModel newPrescriptivemodel) {
-		if (newPrescriptivemodel != prescriptivemodel) {
+	public void setSoftware(Software newSoftware) {
+		if (newSoftware != software) {
 			NotificationChain msgs = null;
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM, PrescriptiveModel.class, msgs);
-			if (newPrescriptivemodel != null)
-				msgs = ((InternalEObject) newPrescriptivemodel).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM, PrescriptiveModel.class, msgs);
-			msgs = basicSetPrescriptivemodel(newPrescriptivemodel, msgs);
+			if (software != null)
+				msgs = ((InternalEObject) software).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE, null, msgs);
+			if (newSoftware != null)
+				msgs = ((InternalEObject) newSoftware).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE, null, msgs);
+			msgs = basicSetSoftware(newSoftware, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL,
-					newPrescriptivemodel, newPrescriptivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE,
+					newSoftware, newSoftware));
 	}
 
 	/**
@@ -185,8 +135,17 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public OtherInterplay getOtherinterplay() {
+		if (otherinterplay != null && otherinterplay.eIsProxy()) {
+			InternalEObject oldOtherinterplay = (InternalEObject) otherinterplay;
+			otherinterplay = (OtherInterplay) eResolveProxy(oldOtherinterplay);
+			if (otherinterplay != oldOtherinterplay) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY, oldOtherinterplay, otherinterplay));
+			}
+		}
+		return otherinterplay;
 	}
 
 	/**
@@ -194,12 +153,117 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME, oldName,
-					name));
+	public OtherInterplay basicGetOtherinterplay() {
+		return otherinterplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOtherinterplay(OtherInterplay newOtherinterplay, NotificationChain msgs) {
+		OtherInterplay oldOtherinterplay = otherinterplay;
+		otherinterplay = newOtherinterplay;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY, oldOtherinterplay, newOtherinterplay);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOtherinterplay(OtherInterplay newOtherinterplay) {
+		if (newOtherinterplay != otherinterplay) {
+			NotificationChain msgs = null;
+			if (otherinterplay != null)
+				msgs = ((InternalEObject) otherinterplay).eInverseRemove(this,
+						Fig1Package.OTHER_INTERPLAY__SOCIOTECHNICALSYSTEM, OtherInterplay.class, msgs);
+			if (newOtherinterplay != null)
+				msgs = ((InternalEObject) newOtherinterplay).eInverseAdd(this,
+						Fig1Package.OTHER_INTERPLAY__SOCIOTECHNICALSYSTEM, OtherInterplay.class, msgs);
+			msgs = basicSetOtherinterplay(newOtherinterplay, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY,
+					newOtherinterplay, newOtherinterplay));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enactment getEnactment() {
+		if (enactment != null && enactment.eIsProxy()) {
+			InternalEObject oldEnactment = (InternalEObject) enactment;
+			enactment = (Enactment) eResolveProxy(oldEnactment);
+			if (enactment != oldEnactment) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, oldEnactment, enactment));
+			}
+		}
+		return enactment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enactment basicGetEnactment() {
+		return enactment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEnactment(Enactment newEnactment, NotificationChain msgs) {
+		Enactment oldEnactment = enactment;
+		enactment = newEnactment;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, oldEnactment, newEnactment);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEnactment(Enactment newEnactment) {
+		if (newEnactment != enactment) {
+			NotificationChain msgs = null;
+			if (enactment != null)
+				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
+						Enactment.class, msgs);
+			if (newEnactment != null)
+				msgs = ((InternalEObject) newEnactment).eInverseAdd(this, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
+						Enactment.class, msgs);
+			msgs = basicSetEnactment(newEnactment, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT,
+					newEnactment, newEnactment));
 	}
 
 	/**
@@ -211,13 +275,16 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getData()).basicAdd(otherEnd, msgs);
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__SOCIOTECHNICALSYSTEM, PrescriptiveModel.class, msgs);
-			return basicSetPrescriptivemodel((PrescriptiveModel) otherEnd, msgs);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
+			if (otherinterplay != null)
+				msgs = ((InternalEObject) otherinterplay).eInverseRemove(this,
+						Fig1Package.OTHER_INTERPLAY__SOCIOTECHNICALSYSTEM, OtherInterplay.class, msgs);
+			return basicSetOtherinterplay((OtherInterplay) otherEnd, msgs);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+			if (enactment != null)
+				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
+						Enactment.class, msgs);
+			return basicSetEnactment((Enactment) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -230,10 +297,12 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA:
-			return ((InternalEList<?>) getData()).basicRemove(otherEnd, msgs);
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
-			return basicSetPrescriptivemodel(null, msgs);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE:
+			return basicSetSoftware(null, msgs);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
+			return basicSetOtherinterplay(null, msgs);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+			return basicSetEnactment(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -246,14 +315,16 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA:
-			return getData();
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE:
+			return getSoftware();
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
 			if (resolve)
-				return getPrescriptivemodel();
-			return basicGetPrescriptivemodel();
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
-			return getName();
+				return getOtherinterplay();
+			return basicGetOtherinterplay();
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+			if (resolve)
+				return getEnactment();
+			return basicGetEnactment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,15 +338,14 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA:
-			getData().clear();
-			getData().addAll((Collection<? extends Data>) newValue);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE:
+			setSoftware((Software) newValue);
 			return;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) newValue);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
+			setOtherinterplay((OtherInterplay) newValue);
 			return;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
-			setName((String) newValue);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+			setEnactment((Enactment) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,14 +359,14 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA:
-			getData().clear();
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE:
+			setSoftware((Software) null);
 			return;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) null);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
+			setOtherinterplay((OtherInterplay) null);
 			return;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
-			setName(NAME_EDEFAULT);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+			setEnactment((Enactment) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -310,31 +380,14 @@ public class SocioTechnicalSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA:
-			return data != null && !data.isEmpty();
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__PRESCRIPTIVEMODEL:
-			return prescriptivemodel != null;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__SOFTWARE:
+			return software != null;
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
+			return otherinterplay != null;
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+			return enactment != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SocioTechnicalSystemImpl

@@ -72,6 +72,22 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 			return createSocioTechnicalSystem();
 		case Fig1Package.MODEL:
 			return createModel();
+		case Fig1Package.OTHER_INTERPLAY:
+			return createOtherInterplay();
+		case Fig1Package.DATA_PURPOSE:
+			return createDataPurpose();
+		case Fig1Package.ENACTMENT:
+			return createEnactment();
+		case Fig1Package.DEPLOYMENT:
+			return createDeployment();
+		case Fig1Package.PREPARATION:
+			return createPreparation();
+		case Fig1Package.ANALYSIS:
+			return createAnalysis();
+		case Fig1Package.GENERATION:
+			return createGeneration();
+		case Fig1Package.GENERALIZATION:
+			return createGeneralization();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -85,8 +101,8 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-		case Fig1Package.DATA_TYPES:
-			return createDataTypesFromString(eDataType, initialValue);
+		case Fig1Package.DATA_KIND:
+			return createDataKindFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -100,8 +116,8 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-		case Fig1Package.DATA_TYPES:
-			return convertDataTypesToString(eDataType, instanceValue);
+		case Fig1Package.DATA_KIND:
+			return convertDataKindToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -192,8 +208,88 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataTypes createDataTypesFromString(EDataType eDataType, String initialValue) {
-		DataTypes result = DataTypes.get(initialValue);
+	public OtherInterplay createOtherInterplay() {
+		OtherInterplayImpl otherInterplay = new OtherInterplayImpl();
+		return otherInterplay;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataPurpose createDataPurpose() {
+		DataPurposeImpl dataPurpose = new DataPurposeImpl();
+		return dataPurpose;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Enactment createEnactment() {
+		EnactmentImpl enactment = new EnactmentImpl();
+		return enactment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Deployment createDeployment() {
+		DeploymentImpl deployment = new DeploymentImpl();
+		return deployment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Preparation createPreparation() {
+		PreparationImpl preparation = new PreparationImpl();
+		return preparation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Analysis createAnalysis() {
+		AnalysisImpl analysis = new AnalysisImpl();
+		return analysis;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Generation createGeneration() {
+		GenerationImpl generation = new GenerationImpl();
+		return generation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Generalization createGeneralization() {
+		GeneralizationImpl generalization = new GeneralizationImpl();
+		return generalization;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataKind createDataKindFromString(EDataType eDataType, String initialValue) {
+		DataKind result = DataKind.get(initialValue);
 		if (result == null)
 			throw new IllegalArgumentException(
 					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -205,7 +301,7 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertDataTypesToString(EDataType eDataType, Object instanceValue) {
+	public String convertDataKindToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

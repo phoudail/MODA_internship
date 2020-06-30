@@ -112,6 +112,61 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseModaNode(ModaNode object) {
+			return createModaNodeAdapter();
+		}
+
+		@Override
+		public Adapter caseModaRelation(ModaRelation object) {
+			return createModaRelationAdapter();
+		}
+
+		@Override
+		public Adapter caseOtherInterplay(OtherInterplay object) {
+			return createOtherInterplayAdapter();
+		}
+
+		@Override
+		public Adapter caseDataPurpose(DataPurpose object) {
+			return createDataPurposeAdapter();
+		}
+
+		@Override
+		public Adapter caseEnactment(Enactment object) {
+			return createEnactmentAdapter();
+		}
+
+		@Override
+		public Adapter caseDeployment(Deployment object) {
+			return createDeploymentAdapter();
+		}
+
+		@Override
+		public Adapter casePreparation(Preparation object) {
+			return createPreparationAdapter();
+		}
+
+		@Override
+		public Adapter caseAnalysis(Analysis object) {
+			return createAnalysisAdapter();
+		}
+
+		@Override
+		public Adapter caseGeneration(Generation object) {
+			return createGenerationAdapter();
+		}
+
+		@Override
+		public Adapter caseNamedElement(NamedElement object) {
+			return createNamedElementAdapter();
+		}
+
+		@Override
+		public Adapter caseGeneralization(Generalization object) {
+			return createGeneralizationAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -253,6 +308,160 @@ public class Fig1AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.ModaNode <em>Moda Node</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.ModaNode
+	 * @generated
+	 */
+	public Adapter createModaNodeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.ModaRelation <em>Moda Relation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.ModaRelation
+	 * @generated
+	 */
+	public Adapter createModaRelationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.OtherInterplay <em>Other Interplay</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.OtherInterplay
+	 * @generated
+	 */
+	public Adapter createOtherInterplayAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.DataPurpose <em>Data Purpose</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.DataPurpose
+	 * @generated
+	 */
+	public Adapter createDataPurposeAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.Enactment <em>Enactment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.Enactment
+	 * @generated
+	 */
+	public Adapter createEnactmentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.Deployment <em>Deployment</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.Deployment
+	 * @generated
+	 */
+	public Adapter createDeploymentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.Preparation <em>Preparation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.Preparation
+	 * @generated
+	 */
+	public Adapter createPreparationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.Analysis <em>Analysis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.Analysis
+	 * @generated
+	 */
+	public Adapter createAnalysisAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.Generation <em>Generation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.Generation
+	 * @generated
+	 */
+	public Adapter createGenerationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.NamedElement
+	 * @generated
+	 */
+	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link internship.moda.fig1.Generalization <em>Generalization</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see internship.moda.fig1.Generalization
+	 * @generated
+	 */
+	public Adapter createGeneralizationAdapter() {
 		return null;
 	}
 

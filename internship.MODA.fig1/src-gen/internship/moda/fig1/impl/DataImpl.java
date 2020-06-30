@@ -3,20 +3,21 @@
 package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Data;
-import internship.moda.fig1.DataTypes;
+import internship.moda.fig1.DataPurpose;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.ModelRole;
-import internship.moda.fig1.SocioTechnicalSystem;
-import internship.moda.fig1.Software;
-
+import internship.moda.fig1.Generalization;
+import internship.moda.fig1.OtherInterplay;
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,85 +27,43 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.DataImpl#getName <em>Name</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.DataImpl#getDataType <em>Data Type</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.DataImpl#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.DataImpl#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.DataImpl#getModelrole <em>Modelrole</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DataImpl#getOtherinterplay <em>Otherinterplay</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DataImpl#getProcessing <em>Processing</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DataImpl#getGeneralization <em>Generalization</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DataImpl extends MinimalEObjectImpl.Container implements Data {
+public class DataImpl extends ModaNodeImpl implements Data {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getOtherinterplay() <em>Otherinterplay</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getOtherinterplay()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected EList<OtherInterplay> otherinterplay;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getProcessing() <em>Processing</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getProcessing()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected DataPurpose processing;
 
 	/**
-	 * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
+	 * The cached value of the '{@link #getGeneralization() <em>Generalization</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDataType()
+	 * @see #getGeneralization()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final DataTypes DATA_TYPE_EDEFAULT = DataTypes.INPUT_DATA;
-
-	/**
-	 * The cached value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataType()
-	 * @generated
-	 * @ordered
-	 */
-	protected DataTypes dataType = DATA_TYPE_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSoftware() <em>Software</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSoftware()
-	 * @generated
-	 * @ordered
-	 */
-	protected Software software;
-
-	/**
-	 * The cached value of the '{@link #getSociotechnicalsystem() <em>Sociotechnicalsystem</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSociotechnicalsystem()
-	 * @generated
-	 * @ordered
-	 */
-	protected SocioTechnicalSystem sociotechnicalsystem;
-
-	/**
-	 * The cached value of the '{@link #getModelrole() <em>Modelrole</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModelrole()
-	 * @generated
-	 * @ordered
-	 */
-	protected ModelRole modelrole;
+	protected Generalization generalization;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,8 +89,12 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public EList<OtherInterplay> getOtherinterplay() {
+		if (otherinterplay == null) {
+			otherinterplay = new EObjectWithInverseResolvingEList.ManyInverse<OtherInterplay>(OtherInterplay.class,
+					this, Fig1Package.DATA__OTHERINTERPLAY, Fig1Package.OTHER_INTERPLAY__DATA);
+		}
+		return otherinterplay;
 	}
 
 	/**
@@ -139,29 +102,17 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Software getSoftware() {
-		if (software != null && software.eIsProxy()) {
-			InternalEObject oldSoftware = (InternalEObject) software;
-			software = (Software) eResolveProxy(oldSoftware);
-			if (software != oldSoftware) {
+	public DataPurpose getProcessing() {
+		if (processing != null && processing.eIsProxy()) {
+			InternalEObject oldProcessing = (InternalEObject) processing;
+			processing = (DataPurpose) eResolveProxy(oldProcessing);
+			if (processing != oldProcessing) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__SOFTWARE, oldSoftware,
-							software));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__PROCESSING,
+							oldProcessing, processing));
 			}
 		}
-		return software;
+		return processing;
 	}
 
 	/**
@@ -169,8 +120,8 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Software basicGetSoftware() {
-		return software;
+	public DataPurpose basicGetProcessing() {
+		return processing;
 	}
 
 	/**
@@ -178,12 +129,12 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSoftware(Software newSoftware, NotificationChain msgs) {
-		Software oldSoftware = software;
-		software = newSoftware;
+	public NotificationChain basicSetProcessing(DataPurpose newProcessing, NotificationChain msgs) {
+		DataPurpose oldProcessing = processing;
+		processing = newProcessing;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__SOFTWARE,
-					oldSoftware, newSoftware);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__PROCESSING,
+					oldProcessing, newProcessing);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -197,21 +148,21 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSoftware(Software newSoftware) {
-		if (newSoftware != software) {
+	public void setProcessing(DataPurpose newProcessing) {
+		if (newProcessing != processing) {
 			NotificationChain msgs = null;
-			if (software != null)
-				msgs = ((InternalEObject) software).eInverseRemove(this, Fig1Package.SOFTWARE__DATA, Software.class,
-						msgs);
-			if (newSoftware != null)
-				msgs = ((InternalEObject) newSoftware).eInverseAdd(this, Fig1Package.SOFTWARE__DATA, Software.class,
-						msgs);
-			msgs = basicSetSoftware(newSoftware, msgs);
+			if (processing != null)
+				msgs = ((InternalEObject) processing).eInverseRemove(this, Fig1Package.DATA_PURPOSE__DATA,
+						DataPurpose.class, msgs);
+			if (newProcessing != null)
+				msgs = ((InternalEObject) newProcessing).eInverseAdd(this, Fig1Package.DATA_PURPOSE__DATA,
+						DataPurpose.class, msgs);
+			msgs = basicSetProcessing(newProcessing, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__SOFTWARE, newSoftware,
-					newSoftware));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__PROCESSING, newProcessing,
+					newProcessing));
 	}
 
 	/**
@@ -219,17 +170,17 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SocioTechnicalSystem getSociotechnicalsystem() {
-		if (sociotechnicalsystem != null && sociotechnicalsystem.eIsProxy()) {
-			InternalEObject oldSociotechnicalsystem = (InternalEObject) sociotechnicalsystem;
-			sociotechnicalsystem = (SocioTechnicalSystem) eResolveProxy(oldSociotechnicalsystem);
-			if (sociotechnicalsystem != oldSociotechnicalsystem) {
+	public Generalization getGeneralization() {
+		if (generalization != null && generalization.eIsProxy()) {
+			InternalEObject oldGeneralization = (InternalEObject) generalization;
+			generalization = (Generalization) eResolveProxy(oldGeneralization);
+			if (generalization != oldGeneralization) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__SOCIOTECHNICALSYSTEM,
-							oldSociotechnicalsystem, sociotechnicalsystem));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__GENERALIZATION,
+							oldGeneralization, generalization));
 			}
 		}
-		return sociotechnicalsystem;
+		return generalization;
 	}
 
 	/**
@@ -237,8 +188,8 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SocioTechnicalSystem basicGetSociotechnicalsystem() {
-		return sociotechnicalsystem;
+	public Generalization basicGetGeneralization() {
+		return generalization;
 	}
 
 	/**
@@ -246,13 +197,12 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSociotechnicalsystem(SocioTechnicalSystem newSociotechnicalsystem,
-			NotificationChain msgs) {
-		SocioTechnicalSystem oldSociotechnicalsystem = sociotechnicalsystem;
-		sociotechnicalsystem = newSociotechnicalsystem;
+	public NotificationChain basicSetGeneralization(Generalization newGeneralization, NotificationChain msgs) {
+		Generalization oldGeneralization = generalization;
+		generalization = newGeneralization;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.DATA__SOCIOTECHNICALSYSTEM, oldSociotechnicalsystem, newSociotechnicalsystem);
+					Fig1Package.DATA__GENERALIZATION, oldGeneralization, newGeneralization);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -266,21 +216,21 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSociotechnicalsystem(SocioTechnicalSystem newSociotechnicalsystem) {
-		if (newSociotechnicalsystem != sociotechnicalsystem) {
+	public void setGeneralization(Generalization newGeneralization) {
+		if (newGeneralization != generalization) {
 			NotificationChain msgs = null;
-			if (sociotechnicalsystem != null)
-				msgs = ((InternalEObject) sociotechnicalsystem).eInverseRemove(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA, SocioTechnicalSystem.class, msgs);
-			if (newSociotechnicalsystem != null)
-				msgs = ((InternalEObject) newSociotechnicalsystem).eInverseAdd(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA, SocioTechnicalSystem.class, msgs);
-			msgs = basicSetSociotechnicalsystem(newSociotechnicalsystem, msgs);
+			if (generalization != null)
+				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__DATA,
+						Generalization.class, msgs);
+			if (newGeneralization != null)
+				msgs = ((InternalEObject) newGeneralization).eInverseAdd(this, Fig1Package.GENERALIZATION__DATA,
+						Generalization.class, msgs);
+			msgs = basicSetGeneralization(newGeneralization, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__SOCIOTECHNICALSYSTEM,
-					newSociotechnicalsystem, newSociotechnicalsystem));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__GENERALIZATION, newGeneralization,
+					newGeneralization));
 	}
 
 	/**
@@ -288,113 +238,22 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModelRole getModelrole() {
-		if (modelrole != null && modelrole.eIsProxy()) {
-			InternalEObject oldModelrole = (InternalEObject) modelrole;
-			modelrole = (ModelRole) eResolveProxy(oldModelrole);
-			if (modelrole != oldModelrole) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__MODELROLE, oldModelrole,
-							modelrole));
-			}
-		}
-		return modelrole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModelRole basicGetModelrole() {
-		return modelrole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetModelrole(ModelRole newModelrole, NotificationChain msgs) {
-		ModelRole oldModelrole = modelrole;
-		modelrole = newModelrole;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__MODELROLE,
-					oldModelrole, newModelrole);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setModelrole(ModelRole newModelrole) {
-		if (newModelrole != modelrole) {
-			NotificationChain msgs = null;
-			if (modelrole != null)
-				msgs = ((InternalEObject) modelrole).eInverseRemove(this, Fig1Package.MODEL_ROLE__DATA, ModelRole.class,
-						msgs);
-			if (newModelrole != null)
-				msgs = ((InternalEObject) newModelrole).eInverseAdd(this, Fig1Package.MODEL_ROLE__DATA, ModelRole.class,
-						msgs);
-			msgs = basicSetModelrole(newModelrole, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__MODELROLE, newModelrole,
-					newModelrole));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DataTypes getDataType() {
-		return dataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDataType(DataTypes newDataType) {
-		DataTypes oldDataType = dataType;
-		dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__DATA_TYPE, oldDataType, dataType));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DATA__SOFTWARE:
-			if (software != null)
-				msgs = ((InternalEObject) software).eInverseRemove(this, Fig1Package.SOFTWARE__DATA, Software.class,
-						msgs);
-			return basicSetSoftware((Software) otherEnd, msgs);
-		case Fig1Package.DATA__SOCIOTECHNICALSYSTEM:
-			if (sociotechnicalsystem != null)
-				msgs = ((InternalEObject) sociotechnicalsystem).eInverseRemove(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__DATA, SocioTechnicalSystem.class, msgs);
-			return basicSetSociotechnicalsystem((SocioTechnicalSystem) otherEnd, msgs);
-		case Fig1Package.DATA__MODELROLE:
-			if (modelrole != null)
-				msgs = ((InternalEObject) modelrole).eInverseRemove(this, Fig1Package.MODEL_ROLE__DATA, ModelRole.class,
-						msgs);
-			return basicSetModelrole((ModelRole) otherEnd, msgs);
+		case Fig1Package.DATA__OTHERINTERPLAY:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOtherinterplay()).basicAdd(otherEnd, msgs);
+		case Fig1Package.DATA__PROCESSING:
+			if (processing != null)
+				msgs = ((InternalEObject) processing).eInverseRemove(this, Fig1Package.DATA_PURPOSE__DATA,
+						DataPurpose.class, msgs);
+			return basicSetProcessing((DataPurpose) otherEnd, msgs);
+		case Fig1Package.DATA__GENERALIZATION:
+			if (generalization != null)
+				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__DATA,
+						Generalization.class, msgs);
+			return basicSetGeneralization((Generalization) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -407,12 +266,12 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DATA__SOFTWARE:
-			return basicSetSoftware(null, msgs);
-		case Fig1Package.DATA__SOCIOTECHNICALSYSTEM:
-			return basicSetSociotechnicalsystem(null, msgs);
-		case Fig1Package.DATA__MODELROLE:
-			return basicSetModelrole(null, msgs);
+		case Fig1Package.DATA__OTHERINTERPLAY:
+			return ((InternalEList<?>) getOtherinterplay()).basicRemove(otherEnd, msgs);
+		case Fig1Package.DATA__PROCESSING:
+			return basicSetProcessing(null, msgs);
+		case Fig1Package.DATA__GENERALIZATION:
+			return basicSetGeneralization(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -425,22 +284,16 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.DATA__NAME:
-			return getName();
-		case Fig1Package.DATA__DATA_TYPE:
-			return getDataType();
-		case Fig1Package.DATA__SOFTWARE:
+		case Fig1Package.DATA__OTHERINTERPLAY:
+			return getOtherinterplay();
+		case Fig1Package.DATA__PROCESSING:
 			if (resolve)
-				return getSoftware();
-			return basicGetSoftware();
-		case Fig1Package.DATA__SOCIOTECHNICALSYSTEM:
+				return getProcessing();
+			return basicGetProcessing();
+		case Fig1Package.DATA__GENERALIZATION:
 			if (resolve)
-				return getSociotechnicalsystem();
-			return basicGetSociotechnicalsystem();
-		case Fig1Package.DATA__MODELROLE:
-			if (resolve)
-				return getModelrole();
-			return basicGetModelrole();
+				return getGeneralization();
+			return basicGetGeneralization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -450,23 +303,19 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.DATA__NAME:
-			setName((String) newValue);
+		case Fig1Package.DATA__OTHERINTERPLAY:
+			getOtherinterplay().clear();
+			getOtherinterplay().addAll((Collection<? extends OtherInterplay>) newValue);
 			return;
-		case Fig1Package.DATA__DATA_TYPE:
-			setDataType((DataTypes) newValue);
+		case Fig1Package.DATA__PROCESSING:
+			setProcessing((DataPurpose) newValue);
 			return;
-		case Fig1Package.DATA__SOFTWARE:
-			setSoftware((Software) newValue);
-			return;
-		case Fig1Package.DATA__SOCIOTECHNICALSYSTEM:
-			setSociotechnicalsystem((SocioTechnicalSystem) newValue);
-			return;
-		case Fig1Package.DATA__MODELROLE:
-			setModelrole((ModelRole) newValue);
+		case Fig1Package.DATA__GENERALIZATION:
+			setGeneralization((Generalization) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -480,20 +329,14 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DATA__NAME:
-			setName(NAME_EDEFAULT);
+		case Fig1Package.DATA__OTHERINTERPLAY:
+			getOtherinterplay().clear();
 			return;
-		case Fig1Package.DATA__DATA_TYPE:
-			setDataType(DATA_TYPE_EDEFAULT);
+		case Fig1Package.DATA__PROCESSING:
+			setProcessing((DataPurpose) null);
 			return;
-		case Fig1Package.DATA__SOFTWARE:
-			setSoftware((Software) null);
-			return;
-		case Fig1Package.DATA__SOCIOTECHNICALSYSTEM:
-			setSociotechnicalsystem((SocioTechnicalSystem) null);
-			return;
-		case Fig1Package.DATA__MODELROLE:
-			setModelrole((ModelRole) null);
+		case Fig1Package.DATA__GENERALIZATION:
+			setGeneralization((Generalization) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -507,37 +350,14 @@ public class DataImpl extends MinimalEObjectImpl.Container implements Data {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DATA__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case Fig1Package.DATA__DATA_TYPE:
-			return dataType != DATA_TYPE_EDEFAULT;
-		case Fig1Package.DATA__SOFTWARE:
-			return software != null;
-		case Fig1Package.DATA__SOCIOTECHNICALSYSTEM:
-			return sociotechnicalsystem != null;
-		case Fig1Package.DATA__MODELROLE:
-			return modelrole != null;
+		case Fig1Package.DATA__OTHERINTERPLAY:
+			return otherinterplay != null && !otherinterplay.isEmpty();
+		case Fig1Package.DATA__PROCESSING:
+			return processing != null;
+		case Fig1Package.DATA__GENERALIZATION:
+			return generalization != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", dataType: ");
-		result.append(dataType);
-		result.append(')');
-		return result.toString();
 	}
 
 } //DataImpl
