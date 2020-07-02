@@ -220,10 +220,10 @@ public class DataImpl extends ModaNodeImpl implements Data {
 		if (newGeneralization != generalization) {
 			NotificationChain msgs = null;
 			if (generalization != null)
-				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__DATA,
+				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__SOURCE,
 						Generalization.class, msgs);
 			if (newGeneralization != null)
-				msgs = ((InternalEObject) newGeneralization).eInverseAdd(this, Fig1Package.GENERALIZATION__DATA,
+				msgs = ((InternalEObject) newGeneralization).eInverseAdd(this, Fig1Package.GENERALIZATION__SOURCE,
 						Generalization.class, msgs);
 			msgs = basicSetGeneralization(newGeneralization, msgs);
 			if (msgs != null)
@@ -251,7 +251,7 @@ public class DataImpl extends ModaNodeImpl implements Data {
 			return basicSetProcessing((DataPurpose) otherEnd, msgs);
 		case Fig1Package.DATA__GENERALIZATION:
 			if (generalization != null)
-				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__DATA,
+				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__SOURCE,
 						Generalization.class, msgs);
 			return basicSetGeneralization((Generalization) otherEnd, msgs);
 		}

@@ -23,32 +23,32 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.AnalysisImpl#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.AnalysisImpl#getModanode <em>Modanode</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.AnalysisImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.AnalysisImpl#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	/**
-	 * The cached value of the '{@link #getPrescriptivemodel() <em>Prescriptivemodel</em>}' reference.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescriptivemodel()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel prescriptivemodel;
+	protected PrescriptiveModel target;
 
 	/**
-	 * The cached value of the '{@link #getModanode() <em>Modanode</em>}' reference.
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getModanode()
+	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-	protected ModaNode modanode;
+	protected ModaNode source;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,17 +74,17 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getPrescriptivemodel() {
-		if (prescriptivemodel != null && prescriptivemodel.eIsProxy()) {
-			InternalEObject oldPrescriptivemodel = (InternalEObject) prescriptivemodel;
-			prescriptivemodel = (PrescriptiveModel) eResolveProxy(oldPrescriptivemodel);
-			if (prescriptivemodel != oldPrescriptivemodel) {
+	public PrescriptiveModel getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject) target;
+			target = (PrescriptiveModel) eResolveProxy(oldTarget);
+			if (target != oldTarget) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
-							oldPrescriptivemodel, prescriptivemodel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ANALYSIS__TARGET, oldTarget,
+							target));
 			}
 		}
-		return prescriptivemodel;
+		return target;
 	}
 
 	/**
@@ -92,8 +92,8 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetPrescriptivemodel() {
-		return prescriptivemodel;
+	public PrescriptiveModel basicGetTarget() {
+		return target;
 	}
 
 	/**
@@ -101,12 +101,12 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescriptivemodel(PrescriptiveModel newPrescriptivemodel, NotificationChain msgs) {
-		PrescriptiveModel oldPrescriptivemodel = prescriptivemodel;
-		prescriptivemodel = newPrescriptivemodel;
+	public NotificationChain basicSetTarget(PrescriptiveModel newTarget, NotificationChain msgs) {
+		PrescriptiveModel oldTarget = target;
+		target = newTarget;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL, oldPrescriptivemodel, newPrescriptivemodel);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__TARGET,
+					oldTarget, newTarget);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -120,21 +120,20 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescriptivemodel(PrescriptiveModel newPrescriptivemodel) {
-		if (newPrescriptivemodel != prescriptivemodel) {
+	public void setTarget(PrescriptiveModel newTarget) {
+		if (newTarget != target) {
 			NotificationChain msgs = null;
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, PrescriptiveModel.class, msgs);
-			if (newPrescriptivemodel != null)
-				msgs = ((InternalEObject) newPrescriptivemodel).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, PrescriptiveModel.class, msgs);
-			msgs = basicSetPrescriptivemodel(newPrescriptivemodel, msgs);
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, PrescriptiveModel.class, msgs);
+			if (newTarget != null)
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, PrescriptiveModel.class, msgs);
+			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
-					newPrescriptivemodel, newPrescriptivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__TARGET, newTarget, newTarget));
 	}
 
 	/**
@@ -142,17 +141,17 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModaNode getModanode() {
-		if (modanode != null && modanode.eIsProxy()) {
-			InternalEObject oldModanode = (InternalEObject) modanode;
-			modanode = (ModaNode) eResolveProxy(oldModanode);
-			if (modanode != oldModanode) {
+	public ModaNode getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject) source;
+			source = (ModaNode) eResolveProxy(oldSource);
+			if (source != oldSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ANALYSIS__MODANODE,
-							oldModanode, modanode));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ANALYSIS__SOURCE, oldSource,
+							source));
 			}
 		}
-		return modanode;
+		return source;
 	}
 
 	/**
@@ -160,8 +159,8 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModaNode basicGetModanode() {
-		return modanode;
+	public ModaNode basicGetSource() {
+		return source;
 	}
 
 	/**
@@ -169,12 +168,12 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetModanode(ModaNode newModanode, NotificationChain msgs) {
-		ModaNode oldModanode = modanode;
-		modanode = newModanode;
+	public NotificationChain basicSetSource(ModaNode newSource, NotificationChain msgs) {
+		ModaNode oldSource = source;
+		source = newSource;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.ANALYSIS__MODANODE, oldModanode, newModanode);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__SOURCE,
+					oldSource, newSource);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -188,21 +187,20 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setModanode(ModaNode newModanode) {
-		if (newModanode != modanode) {
+	public void setSource(ModaNode newSource) {
+		if (newSource != source) {
 			NotificationChain msgs = null;
-			if (modanode != null)
-				msgs = ((InternalEObject) modanode).eInverseRemove(this, Fig1Package.MODA_NODE__ANALYSIS,
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODA_NODE__OUTGOING_ANALYSIS,
 						ModaNode.class, msgs);
-			if (newModanode != null)
-				msgs = ((InternalEObject) newModanode).eInverseAdd(this, Fig1Package.MODA_NODE__ANALYSIS,
+			if (newSource != null)
+				msgs = ((InternalEObject) newSource).eInverseAdd(this, Fig1Package.MODA_NODE__OUTGOING_ANALYSIS,
 						ModaNode.class, msgs);
-			msgs = basicSetModanode(newModanode, msgs);
+			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__MODANODE, newModanode,
-					newModanode));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__SOURCE, newSource, newSource));
 	}
 
 	/**
@@ -213,16 +211,16 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL:
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, PrescriptiveModel.class, msgs);
-			return basicSetPrescriptivemodel((PrescriptiveModel) otherEnd, msgs);
-		case Fig1Package.ANALYSIS__MODANODE:
-			if (modanode != null)
-				msgs = ((InternalEObject) modanode).eInverseRemove(this, Fig1Package.MODA_NODE__ANALYSIS,
+		case Fig1Package.ANALYSIS__TARGET:
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, PrescriptiveModel.class, msgs);
+			return basicSetTarget((PrescriptiveModel) otherEnd, msgs);
+		case Fig1Package.ANALYSIS__SOURCE:
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODA_NODE__OUTGOING_ANALYSIS,
 						ModaNode.class, msgs);
-			return basicSetModanode((ModaNode) otherEnd, msgs);
+			return basicSetSource((ModaNode) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -235,10 +233,10 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL:
-			return basicSetPrescriptivemodel(null, msgs);
-		case Fig1Package.ANALYSIS__MODANODE:
-			return basicSetModanode(null, msgs);
+		case Fig1Package.ANALYSIS__TARGET:
+			return basicSetTarget(null, msgs);
+		case Fig1Package.ANALYSIS__SOURCE:
+			return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -251,14 +249,14 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL:
+		case Fig1Package.ANALYSIS__TARGET:
 			if (resolve)
-				return getPrescriptivemodel();
-			return basicGetPrescriptivemodel();
-		case Fig1Package.ANALYSIS__MODANODE:
+				return getTarget();
+			return basicGetTarget();
+		case Fig1Package.ANALYSIS__SOURCE:
 			if (resolve)
-				return getModanode();
-			return basicGetModanode();
+				return getSource();
+			return basicGetSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,11 +269,11 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) newValue);
+		case Fig1Package.ANALYSIS__TARGET:
+			setTarget((PrescriptiveModel) newValue);
 			return;
-		case Fig1Package.ANALYSIS__MODANODE:
-			setModanode((ModaNode) newValue);
+		case Fig1Package.ANALYSIS__SOURCE:
+			setSource((ModaNode) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,11 +287,11 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) null);
+		case Fig1Package.ANALYSIS__TARGET:
+			setTarget((PrescriptiveModel) null);
 			return;
-		case Fig1Package.ANALYSIS__MODANODE:
-			setModanode((ModaNode) null);
+		case Fig1Package.ANALYSIS__SOURCE:
+			setSource((ModaNode) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -307,10 +305,10 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL:
-			return prescriptivemodel != null;
-		case Fig1Package.ANALYSIS__MODANODE:
-			return modanode != null;
+		case Fig1Package.ANALYSIS__TARGET:
+			return target != null;
+		case Fig1Package.ANALYSIS__SOURCE:
+			return source != null;
 		}
 		return super.eIsSet(featureID);
 	}

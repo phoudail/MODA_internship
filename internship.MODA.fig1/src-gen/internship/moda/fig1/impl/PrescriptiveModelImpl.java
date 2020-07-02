@@ -24,54 +24,65 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getEnactment <em>Enactment</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getRunningSoftware <em>Running Software</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getAnalysisResult <em>Analysis Result</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getGeneration <em>Generation</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getOutgoingEnactment <em>Outgoing Enactment</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getOutgoingDeployment <em>Outgoing Deployment</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getIncomingAnalysis <em>Incoming Analysis</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getOutgoingGeneration <em>Outgoing Generation</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PrescriptiveModelImpl#getIncomingGeneration <em>Incoming Generation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PrescriptiveModelImpl extends ModelRoleImpl implements PrescriptiveModel {
 	/**
-	 * The cached value of the '{@link #getEnactment() <em>Enactment</em>}' reference.
+	 * The cached value of the '{@link #getOutgoingEnactment() <em>Outgoing Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnactment()
+	 * @see #getOutgoingEnactment()
 	 * @generated
 	 * @ordered
 	 */
-	protected Enactment enactment;
+	protected Enactment outgoingEnactment;
 
 	/**
-	 * The cached value of the '{@link #getRunningSoftware() <em>Running Software</em>}' reference.
+	 * The cached value of the '{@link #getOutgoingDeployment() <em>Outgoing Deployment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRunningSoftware()
+	 * @see #getOutgoingDeployment()
 	 * @generated
 	 * @ordered
 	 */
-	protected Deployment runningSoftware;
+	protected Deployment outgoingDeployment;
 
 	/**
-	 * The cached value of the '{@link #getAnalysisResult() <em>Analysis Result</em>}' reference.
+	 * The cached value of the '{@link #getIncomingAnalysis() <em>Incoming Analysis</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnalysisResult()
+	 * @see #getIncomingAnalysis()
 	 * @generated
 	 * @ordered
 	 */
-	protected Analysis analysisResult;
+	protected Analysis incomingAnalysis;
 
 	/**
-	 * The cached value of the '{@link #getGeneration() <em>Generation</em>}' reference.
+	 * The cached value of the '{@link #getOutgoingGeneration() <em>Outgoing Generation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeneration()
+	 * @see #getOutgoingGeneration()
 	 * @generated
 	 * @ordered
 	 */
-	protected Generation generation;
+	protected Generation outgoingGeneration;
+
+	/**
+	 * The cached value of the '{@link #getIncomingGeneration() <em>Incoming Generation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIncomingGeneration()
+	 * @generated
+	 * @ordered
+	 */
+	protected Generation incomingGeneration;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -97,17 +108,18 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enactment getEnactment() {
-		if (enactment != null && enactment.eIsProxy()) {
-			InternalEObject oldEnactment = (InternalEObject) enactment;
-			enactment = (Enactment) eResolveProxy(oldEnactment);
-			if (enactment != oldEnactment) {
+	public Enactment getOutgoingEnactment() {
+		if (outgoingEnactment != null && outgoingEnactment.eIsProxy()) {
+			InternalEObject oldOutgoingEnactment = (InternalEObject) outgoingEnactment;
+			outgoingEnactment = (Enactment) eResolveProxy(oldOutgoingEnactment);
+			if (outgoingEnactment != oldOutgoingEnactment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT,
-							oldEnactment, enactment));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, oldOutgoingEnactment,
+							outgoingEnactment));
 			}
 		}
-		return enactment;
+		return outgoingEnactment;
 	}
 
 	/**
@@ -115,8 +127,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enactment basicGetEnactment() {
-		return enactment;
+	public Enactment basicGetOutgoingEnactment() {
+		return outgoingEnactment;
 	}
 
 	/**
@@ -124,12 +136,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEnactment(Enactment newEnactment, NotificationChain msgs) {
-		Enactment oldEnactment = enactment;
-		enactment = newEnactment;
+	public NotificationChain basicSetOutgoingEnactment(Enactment newOutgoingEnactment, NotificationChain msgs) {
+		Enactment oldOutgoingEnactment = outgoingEnactment;
+		outgoingEnactment = newOutgoingEnactment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT, oldEnactment, newEnactment);
+					Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, oldOutgoingEnactment, newOutgoingEnactment);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -143,21 +155,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnactment(Enactment newEnactment) {
-		if (newEnactment != enactment) {
+	public void setOutgoingEnactment(Enactment newOutgoingEnactment) {
+		if (newOutgoingEnactment != outgoingEnactment) {
 			NotificationChain msgs = null;
-			if (enactment != null)
-				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
+			if (outgoingEnactment != null)
+				msgs = ((InternalEObject) outgoingEnactment).eInverseRemove(this, Fig1Package.ENACTMENT__SOURCE,
 						Enactment.class, msgs);
-			if (newEnactment != null)
-				msgs = ((InternalEObject) newEnactment).eInverseAdd(this, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
+			if (newOutgoingEnactment != null)
+				msgs = ((InternalEObject) newOutgoingEnactment).eInverseAdd(this, Fig1Package.ENACTMENT__SOURCE,
 						Enactment.class, msgs);
-			msgs = basicSetEnactment(newEnactment, msgs);
+			msgs = basicSetOutgoingEnactment(newOutgoingEnactment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT,
-					newEnactment, newEnactment));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT,
+					newOutgoingEnactment, newOutgoingEnactment));
 	}
 
 	/**
@@ -165,17 +177,18 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Deployment getRunningSoftware() {
-		if (runningSoftware != null && runningSoftware.eIsProxy()) {
-			InternalEObject oldRunningSoftware = (InternalEObject) runningSoftware;
-			runningSoftware = (Deployment) eResolveProxy(oldRunningSoftware);
-			if (runningSoftware != oldRunningSoftware) {
+	public Deployment getOutgoingDeployment() {
+		if (outgoingDeployment != null && outgoingDeployment.eIsProxy()) {
+			InternalEObject oldOutgoingDeployment = (InternalEObject) outgoingDeployment;
+			outgoingDeployment = (Deployment) eResolveProxy(oldOutgoingDeployment);
+			if (outgoingDeployment != oldOutgoingDeployment) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, oldRunningSoftware, runningSoftware));
+							Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, oldOutgoingDeployment,
+							outgoingDeployment));
 			}
 		}
-		return runningSoftware;
+		return outgoingDeployment;
 	}
 
 	/**
@@ -183,8 +196,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Deployment basicGetRunningSoftware() {
-		return runningSoftware;
+	public Deployment basicGetOutgoingDeployment() {
+		return outgoingDeployment;
 	}
 
 	/**
@@ -192,12 +205,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRunningSoftware(Deployment newRunningSoftware, NotificationChain msgs) {
-		Deployment oldRunningSoftware = runningSoftware;
-		runningSoftware = newRunningSoftware;
+	public NotificationChain basicSetOutgoingDeployment(Deployment newOutgoingDeployment, NotificationChain msgs) {
+		Deployment oldOutgoingDeployment = outgoingDeployment;
+		outgoingDeployment = newOutgoingDeployment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, oldRunningSoftware, newRunningSoftware);
+					Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, oldOutgoingDeployment, newOutgoingDeployment);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -211,21 +224,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRunningSoftware(Deployment newRunningSoftware) {
-		if (newRunningSoftware != runningSoftware) {
+	public void setOutgoingDeployment(Deployment newOutgoingDeployment) {
+		if (newOutgoingDeployment != outgoingDeployment) {
 			NotificationChain msgs = null;
-			if (runningSoftware != null)
-				msgs = ((InternalEObject) runningSoftware).eInverseRemove(this,
-						Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, Deployment.class, msgs);
-			if (newRunningSoftware != null)
-				msgs = ((InternalEObject) newRunningSoftware).eInverseAdd(this,
-						Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, Deployment.class, msgs);
-			msgs = basicSetRunningSoftware(newRunningSoftware, msgs);
+			if (outgoingDeployment != null)
+				msgs = ((InternalEObject) outgoingDeployment).eInverseRemove(this, Fig1Package.DEPLOYMENT__SOURCE,
+						Deployment.class, msgs);
+			if (newOutgoingDeployment != null)
+				msgs = ((InternalEObject) newOutgoingDeployment).eInverseAdd(this, Fig1Package.DEPLOYMENT__SOURCE,
+						Deployment.class, msgs);
+			msgs = basicSetOutgoingDeployment(newOutgoingDeployment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE,
-					newRunningSoftware, newRunningSoftware));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT,
+					newOutgoingDeployment, newOutgoingDeployment));
 	}
 
 	/**
@@ -233,17 +246,17 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Analysis getAnalysisResult() {
-		if (analysisResult != null && analysisResult.eIsProxy()) {
-			InternalEObject oldAnalysisResult = (InternalEObject) analysisResult;
-			analysisResult = (Analysis) eResolveProxy(oldAnalysisResult);
-			if (analysisResult != oldAnalysisResult) {
+	public Analysis getIncomingAnalysis() {
+		if (incomingAnalysis != null && incomingAnalysis.eIsProxy()) {
+			InternalEObject oldIncomingAnalysis = (InternalEObject) incomingAnalysis;
+			incomingAnalysis = (Analysis) eResolveProxy(oldIncomingAnalysis);
+			if (incomingAnalysis != oldIncomingAnalysis) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, oldAnalysisResult, analysisResult));
+							Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, oldIncomingAnalysis, incomingAnalysis));
 			}
 		}
-		return analysisResult;
+		return incomingAnalysis;
 	}
 
 	/**
@@ -251,8 +264,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Analysis basicGetAnalysisResult() {
-		return analysisResult;
+	public Analysis basicGetIncomingAnalysis() {
+		return incomingAnalysis;
 	}
 
 	/**
@@ -260,12 +273,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAnalysisResult(Analysis newAnalysisResult, NotificationChain msgs) {
-		Analysis oldAnalysisResult = analysisResult;
-		analysisResult = newAnalysisResult;
+	public NotificationChain basicSetIncomingAnalysis(Analysis newIncomingAnalysis, NotificationChain msgs) {
+		Analysis oldIncomingAnalysis = incomingAnalysis;
+		incomingAnalysis = newIncomingAnalysis;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, oldAnalysisResult, newAnalysisResult);
+					Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, oldIncomingAnalysis, newIncomingAnalysis);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -279,21 +292,21 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAnalysisResult(Analysis newAnalysisResult) {
-		if (newAnalysisResult != analysisResult) {
+	public void setIncomingAnalysis(Analysis newIncomingAnalysis) {
+		if (newIncomingAnalysis != incomingAnalysis) {
 			NotificationChain msgs = null;
-			if (analysisResult != null)
-				msgs = ((InternalEObject) analysisResult).eInverseRemove(this, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
+			if (incomingAnalysis != null)
+				msgs = ((InternalEObject) incomingAnalysis).eInverseRemove(this, Fig1Package.ANALYSIS__TARGET,
 						Analysis.class, msgs);
-			if (newAnalysisResult != null)
-				msgs = ((InternalEObject) newAnalysisResult).eInverseAdd(this, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
+			if (newIncomingAnalysis != null)
+				msgs = ((InternalEObject) newIncomingAnalysis).eInverseAdd(this, Fig1Package.ANALYSIS__TARGET,
 						Analysis.class, msgs);
-			msgs = basicSetAnalysisResult(newAnalysisResult, msgs);
+			msgs = basicSetIncomingAnalysis(newIncomingAnalysis, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT,
-					newAnalysisResult, newAnalysisResult));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS,
+					newIncomingAnalysis, newIncomingAnalysis));
 	}
 
 	/**
@@ -301,17 +314,18 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Generation getGeneration() {
-		if (generation != null && generation.eIsProxy()) {
-			InternalEObject oldGeneration = (InternalEObject) generation;
-			generation = (Generation) eResolveProxy(oldGeneration);
-			if (generation != oldGeneration) {
+	public Generation getOutgoingGeneration() {
+		if (outgoingGeneration != null && outgoingGeneration.eIsProxy()) {
+			InternalEObject oldOutgoingGeneration = (InternalEObject) outgoingGeneration;
+			outgoingGeneration = (Generation) eResolveProxy(oldOutgoingGeneration);
+			if (outgoingGeneration != oldOutgoingGeneration) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.PRESCRIPTIVE_MODEL__GENERATION, oldGeneration, generation));
+							Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION, oldOutgoingGeneration,
+							outgoingGeneration));
 			}
 		}
-		return generation;
+		return outgoingGeneration;
 	}
 
 	/**
@@ -319,8 +333,8 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Generation basicGetGeneration() {
-		return generation;
+	public Generation basicGetOutgoingGeneration() {
+		return outgoingGeneration;
 	}
 
 	/**
@@ -328,12 +342,12 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGeneration(Generation newGeneration, NotificationChain msgs) {
-		Generation oldGeneration = generation;
-		generation = newGeneration;
+	public NotificationChain basicSetOutgoingGeneration(Generation newOutgoingGeneration, NotificationChain msgs) {
+		Generation oldOutgoingGeneration = outgoingGeneration;
+		outgoingGeneration = newOutgoingGeneration;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PRESCRIPTIVE_MODEL__GENERATION, oldGeneration, newGeneration);
+					Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION, oldOutgoingGeneration, newOutgoingGeneration);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -347,21 +361,90 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeneration(Generation newGeneration) {
-		if (newGeneration != generation) {
+	public void setOutgoingGeneration(Generation newOutgoingGeneration) {
+		if (newOutgoingGeneration != outgoingGeneration) {
 			NotificationChain msgs = null;
-			if (generation != null)
-				msgs = ((InternalEObject) generation).eInverseRemove(this, Fig1Package.GENERATION__PRESCRIPTIVEMODEL,
+			if (outgoingGeneration != null)
+				msgs = ((InternalEObject) outgoingGeneration).eInverseRemove(this, Fig1Package.GENERATION__SOURCE,
 						Generation.class, msgs);
-			if (newGeneration != null)
-				msgs = ((InternalEObject) newGeneration).eInverseAdd(this, Fig1Package.GENERATION__PRESCRIPTIVEMODEL,
+			if (newOutgoingGeneration != null)
+				msgs = ((InternalEObject) newOutgoingGeneration).eInverseAdd(this, Fig1Package.GENERATION__SOURCE,
 						Generation.class, msgs);
-			msgs = basicSetGeneration(newGeneration, msgs);
+			msgs = basicSetOutgoingGeneration(newOutgoingGeneration, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__GENERATION,
-					newGeneration, newGeneration));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION,
+					newOutgoingGeneration, newOutgoingGeneration));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Generation getIncomingGeneration() {
+		if (incomingGeneration != null && incomingGeneration.eIsProxy()) {
+			InternalEObject oldIncomingGeneration = (InternalEObject) incomingGeneration;
+			incomingGeneration = (Generation) eResolveProxy(oldIncomingGeneration);
+			if (incomingGeneration != oldIncomingGeneration) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION, oldIncomingGeneration,
+							incomingGeneration));
+			}
+		}
+		return incomingGeneration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Generation basicGetIncomingGeneration() {
+		return incomingGeneration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetIncomingGeneration(Generation newIncomingGeneration, NotificationChain msgs) {
+		Generation oldIncomingGeneration = incomingGeneration;
+		incomingGeneration = newIncomingGeneration;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION, oldIncomingGeneration, newIncomingGeneration);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIncomingGeneration(Generation newIncomingGeneration) {
+		if (newIncomingGeneration != incomingGeneration) {
+			NotificationChain msgs = null;
+			if (incomingGeneration != null)
+				msgs = ((InternalEObject) incomingGeneration).eInverseRemove(this, Fig1Package.GENERATION__TARGET,
+						Generation.class, msgs);
+			if (newIncomingGeneration != null)
+				msgs = ((InternalEObject) newIncomingGeneration).eInverseAdd(this, Fig1Package.GENERATION__TARGET,
+						Generation.class, msgs);
+			msgs = basicSetIncomingGeneration(newIncomingGeneration, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION,
+					newIncomingGeneration, newIncomingGeneration));
 	}
 
 	/**
@@ -372,26 +455,31 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
-			if (enactment != null)
-				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT:
+			if (outgoingEnactment != null)
+				msgs = ((InternalEObject) outgoingEnactment).eInverseRemove(this, Fig1Package.ENACTMENT__SOURCE,
 						Enactment.class, msgs);
-			return basicSetEnactment((Enactment) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
-			if (runningSoftware != null)
-				msgs = ((InternalEObject) runningSoftware).eInverseRemove(this,
-						Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, Deployment.class, msgs);
-			return basicSetRunningSoftware((Deployment) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
-			if (analysisResult != null)
-				msgs = ((InternalEObject) analysisResult).eInverseRemove(this, Fig1Package.ANALYSIS__PRESCRIPTIVEMODEL,
+			return basicSetOutgoingEnactment((Enactment) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT:
+			if (outgoingDeployment != null)
+				msgs = ((InternalEObject) outgoingDeployment).eInverseRemove(this, Fig1Package.DEPLOYMENT__SOURCE,
+						Deployment.class, msgs);
+			return basicSetOutgoingDeployment((Deployment) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS:
+			if (incomingAnalysis != null)
+				msgs = ((InternalEObject) incomingAnalysis).eInverseRemove(this, Fig1Package.ANALYSIS__TARGET,
 						Analysis.class, msgs);
-			return basicSetAnalysisResult((Analysis) otherEnd, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
-			if (generation != null)
-				msgs = ((InternalEObject) generation).eInverseRemove(this, Fig1Package.GENERATION__PRESCRIPTIVEMODEL,
+			return basicSetIncomingAnalysis((Analysis) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION:
+			if (outgoingGeneration != null)
+				msgs = ((InternalEObject) outgoingGeneration).eInverseRemove(this, Fig1Package.GENERATION__SOURCE,
 						Generation.class, msgs);
-			return basicSetGeneration((Generation) otherEnd, msgs);
+			return basicSetOutgoingGeneration((Generation) otherEnd, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION:
+			if (incomingGeneration != null)
+				msgs = ((InternalEObject) incomingGeneration).eInverseRemove(this, Fig1Package.GENERATION__TARGET,
+						Generation.class, msgs);
+			return basicSetIncomingGeneration((Generation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -404,14 +492,16 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
-			return basicSetEnactment(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
-			return basicSetRunningSoftware(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
-			return basicSetAnalysisResult(null, msgs);
-		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
-			return basicSetGeneration(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT:
+			return basicSetOutgoingEnactment(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT:
+			return basicSetOutgoingDeployment(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS:
+			return basicSetIncomingAnalysis(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION:
+			return basicSetOutgoingGeneration(null, msgs);
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION:
+			return basicSetIncomingGeneration(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -424,22 +514,26 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT:
 			if (resolve)
-				return getEnactment();
-			return basicGetEnactment();
-		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
+				return getOutgoingEnactment();
+			return basicGetOutgoingEnactment();
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT:
 			if (resolve)
-				return getRunningSoftware();
-			return basicGetRunningSoftware();
-		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
+				return getOutgoingDeployment();
+			return basicGetOutgoingDeployment();
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS:
 			if (resolve)
-				return getAnalysisResult();
-			return basicGetAnalysisResult();
-		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
+				return getIncomingAnalysis();
+			return basicGetIncomingAnalysis();
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION:
 			if (resolve)
-				return getGeneration();
-			return basicGetGeneration();
+				return getOutgoingGeneration();
+			return basicGetOutgoingGeneration();
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION:
+			if (resolve)
+				return getIncomingGeneration();
+			return basicGetIncomingGeneration();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -452,17 +546,20 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
-			setEnactment((Enactment) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT:
+			setOutgoingEnactment((Enactment) newValue);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
-			setRunningSoftware((Deployment) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT:
+			setOutgoingDeployment((Deployment) newValue);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
-			setAnalysisResult((Analysis) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS:
+			setIncomingAnalysis((Analysis) newValue);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
-			setGeneration((Generation) newValue);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION:
+			setOutgoingGeneration((Generation) newValue);
+			return;
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION:
+			setIncomingGeneration((Generation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -476,17 +573,20 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
-			setEnactment((Enactment) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT:
+			setOutgoingEnactment((Enactment) null);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
-			setRunningSoftware((Deployment) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT:
+			setOutgoingDeployment((Deployment) null);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
-			setAnalysisResult((Analysis) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS:
+			setIncomingAnalysis((Analysis) null);
 			return;
-		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
-			setGeneration((Generation) null);
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION:
+			setOutgoingGeneration((Generation) null);
+			return;
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION:
+			setIncomingGeneration((Generation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -500,14 +600,16 @@ public class PrescriptiveModelImpl extends ModelRoleImpl implements Prescriptive
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT:
-			return enactment != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE:
-			return runningSoftware != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT:
-			return analysisResult != null;
-		case Fig1Package.PRESCRIPTIVE_MODEL__GENERATION:
-			return generation != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT:
+			return outgoingEnactment != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT:
+			return outgoingDeployment != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS:
+			return incomingAnalysis != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION:
+			return outgoingGeneration != null;
+		case Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION:
+			return incomingGeneration != null;
 		}
 		return super.eIsSet(featureID);
 	}

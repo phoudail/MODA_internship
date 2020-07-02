@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getData <em>Data</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getModel <em>Model</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getModelrole <em>Modelrole</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.MODAImpl#getAbstractrelation <em>Abstractrelation</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.MODAImpl#getRelations <em>Relations</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,14 +82,14 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 	protected EList<ModelRole> modelrole;
 
 	/**
-	 * The cached value of the '{@link #getAbstractrelation() <em>Abstractrelation</em>}' containment reference list.
+	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAbstractrelation()
+	 * @see #getRelations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModaRelation> abstractrelation;
+	protected EList<ModaRelation> relations;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,12 +202,12 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModaRelation> getAbstractrelation() {
-		if (abstractrelation == null) {
-			abstractrelation = new EObjectContainmentEList<ModaRelation>(ModaRelation.class, this,
-					Fig1Package.MODA__ABSTRACTRELATION);
+	public EList<ModaRelation> getRelations() {
+		if (relations == null) {
+			relations = new EObjectContainmentEList<ModaRelation>(ModaRelation.class, this,
+					Fig1Package.MODA__RELATIONS);
 		}
-		return abstractrelation;
+		return relations;
 	}
 
 	/**
@@ -226,8 +226,8 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			return ((InternalEList<?>) getModel()).basicRemove(otherEnd, msgs);
 		case Fig1Package.MODA__MODELROLE:
 			return ((InternalEList<?>) getModelrole()).basicRemove(otherEnd, msgs);
-		case Fig1Package.MODA__ABSTRACTRELATION:
-			return ((InternalEList<?>) getAbstractrelation()).basicRemove(otherEnd, msgs);
+		case Fig1Package.MODA__RELATIONS:
+			return ((InternalEList<?>) getRelations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -248,8 +248,8 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			return getModel();
 		case Fig1Package.MODA__MODELROLE:
 			return getModelrole();
-		case Fig1Package.MODA__ABSTRACTRELATION:
-			return getAbstractrelation();
+		case Fig1Package.MODA__RELATIONS:
+			return getRelations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -278,9 +278,9 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			getModelrole().clear();
 			getModelrole().addAll((Collection<? extends ModelRole>) newValue);
 			return;
-		case Fig1Package.MODA__ABSTRACTRELATION:
-			getAbstractrelation().clear();
-			getAbstractrelation().addAll((Collection<? extends ModaRelation>) newValue);
+		case Fig1Package.MODA__RELATIONS:
+			getRelations().clear();
+			getRelations().addAll((Collection<? extends ModaRelation>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -306,8 +306,8 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 		case Fig1Package.MODA__MODELROLE:
 			getModelrole().clear();
 			return;
-		case Fig1Package.MODA__ABSTRACTRELATION:
-			getAbstractrelation().clear();
+		case Fig1Package.MODA__RELATIONS:
+			getRelations().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -329,8 +329,8 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			return model != null && !model.isEmpty();
 		case Fig1Package.MODA__MODELROLE:
 			return modelrole != null && !modelrole.isEmpty();
-		case Fig1Package.MODA__ABSTRACTRELATION:
-			return abstractrelation != null && !abstractrelation.isEmpty();
+		case Fig1Package.MODA__RELATIONS:
+			return relations != null && !relations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

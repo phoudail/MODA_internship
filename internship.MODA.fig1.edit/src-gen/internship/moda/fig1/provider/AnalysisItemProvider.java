@@ -42,40 +42,40 @@ public class AnalysisItemProvider extends ModaRelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPrescriptivemodelPropertyDescriptor(object);
-			addModanodePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
+	protected void addTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Analysis_prescriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Analysis_prescriptivemodel_feature",
+						getResourceLocator(), getString("_UI_Analysis_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Analysis_target_feature",
 								"_UI_Analysis_type"),
-						Fig1Package.Literals.ANALYSIS__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.ANALYSIS__TARGET, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Modanode feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addModanodePropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Analysis_modanode_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Analysis_modanode_feature",
+						getResourceLocator(), getString("_UI_Analysis_source_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Analysis_source_feature",
 								"_UI_Analysis_type"),
-						Fig1Package.Literals.ANALYSIS__MODANODE, true, false, true, null, null, null));
+						Fig1Package.Literals.ANALYSIS__SOURCE, true, false, true, null, null, null));
 	}
 
 	/**

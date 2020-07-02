@@ -4,7 +4,7 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.Preparation;
+import internship.moda.fig1.Generalization;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -21,21 +21,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.DescriptiveModelImpl#getPreparation <em>Preparation</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DescriptiveModelImpl#getIncomingGeneralization <em>Incoming Generalization</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveModel {
 	/**
-	 * The cached value of the '{@link #getPreparation() <em>Preparation</em>}' reference.
+	 * The cached value of the '{@link #getIncomingGeneralization() <em>Incoming Generalization</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPreparation()
+	 * @see #getIncomingGeneralization()
 	 * @generated
 	 * @ordered
 	 */
-	protected Preparation preparation;
+	protected Generalization incomingGeneralization;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,17 +61,18 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Preparation getPreparation() {
-		if (preparation != null && preparation.eIsProxy()) {
-			InternalEObject oldPreparation = (InternalEObject) preparation;
-			preparation = (Preparation) eResolveProxy(oldPreparation);
-			if (preparation != oldPreparation) {
+	public Generalization getIncomingGeneralization() {
+		if (incomingGeneralization != null && incomingGeneralization.eIsProxy()) {
+			InternalEObject oldIncomingGeneralization = (InternalEObject) incomingGeneralization;
+			incomingGeneralization = (Generalization) eResolveProxy(oldIncomingGeneralization);
+			if (incomingGeneralization != oldIncomingGeneralization) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, oldPreparation, preparation));
+							Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, oldIncomingGeneralization,
+							incomingGeneralization));
 			}
 		}
-		return preparation;
+		return incomingGeneralization;
 	}
 
 	/**
@@ -79,8 +80,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Preparation basicGetPreparation() {
-		return preparation;
+	public Generalization basicGetIncomingGeneralization() {
+		return incomingGeneralization;
 	}
 
 	/**
@@ -88,12 +89,14 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPreparation(Preparation newPreparation, NotificationChain msgs) {
-		Preparation oldPreparation = preparation;
-		preparation = newPreparation;
+	public NotificationChain basicSetIncomingGeneralization(Generalization newIncomingGeneralization,
+			NotificationChain msgs) {
+		Generalization oldIncomingGeneralization = incomingGeneralization;
+		incomingGeneralization = newIncomingGeneralization;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, oldPreparation, newPreparation);
+					Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, oldIncomingGeneralization,
+					newIncomingGeneralization);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -107,21 +110,22 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPreparation(Preparation newPreparation) {
-		if (newPreparation != preparation) {
+	public void setIncomingGeneralization(Generalization newIncomingGeneralization) {
+		if (newIncomingGeneralization != incomingGeneralization) {
 			NotificationChain msgs = null;
-			if (preparation != null)
-				msgs = ((InternalEObject) preparation).eInverseRemove(this, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
-						Preparation.class, msgs);
-			if (newPreparation != null)
-				msgs = ((InternalEObject) newPreparation).eInverseAdd(this, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
-						Preparation.class, msgs);
-			msgs = basicSetPreparation(newPreparation, msgs);
+			if (incomingGeneralization != null)
+				msgs = ((InternalEObject) incomingGeneralization).eInverseRemove(this,
+						Fig1Package.GENERALIZATION__TARGET, Generalization.class, msgs);
+			if (newIncomingGeneralization != null)
+				msgs = ((InternalEObject) newIncomingGeneralization).eInverseAdd(this,
+						Fig1Package.GENERALIZATION__TARGET, Generalization.class, msgs);
+			msgs = basicSetIncomingGeneralization(newIncomingGeneralization, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DESCRIPTIVE_MODEL__PREPARATION,
-					newPreparation, newPreparation));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, newIncomingGeneralization,
+					newIncomingGeneralization));
 	}
 
 	/**
@@ -132,11 +136,11 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
-			if (preparation != null)
-				msgs = ((InternalEObject) preparation).eInverseRemove(this, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
-						Preparation.class, msgs);
-			return basicSetPreparation((Preparation) otherEnd, msgs);
+		case Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION:
+			if (incomingGeneralization != null)
+				msgs = ((InternalEObject) incomingGeneralization).eInverseRemove(this,
+						Fig1Package.GENERALIZATION__TARGET, Generalization.class, msgs);
+			return basicSetIncomingGeneralization((Generalization) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -149,8 +153,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
-			return basicSetPreparation(null, msgs);
+		case Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION:
+			return basicSetIncomingGeneralization(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -163,10 +167,10 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
+		case Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION:
 			if (resolve)
-				return getPreparation();
-			return basicGetPreparation();
+				return getIncomingGeneralization();
+			return basicGetIncomingGeneralization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,8 +183,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
-			setPreparation((Preparation) newValue);
+		case Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION:
+			setIncomingGeneralization((Generalization) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,8 +198,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
-			setPreparation((Preparation) null);
+		case Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION:
+			setIncomingGeneralization((Generalization) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -209,8 +213,8 @@ public class DescriptiveModelImpl extends ModelRoleImpl implements DescriptiveMo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DESCRIPTIVE_MODEL__PREPARATION:
-			return preparation != null;
+		case Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION:
+			return incomingGeneralization != null;
 		}
 		return super.eIsSet(featureID);
 	}

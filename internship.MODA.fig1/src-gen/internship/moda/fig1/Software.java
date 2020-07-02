@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link internship.moda.fig1.Software#getProcessing <em>Processing</em>}</li>
- *   <li>{@link internship.moda.fig1.Software#getDeployedModel <em>Deployed Model</em>}</li>
+ *   <li>{@link internship.moda.fig1.Software#getIincomingDeployment <em>Iincoming Deployment</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getSoftware()
@@ -41,31 +41,31 @@ public interface Software extends ModaNode {
 	EList<DataPurpose> getProcessing();
 
 	/**
-	 * Returns the value of the '<em><b>Deployed Model</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Deployment#getSoftware <em>Software</em>}'.
+	 * Returns the value of the '<em><b>Iincoming Deployment</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Deployment#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Deployed Model</em>' reference isn't clear,
+	 * If the meaning of the '<em>Iincoming Deployment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Deployed Model</em>' reference.
-	 * @see #setDeployedModel(Deployment)
-	 * @see internship.moda.fig1.Fig1Package#getSoftware_DeployedModel()
-	 * @see internship.moda.fig1.Deployment#getSoftware
-	 * @model opposite="software"
+	 * @return the value of the '<em>Iincoming Deployment</em>' reference.
+	 * @see #setIincomingDeployment(Deployment)
+	 * @see internship.moda.fig1.Fig1Package#getSoftware_IincomingDeployment()
+	 * @see internship.moda.fig1.Deployment#getTarget
+	 * @model opposite="target"
 	 * @generated
 	 */
-	Deployment getDeployedModel();
+	Deployment getIincomingDeployment();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Software#getDeployedModel <em>Deployed Model</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Software#getIincomingDeployment <em>Iincoming Deployment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Deployed Model</em>' reference.
-	 * @see #getDeployedModel()
+	 * @param value the new value of the '<em>Iincoming Deployment</em>' reference.
+	 * @see #getIincomingDeployment()
 	 * @generated
 	 */
-	void setDeployedModel(Deployment value);
+	void setIincomingDeployment(Deployment value);
 
 } // Software

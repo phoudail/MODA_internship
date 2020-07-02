@@ -23,32 +23,32 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.DeploymentImpl#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.DeploymentImpl#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DeploymentImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DeploymentImpl#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	/**
-	 * The cached value of the '{@link #getSoftware() <em>Software</em>}' reference.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSoftware()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected Software software;
+	protected Software target;
 
 	/**
-	 * The cached value of the '{@link #getPrescriptivemodel() <em>Prescriptivemodel</em>}' reference.
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescriptivemodel()
+	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel prescriptivemodel;
+	protected PrescriptiveModel source;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,17 +74,17 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Software getSoftware() {
-		if (software != null && software.eIsProxy()) {
-			InternalEObject oldSoftware = (InternalEObject) software;
-			software = (Software) eResolveProxy(oldSoftware);
-			if (software != oldSoftware) {
+	public Software getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject) target;
+			target = (Software) eResolveProxy(oldTarget);
+			if (target != oldTarget) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DEPLOYMENT__SOFTWARE,
-							oldSoftware, software));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DEPLOYMENT__TARGET, oldTarget,
+							target));
 			}
 		}
-		return software;
+		return target;
 	}
 
 	/**
@@ -92,8 +92,8 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Software basicGetSoftware() {
-		return software;
+	public Software basicGetTarget() {
+		return target;
 	}
 
 	/**
@@ -101,12 +101,12 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSoftware(Software newSoftware, NotificationChain msgs) {
-		Software oldSoftware = software;
-		software = newSoftware;
+	public NotificationChain basicSetTarget(Software newTarget, NotificationChain msgs) {
+		Software oldTarget = target;
+		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.DEPLOYMENT__SOFTWARE, oldSoftware, newSoftware);
+					Fig1Package.DEPLOYMENT__TARGET, oldTarget, newTarget);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -120,21 +120,21 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSoftware(Software newSoftware) {
-		if (newSoftware != software) {
+	public void setTarget(Software newTarget) {
+		if (newTarget != target) {
 			NotificationChain msgs = null;
-			if (software != null)
-				msgs = ((InternalEObject) software).eInverseRemove(this, Fig1Package.SOFTWARE__DEPLOYED_MODEL,
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
 						Software.class, msgs);
-			if (newSoftware != null)
-				msgs = ((InternalEObject) newSoftware).eInverseAdd(this, Fig1Package.SOFTWARE__DEPLOYED_MODEL,
+			if (newTarget != null)
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
 						Software.class, msgs);
-			msgs = basicSetSoftware(newSoftware, msgs);
+			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DEPLOYMENT__SOFTWARE, newSoftware,
-					newSoftware));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DEPLOYMENT__TARGET, newTarget,
+					newTarget));
 	}
 
 	/**
@@ -142,17 +142,17 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getPrescriptivemodel() {
-		if (prescriptivemodel != null && prescriptivemodel.eIsProxy()) {
-			InternalEObject oldPrescriptivemodel = (InternalEObject) prescriptivemodel;
-			prescriptivemodel = (PrescriptiveModel) eResolveProxy(oldPrescriptivemodel);
-			if (prescriptivemodel != oldPrescriptivemodel) {
+	public PrescriptiveModel getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject) source;
+			source = (PrescriptiveModel) eResolveProxy(oldSource);
+			if (source != oldSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL,
-							oldPrescriptivemodel, prescriptivemodel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DEPLOYMENT__SOURCE, oldSource,
+							source));
 			}
 		}
-		return prescriptivemodel;
+		return source;
 	}
 
 	/**
@@ -160,8 +160,8 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetPrescriptivemodel() {
-		return prescriptivemodel;
+	public PrescriptiveModel basicGetSource() {
+		return source;
 	}
 
 	/**
@@ -169,12 +169,12 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescriptivemodel(PrescriptiveModel newPrescriptivemodel, NotificationChain msgs) {
-		PrescriptiveModel oldPrescriptivemodel = prescriptivemodel;
-		prescriptivemodel = newPrescriptivemodel;
+	public NotificationChain basicSetSource(PrescriptiveModel newSource, NotificationChain msgs) {
+		PrescriptiveModel oldSource = source;
+		source = newSource;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL, oldPrescriptivemodel, newPrescriptivemodel);
+					Fig1Package.DEPLOYMENT__SOURCE, oldSource, newSource);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -188,21 +188,21 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescriptivemodel(PrescriptiveModel newPrescriptivemodel) {
-		if (newPrescriptivemodel != prescriptivemodel) {
+	public void setSource(PrescriptiveModel newSource) {
+		if (newSource != source) {
 			NotificationChain msgs = null;
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, PrescriptiveModel.class, msgs);
-			if (newPrescriptivemodel != null)
-				msgs = ((InternalEObject) newPrescriptivemodel).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, PrescriptiveModel.class, msgs);
-			msgs = basicSetPrescriptivemodel(newPrescriptivemodel, msgs);
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, PrescriptiveModel.class, msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject) newSource).eInverseAdd(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, PrescriptiveModel.class, msgs);
+			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL,
-					newPrescriptivemodel, newPrescriptivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DEPLOYMENT__SOURCE, newSource,
+					newSource));
 	}
 
 	/**
@@ -213,16 +213,16 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DEPLOYMENT__SOFTWARE:
-			if (software != null)
-				msgs = ((InternalEObject) software).eInverseRemove(this, Fig1Package.SOFTWARE__DEPLOYED_MODEL,
+		case Fig1Package.DEPLOYMENT__TARGET:
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
 						Software.class, msgs);
-			return basicSetSoftware((Software) otherEnd, msgs);
-		case Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL:
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, PrescriptiveModel.class, msgs);
-			return basicSetPrescriptivemodel((PrescriptiveModel) otherEnd, msgs);
+			return basicSetTarget((Software) otherEnd, msgs);
+		case Fig1Package.DEPLOYMENT__SOURCE:
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, PrescriptiveModel.class, msgs);
+			return basicSetSource((PrescriptiveModel) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -235,10 +235,10 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.DEPLOYMENT__SOFTWARE:
-			return basicSetSoftware(null, msgs);
-		case Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL:
-			return basicSetPrescriptivemodel(null, msgs);
+		case Fig1Package.DEPLOYMENT__TARGET:
+			return basicSetTarget(null, msgs);
+		case Fig1Package.DEPLOYMENT__SOURCE:
+			return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -251,14 +251,14 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.DEPLOYMENT__SOFTWARE:
+		case Fig1Package.DEPLOYMENT__TARGET:
 			if (resolve)
-				return getSoftware();
-			return basicGetSoftware();
-		case Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL:
+				return getTarget();
+			return basicGetTarget();
+		case Fig1Package.DEPLOYMENT__SOURCE:
 			if (resolve)
-				return getPrescriptivemodel();
-			return basicGetPrescriptivemodel();
+				return getSource();
+			return basicGetSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,11 +271,11 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.DEPLOYMENT__SOFTWARE:
-			setSoftware((Software) newValue);
+		case Fig1Package.DEPLOYMENT__TARGET:
+			setTarget((Software) newValue);
 			return;
-		case Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) newValue);
+		case Fig1Package.DEPLOYMENT__SOURCE:
+			setSource((PrescriptiveModel) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,11 +289,11 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DEPLOYMENT__SOFTWARE:
-			setSoftware((Software) null);
+		case Fig1Package.DEPLOYMENT__TARGET:
+			setTarget((Software) null);
 			return;
-		case Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) null);
+		case Fig1Package.DEPLOYMENT__SOURCE:
+			setSource((PrescriptiveModel) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -307,10 +307,10 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.DEPLOYMENT__SOFTWARE:
-			return software != null;
-		case Fig1Package.DEPLOYMENT__PRESCRIPTIVEMODEL:
-			return prescriptivemodel != null;
+		case Fig1Package.DEPLOYMENT__TARGET:
+			return target != null;
+		case Fig1Package.DEPLOYMENT__SOURCE:
+			return source != null;
 		}
 		return super.eIsSet(featureID);
 	}

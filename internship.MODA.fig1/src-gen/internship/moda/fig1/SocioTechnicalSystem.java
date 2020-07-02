@@ -13,7 +13,7 @@ package internship.moda.fig1;
  * <ul>
  *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getSoftware <em>Software</em>}</li>
  *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getOtherinterplay <em>Otherinterplay</em>}</li>
- *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getEnactment <em>Enactment</em>}</li>
+ *   <li>{@link internship.moda.fig1.SocioTechnicalSystem#getIncomingEnactment <em>Incoming Enactment</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem()
@@ -76,31 +76,31 @@ public interface SocioTechnicalSystem extends ModaNode {
 	void setOtherinterplay(OtherInterplay value);
 
 	/**
-	 * Returns the value of the '<em><b>Enactment</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Enactment#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}'.
+	 * Returns the value of the '<em><b>Incoming Enactment</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Enactment#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Enactment</em>' reference isn't clear,
+	 * If the meaning of the '<em>Incoming Enactment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Enactment</em>' reference.
-	 * @see #setEnactment(Enactment)
-	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_Enactment()
-	 * @see internship.moda.fig1.Enactment#getSociotechnicalsystem
-	 * @model opposite="sociotechnicalsystem"
+	 * @return the value of the '<em>Incoming Enactment</em>' reference.
+	 * @see #setIncomingEnactment(Enactment)
+	 * @see internship.moda.fig1.Fig1Package#getSocioTechnicalSystem_IncomingEnactment()
+	 * @see internship.moda.fig1.Enactment#getTarget
+	 * @model opposite="target"
 	 * @generated
 	 */
-	Enactment getEnactment();
+	Enactment getIncomingEnactment();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.SocioTechnicalSystem#getEnactment <em>Enactment</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.SocioTechnicalSystem#getIncomingEnactment <em>Incoming Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Enactment</em>' reference.
-	 * @see #getEnactment()
+	 * @param value the new value of the '<em>Incoming Enactment</em>' reference.
+	 * @see #getIncomingEnactment()
 	 * @generated
 	 */
-	void setEnactment(Enactment value);
+	void setIncomingEnactment(Enactment value);
 
 } // SocioTechnicalSystem

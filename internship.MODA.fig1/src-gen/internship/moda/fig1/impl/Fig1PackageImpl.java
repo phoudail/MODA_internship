@@ -310,15 +310,6 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModelRole_Generalization() {
-		return (EReference) modelRoleEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getDescriptiveModel() {
 		return descriptiveModelEClass;
 	}
@@ -328,7 +319,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDescriptiveModel_Preparation() {
+	public EReference getDescriptiveModel_IncomingGeneralization() {
 		return (EReference) descriptiveModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -346,7 +337,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPredictiveModel_Preparation() {
+	public EReference getPredictiveModel_IncomingPreparation() {
 		return (EReference) predictiveModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -364,7 +355,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescriptiveModel_Enactment() {
+	public EReference getPrescriptiveModel_OutgoingEnactment() {
 		return (EReference) prescriptiveModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -373,7 +364,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescriptiveModel_RunningSoftware() {
+	public EReference getPrescriptiveModel_OutgoingDeployment() {
 		return (EReference) prescriptiveModelEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -382,7 +373,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescriptiveModel_AnalysisResult() {
+	public EReference getPrescriptiveModel_IncomingAnalysis() {
 		return (EReference) prescriptiveModelEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -391,8 +382,17 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPrescriptiveModel_Generation() {
+	public EReference getPrescriptiveModel_OutgoingGeneration() {
 		return (EReference) prescriptiveModelEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPrescriptiveModel_IncomingGeneration() {
+		return (EReference) prescriptiveModelEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -418,7 +418,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSoftware_DeployedModel() {
+	public EReference getSoftware_IincomingDeployment() {
 		return (EReference) softwareEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -454,7 +454,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSocioTechnicalSystem_Enactment() {
+	public EReference getSocioTechnicalSystem_IncomingEnactment() {
 		return (EReference) socioTechnicalSystemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -508,7 +508,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMODA_Abstractrelation() {
+	public EReference getMODA_Relations() {
 		return (EReference) modaEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -544,8 +544,17 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModaNode_Analysis() {
+	public EReference getModaNode_OutgoingAnalysis() {
 		return (EReference) modaNodeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModaNode_OutgoingPreparation() {
+		return (EReference) modaNodeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -634,7 +643,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEnactment_Prescriptivemodel() {
+	public EReference getEnactment_Source() {
 		return (EReference) enactmentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -643,7 +652,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEnactment_Sociotechnicalsystem() {
+	public EReference getEnactment_Target() {
 		return (EReference) enactmentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -661,7 +670,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeployment_Software() {
+	public EReference getDeployment_Target() {
 		return (EReference) deploymentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -670,7 +679,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDeployment_Prescriptivemodel() {
+	public EReference getDeployment_Source() {
 		return (EReference) deploymentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -688,7 +697,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPreparation_Descriptivemodel() {
+	public EReference getPreparation_Target() {
 		return (EReference) preparationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -697,7 +706,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPreparation_Predictivemodel() {
+	public EReference getPreparation_Source() {
 		return (EReference) preparationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -715,7 +724,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAnalysis_Prescriptivemodel() {
+	public EReference getAnalysis_Target() {
 		return (EReference) analysisEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -724,7 +733,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAnalysis_Modanode() {
+	public EReference getAnalysis_Source() {
 		return (EReference) analysisEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -742,8 +751,17 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeneration_Prescriptivemodel() {
+	public EReference getGeneration_Source() {
 		return (EReference) generationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGeneration_Target() {
+		return (EReference) generationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -778,7 +796,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeneralization_Data() {
+	public EReference getGeneralization_Source() {
 		return (EReference) generalizationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -787,7 +805,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGeneralization_Modelrole() {
+	public EReference getGeneralization_Target() {
 		return (EReference) generalizationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -834,7 +852,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		createEReference(modaEClass, MODA__DATA);
 		createEReference(modaEClass, MODA__MODEL);
 		createEReference(modaEClass, MODA__MODELROLE);
-		createEReference(modaEClass, MODA__ABSTRACTRELATION);
+		createEReference(modaEClass, MODA__RELATIONS);
 
 		dataEClass = createEClass(DATA);
 		createEReference(dataEClass, DATA__OTHERINTERPLAY);
@@ -843,34 +861,35 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		modelRoleEClass = createEClass(MODEL_ROLE);
 		createEReference(modelRoleEClass, MODEL_ROLE__MODEL);
-		createEReference(modelRoleEClass, MODEL_ROLE__GENERALIZATION);
 
 		descriptiveModelEClass = createEClass(DESCRIPTIVE_MODEL);
-		createEReference(descriptiveModelEClass, DESCRIPTIVE_MODEL__PREPARATION);
+		createEReference(descriptiveModelEClass, DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION);
 
 		predictiveModelEClass = createEClass(PREDICTIVE_MODEL);
-		createEReference(predictiveModelEClass, PREDICTIVE_MODEL__PREPARATION);
+		createEReference(predictiveModelEClass, PREDICTIVE_MODEL__INCOMING_PREPARATION);
 
 		prescriptiveModelEClass = createEClass(PRESCRIPTIVE_MODEL);
-		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__ENACTMENT);
-		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE);
-		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__ANALYSIS_RESULT);
-		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__GENERATION);
+		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT);
+		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT);
+		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS);
+		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__OUTGOING_GENERATION);
+		createEReference(prescriptiveModelEClass, PRESCRIPTIVE_MODEL__INCOMING_GENERATION);
 
 		softwareEClass = createEClass(SOFTWARE);
 		createEReference(softwareEClass, SOFTWARE__PROCESSING);
-		createEReference(softwareEClass, SOFTWARE__DEPLOYED_MODEL);
+		createEReference(softwareEClass, SOFTWARE__IINCOMING_DEPLOYMENT);
 
 		socioTechnicalSystemEClass = createEClass(SOCIO_TECHNICAL_SYSTEM);
 		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__SOFTWARE);
 		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY);
-		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__ENACTMENT);
+		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT);
 
 		modelEClass = createEClass(MODEL);
 		createEReference(modelEClass, MODEL__MODELROLE);
 
 		modaNodeEClass = createEClass(MODA_NODE);
-		createEReference(modaNodeEClass, MODA_NODE__ANALYSIS);
+		createEReference(modaNodeEClass, MODA_NODE__OUTGOING_ANALYSIS);
+		createEReference(modaNodeEClass, MODA_NODE__OUTGOING_PREPARATION);
 
 		modaRelationEClass = createEClass(MODA_RELATION);
 
@@ -884,30 +903,31 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		createEAttribute(dataPurposeEClass, DATA_PURPOSE__DATA_KIND);
 
 		enactmentEClass = createEClass(ENACTMENT);
-		createEReference(enactmentEClass, ENACTMENT__PRESCRIPTIVEMODEL);
-		createEReference(enactmentEClass, ENACTMENT__SOCIOTECHNICALSYSTEM);
+		createEReference(enactmentEClass, ENACTMENT__SOURCE);
+		createEReference(enactmentEClass, ENACTMENT__TARGET);
 
 		deploymentEClass = createEClass(DEPLOYMENT);
-		createEReference(deploymentEClass, DEPLOYMENT__SOFTWARE);
-		createEReference(deploymentEClass, DEPLOYMENT__PRESCRIPTIVEMODEL);
+		createEReference(deploymentEClass, DEPLOYMENT__TARGET);
+		createEReference(deploymentEClass, DEPLOYMENT__SOURCE);
 
 		preparationEClass = createEClass(PREPARATION);
-		createEReference(preparationEClass, PREPARATION__DESCRIPTIVEMODEL);
-		createEReference(preparationEClass, PREPARATION__PREDICTIVEMODEL);
+		createEReference(preparationEClass, PREPARATION__TARGET);
+		createEReference(preparationEClass, PREPARATION__SOURCE);
 
 		analysisEClass = createEClass(ANALYSIS);
-		createEReference(analysisEClass, ANALYSIS__PRESCRIPTIVEMODEL);
-		createEReference(analysisEClass, ANALYSIS__MODANODE);
+		createEReference(analysisEClass, ANALYSIS__TARGET);
+		createEReference(analysisEClass, ANALYSIS__SOURCE);
 
 		generationEClass = createEClass(GENERATION);
-		createEReference(generationEClass, GENERATION__PRESCRIPTIVEMODEL);
+		createEReference(generationEClass, GENERATION__SOURCE);
+		createEReference(generationEClass, GENERATION__TARGET);
 
 		namedElementEClass = createEClass(NAMED_ELEMENT);
 		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 
 		generalizationEClass = createEClass(GENERALIZATION);
-		createEReference(generalizationEClass, GENERALIZATION__DATA);
-		createEReference(generalizationEClass, GENERALIZATION__MODELROLE);
+		createEReference(generalizationEClass, GENERALIZATION__SOURCE);
+		createEReference(generalizationEClass, GENERALIZATION__TARGET);
 
 		// Create enums
 		dataKindEEnum = createEEnum(DATA_KIND);
@@ -977,7 +997,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getMODA_Modelrole(), this.getModelRole(), null, "modelrole", null, 0, -1,
 				internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMODA_Abstractrelation(), this.getModaRelation(), null, "abstractrelation", null, 0, -1,
+		initEReference(getMODA_Relations(), this.getModaRelation(), null, "relations", null, 0, -1,
 				internship.moda.fig1.MODA.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -988,7 +1008,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getData_Processing(), this.getDataPurpose(), this.getDataPurpose_Data(), "processing", null, 0,
 				1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getData_Generalization(), this.getGeneralization(), this.getGeneralization_Data(),
+		initEReference(getData_Generalization(), this.getGeneralization(), this.getGeneralization_Source(),
 				"generalization", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -997,36 +1017,36 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getModelRole_Model(), this.getModel(), this.getModel_Modelrole(), "model", null, 0, 1,
 				ModelRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModelRole_Generalization(), this.getGeneralization(), this.getGeneralization_Modelrole(),
-				"generalization", null, 0, 1, ModelRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(descriptiveModelEClass, DescriptiveModel.class, "DescriptiveModel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDescriptiveModel_Preparation(), this.getPreparation(), this.getPreparation_Descriptivemodel(),
-				"preparation", null, 0, 1, DescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDescriptiveModel_IncomingGeneralization(), this.getGeneralization(),
+				this.getGeneralization_Target(), "incomingGeneralization", null, 0, 1, DescriptiveModel.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predictiveModelEClass, PredictiveModel.class, "PredictiveModel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPredictiveModel_Preparation(), this.getPreparation(), this.getPreparation_Predictivemodel(),
-				"preparation", null, 0, 1, PredictiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getPredictiveModel_IncomingPreparation(), this.getPreparation(), this.getPreparation_Target(),
+				"incomingPreparation", null, 0, 1, PredictiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(prescriptiveModelEClass, PrescriptiveModel.class, "PrescriptiveModel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPrescriptiveModel_Enactment(), this.getEnactment(), this.getEnactment_Prescriptivemodel(),
-				"enactment", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getPrescriptiveModel_OutgoingEnactment(), this.getEnactment(), this.getEnactment_Source(),
+				"outgoingEnactment", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPrescriptiveModel_RunningSoftware(), this.getDeployment(),
-				this.getDeployment_Prescriptivemodel(), "runningSoftware", null, 0, 1, PrescriptiveModel.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPrescriptiveModel_AnalysisResult(), this.getAnalysis(), this.getAnalysis_Prescriptivemodel(),
-				"analysisResult", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getPrescriptiveModel_OutgoingDeployment(), this.getDeployment(), this.getDeployment_Source(),
+				"outgoingDeployment", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPrescriptiveModel_Generation(), this.getGeneration(), this.getGeneration_Prescriptivemodel(),
-				"generation", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getPrescriptiveModel_IncomingAnalysis(), this.getAnalysis(), this.getAnalysis_Target(),
+				"incomingAnalysis", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrescriptiveModel_OutgoingGeneration(), this.getGeneration(), this.getGeneration_Source(),
+				"outgoingGeneration", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPrescriptiveModel_IncomingGeneration(), this.getGeneration(), this.getGeneration_Target(),
+				"incomingGeneration", null, 0, 1, PrescriptiveModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(softwareEClass, Software.class, "Software", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1034,9 +1054,9 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getSoftware_Processing(), this.getDataPurpose(), this.getDataPurpose_Software(), "processing",
 				null, 0, -1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSoftware_DeployedModel(), this.getDeployment(), this.getDeployment_Software(),
-				"deployedModel", null, 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSoftware_IincomingDeployment(), this.getDeployment(), this.getDeployment_Target(),
+				"iincomingDeployment", null, 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(socioTechnicalSystemEClass, SocioTechnicalSystem.class, "SocioTechnicalSystem", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1047,10 +1067,9 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 				this.getOtherInterplay_Sociotechnicalsystem(), "otherinterplay", null, 0, 1, SocioTechnicalSystem.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSocioTechnicalSystem_Enactment(), this.getEnactment(),
-				this.getEnactment_Sociotechnicalsystem(), "enactment", null, 0, 1, SocioTechnicalSystem.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSocioTechnicalSystem_IncomingEnactment(), this.getEnactment(), this.getEnactment_Target(),
+				"incomingEnactment", null, 0, 1, SocioTechnicalSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModel_Modelrole(), this.getModelRole(), this.getModelRole_Model(), "modelrole", null, 0, -1,
@@ -1058,9 +1077,12 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modaNodeEClass, ModaNode.class, "ModaNode", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModaNode_Analysis(), this.getAnalysis(), this.getAnalysis_Modanode(), "analysis", null, 0, 1,
-				ModaNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModaNode_OutgoingAnalysis(), this.getAnalysis(), this.getAnalysis_Source(),
+				"outgoingAnalysis", null, 0, 1, ModaNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModaNode_OutgoingPreparation(), this.getPreparation(), this.getPreparation_Source(),
+				"outgoingPreparation", null, 0, 1, ModaNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modaRelationEClass, ModaRelation.class, "ModaRelation", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1088,52 +1110,54 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		initEClass(enactmentEClass, Enactment.class, "Enactment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEnactment_Prescriptivemodel(), this.getPrescriptiveModel(),
-				this.getPrescriptiveModel_Enactment(), "prescriptivemodel", null, 0, 1, Enactment.class, !IS_TRANSIENT,
+		initEReference(getEnactment_Source(), this.getPrescriptiveModel(),
+				this.getPrescriptiveModel_OutgoingEnactment(), "source", null, 0, 1, Enactment.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getEnactment_Sociotechnicalsystem(), this.getSocioTechnicalSystem(),
-				this.getSocioTechnicalSystem_Enactment(), "sociotechnicalsystem", null, 0, 1, Enactment.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEnactment_Target(), this.getSocioTechnicalSystem(),
+				this.getSocioTechnicalSystem_IncomingEnactment(), "target", null, 0, 1, Enactment.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(deploymentEClass, Deployment.class, "Deployment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeployment_Software(), this.getSoftware(), this.getSoftware_DeployedModel(), "software", null,
-				0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDeployment_Prescriptivemodel(), this.getPrescriptiveModel(),
-				this.getPrescriptiveModel_RunningSoftware(), "prescriptivemodel", null, 0, 1, Deployment.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(preparationEClass, Preparation.class, "Preparation", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPreparation_Descriptivemodel(), this.getDescriptiveModel(),
-				this.getDescriptiveModel_Preparation(), "descriptivemodel", null, 0, 1, Preparation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPreparation_Predictivemodel(), this.getPredictiveModel(),
-				this.getPredictiveModel_Preparation(), "predictivemodel", null, 0, 1, Preparation.class, !IS_TRANSIENT,
+		initEReference(getDeployment_Target(), this.getSoftware(), this.getSoftware_IincomingDeployment(), "target",
+				null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDeployment_Source(), this.getPrescriptiveModel(),
+				this.getPrescriptiveModel_OutgoingDeployment(), "source", null, 0, 1, Deployment.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
+		initEClass(preparationEClass, Preparation.class, "Preparation", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPreparation_Target(), this.getPredictiveModel(),
+				this.getPredictiveModel_IncomingPreparation(), "target", null, 0, 1, Preparation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getPreparation_Source(), this.getModaNode(), this.getModaNode_OutgoingPreparation(), "source",
+				null, 0, 1, Preparation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(analysisEClass, Analysis.class, "Analysis", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAnalysis_Prescriptivemodel(), this.getPrescriptiveModel(),
-				this.getPrescriptiveModel_AnalysisResult(), "prescriptivemodel", null, 0, 1, Analysis.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAnalysis_Modanode(), this.getModaNode(), this.getModaNode_Analysis(), "modanode", null, 0, 1,
-				Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getAnalysis_Target(), this.getPrescriptiveModel(), this.getPrescriptiveModel_IncomingAnalysis(),
+				"target", null, 0, 1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnalysis_Source(), this.getModaNode(), this.getModaNode_OutgoingAnalysis(), "source", null, 0,
+				1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(generationEClass, Generation.class, "Generation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeneration_Prescriptivemodel(), this.getPrescriptiveModel(),
-				this.getPrescriptiveModel_Generation(), "prescriptivemodel", null, 0, 2, Generation.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeneration_Source(), this.getPrescriptiveModel(),
+				this.getPrescriptiveModel_OutgoingGeneration(), "source", null, 0, 1, Generation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getGeneration_Target(), this.getPrescriptiveModel(),
+				this.getPrescriptiveModel_IncomingGeneration(), "target", null, 0, 1, Generation.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1142,12 +1166,13 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		initEClass(generalizationEClass, Generalization.class, "Generalization", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGeneralization_Data(), this.getData(), this.getData_Generalization(), "data", null, 0, -1,
+		initEReference(getGeneralization_Source(), this.getData(), this.getData_Generalization(), "source", null, 0, -1,
 				Generalization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGeneralization_Modelrole(), this.getModelRole(), this.getModelRole_Generalization(),
-				"modelrole", null, 0, 1, Generalization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGeneralization_Target(), this.getDescriptiveModel(),
+				this.getDescriptiveModel_IncomingGeneralization(), "target", null, 0, 1, Generalization.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(dataKindEEnum, DataKind.class, "DataKind");

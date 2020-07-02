@@ -71,7 +71,7 @@ public interface Data extends ModaNode {
 
 	/**
 	 * Returns the value of the '<em><b>Generalization</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generalization#getData <em>Data</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generalization#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Generalization</em>' reference isn't clear,
@@ -81,8 +81,8 @@ public interface Data extends ModaNode {
 	 * @return the value of the '<em>Generalization</em>' reference.
 	 * @see #setGeneralization(Generalization)
 	 * @see internship.moda.fig1.Fig1Package#getData_Generalization()
-	 * @see internship.moda.fig1.Generalization#getData
-	 * @model opposite="data"
+	 * @see internship.moda.fig1.Generalization#getSource
+	 * @model opposite="source"
 	 * @generated
 	 */
 	Generalization getGeneralization();

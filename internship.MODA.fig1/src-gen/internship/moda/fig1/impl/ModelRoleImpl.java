@@ -3,7 +3,6 @@
 package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.Generalization;
 import internship.moda.fig1.Model;
 import internship.moda.fig1.ModelRole;
 import org.eclipse.emf.common.notify.Notification;
@@ -22,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link internship.moda.fig1.impl.ModelRoleImpl#getModel <em>Model</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.ModelRoleImpl#getGeneralization <em>Generalization</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,16 +35,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 	 * @ordered
 	 */
 	protected Model model;
-
-	/**
-	 * The cached value of the '{@link #getGeneralization() <em>Generalization</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getGeneralization()
-	 * @generated
-	 * @ordered
-	 */
-	protected Generalization generalization;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -137,74 +125,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Generalization getGeneralization() {
-		if (generalization != null && generalization.eIsProxy()) {
-			InternalEObject oldGeneralization = (InternalEObject) generalization;
-			generalization = (Generalization) eResolveProxy(oldGeneralization);
-			if (generalization != oldGeneralization) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.MODEL_ROLE__GENERALIZATION,
-							oldGeneralization, generalization));
-			}
-		}
-		return generalization;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Generalization basicGetGeneralization() {
-		return generalization;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetGeneralization(Generalization newGeneralization, NotificationChain msgs) {
-		Generalization oldGeneralization = generalization;
-		generalization = newGeneralization;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.MODEL_ROLE__GENERALIZATION, oldGeneralization, newGeneralization);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGeneralization(Generalization newGeneralization) {
-		if (newGeneralization != generalization) {
-			NotificationChain msgs = null;
-			if (generalization != null)
-				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__MODELROLE,
-						Generalization.class, msgs);
-			if (newGeneralization != null)
-				msgs = ((InternalEObject) newGeneralization).eInverseAdd(this, Fig1Package.GENERALIZATION__MODELROLE,
-						Generalization.class, msgs);
-			msgs = basicSetGeneralization(newGeneralization, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.MODEL_ROLE__GENERALIZATION,
-					newGeneralization, newGeneralization));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -213,11 +133,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 			if (model != null)
 				msgs = ((InternalEObject) model).eInverseRemove(this, Fig1Package.MODEL__MODELROLE, Model.class, msgs);
 			return basicSetModel((Model) otherEnd, msgs);
-		case Fig1Package.MODEL_ROLE__GENERALIZATION:
-			if (generalization != null)
-				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__MODELROLE,
-						Generalization.class, msgs);
-			return basicSetGeneralization((Generalization) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -232,8 +147,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 		switch (featureID) {
 		case Fig1Package.MODEL_ROLE__MODEL:
 			return basicSetModel(null, msgs);
-		case Fig1Package.MODEL_ROLE__GENERALIZATION:
-			return basicSetGeneralization(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -250,10 +163,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 			if (resolve)
 				return getModel();
 			return basicGetModel();
-		case Fig1Package.MODEL_ROLE__GENERALIZATION:
-			if (resolve)
-				return getGeneralization();
-			return basicGetGeneralization();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -270,9 +179,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 		case Fig1Package.MODEL_ROLE__MODEL:
 			setModel((Model) newValue);
 			return;
-		case Fig1Package.MODEL_ROLE__GENERALIZATION:
-			setGeneralization((Generalization) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -288,9 +194,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 		case Fig1Package.MODEL_ROLE__MODEL:
 			setModel((Model) null);
 			return;
-		case Fig1Package.MODEL_ROLE__GENERALIZATION:
-			setGeneralization((Generalization) null);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -305,8 +208,6 @@ public abstract class ModelRoleImpl extends ModaNodeImpl implements ModelRole {
 		switch (featureID) {
 		case Fig1Package.MODEL_ROLE__MODEL:
 			return model != null;
-		case Fig1Package.MODEL_ROLE__GENERALIZATION:
-			return generalization != null;
 		}
 		return super.eIsSet(featureID);
 	}

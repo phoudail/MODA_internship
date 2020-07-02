@@ -42,7 +42,7 @@ public class SoftwareItemProvider extends ModaNodeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addProcessingPropertyDescriptor(object);
-			addDeployedModelPropertyDescriptor(object);
+			addIincomingDeploymentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -63,18 +63,18 @@ public class SoftwareItemProvider extends ModaNodeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Deployed Model feature.
+	 * This adds a property descriptor for the Iincoming Deployment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDeployedModelPropertyDescriptor(Object object) {
+	protected void addIincomingDeploymentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Software_deployedModel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Software_deployedModel_feature",
+						getResourceLocator(), getString("_UI_Software_iincomingDeployment_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Software_iincomingDeployment_feature",
 								"_UI_Software_type"),
-						Fig1Package.Literals.SOFTWARE__DEPLOYED_MODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.SOFTWARE__IINCOMING_DEPLOYMENT, true, false, true, null, null, null));
 	}
 
 	/**

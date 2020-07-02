@@ -45,7 +45,7 @@ public class SocioTechnicalSystemItemProvider extends ModaNodeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOtherinterplayPropertyDescriptor(object);
-			addEnactmentPropertyDescriptor(object);
+			addIncomingEnactmentPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -66,18 +66,18 @@ public class SocioTechnicalSystemItemProvider extends ModaNodeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Enactment feature.
+	 * This adds a property descriptor for the Incoming Enactment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEnactmentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SocioTechnicalSystem_enactment_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_enactment_feature",
-								"_UI_SocioTechnicalSystem_type"),
-						Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, true, false, true, null, null, null));
+	protected void addIncomingEnactmentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_SocioTechnicalSystem_incomingEnactment_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_SocioTechnicalSystem_incomingEnactment_feature",
+						"_UI_SocioTechnicalSystem_type"),
+				Fig1Package.Literals.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, true, false, true, null, null, null));
 	}
 
 	/**

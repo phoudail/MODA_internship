@@ -42,72 +42,88 @@ public class PrescriptiveModelItemProvider extends ModelRoleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addEnactmentPropertyDescriptor(object);
-			addRunningSoftwarePropertyDescriptor(object);
-			addAnalysisResultPropertyDescriptor(object);
-			addGenerationPropertyDescriptor(object);
+			addOutgoingEnactmentPropertyDescriptor(object);
+			addOutgoingDeploymentPropertyDescriptor(object);
+			addIncomingAnalysisPropertyDescriptor(object);
+			addOutgoingGenerationPropertyDescriptor(object);
+			addIncomingGenerationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Enactment feature.
+	 * This adds a property descriptor for the Outgoing Enactment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEnactmentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PrescriptiveModel_enactment_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_enactment_feature",
-								"_UI_PrescriptiveModel_type"),
-						Fig1Package.Literals.PRESCRIPTIVE_MODEL__ENACTMENT, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Running Software feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRunningSoftwarePropertyDescriptor(Object object) {
+	protected void addOutgoingEnactmentPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_PrescriptiveModel_runningSoftware_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_runningSoftware_feature",
+				getString("_UI_PrescriptiveModel_outgoingEnactment_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_outgoingEnactment_feature",
 						"_UI_PrescriptiveModel_type"),
-				Fig1Package.Literals.PRESCRIPTIVE_MODEL__RUNNING_SOFTWARE, true, false, true, null, null, null));
+				Fig1Package.Literals.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Analysis Result feature.
+	 * This adds a property descriptor for the Outgoing Deployment feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnalysisResultPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PrescriptiveModel_analysisResult_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_analysisResult_feature",
-								"_UI_PrescriptiveModel_type"),
-						Fig1Package.Literals.PRESCRIPTIVE_MODEL__ANALYSIS_RESULT, true, false, true, null, null, null));
+	protected void addOutgoingDeploymentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PrescriptiveModel_outgoingDeployment_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_outgoingDeployment_feature",
+						"_UI_PrescriptiveModel_type"),
+				Fig1Package.Literals.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Generation feature.
+	 * This adds a property descriptor for the Incoming Analysis feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addGenerationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PrescriptiveModel_generation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_generation_feature",
-								"_UI_PrescriptiveModel_type"),
-						Fig1Package.Literals.PRESCRIPTIVE_MODEL__GENERATION, true, false, true, null, null, null));
+	protected void addIncomingAnalysisPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PrescriptiveModel_incomingAnalysis_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_incomingAnalysis_feature",
+						"_UI_PrescriptiveModel_type"),
+				Fig1Package.Literals.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outgoing Generation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutgoingGenerationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PrescriptiveModel_outgoingGeneration_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_outgoingGeneration_feature",
+						"_UI_PrescriptiveModel_type"),
+				Fig1Package.Literals.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Incoming Generation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncomingGenerationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PrescriptiveModel_incomingGeneration_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PrescriptiveModel_incomingGeneration_feature",
+						"_UI_PrescriptiveModel_type"),
+				Fig1Package.Literals.PRESCRIPTIVE_MODEL__INCOMING_GENERATION, true, false, true, null, null, null));
 	}
 
 	/**

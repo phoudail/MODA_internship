@@ -21,21 +21,21 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.PredictiveModelImpl#getPreparation <em>Preparation</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PredictiveModelImpl#getIncomingPreparation <em>Incoming Preparation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveModel {
 	/**
-	 * The cached value of the '{@link #getPreparation() <em>Preparation</em>}' reference.
+	 * The cached value of the '{@link #getIncomingPreparation() <em>Incoming Preparation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPreparation()
+	 * @see #getIncomingPreparation()
 	 * @generated
 	 * @ordered
 	 */
-	protected Preparation preparation;
+	protected Preparation incomingPreparation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -61,17 +61,18 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Preparation getPreparation() {
-		if (preparation != null && preparation.eIsProxy()) {
-			InternalEObject oldPreparation = (InternalEObject) preparation;
-			preparation = (Preparation) eResolveProxy(oldPreparation);
-			if (preparation != oldPreparation) {
+	public Preparation getIncomingPreparation() {
+		if (incomingPreparation != null && incomingPreparation.eIsProxy()) {
+			InternalEObject oldIncomingPreparation = (InternalEObject) incomingPreparation;
+			incomingPreparation = (Preparation) eResolveProxy(oldIncomingPreparation);
+			if (incomingPreparation != oldIncomingPreparation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PREDICTIVE_MODEL__PREPARATION,
-							oldPreparation, preparation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, oldIncomingPreparation,
+							incomingPreparation));
 			}
 		}
-		return preparation;
+		return incomingPreparation;
 	}
 
 	/**
@@ -79,8 +80,8 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Preparation basicGetPreparation() {
-		return preparation;
+	public Preparation basicGetIncomingPreparation() {
+		return incomingPreparation;
 	}
 
 	/**
@@ -88,12 +89,12 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPreparation(Preparation newPreparation, NotificationChain msgs) {
-		Preparation oldPreparation = preparation;
-		preparation = newPreparation;
+	public NotificationChain basicSetIncomingPreparation(Preparation newIncomingPreparation, NotificationChain msgs) {
+		Preparation oldIncomingPreparation = incomingPreparation;
+		incomingPreparation = newIncomingPreparation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PREDICTIVE_MODEL__PREPARATION, oldPreparation, newPreparation);
+					Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, oldIncomingPreparation, newIncomingPreparation);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -107,21 +108,21 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPreparation(Preparation newPreparation) {
-		if (newPreparation != preparation) {
+	public void setIncomingPreparation(Preparation newIncomingPreparation) {
+		if (newIncomingPreparation != incomingPreparation) {
 			NotificationChain msgs = null;
-			if (preparation != null)
-				msgs = ((InternalEObject) preparation).eInverseRemove(this, Fig1Package.PREPARATION__PREDICTIVEMODEL,
+			if (incomingPreparation != null)
+				msgs = ((InternalEObject) incomingPreparation).eInverseRemove(this, Fig1Package.PREPARATION__TARGET,
 						Preparation.class, msgs);
-			if (newPreparation != null)
-				msgs = ((InternalEObject) newPreparation).eInverseAdd(this, Fig1Package.PREPARATION__PREDICTIVEMODEL,
+			if (newIncomingPreparation != null)
+				msgs = ((InternalEObject) newIncomingPreparation).eInverseAdd(this, Fig1Package.PREPARATION__TARGET,
 						Preparation.class, msgs);
-			msgs = basicSetPreparation(newPreparation, msgs);
+			msgs = basicSetIncomingPreparation(newIncomingPreparation, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PREDICTIVE_MODEL__PREPARATION,
-					newPreparation, newPreparation));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION,
+					newIncomingPreparation, newIncomingPreparation));
 	}
 
 	/**
@@ -132,11 +133,11 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PREDICTIVE_MODEL__PREPARATION:
-			if (preparation != null)
-				msgs = ((InternalEObject) preparation).eInverseRemove(this, Fig1Package.PREPARATION__PREDICTIVEMODEL,
+		case Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION:
+			if (incomingPreparation != null)
+				msgs = ((InternalEObject) incomingPreparation).eInverseRemove(this, Fig1Package.PREPARATION__TARGET,
 						Preparation.class, msgs);
-			return basicSetPreparation((Preparation) otherEnd, msgs);
+			return basicSetIncomingPreparation((Preparation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -149,8 +150,8 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PREDICTIVE_MODEL__PREPARATION:
-			return basicSetPreparation(null, msgs);
+		case Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION:
+			return basicSetIncomingPreparation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -163,10 +164,10 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.PREDICTIVE_MODEL__PREPARATION:
+		case Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION:
 			if (resolve)
-				return getPreparation();
-			return basicGetPreparation();
+				return getIncomingPreparation();
+			return basicGetIncomingPreparation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -179,8 +180,8 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.PREDICTIVE_MODEL__PREPARATION:
-			setPreparation((Preparation) newValue);
+		case Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION:
+			setIncomingPreparation((Preparation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -194,8 +195,8 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PREDICTIVE_MODEL__PREPARATION:
-			setPreparation((Preparation) null);
+		case Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION:
+			setIncomingPreparation((Preparation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -209,8 +210,8 @@ public class PredictiveModelImpl extends ModelRoleImpl implements PredictiveMode
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PREDICTIVE_MODEL__PREPARATION:
-			return preparation != null;
+		case Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION:
+			return incomingPreparation != null;
 		}
 		return super.eIsSet(featureID);
 	}

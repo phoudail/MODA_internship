@@ -11,8 +11,8 @@ package internship.moda.fig1;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.Deployment#getSoftware <em>Software</em>}</li>
- *   <li>{@link internship.moda.fig1.Deployment#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
+ *   <li>{@link internship.moda.fig1.Deployment#getTarget <em>Target</em>}</li>
+ *   <li>{@link internship.moda.fig1.Deployment#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getDeployment()
@@ -21,59 +21,59 @@ package internship.moda.fig1;
  */
 public interface Deployment extends ModaRelation {
 	/**
-	 * Returns the value of the '<em><b>Software</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getDeployedModel <em>Deployed Model</em>}'.
+	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getIincomingDeployment <em>Iincoming Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Software</em>' reference isn't clear,
+	 * If the meaning of the '<em>Target</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software</em>' reference.
-	 * @see #setSoftware(Software)
-	 * @see internship.moda.fig1.Fig1Package#getDeployment_Software()
-	 * @see internship.moda.fig1.Software#getDeployedModel
-	 * @model opposite="deployedModel"
+	 * @return the value of the '<em>Target</em>' reference.
+	 * @see #setTarget(Software)
+	 * @see internship.moda.fig1.Fig1Package#getDeployment_Target()
+	 * @see internship.moda.fig1.Software#getIincomingDeployment
+	 * @model opposite="iincomingDeployment"
 	 * @generated
 	 */
-	Software getSoftware();
+	Software getTarget();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Deployment#getSoftware <em>Software</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Deployment#getTarget <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Software</em>' reference.
-	 * @see #getSoftware()
+	 * @param value the new value of the '<em>Target</em>' reference.
+	 * @see #getTarget()
 	 * @generated
 	 */
-	void setSoftware(Software value);
+	void setTarget(Software value);
 
 	/**
-	 * Returns the value of the '<em><b>Prescriptivemodel</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getRunningSoftware <em>Running Software</em>}'.
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getOutgoingDeployment <em>Outgoing Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescriptivemodel</em>' reference isn't clear,
+	 * If the meaning of the '<em>Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #setPrescriptivemodel(PrescriptiveModel)
-	 * @see internship.moda.fig1.Fig1Package#getDeployment_Prescriptivemodel()
-	 * @see internship.moda.fig1.PrescriptiveModel#getRunningSoftware
-	 * @model opposite="runningSoftware"
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(PrescriptiveModel)
+	 * @see internship.moda.fig1.Fig1Package#getDeployment_Source()
+	 * @see internship.moda.fig1.PrescriptiveModel#getOutgoingDeployment
+	 * @model opposite="outgoingDeployment"
 	 * @generated
 	 */
-	PrescriptiveModel getPrescriptivemodel();
+	PrescriptiveModel getSource();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Deployment#getPrescriptivemodel <em>Prescriptivemodel</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Deployment#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #getPrescriptivemodel()
+	 * @param value the new value of the '<em>Source</em>' reference.
+	 * @see #getSource()
 	 * @generated
 	 */
-	void setPrescriptivemodel(PrescriptiveModel value);
+	void setSource(PrescriptiveModel value);
 
 } // Deployment

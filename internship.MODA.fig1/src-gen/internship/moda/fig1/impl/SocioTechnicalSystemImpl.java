@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getSoftware <em>Software</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getOtherinterplay <em>Otherinterplay</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getEnactment <em>Enactment</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl#getIncomingEnactment <em>Incoming Enactment</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +52,14 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 	protected OtherInterplay otherinterplay;
 
 	/**
-	 * The cached value of the '{@link #getEnactment() <em>Enactment</em>}' reference.
+	 * The cached value of the '{@link #getIncomingEnactment() <em>Incoming Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnactment()
+	 * @see #getIncomingEnactment()
 	 * @generated
 	 * @ordered
 	 */
-	protected Enactment enactment;
+	protected Enactment incomingEnactment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,17 +203,18 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enactment getEnactment() {
-		if (enactment != null && enactment.eIsProxy()) {
-			InternalEObject oldEnactment = (InternalEObject) enactment;
-			enactment = (Enactment) eResolveProxy(oldEnactment);
-			if (enactment != oldEnactment) {
+	public Enactment getIncomingEnactment() {
+		if (incomingEnactment != null && incomingEnactment.eIsProxy()) {
+			InternalEObject oldIncomingEnactment = (InternalEObject) incomingEnactment;
+			incomingEnactment = (Enactment) eResolveProxy(oldIncomingEnactment);
+			if (incomingEnactment != oldIncomingEnactment) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, oldEnactment, enactment));
+							Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, oldIncomingEnactment,
+							incomingEnactment));
 			}
 		}
-		return enactment;
+		return incomingEnactment;
 	}
 
 	/**
@@ -221,8 +222,8 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Enactment basicGetEnactment() {
-		return enactment;
+	public Enactment basicGetIncomingEnactment() {
+		return incomingEnactment;
 	}
 
 	/**
@@ -230,12 +231,12 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEnactment(Enactment newEnactment, NotificationChain msgs) {
-		Enactment oldEnactment = enactment;
-		enactment = newEnactment;
+	public NotificationChain basicSetIncomingEnactment(Enactment newIncomingEnactment, NotificationChain msgs) {
+		Enactment oldIncomingEnactment = incomingEnactment;
+		incomingEnactment = newIncomingEnactment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, oldEnactment, newEnactment);
+					Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, oldIncomingEnactment, newIncomingEnactment);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -249,21 +250,22 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnactment(Enactment newEnactment) {
-		if (newEnactment != enactment) {
+	public void setIncomingEnactment(Enactment newIncomingEnactment) {
+		if (newIncomingEnactment != incomingEnactment) {
 			NotificationChain msgs = null;
-			if (enactment != null)
-				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
+			if (incomingEnactment != null)
+				msgs = ((InternalEObject) incomingEnactment).eInverseRemove(this, Fig1Package.ENACTMENT__TARGET,
 						Enactment.class, msgs);
-			if (newEnactment != null)
-				msgs = ((InternalEObject) newEnactment).eInverseAdd(this, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
+			if (newIncomingEnactment != null)
+				msgs = ((InternalEObject) newIncomingEnactment).eInverseAdd(this, Fig1Package.ENACTMENT__TARGET,
 						Enactment.class, msgs);
-			msgs = basicSetEnactment(newEnactment, msgs);
+			msgs = basicSetIncomingEnactment(newIncomingEnactment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT,
-					newEnactment, newEnactment));
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, newIncomingEnactment,
+					newIncomingEnactment));
 	}
 
 	/**
@@ -280,11 +282,11 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 				msgs = ((InternalEObject) otherinterplay).eInverseRemove(this,
 						Fig1Package.OTHER_INTERPLAY__SOCIOTECHNICALSYSTEM, OtherInterplay.class, msgs);
 			return basicSetOtherinterplay((OtherInterplay) otherEnd, msgs);
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
-			if (enactment != null)
-				msgs = ((InternalEObject) enactment).eInverseRemove(this, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT:
+			if (incomingEnactment != null)
+				msgs = ((InternalEObject) incomingEnactment).eInverseRemove(this, Fig1Package.ENACTMENT__TARGET,
 						Enactment.class, msgs);
-			return basicSetEnactment((Enactment) otherEnd, msgs);
+			return basicSetIncomingEnactment((Enactment) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -301,8 +303,8 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 			return basicSetSoftware(null, msgs);
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
 			return basicSetOtherinterplay(null, msgs);
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
-			return basicSetEnactment(null, msgs);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT:
+			return basicSetIncomingEnactment(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -321,10 +323,10 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 			if (resolve)
 				return getOtherinterplay();
 			return basicGetOtherinterplay();
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT:
 			if (resolve)
-				return getEnactment();
-			return basicGetEnactment();
+				return getIncomingEnactment();
+			return basicGetIncomingEnactment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,8 +346,8 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
 			setOtherinterplay((OtherInterplay) newValue);
 			return;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
-			setEnactment((Enactment) newValue);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT:
+			setIncomingEnactment((Enactment) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -365,8 +367,8 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
 			setOtherinterplay((OtherInterplay) null);
 			return;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
-			setEnactment((Enactment) null);
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT:
+			setIncomingEnactment((Enactment) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -384,8 +386,8 @@ public class SocioTechnicalSystemImpl extends ModaNodeImpl implements SocioTechn
 			return software != null;
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__OTHERINTERPLAY:
 			return otherinterplay != null;
-		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT:
-			return enactment != null;
+		case Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT:
+			return incomingEnactment != null;
 		}
 		return super.eIsSet(featureID);
 	}

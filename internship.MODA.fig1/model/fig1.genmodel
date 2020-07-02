@@ -21,7 +21,7 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/data"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/model"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/modelrole"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/abstractrelation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//MODA/relations"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Data">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/otherinterplay"/>
@@ -30,34 +30,35 @@
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//ModelRole">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModelRole/model"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModelRole/generalization"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//DescriptiveModel">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//DescriptiveModel/preparation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//DescriptiveModel/incomingGeneralization"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//PredictiveModel">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PredictiveModel/preparation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PredictiveModel/incomingPreparation"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//PrescriptiveModel">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/enactment"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/runningSoftware"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/analysisResult"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/generation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/outgoingEnactment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/outgoingDeployment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/incomingAnalysis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/outgoingGeneration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//PrescriptiveModel/incomingGeneration"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Software">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/processing"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/deployedModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Software/incomingDeployment"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//SocioTechnicalSystem">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/software"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/otherinterplay"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/enactment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//SocioTechnicalSystem/incomingEnactment"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Model">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Model/modelrole"/>
     </genClasses>
     <genClasses image="false" ecoreClass="fig1.ecore#//ModaNode">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModaNode/analysis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModaNode/outgoingAnalysis"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//ModaNode/outgoingPreparation"/>
     </genClasses>
     <genClasses image="false" ecoreClass="fig1.ecore#//ModaRelation"/>
     <genClasses ecoreClass="fig1.ecore#//OtherInterplay">
@@ -70,30 +71,31 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//DataPurpose/dataKind"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Enactment">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Enactment/prescriptivemodel"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Enactment/sociotechnicalsystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Enactment/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Enactment/target"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Deployment">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Deployment/software"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Deployment/prescriptivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Deployment/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Deployment/source"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Preparation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Preparation/descriptivemodel"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Preparation/predictivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Preparation/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Preparation/source"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Analysis">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Analysis/prescriptivemodel"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Analysis/modanode"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Analysis/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Analysis/source"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Generation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generation/prescriptivemodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generation/target"/>
     </genClasses>
     <genClasses image="false" ecoreClass="fig1.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute fig1.ecore#//NamedElement/name"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Generalization">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generalization/data"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generalization/modelrole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generalization/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Generalization/target"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -23,32 +23,32 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.EnactmentImpl#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.EnactmentImpl#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.EnactmentImpl#getSource <em>Source</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.EnactmentImpl#getTarget <em>Target</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	/**
-	 * The cached value of the '{@link #getPrescriptivemodel() <em>Prescriptivemodel</em>}' reference.
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrescriptivemodel()
+	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel prescriptivemodel;
+	protected PrescriptiveModel source;
 
 	/**
-	 * The cached value of the '{@link #getSociotechnicalsystem() <em>Sociotechnicalsystem</em>}' reference.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSociotechnicalsystem()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected SocioTechnicalSystem sociotechnicalsystem;
+	protected SocioTechnicalSystem target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,17 +74,17 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getPrescriptivemodel() {
-		if (prescriptivemodel != null && prescriptivemodel.eIsProxy()) {
-			InternalEObject oldPrescriptivemodel = (InternalEObject) prescriptivemodel;
-			prescriptivemodel = (PrescriptiveModel) eResolveProxy(oldPrescriptivemodel);
-			if (prescriptivemodel != oldPrescriptivemodel) {
+	public PrescriptiveModel getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject) source;
+			source = (PrescriptiveModel) eResolveProxy(oldSource);
+			if (source != oldSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
-							oldPrescriptivemodel, prescriptivemodel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ENACTMENT__SOURCE, oldSource,
+							source));
 			}
 		}
-		return prescriptivemodel;
+		return source;
 	}
 
 	/**
@@ -92,8 +92,8 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetPrescriptivemodel() {
-		return prescriptivemodel;
+	public PrescriptiveModel basicGetSource() {
+		return source;
 	}
 
 	/**
@@ -101,12 +101,12 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPrescriptivemodel(PrescriptiveModel newPrescriptivemodel, NotificationChain msgs) {
-		PrescriptiveModel oldPrescriptivemodel = prescriptivemodel;
-		prescriptivemodel = newPrescriptivemodel;
+	public NotificationChain basicSetSource(PrescriptiveModel newSource, NotificationChain msgs) {
+		PrescriptiveModel oldSource = source;
+		source = newSource;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL, oldPrescriptivemodel, newPrescriptivemodel);
+					Fig1Package.ENACTMENT__SOURCE, oldSource, newSource);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -120,21 +120,20 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrescriptivemodel(PrescriptiveModel newPrescriptivemodel) {
-		if (newPrescriptivemodel != prescriptivemodel) {
+	public void setSource(PrescriptiveModel newSource) {
+		if (newSource != source) {
 			NotificationChain msgs = null;
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT, PrescriptiveModel.class, msgs);
-			if (newPrescriptivemodel != null)
-				msgs = ((InternalEObject) newPrescriptivemodel).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT, PrescriptiveModel.class, msgs);
-			msgs = basicSetPrescriptivemodel(newPrescriptivemodel, msgs);
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, PrescriptiveModel.class, msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject) newSource).eInverseAdd(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, PrescriptiveModel.class, msgs);
+			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL,
-					newPrescriptivemodel, newPrescriptivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ENACTMENT__SOURCE, newSource, newSource));
 	}
 
 	/**
@@ -142,18 +141,17 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SocioTechnicalSystem getSociotechnicalsystem() {
-		if (sociotechnicalsystem != null && sociotechnicalsystem.eIsProxy()) {
-			InternalEObject oldSociotechnicalsystem = (InternalEObject) sociotechnicalsystem;
-			sociotechnicalsystem = (SocioTechnicalSystem) eResolveProxy(oldSociotechnicalsystem);
-			if (sociotechnicalsystem != oldSociotechnicalsystem) {
+	public SocioTechnicalSystem getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject) target;
+			target = (SocioTechnicalSystem) eResolveProxy(oldTarget);
+			if (target != oldTarget) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM, oldSociotechnicalsystem,
-							sociotechnicalsystem));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ENACTMENT__TARGET, oldTarget,
+							target));
 			}
 		}
-		return sociotechnicalsystem;
+		return target;
 	}
 
 	/**
@@ -161,8 +159,8 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SocioTechnicalSystem basicGetSociotechnicalsystem() {
-		return sociotechnicalsystem;
+	public SocioTechnicalSystem basicGetTarget() {
+		return target;
 	}
 
 	/**
@@ -170,13 +168,12 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSociotechnicalsystem(SocioTechnicalSystem newSociotechnicalsystem,
-			NotificationChain msgs) {
-		SocioTechnicalSystem oldSociotechnicalsystem = sociotechnicalsystem;
-		sociotechnicalsystem = newSociotechnicalsystem;
+	public NotificationChain basicSetTarget(SocioTechnicalSystem newTarget, NotificationChain msgs) {
+		SocioTechnicalSystem oldTarget = target;
+		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM, oldSociotechnicalsystem, newSociotechnicalsystem);
+					Fig1Package.ENACTMENT__TARGET, oldTarget, newTarget);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -190,21 +187,20 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSociotechnicalsystem(SocioTechnicalSystem newSociotechnicalsystem) {
-		if (newSociotechnicalsystem != sociotechnicalsystem) {
+	public void setTarget(SocioTechnicalSystem newTarget) {
+		if (newTarget != target) {
 			NotificationChain msgs = null;
-			if (sociotechnicalsystem != null)
-				msgs = ((InternalEObject) sociotechnicalsystem).eInverseRemove(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, SocioTechnicalSystem.class, msgs);
-			if (newSociotechnicalsystem != null)
-				msgs = ((InternalEObject) newSociotechnicalsystem).eInverseAdd(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, SocioTechnicalSystem.class, msgs);
-			msgs = basicSetSociotechnicalsystem(newSociotechnicalsystem, msgs);
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this,
+						Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, SocioTechnicalSystem.class, msgs);
+			if (newTarget != null)
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
+						Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, SocioTechnicalSystem.class, msgs);
+			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM,
-					newSociotechnicalsystem, newSociotechnicalsystem));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.ENACTMENT__TARGET, newTarget, newTarget));
 	}
 
 	/**
@@ -215,16 +211,16 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL:
-			if (prescriptivemodel != null)
-				msgs = ((InternalEObject) prescriptivemodel).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__ENACTMENT, PrescriptiveModel.class, msgs);
-			return basicSetPrescriptivemodel((PrescriptiveModel) otherEnd, msgs);
-		case Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM:
-			if (sociotechnicalsystem != null)
-				msgs = ((InternalEObject) sociotechnicalsystem).eInverseRemove(this,
-						Fig1Package.SOCIO_TECHNICAL_SYSTEM__ENACTMENT, SocioTechnicalSystem.class, msgs);
-			return basicSetSociotechnicalsystem((SocioTechnicalSystem) otherEnd, msgs);
+		case Fig1Package.ENACTMENT__SOURCE:
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this,
+						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, PrescriptiveModel.class, msgs);
+			return basicSetSource((PrescriptiveModel) otherEnd, msgs);
+		case Fig1Package.ENACTMENT__TARGET:
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this,
+						Fig1Package.SOCIO_TECHNICAL_SYSTEM__INCOMING_ENACTMENT, SocioTechnicalSystem.class, msgs);
+			return basicSetTarget((SocioTechnicalSystem) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -237,10 +233,10 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL:
-			return basicSetPrescriptivemodel(null, msgs);
-		case Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM:
-			return basicSetSociotechnicalsystem(null, msgs);
+		case Fig1Package.ENACTMENT__SOURCE:
+			return basicSetSource(null, msgs);
+		case Fig1Package.ENACTMENT__TARGET:
+			return basicSetTarget(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -253,14 +249,14 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL:
+		case Fig1Package.ENACTMENT__SOURCE:
 			if (resolve)
-				return getPrescriptivemodel();
-			return basicGetPrescriptivemodel();
-		case Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM:
+				return getSource();
+			return basicGetSource();
+		case Fig1Package.ENACTMENT__TARGET:
 			if (resolve)
-				return getSociotechnicalsystem();
-			return basicGetSociotechnicalsystem();
+				return getTarget();
+			return basicGetTarget();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,11 +269,11 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) newValue);
+		case Fig1Package.ENACTMENT__SOURCE:
+			setSource((PrescriptiveModel) newValue);
 			return;
-		case Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM:
-			setSociotechnicalsystem((SocioTechnicalSystem) newValue);
+		case Fig1Package.ENACTMENT__TARGET:
+			setTarget((SocioTechnicalSystem) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -291,11 +287,11 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL:
-			setPrescriptivemodel((PrescriptiveModel) null);
+		case Fig1Package.ENACTMENT__SOURCE:
+			setSource((PrescriptiveModel) null);
 			return;
-		case Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM:
-			setSociotechnicalsystem((SocioTechnicalSystem) null);
+		case Fig1Package.ENACTMENT__TARGET:
+			setTarget((SocioTechnicalSystem) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -309,10 +305,10 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.ENACTMENT__PRESCRIPTIVEMODEL:
-			return prescriptivemodel != null;
-		case Fig1Package.ENACTMENT__SOCIOTECHNICALSYSTEM:
-			return sociotechnicalsystem != null;
+		case Fig1Package.ENACTMENT__SOURCE:
+			return source != null;
+		case Fig1Package.ENACTMENT__TARGET:
+			return target != null;
 		}
 		return super.eIsSet(featureID);
 	}

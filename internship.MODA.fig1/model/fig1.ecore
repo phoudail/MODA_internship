@@ -10,7 +10,7 @@
         eType="#//Model" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelrole" upperBound="-1"
         eType="#//ModelRole" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractrelation" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relations" upperBound="-1"
         eType="#//ModaRelation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//ModaNode">
@@ -19,45 +19,45 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="processing" eType="#//DataPurpose"
         eOpposite="#//DataPurpose/data"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generalization" eType="#//Generalization"
-        eOpposite="#//Generalization/data"/>
+        eOpposite="#//Generalization/source"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelRole" abstract="true" eSuperTypes="#//ModaNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#//Model"
         eOpposite="#//Model/modelrole"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generalization" eType="#//Generalization"
-        eOpposite="#//Generalization/modelrole"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DescriptiveModel" eSuperTypes="#//ModelRole">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preparation" eType="#//Preparation"
-        eOpposite="#//Preparation/descriptivemodel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingGeneralization"
+        eType="#//Generalization" eOpposite="#//Generalization/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PredictiveModel" eSuperTypes="#//ModelRole">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preparation" eType="#//Preparation"
-        eOpposite="#//Preparation/predictivemodel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingPreparation" eType="#//Preparation"
+        eOpposite="#//Preparation/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PrescriptiveModel" eSuperTypes="#//ModelRole">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="enactment" eType="#//Enactment"
-        eOpposite="#//Enactment/prescriptivemodel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="runningSoftware" eType="#//Deployment"
-        eOpposite="#//Deployment/prescriptivemodel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="analysisResult" eType="#//Analysis"
-        eOpposite="#//Analysis/prescriptivemodel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generation" eType="#//Generation"
-        eOpposite="#//Generation/prescriptivemodel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingEnactment" eType="#//Enactment"
+        eOpposite="#//Enactment/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingDeployment" eType="#//Deployment"
+        eOpposite="#//Deployment/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingAnalysis" eType="#//Analysis"
+        eOpposite="#//Analysis/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingGeneration" eType="#//Generation"
+        eOpposite="#//Generation/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingGeneration" eType="#//Generation"
+        eOpposite="#//Generation/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Software" eSuperTypes="#//ModaNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="processing" upperBound="-1"
         eType="#//DataPurpose" eOpposite="#//DataPurpose/software"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="deployedModel" eType="#//Deployment"
-        eOpposite="#//Deployment/software"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingDeployment" eType="#//Deployment"
+        eOpposite="#//Deployment/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SocioTechnicalSystem" eSuperTypes="#//ModaNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="otherinterplay" eType="#//OtherInterplay"
         eOpposite="#//OtherInterplay/sociotechnicalsystem"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="enactment" eType="#//Enactment"
-        eOpposite="#//Enactment/sociotechnicalsystem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingEnactment" eType="#//Enactment"
+        eOpposite="#//Enactment/target"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DataKind">
     <eLiterals name="InputData"/>
@@ -70,8 +70,10 @@
         eType="#//ModelRole" eOpposite="#//ModelRole/model"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModaNode" abstract="true" eSuperTypes="#//NamedElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="analysis" eType="#//Analysis"
-        eOpposite="#//Analysis/modanode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingAnalysis" eType="#//Analysis"
+        eOpposite="#//Analysis/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingPreparation" eType="#//Preparation"
+        eOpposite="#//Preparation/source"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModaRelation" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="OtherInterplay" eSuperTypes="#//ModaRelation">
@@ -87,40 +89,42 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataKind" eType="#//DataKind"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Enactment" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptivemodel" eType="#//PrescriptiveModel"
-        eOpposite="#//PrescriptiveModel/enactment"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sociotechnicalsystem" eType="#//SocioTechnicalSystem"
-        eOpposite="#//SocioTechnicalSystem/enactment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//PrescriptiveModel"
+        eOpposite="#//PrescriptiveModel/outgoingEnactment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//SocioTechnicalSystem"
+        eOpposite="#//SocioTechnicalSystem/incomingEnactment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Deployment" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
-        eOpposite="#//Software/deployedModel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptivemodel" eType="#//PrescriptiveModel"
-        eOpposite="#//PrescriptiveModel/runningSoftware"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Software"
+        eOpposite="#//Software/incomingDeployment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//PrescriptiveModel"
+        eOpposite="#//PrescriptiveModel/outgoingDeployment"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Preparation" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="descriptivemodel" eType="#//DescriptiveModel"
-        eOpposite="#//DescriptiveModel/preparation"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="predictivemodel" eType="#//PredictiveModel"
-        eOpposite="#//PredictiveModel/preparation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//PredictiveModel"
+        eOpposite="#//PredictiveModel/incomingPreparation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//ModaNode"
+        eOpposite="#//ModaNode/outgoingPreparation"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Analysis" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptivemodel" eType="#//PrescriptiveModel"
-        eOpposite="#//PrescriptiveModel/analysisResult"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modanode" eType="#//ModaNode"
-        eOpposite="#//ModaNode/analysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//PrescriptiveModel"
+        eOpposite="#//PrescriptiveModel/incomingAnalysis"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//ModaNode"
+        eOpposite="#//ModaNode/outgoingAnalysis"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Generation" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prescriptivemodel" upperBound="2"
-        eType="#//PrescriptiveModel" eOpposite="#//PrescriptiveModel/generation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//PrescriptiveModel"
+        eOpposite="#//PrescriptiveModel/outgoingGeneration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//PrescriptiveModel"
+        eOpposite="#//PrescriptiveModel/incomingGeneration"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Generalization" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="data" upperBound="-1" eType="#//Data"
-        eOpposite="#//Data/generalization"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modelrole" eType="#//ModelRole"
-        eOpposite="#//ModelRole/generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" upperBound="-1"
+        eType="#//Data" eOpposite="#//Data/generalization"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//DescriptiveModel"
+        eOpposite="#//DescriptiveModel/incomingGeneralization"/>
   </eClassifiers>
 </ecore:EPackage>

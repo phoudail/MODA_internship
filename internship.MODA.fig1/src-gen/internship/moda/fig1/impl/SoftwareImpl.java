@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link internship.moda.fig1.impl.SoftwareImpl#getProcessing <em>Processing</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.SoftwareImpl#getDeployedModel <em>Deployed Model</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.SoftwareImpl#getIincomingDeployment <em>Iincoming Deployment</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,14 +47,14 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 	protected EList<DataPurpose> processing;
 
 	/**
-	 * The cached value of the '{@link #getDeployedModel() <em>Deployed Model</em>}' reference.
+	 * The cached value of the '{@link #getIincomingDeployment() <em>Iincoming Deployment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDeployedModel()
+	 * @see #getIincomingDeployment()
 	 * @generated
 	 * @ordered
 	 */
-	protected Deployment deployedModel;
+	protected Deployment iincomingDeployment;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,17 +93,17 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Deployment getDeployedModel() {
-		if (deployedModel != null && deployedModel.eIsProxy()) {
-			InternalEObject oldDeployedModel = (InternalEObject) deployedModel;
-			deployedModel = (Deployment) eResolveProxy(oldDeployedModel);
-			if (deployedModel != oldDeployedModel) {
+	public Deployment getIincomingDeployment() {
+		if (iincomingDeployment != null && iincomingDeployment.eIsProxy()) {
+			InternalEObject oldIincomingDeployment = (InternalEObject) iincomingDeployment;
+			iincomingDeployment = (Deployment) eResolveProxy(oldIincomingDeployment);
+			if (iincomingDeployment != oldIincomingDeployment) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.SOFTWARE__DEPLOYED_MODEL,
-							oldDeployedModel, deployedModel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT, oldIincomingDeployment, iincomingDeployment));
 			}
 		}
-		return deployedModel;
+		return iincomingDeployment;
 	}
 
 	/**
@@ -111,8 +111,8 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Deployment basicGetDeployedModel() {
-		return deployedModel;
+	public Deployment basicGetIincomingDeployment() {
+		return iincomingDeployment;
 	}
 
 	/**
@@ -120,12 +120,12 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDeployedModel(Deployment newDeployedModel, NotificationChain msgs) {
-		Deployment oldDeployedModel = deployedModel;
-		deployedModel = newDeployedModel;
+	public NotificationChain basicSetIincomingDeployment(Deployment newIincomingDeployment, NotificationChain msgs) {
+		Deployment oldIincomingDeployment = iincomingDeployment;
+		iincomingDeployment = newIincomingDeployment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.SOFTWARE__DEPLOYED_MODEL, oldDeployedModel, newDeployedModel);
+					Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT, oldIincomingDeployment, newIincomingDeployment);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -139,21 +139,21 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDeployedModel(Deployment newDeployedModel) {
-		if (newDeployedModel != deployedModel) {
+	public void setIincomingDeployment(Deployment newIincomingDeployment) {
+		if (newIincomingDeployment != iincomingDeployment) {
 			NotificationChain msgs = null;
-			if (deployedModel != null)
-				msgs = ((InternalEObject) deployedModel).eInverseRemove(this, Fig1Package.DEPLOYMENT__SOFTWARE,
+			if (iincomingDeployment != null)
+				msgs = ((InternalEObject) iincomingDeployment).eInverseRemove(this, Fig1Package.DEPLOYMENT__TARGET,
 						Deployment.class, msgs);
-			if (newDeployedModel != null)
-				msgs = ((InternalEObject) newDeployedModel).eInverseAdd(this, Fig1Package.DEPLOYMENT__SOFTWARE,
+			if (newIincomingDeployment != null)
+				msgs = ((InternalEObject) newIincomingDeployment).eInverseAdd(this, Fig1Package.DEPLOYMENT__TARGET,
 						Deployment.class, msgs);
-			msgs = basicSetDeployedModel(newDeployedModel, msgs);
+			msgs = basicSetIincomingDeployment(newIincomingDeployment, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOFTWARE__DEPLOYED_MODEL,
-					newDeployedModel, newDeployedModel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
+					newIincomingDeployment, newIincomingDeployment));
 	}
 
 	/**
@@ -167,11 +167,11 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 		switch (featureID) {
 		case Fig1Package.SOFTWARE__PROCESSING:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getProcessing()).basicAdd(otherEnd, msgs);
-		case Fig1Package.SOFTWARE__DEPLOYED_MODEL:
-			if (deployedModel != null)
-				msgs = ((InternalEObject) deployedModel).eInverseRemove(this, Fig1Package.DEPLOYMENT__SOFTWARE,
+		case Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT:
+			if (iincomingDeployment != null)
+				msgs = ((InternalEObject) iincomingDeployment).eInverseRemove(this, Fig1Package.DEPLOYMENT__TARGET,
 						Deployment.class, msgs);
-			return basicSetDeployedModel((Deployment) otherEnd, msgs);
+			return basicSetIincomingDeployment((Deployment) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -186,8 +186,8 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 		switch (featureID) {
 		case Fig1Package.SOFTWARE__PROCESSING:
 			return ((InternalEList<?>) getProcessing()).basicRemove(otherEnd, msgs);
-		case Fig1Package.SOFTWARE__DEPLOYED_MODEL:
-			return basicSetDeployedModel(null, msgs);
+		case Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT:
+			return basicSetIincomingDeployment(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -202,10 +202,10 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 		switch (featureID) {
 		case Fig1Package.SOFTWARE__PROCESSING:
 			return getProcessing();
-		case Fig1Package.SOFTWARE__DEPLOYED_MODEL:
+		case Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT:
 			if (resolve)
-				return getDeployedModel();
-			return basicGetDeployedModel();
+				return getIincomingDeployment();
+			return basicGetIincomingDeployment();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -223,8 +223,8 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 			getProcessing().clear();
 			getProcessing().addAll((Collection<? extends DataPurpose>) newValue);
 			return;
-		case Fig1Package.SOFTWARE__DEPLOYED_MODEL:
-			setDeployedModel((Deployment) newValue);
+		case Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT:
+			setIincomingDeployment((Deployment) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -241,8 +241,8 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 		case Fig1Package.SOFTWARE__PROCESSING:
 			getProcessing().clear();
 			return;
-		case Fig1Package.SOFTWARE__DEPLOYED_MODEL:
-			setDeployedModel((Deployment) null);
+		case Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT:
+			setIincomingDeployment((Deployment) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -258,8 +258,8 @@ public class SoftwareImpl extends ModaNodeImpl implements Software {
 		switch (featureID) {
 		case Fig1Package.SOFTWARE__PROCESSING:
 			return processing != null && !processing.isEmpty();
-		case Fig1Package.SOFTWARE__DEPLOYED_MODEL:
-			return deployedModel != null;
+		case Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT:
+			return iincomingDeployment != null;
 		}
 		return super.eIsSet(featureID);
 	}

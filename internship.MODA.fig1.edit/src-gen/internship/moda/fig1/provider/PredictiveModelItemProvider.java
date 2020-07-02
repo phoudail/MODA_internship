@@ -42,24 +42,24 @@ public class PredictiveModelItemProvider extends ModelRoleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPreparationPropertyDescriptor(object);
+			addIncomingPreparationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Preparation feature.
+	 * This adds a property descriptor for the Incoming Preparation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPreparationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_PredictiveModel_preparation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_PredictiveModel_preparation_feature",
-								"_UI_PredictiveModel_type"),
-						Fig1Package.Literals.PREDICTIVE_MODEL__PREPARATION, true, false, true, null, null, null));
+	protected void addIncomingPreparationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_PredictiveModel_incomingPreparation_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_PredictiveModel_incomingPreparation_feature",
+						"_UI_PredictiveModel_type"),
+				Fig1Package.Literals.PREDICTIVE_MODEL__INCOMING_PREPARATION, true, false, true, null, null, null));
 	}
 
 	/**

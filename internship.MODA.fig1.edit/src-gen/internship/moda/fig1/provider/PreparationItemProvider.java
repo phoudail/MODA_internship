@@ -42,40 +42,40 @@ public class PreparationItemProvider extends ModaRelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDescriptivemodelPropertyDescriptor(object);
-			addPredictivemodelPropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Descriptivemodel feature.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDescriptivemodelPropertyDescriptor(Object object) {
+	protected void addTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Preparation_descriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Preparation_descriptivemodel_feature",
+						getResourceLocator(), getString("_UI_Preparation_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Preparation_target_feature",
 								"_UI_Preparation_type"),
-						Fig1Package.Literals.PREPARATION__DESCRIPTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.PREPARATION__TARGET, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Predictivemodel feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPredictivemodelPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Preparation_predictivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Preparation_predictivemodel_feature",
+						getResourceLocator(), getString("_UI_Preparation_source_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Preparation_source_feature",
 								"_UI_Preparation_type"),
-						Fig1Package.Literals.PREPARATION__PREDICTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.PREPARATION__SOURCE, true, false, true, null, null, null));
 	}
 
 	/**

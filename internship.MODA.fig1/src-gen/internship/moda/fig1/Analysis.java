@@ -11,8 +11,8 @@ package internship.moda.fig1;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.Analysis#getPrescriptivemodel <em>Prescriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.Analysis#getModanode <em>Modanode</em>}</li>
+ *   <li>{@link internship.moda.fig1.Analysis#getTarget <em>Target</em>}</li>
+ *   <li>{@link internship.moda.fig1.Analysis#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getAnalysis()
@@ -21,59 +21,59 @@ package internship.moda.fig1;
  */
 public interface Analysis extends ModaRelation {
 	/**
-	 * Returns the value of the '<em><b>Prescriptivemodel</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getAnalysisResult <em>Analysis Result</em>}'.
+	 * Returns the value of the '<em><b>Target</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getIncomingAnalysis <em>Incoming Analysis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prescriptivemodel</em>' reference isn't clear,
+	 * If the meaning of the '<em>Target</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #setPrescriptivemodel(PrescriptiveModel)
-	 * @see internship.moda.fig1.Fig1Package#getAnalysis_Prescriptivemodel()
-	 * @see internship.moda.fig1.PrescriptiveModel#getAnalysisResult
-	 * @model opposite="analysisResult"
+	 * @return the value of the '<em>Target</em>' reference.
+	 * @see #setTarget(PrescriptiveModel)
+	 * @see internship.moda.fig1.Fig1Package#getAnalysis_Target()
+	 * @see internship.moda.fig1.PrescriptiveModel#getIncomingAnalysis
+	 * @model opposite="incomingAnalysis"
 	 * @generated
 	 */
-	PrescriptiveModel getPrescriptivemodel();
+	PrescriptiveModel getTarget();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Analysis#getPrescriptivemodel <em>Prescriptivemodel</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Analysis#getTarget <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prescriptivemodel</em>' reference.
-	 * @see #getPrescriptivemodel()
+	 * @param value the new value of the '<em>Target</em>' reference.
+	 * @see #getTarget()
 	 * @generated
 	 */
-	void setPrescriptivemodel(PrescriptiveModel value);
+	void setTarget(PrescriptiveModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Modanode</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.ModaNode#getAnalysis <em>Analysis</em>}'.
+	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.ModaNode#getOutgoingAnalysis <em>Outgoing Analysis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Modanode</em>' reference isn't clear,
+	 * If the meaning of the '<em>Source</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modanode</em>' reference.
-	 * @see #setModanode(ModaNode)
-	 * @see internship.moda.fig1.Fig1Package#getAnalysis_Modanode()
-	 * @see internship.moda.fig1.ModaNode#getAnalysis
-	 * @model opposite="analysis"
+	 * @return the value of the '<em>Source</em>' reference.
+	 * @see #setSource(ModaNode)
+	 * @see internship.moda.fig1.Fig1Package#getAnalysis_Source()
+	 * @see internship.moda.fig1.ModaNode#getOutgoingAnalysis
+	 * @model opposite="outgoingAnalysis"
 	 * @generated
 	 */
-	ModaNode getModanode();
+	ModaNode getSource();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Analysis#getModanode <em>Modanode</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Analysis#getSource <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Modanode</em>' reference.
-	 * @see #getModanode()
+	 * @param value the new value of the '<em>Source</em>' reference.
+	 * @see #getSource()
 	 * @generated
 	 */
-	void setModanode(ModaNode value);
+	void setSource(ModaNode value);
 
 } // Analysis

@@ -2,8 +2,8 @@
  */
 package internship.moda.fig1.impl;
 
-import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
+import internship.moda.fig1.ModaNode;
 import internship.moda.fig1.PredictiveModel;
 import internship.moda.fig1.Preparation;
 
@@ -23,32 +23,32 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.PreparationImpl#getDescriptivemodel <em>Descriptivemodel</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.PreparationImpl#getPredictivemodel <em>Predictivemodel</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PreparationImpl#getTarget <em>Target</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.PreparationImpl#getSource <em>Source</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	/**
-	 * The cached value of the '{@link #getDescriptivemodel() <em>Descriptivemodel</em>}' reference.
+	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDescriptivemodel()
+	 * @see #getTarget()
 	 * @generated
 	 * @ordered
 	 */
-	protected DescriptiveModel descriptivemodel;
+	protected PredictiveModel target;
 
 	/**
-	 * The cached value of the '{@link #getPredictivemodel() <em>Predictivemodel</em>}' reference.
+	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPredictivemodel()
+	 * @see #getSource()
 	 * @generated
 	 * @ordered
 	 */
-	protected PredictiveModel predictivemodel;
+	protected ModaNode source;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,17 +74,17 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DescriptiveModel getDescriptivemodel() {
-		if (descriptivemodel != null && descriptivemodel.eIsProxy()) {
-			InternalEObject oldDescriptivemodel = (InternalEObject) descriptivemodel;
-			descriptivemodel = (DescriptiveModel) eResolveProxy(oldDescriptivemodel);
-			if (descriptivemodel != oldDescriptivemodel) {
+	public PredictiveModel getTarget() {
+		if (target != null && target.eIsProxy()) {
+			InternalEObject oldTarget = (InternalEObject) target;
+			target = (PredictiveModel) eResolveProxy(oldTarget);
+			if (target != oldTarget) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
-							oldDescriptivemodel, descriptivemodel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PREPARATION__TARGET,
+							oldTarget, target));
 			}
 		}
-		return descriptivemodel;
+		return target;
 	}
 
 	/**
@@ -92,8 +92,8 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DescriptiveModel basicGetDescriptivemodel() {
-		return descriptivemodel;
+	public PredictiveModel basicGetTarget() {
+		return target;
 	}
 
 	/**
@@ -101,12 +101,12 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescriptivemodel(DescriptiveModel newDescriptivemodel, NotificationChain msgs) {
-		DescriptiveModel oldDescriptivemodel = descriptivemodel;
-		descriptivemodel = newDescriptivemodel;
+	public NotificationChain basicSetTarget(PredictiveModel newTarget, NotificationChain msgs) {
+		PredictiveModel oldTarget = target;
+		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PREPARATION__DESCRIPTIVEMODEL, oldDescriptivemodel, newDescriptivemodel);
+					Fig1Package.PREPARATION__TARGET, oldTarget, newTarget);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -120,21 +120,21 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescriptivemodel(DescriptiveModel newDescriptivemodel) {
-		if (newDescriptivemodel != descriptivemodel) {
+	public void setTarget(PredictiveModel newTarget) {
+		if (newTarget != target) {
 			NotificationChain msgs = null;
-			if (descriptivemodel != null)
-				msgs = ((InternalEObject) descriptivemodel).eInverseRemove(this,
-						Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, DescriptiveModel.class, msgs);
-			if (newDescriptivemodel != null)
-				msgs = ((InternalEObject) newDescriptivemodel).eInverseAdd(this,
-						Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, DescriptiveModel.class, msgs);
-			msgs = basicSetDescriptivemodel(newDescriptivemodel, msgs);
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this,
+						Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, PredictiveModel.class, msgs);
+			if (newTarget != null)
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
+						Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, PredictiveModel.class, msgs);
+			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PREPARATION__DESCRIPTIVEMODEL,
-					newDescriptivemodel, newDescriptivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PREPARATION__TARGET, newTarget,
+					newTarget));
 	}
 
 	/**
@@ -142,17 +142,17 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel getPredictivemodel() {
-		if (predictivemodel != null && predictivemodel.eIsProxy()) {
-			InternalEObject oldPredictivemodel = (InternalEObject) predictivemodel;
-			predictivemodel = (PredictiveModel) eResolveProxy(oldPredictivemodel);
-			if (predictivemodel != oldPredictivemodel) {
+	public ModaNode getSource() {
+		if (source != null && source.eIsProxy()) {
+			InternalEObject oldSource = (InternalEObject) source;
+			source = (ModaNode) eResolveProxy(oldSource);
+			if (source != oldSource) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PREPARATION__PREDICTIVEMODEL,
-							oldPredictivemodel, predictivemodel));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PREPARATION__SOURCE,
+							oldSource, source));
 			}
 		}
-		return predictivemodel;
+		return source;
 	}
 
 	/**
@@ -160,8 +160,8 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel basicGetPredictivemodel() {
-		return predictivemodel;
+	public ModaNode basicGetSource() {
+		return source;
 	}
 
 	/**
@@ -169,12 +169,12 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPredictivemodel(PredictiveModel newPredictivemodel, NotificationChain msgs) {
-		PredictiveModel oldPredictivemodel = predictivemodel;
-		predictivemodel = newPredictivemodel;
+	public NotificationChain basicSetSource(ModaNode newSource, NotificationChain msgs) {
+		ModaNode oldSource = source;
+		source = newSource;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.PREPARATION__PREDICTIVEMODEL, oldPredictivemodel, newPredictivemodel);
+					Fig1Package.PREPARATION__SOURCE, oldSource, newSource);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -188,21 +188,21 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPredictivemodel(PredictiveModel newPredictivemodel) {
-		if (newPredictivemodel != predictivemodel) {
+	public void setSource(ModaNode newSource) {
+		if (newSource != source) {
 			NotificationChain msgs = null;
-			if (predictivemodel != null)
-				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__PREPARATION, PredictiveModel.class, msgs);
-			if (newPredictivemodel != null)
-				msgs = ((InternalEObject) newPredictivemodel).eInverseAdd(this,
-						Fig1Package.PREDICTIVE_MODEL__PREPARATION, PredictiveModel.class, msgs);
-			msgs = basicSetPredictivemodel(newPredictivemodel, msgs);
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODA_NODE__OUTGOING_PREPARATION,
+						ModaNode.class, msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject) newSource).eInverseAdd(this, Fig1Package.MODA_NODE__OUTGOING_PREPARATION,
+						ModaNode.class, msgs);
+			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PREPARATION__PREDICTIVEMODEL,
-					newPredictivemodel, newPredictivemodel));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.PREPARATION__SOURCE, newSource,
+					newSource));
 	}
 
 	/**
@@ -213,16 +213,16 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PREPARATION__DESCRIPTIVEMODEL:
-			if (descriptivemodel != null)
-				msgs = ((InternalEObject) descriptivemodel).eInverseRemove(this,
-						Fig1Package.DESCRIPTIVE_MODEL__PREPARATION, DescriptiveModel.class, msgs);
-			return basicSetDescriptivemodel((DescriptiveModel) otherEnd, msgs);
-		case Fig1Package.PREPARATION__PREDICTIVEMODEL:
-			if (predictivemodel != null)
-				msgs = ((InternalEObject) predictivemodel).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__PREPARATION, PredictiveModel.class, msgs);
-			return basicSetPredictivemodel((PredictiveModel) otherEnd, msgs);
+		case Fig1Package.PREPARATION__TARGET:
+			if (target != null)
+				msgs = ((InternalEObject) target).eInverseRemove(this,
+						Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, PredictiveModel.class, msgs);
+			return basicSetTarget((PredictiveModel) otherEnd, msgs);
+		case Fig1Package.PREPARATION__SOURCE:
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODA_NODE__OUTGOING_PREPARATION,
+						ModaNode.class, msgs);
+			return basicSetSource((ModaNode) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -235,10 +235,10 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.PREPARATION__DESCRIPTIVEMODEL:
-			return basicSetDescriptivemodel(null, msgs);
-		case Fig1Package.PREPARATION__PREDICTIVEMODEL:
-			return basicSetPredictivemodel(null, msgs);
+		case Fig1Package.PREPARATION__TARGET:
+			return basicSetTarget(null, msgs);
+		case Fig1Package.PREPARATION__SOURCE:
+			return basicSetSource(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -251,14 +251,14 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.PREPARATION__DESCRIPTIVEMODEL:
+		case Fig1Package.PREPARATION__TARGET:
 			if (resolve)
-				return getDescriptivemodel();
-			return basicGetDescriptivemodel();
-		case Fig1Package.PREPARATION__PREDICTIVEMODEL:
+				return getTarget();
+			return basicGetTarget();
+		case Fig1Package.PREPARATION__SOURCE:
 			if (resolve)
-				return getPredictivemodel();
-			return basicGetPredictivemodel();
+				return getSource();
+			return basicGetSource();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -271,11 +271,11 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.PREPARATION__DESCRIPTIVEMODEL:
-			setDescriptivemodel((DescriptiveModel) newValue);
+		case Fig1Package.PREPARATION__TARGET:
+			setTarget((PredictiveModel) newValue);
 			return;
-		case Fig1Package.PREPARATION__PREDICTIVEMODEL:
-			setPredictivemodel((PredictiveModel) newValue);
+		case Fig1Package.PREPARATION__SOURCE:
+			setSource((ModaNode) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -289,11 +289,11 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PREPARATION__DESCRIPTIVEMODEL:
-			setDescriptivemodel((DescriptiveModel) null);
+		case Fig1Package.PREPARATION__TARGET:
+			setTarget((PredictiveModel) null);
 			return;
-		case Fig1Package.PREPARATION__PREDICTIVEMODEL:
-			setPredictivemodel((PredictiveModel) null);
+		case Fig1Package.PREPARATION__SOURCE:
+			setSource((ModaNode) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -307,10 +307,10 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.PREPARATION__DESCRIPTIVEMODEL:
-			return descriptivemodel != null;
-		case Fig1Package.PREPARATION__PREDICTIVEMODEL:
-			return predictivemodel != null;
+		case Fig1Package.PREPARATION__TARGET:
+			return target != null;
+		case Fig1Package.PREPARATION__SOURCE:
+			return source != null;
 		}
 		return super.eIsSet(featureID);
 	}

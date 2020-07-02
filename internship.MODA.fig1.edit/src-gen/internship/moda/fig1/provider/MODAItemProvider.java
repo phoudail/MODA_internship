@@ -96,7 +96,7 @@ public class MODAItemProvider extends ModaNodeItemProvider {
 			childrenFeatures.add(Fig1Package.Literals.MODA__DATA);
 			childrenFeatures.add(Fig1Package.Literals.MODA__MODEL);
 			childrenFeatures.add(Fig1Package.Literals.MODA__MODELROLE);
-			childrenFeatures.add(Fig1Package.Literals.MODA__ABSTRACTRELATION);
+			childrenFeatures.add(Fig1Package.Literals.MODA__RELATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -164,7 +164,7 @@ public class MODAItemProvider extends ModaNodeItemProvider {
 		case Fig1Package.MODA__DATA:
 		case Fig1Package.MODA__MODEL:
 		case Fig1Package.MODA__MODELROLE:
-		case Fig1Package.MODA__ABSTRACTRELATION:
+		case Fig1Package.MODA__RELATIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -200,28 +200,28 @@ public class MODAItemProvider extends ModaNodeItemProvider {
 		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__MODELROLE,
 				Fig1Factory.eINSTANCE.createPrescriptiveModel()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__RELATIONS,
 				Fig1Factory.eINSTANCE.createOtherInterplay()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
-				Fig1Factory.eINSTANCE.createDataPurpose()));
+		newChildDescriptors.add(
+				createChildParameter(Fig1Package.Literals.MODA__RELATIONS, Fig1Factory.eINSTANCE.createDataPurpose()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
-				Fig1Factory.eINSTANCE.createEnactment()));
+		newChildDescriptors.add(
+				createChildParameter(Fig1Package.Literals.MODA__RELATIONS, Fig1Factory.eINSTANCE.createEnactment()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
-				Fig1Factory.eINSTANCE.createDeployment()));
+		newChildDescriptors.add(
+				createChildParameter(Fig1Package.Literals.MODA__RELATIONS, Fig1Factory.eINSTANCE.createDeployment()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
-				Fig1Factory.eINSTANCE.createPreparation()));
+		newChildDescriptors.add(
+				createChildParameter(Fig1Package.Literals.MODA__RELATIONS, Fig1Factory.eINSTANCE.createPreparation()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
-				Fig1Factory.eINSTANCE.createAnalysis()));
+		newChildDescriptors.add(
+				createChildParameter(Fig1Package.Literals.MODA__RELATIONS, Fig1Factory.eINSTANCE.createAnalysis()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
-				Fig1Factory.eINSTANCE.createGeneration()));
+		newChildDescriptors.add(
+				createChildParameter(Fig1Package.Literals.MODA__RELATIONS, Fig1Factory.eINSTANCE.createGeneration()));
 
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__ABSTRACTRELATION,
+		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__RELATIONS,
 				Fig1Factory.eINSTANCE.createGeneralization()));
 	}
 

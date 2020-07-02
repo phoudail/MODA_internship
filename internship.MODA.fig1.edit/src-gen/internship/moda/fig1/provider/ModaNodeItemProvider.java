@@ -42,24 +42,40 @@ public class ModaNodeItemProvider extends NamedElementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAnalysisPropertyDescriptor(object);
+			addOutgoingAnalysisPropertyDescriptor(object);
+			addOutgoingPreparationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Analysis feature.
+	 * This adds a property descriptor for the Outgoing Analysis feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAnalysisPropertyDescriptor(Object object) {
+	protected void addOutgoingAnalysisPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ModaNode_analysis_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ModaNode_analysis_feature",
+						getResourceLocator(), getString("_UI_ModaNode_outgoingAnalysis_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ModaNode_outgoingAnalysis_feature",
 								"_UI_ModaNode_type"),
-						Fig1Package.Literals.MODA_NODE__ANALYSIS, true, false, true, null, null, null));
+						Fig1Package.Literals.MODA_NODE__OUTGOING_ANALYSIS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outgoing Preparation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutgoingPreparationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ModaNode_outgoingPreparation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ModaNode_outgoingPreparation_feature",
+								"_UI_ModaNode_type"),
+						Fig1Package.Literals.MODA_NODE__OUTGOING_PREPARATION, true, false, true, null, null, null));
 	}
 
 	/**

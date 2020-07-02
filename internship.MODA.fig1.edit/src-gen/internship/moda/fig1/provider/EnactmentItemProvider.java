@@ -42,40 +42,40 @@ public class EnactmentItemProvider extends ModaRelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPrescriptivemodelPropertyDescriptor(object);
-			addSociotechnicalsystemPropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Enactment_prescriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Enactment_prescriptivemodel_feature",
+						getResourceLocator(), getString("_UI_Enactment_source_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Enactment_source_feature",
 								"_UI_Enactment_type"),
-						Fig1Package.Literals.ENACTMENT__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.ENACTMENT__SOURCE, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Sociotechnicalsystem feature.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSociotechnicalsystemPropertyDescriptor(Object object) {
+	protected void addTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Enactment_sociotechnicalsystem_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Enactment_sociotechnicalsystem_feature",
+						getResourceLocator(), getString("_UI_Enactment_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Enactment_target_feature",
 								"_UI_Enactment_type"),
-						Fig1Package.Literals.ENACTMENT__SOCIOTECHNICALSYSTEM, true, false, true, null, null, null));
+						Fig1Package.Literals.ENACTMENT__TARGET, true, false, true, null, null, null));
 	}
 
 	/**

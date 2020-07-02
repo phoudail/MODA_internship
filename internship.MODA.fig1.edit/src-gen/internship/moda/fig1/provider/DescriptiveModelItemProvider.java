@@ -42,24 +42,24 @@ public class DescriptiveModelItemProvider extends ModelRoleItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPreparationPropertyDescriptor(object);
+			addIncomingGeneralizationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Preparation feature.
+	 * This adds a property descriptor for the Incoming Generalization feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPreparationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DescriptiveModel_preparation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DescriptiveModel_preparation_feature",
-								"_UI_DescriptiveModel_type"),
-						Fig1Package.Literals.DESCRIPTIVE_MODEL__PREPARATION, true, false, true, null, null, null));
+	protected void addIncomingGeneralizationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DescriptiveModel_incomingGeneralization_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DescriptiveModel_incomingGeneralization_feature",
+						"_UI_DescriptiveModel_type"),
+				Fig1Package.Literals.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, true, false, true, null, null, null));
 	}
 
 	/**

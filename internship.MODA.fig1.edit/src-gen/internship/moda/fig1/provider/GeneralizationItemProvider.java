@@ -42,40 +42,40 @@ public class GeneralizationItemProvider extends ModaRelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDataPropertyDescriptor(object);
-			addModelrolePropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Data feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDataPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Generalization_data_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Generalization_data_feature",
+						getResourceLocator(), getString("_UI_Generalization_source_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Generalization_source_feature",
 								"_UI_Generalization_type"),
-						Fig1Package.Literals.GENERALIZATION__DATA, true, false, true, null, null, null));
+						Fig1Package.Literals.GENERALIZATION__SOURCE, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Modelrole feature.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addModelrolePropertyDescriptor(Object object) {
+	protected void addTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Generalization_modelrole_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Generalization_modelrole_feature",
+						getResourceLocator(), getString("_UI_Generalization_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Generalization_target_feature",
 								"_UI_Generalization_type"),
-						Fig1Package.Literals.GENERALIZATION__MODELROLE, true, false, true, null, null, null));
+						Fig1Package.Literals.GENERALIZATION__TARGET, true, false, true, null, null, null));
 	}
 
 	/**

@@ -11,10 +11,11 @@ package internship.moda.fig1;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getEnactment <em>Enactment</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getRunningSoftware <em>Running Software</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getAnalysisResult <em>Analysis Result</em>}</li>
- *   <li>{@link internship.moda.fig1.PrescriptiveModel#getGeneration <em>Generation</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getOutgoingEnactment <em>Outgoing Enactment</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getOutgoingDeployment <em>Outgoing Deployment</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getIncomingAnalysis <em>Incoming Analysis</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getOutgoingGeneration <em>Outgoing Generation</em>}</li>
+ *   <li>{@link internship.moda.fig1.PrescriptiveModel#getIncomingGeneration <em>Incoming Generation</em>}</li>
  * </ul>
  *
  * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel()
@@ -23,115 +24,143 @@ package internship.moda.fig1;
  */
 public interface PrescriptiveModel extends ModelRole {
 	/**
-	 * Returns the value of the '<em><b>Enactment</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Enactment#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Outgoing Enactment</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Enactment#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Enactment</em>' reference isn't clear,
+	 * If the meaning of the '<em>Outgoing Enactment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Enactment</em>' reference.
-	 * @see #setEnactment(Enactment)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Enactment()
-	 * @see internship.moda.fig1.Enactment#getPrescriptivemodel
-	 * @model opposite="prescriptivemodel"
+	 * @return the value of the '<em>Outgoing Enactment</em>' reference.
+	 * @see #setOutgoingEnactment(Enactment)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_OutgoingEnactment()
+	 * @see internship.moda.fig1.Enactment#getSource
+	 * @model opposite="source"
 	 * @generated
 	 */
-	Enactment getEnactment();
+	Enactment getOutgoingEnactment();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getEnactment <em>Enactment</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getOutgoingEnactment <em>Outgoing Enactment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Enactment</em>' reference.
-	 * @see #getEnactment()
+	 * @param value the new value of the '<em>Outgoing Enactment</em>' reference.
+	 * @see #getOutgoingEnactment()
 	 * @generated
 	 */
-	void setEnactment(Enactment value);
+	void setOutgoingEnactment(Enactment value);
 
 	/**
-	 * Returns the value of the '<em><b>Running Software</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Deployment#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Outgoing Deployment</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Deployment#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Running Software</em>' reference isn't clear,
+	 * If the meaning of the '<em>Outgoing Deployment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Running Software</em>' reference.
-	 * @see #setRunningSoftware(Deployment)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_RunningSoftware()
-	 * @see internship.moda.fig1.Deployment#getPrescriptivemodel
-	 * @model opposite="prescriptivemodel"
+	 * @return the value of the '<em>Outgoing Deployment</em>' reference.
+	 * @see #setOutgoingDeployment(Deployment)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_OutgoingDeployment()
+	 * @see internship.moda.fig1.Deployment#getSource
+	 * @model opposite="source"
 	 * @generated
 	 */
-	Deployment getRunningSoftware();
+	Deployment getOutgoingDeployment();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getRunningSoftware <em>Running Software</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getOutgoingDeployment <em>Outgoing Deployment</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Running Software</em>' reference.
-	 * @see #getRunningSoftware()
+	 * @param value the new value of the '<em>Outgoing Deployment</em>' reference.
+	 * @see #getOutgoingDeployment()
 	 * @generated
 	 */
-	void setRunningSoftware(Deployment value);
+	void setOutgoingDeployment(Deployment value);
 
 	/**
-	 * Returns the value of the '<em><b>Analysis Result</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Analysis#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Incoming Analysis</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Analysis#getTarget <em>Target</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Analysis Result</em>' reference isn't clear,
+	 * If the meaning of the '<em>Incoming Analysis</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Analysis Result</em>' reference.
-	 * @see #setAnalysisResult(Analysis)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_AnalysisResult()
-	 * @see internship.moda.fig1.Analysis#getPrescriptivemodel
-	 * @model opposite="prescriptivemodel"
+	 * @return the value of the '<em>Incoming Analysis</em>' reference.
+	 * @see #setIncomingAnalysis(Analysis)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_IncomingAnalysis()
+	 * @see internship.moda.fig1.Analysis#getTarget
+	 * @model opposite="target"
 	 * @generated
 	 */
-	Analysis getAnalysisResult();
+	Analysis getIncomingAnalysis();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getAnalysisResult <em>Analysis Result</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getIncomingAnalysis <em>Incoming Analysis</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Analysis Result</em>' reference.
-	 * @see #getAnalysisResult()
+	 * @param value the new value of the '<em>Incoming Analysis</em>' reference.
+	 * @see #getIncomingAnalysis()
 	 * @generated
 	 */
-	void setAnalysisResult(Analysis value);
+	void setIncomingAnalysis(Analysis value);
 
 	/**
-	 * Returns the value of the '<em><b>Generation</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generation#getPrescriptivemodel <em>Prescriptivemodel</em>}'.
+	 * Returns the value of the '<em><b>Outgoing Generation</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generation#getSource <em>Source</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Generation</em>' reference isn't clear,
+	 * If the meaning of the '<em>Outgoing Generation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Generation</em>' reference.
-	 * @see #setGeneration(Generation)
-	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_Generation()
-	 * @see internship.moda.fig1.Generation#getPrescriptivemodel
-	 * @model opposite="prescriptivemodel"
+	 * @return the value of the '<em>Outgoing Generation</em>' reference.
+	 * @see #setOutgoingGeneration(Generation)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_OutgoingGeneration()
+	 * @see internship.moda.fig1.Generation#getSource
+	 * @model opposite="source"
 	 * @generated
 	 */
-	Generation getGeneration();
+	Generation getOutgoingGeneration();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getGeneration <em>Generation</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getOutgoingGeneration <em>Outgoing Generation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Generation</em>' reference.
-	 * @see #getGeneration()
+	 * @param value the new value of the '<em>Outgoing Generation</em>' reference.
+	 * @see #getOutgoingGeneration()
 	 * @generated
 	 */
-	void setGeneration(Generation value);
+	void setOutgoingGeneration(Generation value);
+
+	/**
+	 * Returns the value of the '<em><b>Incoming Generation</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Generation#getTarget <em>Target</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Incoming Generation</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Incoming Generation</em>' reference.
+	 * @see #setIncomingGeneration(Generation)
+	 * @see internship.moda.fig1.Fig1Package#getPrescriptiveModel_IncomingGeneration()
+	 * @see internship.moda.fig1.Generation#getTarget
+	 * @model opposite="target"
+	 * @generated
+	 */
+	Generation getIncomingGeneration();
+
+	/**
+	 * Sets the value of the '{@link internship.moda.fig1.PrescriptiveModel#getIncomingGeneration <em>Incoming Generation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Incoming Generation</em>' reference.
+	 * @see #getIncomingGeneration()
+	 * @generated
+	 */
+	void setIncomingGeneration(Generation value);
 
 } // PrescriptiveModel

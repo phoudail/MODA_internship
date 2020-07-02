@@ -6,6 +6,7 @@ import internship.moda.fig1.Analysis;
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.ModaNode;
 
+import internship.moda.fig1.Preparation;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -22,21 +23,31 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link internship.moda.fig1.impl.ModaNodeImpl#getAnalysis <em>Analysis</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.ModaNodeImpl#getOutgoingAnalysis <em>Outgoing Analysis</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.ModaNodeImpl#getOutgoingPreparation <em>Outgoing Preparation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode {
 	/**
-	 * The cached value of the '{@link #getAnalysis() <em>Analysis</em>}' reference.
+	 * The cached value of the '{@link #getOutgoingAnalysis() <em>Outgoing Analysis</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnalysis()
+	 * @see #getOutgoingAnalysis()
 	 * @generated
 	 * @ordered
 	 */
-	protected Analysis analysis;
+	protected Analysis outgoingAnalysis;
+	/**
+	 * The cached value of the '{@link #getOutgoingPreparation() <em>Outgoing Preparation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOutgoingPreparation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Preparation outgoingPreparation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -62,17 +73,17 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Analysis getAnalysis() {
-		if (analysis != null && analysis.eIsProxy()) {
-			InternalEObject oldAnalysis = (InternalEObject) analysis;
-			analysis = (Analysis) eResolveProxy(oldAnalysis);
-			if (analysis != oldAnalysis) {
+	public Analysis getOutgoingAnalysis() {
+		if (outgoingAnalysis != null && outgoingAnalysis.eIsProxy()) {
+			InternalEObject oldOutgoingAnalysis = (InternalEObject) outgoingAnalysis;
+			outgoingAnalysis = (Analysis) eResolveProxy(oldOutgoingAnalysis);
+			if (outgoingAnalysis != oldOutgoingAnalysis) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.MODA_NODE__ANALYSIS,
-							oldAnalysis, analysis));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.MODA_NODE__OUTGOING_ANALYSIS,
+							oldOutgoingAnalysis, outgoingAnalysis));
 			}
 		}
-		return analysis;
+		return outgoingAnalysis;
 	}
 
 	/**
@@ -80,8 +91,8 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Analysis basicGetAnalysis() {
-		return analysis;
+	public Analysis basicGetOutgoingAnalysis() {
+		return outgoingAnalysis;
 	}
 
 	/**
@@ -89,12 +100,12 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAnalysis(Analysis newAnalysis, NotificationChain msgs) {
-		Analysis oldAnalysis = analysis;
-		analysis = newAnalysis;
+	public NotificationChain basicSetOutgoingAnalysis(Analysis newOutgoingAnalysis, NotificationChain msgs) {
+		Analysis oldOutgoingAnalysis = outgoingAnalysis;
+		outgoingAnalysis = newOutgoingAnalysis;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					Fig1Package.MODA_NODE__ANALYSIS, oldAnalysis, newAnalysis);
+					Fig1Package.MODA_NODE__OUTGOING_ANALYSIS, oldOutgoingAnalysis, newOutgoingAnalysis);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -108,21 +119,89 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAnalysis(Analysis newAnalysis) {
-		if (newAnalysis != analysis) {
+	public void setOutgoingAnalysis(Analysis newOutgoingAnalysis) {
+		if (newOutgoingAnalysis != outgoingAnalysis) {
 			NotificationChain msgs = null;
-			if (analysis != null)
-				msgs = ((InternalEObject) analysis).eInverseRemove(this, Fig1Package.ANALYSIS__MODANODE, Analysis.class,
-						msgs);
-			if (newAnalysis != null)
-				msgs = ((InternalEObject) newAnalysis).eInverseAdd(this, Fig1Package.ANALYSIS__MODANODE, Analysis.class,
-						msgs);
-			msgs = basicSetAnalysis(newAnalysis, msgs);
+			if (outgoingAnalysis != null)
+				msgs = ((InternalEObject) outgoingAnalysis).eInverseRemove(this, Fig1Package.ANALYSIS__SOURCE,
+						Analysis.class, msgs);
+			if (newOutgoingAnalysis != null)
+				msgs = ((InternalEObject) newOutgoingAnalysis).eInverseAdd(this, Fig1Package.ANALYSIS__SOURCE,
+						Analysis.class, msgs);
+			msgs = basicSetOutgoingAnalysis(newOutgoingAnalysis, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.MODA_NODE__ANALYSIS, newAnalysis,
-					newAnalysis));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.MODA_NODE__OUTGOING_ANALYSIS,
+					newOutgoingAnalysis, newOutgoingAnalysis));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Preparation getOutgoingPreparation() {
+		if (outgoingPreparation != null && outgoingPreparation.eIsProxy()) {
+			InternalEObject oldOutgoingPreparation = (InternalEObject) outgoingPreparation;
+			outgoingPreparation = (Preparation) eResolveProxy(oldOutgoingPreparation);
+			if (outgoingPreparation != oldOutgoingPreparation) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							Fig1Package.MODA_NODE__OUTGOING_PREPARATION, oldOutgoingPreparation, outgoingPreparation));
+			}
+		}
+		return outgoingPreparation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Preparation basicGetOutgoingPreparation() {
+		return outgoingPreparation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOutgoingPreparation(Preparation newOutgoingPreparation, NotificationChain msgs) {
+		Preparation oldOutgoingPreparation = outgoingPreparation;
+		outgoingPreparation = newOutgoingPreparation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Fig1Package.MODA_NODE__OUTGOING_PREPARATION, oldOutgoingPreparation, newOutgoingPreparation);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOutgoingPreparation(Preparation newOutgoingPreparation) {
+		if (newOutgoingPreparation != outgoingPreparation) {
+			NotificationChain msgs = null;
+			if (outgoingPreparation != null)
+				msgs = ((InternalEObject) outgoingPreparation).eInverseRemove(this, Fig1Package.PREPARATION__SOURCE,
+						Preparation.class, msgs);
+			if (newOutgoingPreparation != null)
+				msgs = ((InternalEObject) newOutgoingPreparation).eInverseAdd(this, Fig1Package.PREPARATION__SOURCE,
+						Preparation.class, msgs);
+			msgs = basicSetOutgoingPreparation(newOutgoingPreparation, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.MODA_NODE__OUTGOING_PREPARATION,
+					newOutgoingPreparation, newOutgoingPreparation));
 	}
 
 	/**
@@ -133,11 +212,16 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.MODA_NODE__ANALYSIS:
-			if (analysis != null)
-				msgs = ((InternalEObject) analysis).eInverseRemove(this, Fig1Package.ANALYSIS__MODANODE, Analysis.class,
-						msgs);
-			return basicSetAnalysis((Analysis) otherEnd, msgs);
+		case Fig1Package.MODA_NODE__OUTGOING_ANALYSIS:
+			if (outgoingAnalysis != null)
+				msgs = ((InternalEObject) outgoingAnalysis).eInverseRemove(this, Fig1Package.ANALYSIS__SOURCE,
+						Analysis.class, msgs);
+			return basicSetOutgoingAnalysis((Analysis) otherEnd, msgs);
+		case Fig1Package.MODA_NODE__OUTGOING_PREPARATION:
+			if (outgoingPreparation != null)
+				msgs = ((InternalEObject) outgoingPreparation).eInverseRemove(this, Fig1Package.PREPARATION__SOURCE,
+						Preparation.class, msgs);
+			return basicSetOutgoingPreparation((Preparation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -150,8 +234,10 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case Fig1Package.MODA_NODE__ANALYSIS:
-			return basicSetAnalysis(null, msgs);
+		case Fig1Package.MODA_NODE__OUTGOING_ANALYSIS:
+			return basicSetOutgoingAnalysis(null, msgs);
+		case Fig1Package.MODA_NODE__OUTGOING_PREPARATION:
+			return basicSetOutgoingPreparation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -164,10 +250,14 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case Fig1Package.MODA_NODE__ANALYSIS:
+		case Fig1Package.MODA_NODE__OUTGOING_ANALYSIS:
 			if (resolve)
-				return getAnalysis();
-			return basicGetAnalysis();
+				return getOutgoingAnalysis();
+			return basicGetOutgoingAnalysis();
+		case Fig1Package.MODA_NODE__OUTGOING_PREPARATION:
+			if (resolve)
+				return getOutgoingPreparation();
+			return basicGetOutgoingPreparation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -180,8 +270,11 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case Fig1Package.MODA_NODE__ANALYSIS:
-			setAnalysis((Analysis) newValue);
+		case Fig1Package.MODA_NODE__OUTGOING_ANALYSIS:
+			setOutgoingAnalysis((Analysis) newValue);
+			return;
+		case Fig1Package.MODA_NODE__OUTGOING_PREPARATION:
+			setOutgoingPreparation((Preparation) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -195,8 +288,11 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case Fig1Package.MODA_NODE__ANALYSIS:
-			setAnalysis((Analysis) null);
+		case Fig1Package.MODA_NODE__OUTGOING_ANALYSIS:
+			setOutgoingAnalysis((Analysis) null);
+			return;
+		case Fig1Package.MODA_NODE__OUTGOING_PREPARATION:
+			setOutgoingPreparation((Preparation) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -210,8 +306,10 @@ public abstract class ModaNodeImpl extends NamedElementImpl implements ModaNode 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case Fig1Package.MODA_NODE__ANALYSIS:
-			return analysis != null;
+		case Fig1Package.MODA_NODE__OUTGOING_ANALYSIS:
+			return outgoingAnalysis != null;
+		case Fig1Package.MODA_NODE__OUTGOING_PREPARATION:
+			return outgoingPreparation != null;
 		}
 		return super.eIsSet(featureID);
 	}

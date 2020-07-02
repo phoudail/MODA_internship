@@ -42,40 +42,40 @@ public class DeploymentItemProvider extends ModaRelationItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSoftwarePropertyDescriptor(object);
-			addPrescriptivemodelPropertyDescriptor(object);
+			addTargetPropertyDescriptor(object);
+			addSourcePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Software feature.
+	 * This adds a property descriptor for the Target feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSoftwarePropertyDescriptor(Object object) {
+	protected void addTargetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Deployment_software_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Deployment_software_feature",
+						getResourceLocator(), getString("_UI_Deployment_target_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Deployment_target_feature",
 								"_UI_Deployment_type"),
-						Fig1Package.Literals.DEPLOYMENT__SOFTWARE, true, false, true, null, null, null));
+						Fig1Package.Literals.DEPLOYMENT__TARGET, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Prescriptivemodel feature.
+	 * This adds a property descriptor for the Source feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPrescriptivemodelPropertyDescriptor(Object object) {
+	protected void addSourcePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Deployment_prescriptivemodel_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Deployment_prescriptivemodel_feature",
+						getResourceLocator(), getString("_UI_Deployment_source_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Deployment_source_feature",
 								"_UI_Deployment_type"),
-						Fig1Package.Literals.DEPLOYMENT__PRESCRIPTIVEMODEL, true, false, true, null, null, null));
+						Fig1Package.Literals.DEPLOYMENT__SOURCE, true, false, true, null, null, null));
 	}
 
 	/**
