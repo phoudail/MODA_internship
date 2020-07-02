@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link internship.moda.fig1.impl.DataImpl#getOtherinterplay <em>Otherinterplay</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.DataImpl#getProcessing <em>Processing</em>}</li>
+ *   <li>{@link internship.moda.fig1.impl.DataImpl#getDatapurpose <em>Datapurpose</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.DataImpl#getGeneralization <em>Generalization</em>}</li>
  * </ul>
  *
@@ -46,14 +46,14 @@ public class DataImpl extends ModaNodeImpl implements Data {
 	protected EList<OtherInterplay> otherinterplay;
 
 	/**
-	 * The cached value of the '{@link #getProcessing() <em>Processing</em>}' reference.
+	 * The cached value of the '{@link #getDatapurpose() <em>Datapurpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProcessing()
+	 * @see #getDatapurpose()
 	 * @generated
 	 * @ordered
 	 */
-	protected DataPurpose processing;
+	protected DataPurpose datapurpose;
 
 	/**
 	 * The cached value of the '{@link #getGeneralization() <em>Generalization</em>}' reference.
@@ -102,17 +102,17 @@ public class DataImpl extends ModaNodeImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataPurpose getProcessing() {
-		if (processing != null && processing.eIsProxy()) {
-			InternalEObject oldProcessing = (InternalEObject) processing;
-			processing = (DataPurpose) eResolveProxy(oldProcessing);
-			if (processing != oldProcessing) {
+	public DataPurpose getDatapurpose() {
+		if (datapurpose != null && datapurpose.eIsProxy()) {
+			InternalEObject oldDatapurpose = (InternalEObject) datapurpose;
+			datapurpose = (DataPurpose) eResolveProxy(oldDatapurpose);
+			if (datapurpose != oldDatapurpose) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__PROCESSING,
-							oldProcessing, processing));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DATA__DATAPURPOSE,
+							oldDatapurpose, datapurpose));
 			}
 		}
-		return processing;
+		return datapurpose;
 	}
 
 	/**
@@ -120,8 +120,8 @@ public class DataImpl extends ModaNodeImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DataPurpose basicGetProcessing() {
-		return processing;
+	public DataPurpose basicGetDatapurpose() {
+		return datapurpose;
 	}
 
 	/**
@@ -129,12 +129,12 @@ public class DataImpl extends ModaNodeImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetProcessing(DataPurpose newProcessing, NotificationChain msgs) {
-		DataPurpose oldProcessing = processing;
-		processing = newProcessing;
+	public NotificationChain basicSetDatapurpose(DataPurpose newDatapurpose, NotificationChain msgs) {
+		DataPurpose oldDatapurpose = datapurpose;
+		datapurpose = newDatapurpose;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__PROCESSING,
-					oldProcessing, newProcessing);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					Fig1Package.DATA__DATAPURPOSE, oldDatapurpose, newDatapurpose);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -148,21 +148,21 @@ public class DataImpl extends ModaNodeImpl implements Data {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProcessing(DataPurpose newProcessing) {
-		if (newProcessing != processing) {
+	public void setDatapurpose(DataPurpose newDatapurpose) {
+		if (newDatapurpose != datapurpose) {
 			NotificationChain msgs = null;
-			if (processing != null)
-				msgs = ((InternalEObject) processing).eInverseRemove(this, Fig1Package.DATA_PURPOSE__DATA,
+			if (datapurpose != null)
+				msgs = ((InternalEObject) datapurpose).eInverseRemove(this, Fig1Package.DATA_PURPOSE__DATA,
 						DataPurpose.class, msgs);
-			if (newProcessing != null)
-				msgs = ((InternalEObject) newProcessing).eInverseAdd(this, Fig1Package.DATA_PURPOSE__DATA,
+			if (newDatapurpose != null)
+				msgs = ((InternalEObject) newDatapurpose).eInverseAdd(this, Fig1Package.DATA_PURPOSE__DATA,
 						DataPurpose.class, msgs);
-			msgs = basicSetProcessing(newProcessing, msgs);
+			msgs = basicSetDatapurpose(newDatapurpose, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__PROCESSING, newProcessing,
-					newProcessing));
+			eNotify(new ENotificationImpl(this, Notification.SET, Fig1Package.DATA__DATAPURPOSE, newDatapurpose,
+					newDatapurpose));
 	}
 
 	/**
@@ -244,11 +244,11 @@ public class DataImpl extends ModaNodeImpl implements Data {
 		switch (featureID) {
 		case Fig1Package.DATA__OTHERINTERPLAY:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getOtherinterplay()).basicAdd(otherEnd, msgs);
-		case Fig1Package.DATA__PROCESSING:
-			if (processing != null)
-				msgs = ((InternalEObject) processing).eInverseRemove(this, Fig1Package.DATA_PURPOSE__DATA,
+		case Fig1Package.DATA__DATAPURPOSE:
+			if (datapurpose != null)
+				msgs = ((InternalEObject) datapurpose).eInverseRemove(this, Fig1Package.DATA_PURPOSE__DATA,
 						DataPurpose.class, msgs);
-			return basicSetProcessing((DataPurpose) otherEnd, msgs);
+			return basicSetDatapurpose((DataPurpose) otherEnd, msgs);
 		case Fig1Package.DATA__GENERALIZATION:
 			if (generalization != null)
 				msgs = ((InternalEObject) generalization).eInverseRemove(this, Fig1Package.GENERALIZATION__SOURCE,
@@ -268,8 +268,8 @@ public class DataImpl extends ModaNodeImpl implements Data {
 		switch (featureID) {
 		case Fig1Package.DATA__OTHERINTERPLAY:
 			return ((InternalEList<?>) getOtherinterplay()).basicRemove(otherEnd, msgs);
-		case Fig1Package.DATA__PROCESSING:
-			return basicSetProcessing(null, msgs);
+		case Fig1Package.DATA__DATAPURPOSE:
+			return basicSetDatapurpose(null, msgs);
 		case Fig1Package.DATA__GENERALIZATION:
 			return basicSetGeneralization(null, msgs);
 		}
@@ -286,10 +286,10 @@ public class DataImpl extends ModaNodeImpl implements Data {
 		switch (featureID) {
 		case Fig1Package.DATA__OTHERINTERPLAY:
 			return getOtherinterplay();
-		case Fig1Package.DATA__PROCESSING:
+		case Fig1Package.DATA__DATAPURPOSE:
 			if (resolve)
-				return getProcessing();
-			return basicGetProcessing();
+				return getDatapurpose();
+			return basicGetDatapurpose();
 		case Fig1Package.DATA__GENERALIZATION:
 			if (resolve)
 				return getGeneralization();
@@ -311,8 +311,8 @@ public class DataImpl extends ModaNodeImpl implements Data {
 			getOtherinterplay().clear();
 			getOtherinterplay().addAll((Collection<? extends OtherInterplay>) newValue);
 			return;
-		case Fig1Package.DATA__PROCESSING:
-			setProcessing((DataPurpose) newValue);
+		case Fig1Package.DATA__DATAPURPOSE:
+			setDatapurpose((DataPurpose) newValue);
 			return;
 		case Fig1Package.DATA__GENERALIZATION:
 			setGeneralization((Generalization) newValue);
@@ -332,8 +332,8 @@ public class DataImpl extends ModaNodeImpl implements Data {
 		case Fig1Package.DATA__OTHERINTERPLAY:
 			getOtherinterplay().clear();
 			return;
-		case Fig1Package.DATA__PROCESSING:
-			setProcessing((DataPurpose) null);
+		case Fig1Package.DATA__DATAPURPOSE:
+			setDatapurpose((DataPurpose) null);
 			return;
 		case Fig1Package.DATA__GENERALIZATION:
 			setGeneralization((Generalization) null);
@@ -352,8 +352,8 @@ public class DataImpl extends ModaNodeImpl implements Data {
 		switch (featureID) {
 		case Fig1Package.DATA__OTHERINTERPLAY:
 			return otherinterplay != null && !otherinterplay.isEmpty();
-		case Fig1Package.DATA__PROCESSING:
-			return processing != null;
+		case Fig1Package.DATA__DATAPURPOSE:
+			return datapurpose != null;
 		case Fig1Package.DATA__GENERALIZATION:
 			return generalization != null;
 		}

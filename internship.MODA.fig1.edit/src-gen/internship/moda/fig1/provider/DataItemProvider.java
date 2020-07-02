@@ -42,7 +42,7 @@ public class DataItemProvider extends ModaNodeItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOtherinterplayPropertyDescriptor(object);
-			addProcessingPropertyDescriptor(object);
+			addDatapurposePropertyDescriptor(object);
 			addGeneralizationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -64,17 +64,18 @@ public class DataItemProvider extends ModaNodeItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Processing feature.
+	 * This adds a property descriptor for the Datapurpose feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProcessingPropertyDescriptor(Object object) {
+	protected void addDatapurposePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Data_processing_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Data_processing_feature", "_UI_Data_type"),
-						Fig1Package.Literals.DATA__PROCESSING, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Data_datapurpose_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_datapurpose_feature",
+								"_UI_Data_type"),
+						Fig1Package.Literals.DATA__DATAPURPOSE, true, false, true, null, null, null));
 	}
 
 	/**

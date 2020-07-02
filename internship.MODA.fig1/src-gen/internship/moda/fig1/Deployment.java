@@ -22,7 +22,7 @@ package internship.moda.fig1;
 public interface Deployment extends ModaRelation {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getIincomingDeployment <em>Iincoming Deployment</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Software#getIncomingDeployment <em>Incoming Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target</em>' reference isn't clear,
@@ -32,8 +32,8 @@ public interface Deployment extends ModaRelation {
 	 * @return the value of the '<em>Target</em>' reference.
 	 * @see #setTarget(Software)
 	 * @see internship.moda.fig1.Fig1Package#getDeployment_Target()
-	 * @see internship.moda.fig1.Software#getIincomingDeployment
-	 * @model opposite="iincomingDeployment"
+	 * @see internship.moda.fig1.Software#getIncomingDeployment
+	 * @model opposite="incomingDeployment"
 	 * @generated
 	 */
 	Software getTarget();

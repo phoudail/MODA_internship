@@ -356,13 +356,13 @@ public interface Fig1Package extends EPackage {
 	int DATA__OTHERINTERPLAY = MODA_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Processing</b></em>' reference.
+	 * The feature id for the '<em><b>Datapurpose</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA__PROCESSING = MODA_NODE_FEATURE_COUNT + 1;
+	int DATA__DATAPURPOSE = MODA_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Generalization</b></em>' reference.
@@ -707,13 +707,13 @@ public interface Fig1Package extends EPackage {
 	int SOFTWARE__PROCESSING = MODA_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Iincoming Deployment</b></em>' reference.
+	 * The feature id for the '<em><b>Incoming Deployment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SOFTWARE__IINCOMING_DEPLOYMENT = MODA_NODE_FEATURE_COUNT + 1;
+	int SOFTWARE__INCOMING_DEPLOYMENT = MODA_NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Software</em>' class.
@@ -1387,15 +1387,15 @@ public interface Fig1Package extends EPackage {
 	EReference getData_Otherinterplay();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getProcessing <em>Processing</em>}'.
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getDatapurpose <em>Datapurpose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Processing</em>'.
-	 * @see internship.moda.fig1.Data#getProcessing()
+	 * @return the meta object for the reference '<em>Datapurpose</em>'.
+	 * @see internship.moda.fig1.Data#getDatapurpose()
 	 * @see #getData()
 	 * @generated
 	 */
-	EReference getData_Processing();
+	EReference getData_Datapurpose();
 
 	/**
 	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getGeneralization <em>Generalization</em>}'.
@@ -1558,15 +1558,15 @@ public interface Fig1Package extends EPackage {
 	EReference getSoftware_Processing();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.Software#getIincomingDeployment <em>Iincoming Deployment</em>}'.
+	 * Returns the meta object for the reference '{@link internship.moda.fig1.Software#getIncomingDeployment <em>Incoming Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Iincoming Deployment</em>'.
-	 * @see internship.moda.fig1.Software#getIincomingDeployment()
+	 * @return the meta object for the reference '<em>Incoming Deployment</em>'.
+	 * @see internship.moda.fig1.Software#getIncomingDeployment()
 	 * @see #getSoftware()
 	 * @generated
 	 */
-	EReference getSoftware_IincomingDeployment();
+	EReference getSoftware_IncomingDeployment();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.SocioTechnicalSystem <em>Socio Technical System</em>}'.
@@ -2079,12 +2079,12 @@ public interface Fig1Package extends EPackage {
 		EReference DATA__OTHERINTERPLAY = eINSTANCE.getData_Otherinterplay();
 
 		/**
-		 * The meta object literal for the '<em><b>Processing</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Datapurpose</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA__PROCESSING = eINSTANCE.getData_Processing();
+		EReference DATA__DATAPURPOSE = eINSTANCE.getData_Datapurpose();
 
 		/**
 		 * The meta object literal for the '<em><b>Generalization</b></em>' reference feature.
@@ -2217,12 +2217,12 @@ public interface Fig1Package extends EPackage {
 		EReference SOFTWARE__PROCESSING = eINSTANCE.getSoftware_Processing();
 
 		/**
-		 * The meta object literal for the '<em><b>Iincoming Deployment</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Incoming Deployment</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SOFTWARE__IINCOMING_DEPLOYMENT = eINSTANCE.getSoftware_IincomingDeployment();
+		EReference SOFTWARE__INCOMING_DEPLOYMENT = eINSTANCE.getSoftware_IncomingDeployment();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.SocioTechnicalSystemImpl <em>Socio Technical System</em>}' class.

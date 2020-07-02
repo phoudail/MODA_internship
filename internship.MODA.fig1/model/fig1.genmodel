@@ -25,7 +25,7 @@
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//Data">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/otherinterplay"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/processing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/datapurpose"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference fig1.ecore#//Data/generalization"/>
     </genClasses>
     <genClasses ecoreClass="fig1.ecore#//ModelRole">

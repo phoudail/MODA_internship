@@ -274,7 +274,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getData_Processing() {
+	public EReference getData_Datapurpose() {
 		return (EReference) dataEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -418,7 +418,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSoftware_IincomingDeployment() {
+	public EReference getSoftware_IncomingDeployment() {
 		return (EReference) softwareEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -856,7 +856,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		dataEClass = createEClass(DATA);
 		createEReference(dataEClass, DATA__OTHERINTERPLAY);
-		createEReference(dataEClass, DATA__PROCESSING);
+		createEReference(dataEClass, DATA__DATAPURPOSE);
 		createEReference(dataEClass, DATA__GENERALIZATION);
 
 		modelRoleEClass = createEClass(MODEL_ROLE);
@@ -877,7 +877,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		softwareEClass = createEClass(SOFTWARE);
 		createEReference(softwareEClass, SOFTWARE__PROCESSING);
-		createEReference(softwareEClass, SOFTWARE__IINCOMING_DEPLOYMENT);
+		createEReference(softwareEClass, SOFTWARE__INCOMING_DEPLOYMENT);
 
 		socioTechnicalSystemEClass = createEClass(SOCIO_TECHNICAL_SYSTEM);
 		createEReference(socioTechnicalSystemEClass, SOCIO_TECHNICAL_SYSTEM__SOFTWARE);
@@ -1005,7 +1005,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getData_Otherinterplay(), this.getOtherInterplay(), this.getOtherInterplay_Data(),
 				"otherinterplay", null, 0, -1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getData_Processing(), this.getDataPurpose(), this.getDataPurpose_Data(), "processing", null, 0,
+		initEReference(getData_Datapurpose(), this.getDataPurpose(), this.getDataPurpose_Data(), "datapurpose", null, 0,
 				1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getData_Generalization(), this.getGeneralization(), this.getGeneralization_Source(),
@@ -1054,8 +1054,8 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getSoftware_Processing(), this.getDataPurpose(), this.getDataPurpose_Software(), "processing",
 				null, 0, -1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSoftware_IincomingDeployment(), this.getDeployment(), this.getDeployment_Target(),
-				"iincomingDeployment", null, 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getSoftware_IncomingDeployment(), this.getDeployment(), this.getDeployment_Target(),
+				"incomingDeployment", null, 0, 1, Software.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(socioTechnicalSystemEClass, SocioTechnicalSystem.class, "SocioTechnicalSystem", !IS_ABSTRACT,
@@ -1099,7 +1099,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		initEClass(dataPurposeEClass, DataPurpose.class, "DataPurpose", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDataPurpose_Data(), this.getData(), this.getData_Processing(), "data", null, 0, 1,
+		initEReference(getDataPurpose_Data(), this.getData(), this.getData_Datapurpose(), "data", null, 0, 1,
 				DataPurpose.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataPurpose_Software(), this.getSoftware(), this.getSoftware_Processing(), "software", null,
@@ -1121,7 +1121,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 
 		initEClass(deploymentEClass, Deployment.class, "Deployment", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDeployment_Target(), this.getSoftware(), this.getSoftware_IincomingDeployment(), "target",
+		initEReference(getDeployment_Target(), this.getSoftware(), this.getSoftware_IncomingDeployment(), "target",
 				null, 0, 1, Deployment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDeployment_Source(), this.getPrescriptiveModel(),

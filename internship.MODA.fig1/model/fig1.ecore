@@ -16,7 +16,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//ModaNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="otherinterplay" upperBound="-1"
         eType="#//OtherInterplay" eOpposite="#//OtherInterplay/data"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="processing" eType="#//DataPurpose"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapurpose" eType="#//DataPurpose"
         eOpposite="#//DataPurpose/data"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generalization" eType="#//Generalization"
         eOpposite="#//Generalization/source"/>
@@ -83,7 +83,7 @@
         eOpposite="#//SocioTechnicalSystem/otherinterplay"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataPurpose" eSuperTypes="#//ModaRelation">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="data" eType="#//Data" eOpposite="#//Data/processing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" eType="#//Data" eOpposite="#//Data/datapurpose"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
         eOpposite="#//Software/processing"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataKind" eType="#//DataKind"/>

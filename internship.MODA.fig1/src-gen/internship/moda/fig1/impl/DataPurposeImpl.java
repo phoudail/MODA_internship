@@ -146,9 +146,9 @@ public class DataPurposeImpl extends ModaRelationImpl implements DataPurpose {
 		if (newData != data) {
 			NotificationChain msgs = null;
 			if (data != null)
-				msgs = ((InternalEObject) data).eInverseRemove(this, Fig1Package.DATA__PROCESSING, Data.class, msgs);
+				msgs = ((InternalEObject) data).eInverseRemove(this, Fig1Package.DATA__DATAPURPOSE, Data.class, msgs);
 			if (newData != null)
-				msgs = ((InternalEObject) newData).eInverseAdd(this, Fig1Package.DATA__PROCESSING, Data.class, msgs);
+				msgs = ((InternalEObject) newData).eInverseAdd(this, Fig1Package.DATA__DATAPURPOSE, Data.class, msgs);
 			msgs = basicSetData(newData, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -256,7 +256,7 @@ public class DataPurposeImpl extends ModaRelationImpl implements DataPurpose {
 		switch (featureID) {
 		case Fig1Package.DATA_PURPOSE__DATA:
 			if (data != null)
-				msgs = ((InternalEObject) data).eInverseRemove(this, Fig1Package.DATA__PROCESSING, Data.class, msgs);
+				msgs = ((InternalEObject) data).eInverseRemove(this, Fig1Package.DATA__DATAPURPOSE, Data.class, msgs);
 			return basicSetData((Data) otherEnd, msgs);
 		case Fig1Package.DATA_PURPOSE__SOFTWARE:
 			if (software != null)

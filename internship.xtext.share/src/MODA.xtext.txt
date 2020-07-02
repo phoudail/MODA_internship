@@ -73,7 +73,7 @@ Data returns Data:
 	('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])?
 	('outgoingPreparation' outgoingPreparation=[Preparation|EString])?
 	('otherinterplay' '(' otherinterplay+=[OtherInterplay|EString] ("," otherinterplay+=[OtherInterplay|EString])* ')')?
-	('processing' processing=[DataPurpose|EString])?
+	('processing' datapurpose=[DataPurpose|EString])?
 	('generalization' generalization=[Generalization|EString])?
 	'}';
 
@@ -81,9 +81,8 @@ Model returns Model:
 	{Model}
 	'Model'
 	name=EString
-	'{'
-	('modelrole' '(' modelrole+=[ModelRole|EString] ("," modelrole+=[ModelRole|EString])* ')')?
-	'}';
+	':'
+	('modelrole' '(' modelrole+=[ModelRole|EString] ("," modelrole+=[ModelRole|EString])* ')')?;
 
 PrescriptiveModel returns PrescriptiveModel:
 	{PrescriptiveModel}

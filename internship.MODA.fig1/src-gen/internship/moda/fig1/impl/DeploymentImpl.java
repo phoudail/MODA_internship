@@ -124,10 +124,10 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.SOFTWARE__INCOMING_DEPLOYMENT,
 						Software.class, msgs);
 			if (newTarget != null)
-				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.SOFTWARE__INCOMING_DEPLOYMENT,
 						Software.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
@@ -215,7 +215,7 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 		switch (featureID) {
 		case Fig1Package.DEPLOYMENT__TARGET:
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.SOFTWARE__IINCOMING_DEPLOYMENT,
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.SOFTWARE__INCOMING_DEPLOYMENT,
 						Software.class, msgs);
 			return basicSetTarget((Software) otherEnd, msgs);
 		case Fig1Package.DEPLOYMENT__SOURCE:

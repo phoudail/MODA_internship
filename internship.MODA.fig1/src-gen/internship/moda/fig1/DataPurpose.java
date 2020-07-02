@@ -23,7 +23,7 @@ package internship.moda.fig1;
 public interface DataPurpose extends ModaRelation {
 	/**
 	 * Returns the value of the '<em><b>Data</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Data#getProcessing <em>Processing</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Data#getDatapurpose <em>Datapurpose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Data</em>' reference isn't clear,
@@ -33,8 +33,8 @@ public interface DataPurpose extends ModaRelation {
 	 * @return the value of the '<em>Data</em>' reference.
 	 * @see #setData(Data)
 	 * @see internship.moda.fig1.Fig1Package#getDataPurpose_Data()
-	 * @see internship.moda.fig1.Data#getProcessing
-	 * @model opposite="processing"
+	 * @see internship.moda.fig1.Data#getDatapurpose
+	 * @model opposite="datapurpose"
 	 * @generated
 	 */
 	Data getData();

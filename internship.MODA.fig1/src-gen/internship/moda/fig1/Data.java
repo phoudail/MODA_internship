@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link internship.moda.fig1.Data#getOtherinterplay <em>Otherinterplay</em>}</li>
- *   <li>{@link internship.moda.fig1.Data#getProcessing <em>Processing</em>}</li>
+ *   <li>{@link internship.moda.fig1.Data#getDatapurpose <em>Datapurpose</em>}</li>
  *   <li>{@link internship.moda.fig1.Data#getGeneralization <em>Generalization</em>}</li>
  * </ul>
  *
@@ -42,32 +42,32 @@ public interface Data extends ModaNode {
 	EList<OtherInterplay> getOtherinterplay();
 
 	/**
-	 * Returns the value of the '<em><b>Processing</b></em>' reference.
+	 * Returns the value of the '<em><b>Datapurpose</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.DataPurpose#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Processing</em>' reference isn't clear,
+	 * If the meaning of the '<em>Datapurpose</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processing</em>' reference.
-	 * @see #setProcessing(DataPurpose)
-	 * @see internship.moda.fig1.Fig1Package#getData_Processing()
+	 * @return the value of the '<em>Datapurpose</em>' reference.
+	 * @see #setDatapurpose(DataPurpose)
+	 * @see internship.moda.fig1.Fig1Package#getData_Datapurpose()
 	 * @see internship.moda.fig1.DataPurpose#getData
 	 * @model opposite="data"
 	 * @generated
 	 */
-	DataPurpose getProcessing();
+	DataPurpose getDatapurpose();
 
 	/**
-	 * Sets the value of the '{@link internship.moda.fig1.Data#getProcessing <em>Processing</em>}' reference.
+	 * Sets the value of the '{@link internship.moda.fig1.Data#getDatapurpose <em>Datapurpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processing</em>' reference.
-	 * @see #getProcessing()
+	 * @param value the new value of the '<em>Datapurpose</em>' reference.
+	 * @see #getDatapurpose()
 	 * @generated
 	 */
-	void setProcessing(DataPurpose value);
+	void setDatapurpose(DataPurpose value);
 
 	/**
 	 * Returns the value of the '<em><b>Generalization</b></em>' reference.
