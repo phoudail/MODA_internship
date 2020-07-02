@@ -1,0 +1,25 @@
+MODA mymoda :
+	Software soft1 {
+		}
+	modelrole {
+		DescriptiveModel descr1 {
+			
+		}
+		, PrescriptiveModel prescr1 {
+			
+		}
+		, PredictiveModel pred1 {
+			
+		}
+	}
+	model { 
+		Model model1 {
+			
+		} 
+		
+	}
+	relations {
+			Analysis : descr1 -[analysis1]-> prescr1,
+			DataPurpose :  -[datap1 | ExternalData ]-> ,
+			DataPurpose :  -[datap2  ]->
+	}
