@@ -71,9 +71,15 @@ class MODAGenerator extends AbstractGenerator {
 		tmpRes.substring(atDot+1, atStart-4) + tmp2
 	}
 	
-	def String mapModaToString(NamedElement o) {
-		"\n###object " + o.name + " of class " + o.classActualName +
-		"\n**contains :** \n" + o.eContents.map["\n* " + filterObjectReference].join(",\n") +
-		"\n\n\n**references :** \n" + o.eCrossReferences.map["\n* " + filterObjectReference].join(",\n")
+	def String mapModaToString(NamedElement o) { '''
+		
+		###object «o.name» of class «o.classActualName»
+		**contains :** 
+		«o.eContents.map["\n* " + filterObjectReference].join(",\n")» 
+		
+		
+		**references :**
+		«o.eCrossReferences.map["\n* " + filterObjectReference].join(",\n")»
+		'''
 	}
 }
