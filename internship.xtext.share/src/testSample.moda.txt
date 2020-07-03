@@ -1,4 +1,8 @@
 MODA mymoda :
+	data { 
+		Data data1 {
+		}
+	}
 	Software soft1 {
 		}
 	modelrole {
@@ -13,10 +17,7 @@ MODA mymoda :
 		}
 	}
 	model { 
-		Model model1 {
-			
-		} 
-		
+		Model model1 : modelrole (descr1)
 	}
 	relations {
 			Analysis : descr1 -[analysis1]-> prescr1,
