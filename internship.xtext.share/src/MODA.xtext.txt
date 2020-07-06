@@ -50,31 +50,28 @@ SocioTechnicalSystem returns SocioTechnicalSystem:
 	{SocioTechnicalSystem}
 	'SocioTechnicalSystem'
 	name=EString
-	'{'
-	('otherinterplay' otherinterplay=[OtherInterplay|EString])?
-	('incomingEnactment' incomingEnactment=[Enactment|EString])?
-	('software' software=Software)?
-	'}';
+	'{' (('otherinterplay' otherinterplay=[OtherInterplay|EString])? &
+	('incomingEnactment' incomingEnactment=[Enactment|EString])? &
+	('software' software=Software)?) '}';
 
 Software returns Software:
 	{Software}
 	'Software'
 	name=EString
 	'{'
-	('processing' '(' processing+=[DataPurpose|EString] ("," processing+=[DataPurpose|EString])* ')')?
-	('incomingDeployment' incomingDeployment=[Deployment|EString])?
+	(('processing' '(' processing+=[DataPurpose|EString] ("," processing+=[DataPurpose|EString])* ')')? &
+	('incomingDeployment' incomingDeployment=[Deployment|EString])?)
 	'}';
 
 Data returns Data:
 	{Data}
 	'Data'
 	name=EString
-	'{'
-	('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])?
-	('outgoingPreparation' outgoingPreparation=[Preparation|EString])?
-	('otherinterplay' '(' otherinterplay+=[OtherInterplay|EString] ("," otherinterplay+=[OtherInterplay|EString])* ')')?
-	('processing' datapurpose=[DataPurpose|EString])?
-	('generalization' generalization=[Generalization|EString])?
+	'{' (('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])? &
+	('outgoingPreparation' outgoingPreparation=[Preparation|EString])? &
+	('processing' datapurpose=[DataPurpose|EString])? &
+	('generalization' generalization=[Generalization|EString])? &
+	('otherinterplay' '(' otherinterplay+=[OtherInterplay|EString] ("," otherinterplay+=[OtherInterplay|EString])* ')')?)
 	'}';
 
 Model returns Model:
@@ -89,12 +86,12 @@ PrescriptiveModel returns PrescriptiveModel:
 	'PrescriptiveModel'
 	name=EString
 	'{'
-	('model' model=[Model|EString])?
-	('outgoingEnactment' outgoingEnactment=[Enactment|EString])?
-	('outgoingDeployment' outgoingDeployment=[Deployment|EString])?
-	('incomingAnalysis' incomingAnalysis=[Analysis|EString])?
-	('outgoingGeneration' outgoingGeneration=[Generation|EString])?
-	('incomingGeneration' incomingGeneration=[Generation|EString])?
+	(('model' model=[Model|EString])? &
+	('outgoingEnactment' outgoingEnactment=[Enactment|EString])? &
+	('outgoingDeployment' outgoingDeployment=[Deployment|EString])? &
+	('incomingAnalysis' incomingAnalysis=[Analysis|EString])? &
+	('outgoingGeneration' outgoingGeneration=[Generation|EString])? &
+	('incomingGeneration' incomingGeneration=[Generation|EString])?)
 	'}';
 
 Enactment returns Enactment:
@@ -125,10 +122,8 @@ DataPurpose returns DataPurpose:
 	{DataPurpose}
 	'DataPurpose'
 	':'
-	(('data' data=[Data|EString])? '-[' name=EString ('|' dataKind=DataKind)? ']->' ('software'
-	software=[Software|EString])?) |
-	((('software' software=[Software|EString])?) '-[' name=EString ('|' dataKind=DataKind)? ']->' ('data'
-	data=[Data|EString])?);
+	((data=[Data|EString])? '-[' name=EString ('|' dataKind=DataKind)? ']->' (software=[Software|EString])?) |
+	(((software=[Software|EString])?) '-[' name=EString ('|' dataKind=DataKind)? ']->' (data=[Data|EString])?);
 
 enum DataKind returns DataKind:
 	InputData='InputData' | OutputData='OutputData' | ExternalData='ExternalData' | MeasuredData='MeasuredData';
@@ -137,22 +132,18 @@ DescriptiveModel returns DescriptiveModel:
 	{DescriptiveModel}
 	'DescriptiveModel'
 	name=EString
-	'{'
-	('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])?
-	('outgoingPreparation' outgoingPreparation=[Preparation|EString])?
-	('model' model=[Model|EString])?
-	('incomingGeneralization' incomingGeneralization=[Generalization|EString])?
-	'}';
+	'{' (('model' model=[Model|EString])? &
+	(('outgoingAnalysis' outgoingAnalysis=[Analysis|EString]) | ('outgoingPreparation'
+	outgoingPreparation=[Preparation|EString]))? &
+	('incomingGeneralization' incomingGeneralization=[Generalization|EString])?) '}';
 
 PredictiveModel returns PredictiveModel:
 	{PredictiveModel}
 	'PredictiveModel'
 	name=EString
-	'{'
-	('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])?
-	('model' model=[Model|EString])?
-	('incomingPreparation' incomingPreparation=[Preparation|EString])?
-	'}';
+	'{' (('model' model=[Model|EString])? &
+	('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])? &
+	('incomingPreparation' incomingPreparation=[Preparation|EString])?) '}';
 
 Generalization returns Generalization:
 	{Generalization}
