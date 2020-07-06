@@ -1,6 +1,7 @@
 MODA mymoda :
-	data { 
+	data {
 		Data data1 {
+			
 		}
 	}
 	Software soft1 {
@@ -14,13 +15,17 @@ MODA mymoda :
 		}
 		, PredictiveModel pred1 {
 			
+		},
+		PrescriptiveModel prescr2 { 
+			
 		}
+		
 	}
 	model { 
 		Model model1 : modelrole (descr1)
 	}
 	relations {
 			Analysis : descr1 -[analysis1]-> prescr1,
-			DataPurpose :  -[datap1 | ExternalData ]-> ,
+			DataPurpose : data1 -[datap1 | ExternalData ]-> soft1,
 			DataPurpose :  -[datap2  ]->
 	}

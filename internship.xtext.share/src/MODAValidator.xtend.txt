@@ -15,6 +15,7 @@ import internship.moda.fig1.MODA
 import internship.moda.fig1.ModaRelation
 import internship.moda.fig1.DataPurpose
 import internship.moda.fig1.ModelRole
+import internship.moda.fig1.PrescriptiveModel
 
 /**
  * This class contains custom validation rules. 
@@ -68,20 +69,19 @@ class MODAValidator extends AbstractMODAValidator {
 			}
 		}
 	}
-		
 
+// Stop prescriptive model generation ? (G arrow)
 	@Check
 	def checkModelRoleIsUnique(ModelRole modelRole) {
 		val moda = modelRole.eContainer as MODA
 		var index = 0
 		for (other : moda.modelrole) {
-			if (modelRole != other && other.class == modelRole.class) {
+			if (modelRole != other && !(modelRole instanceof PrescriptiveModel) && other.class == modelRole.class) {
 				"There should not be multiple instances of a given model role".error(moda,
 					Fig1Package.Literals.MODA__MODELROLE, index)
 			}
 			index++
 		}
 	}
-	
 
 }
