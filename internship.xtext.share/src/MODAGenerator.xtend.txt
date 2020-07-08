@@ -24,11 +24,29 @@ class MODAGenerator extends AbstractGenerator {
 //		}
 //		fsa.generateFile("names.txt", result)
 		//fsa.generateFile('names.txt', resource.allContents.filter(NamedElement).map[name + " | " + class.interfaces.get(0).name].join('\n'))
-		fsa.generateFile("description.md", resource.allContents
-			.toIterable
-			.filter(NamedElement)
-			.map[mapModaToString]
-			.join("\n")
+		fsa.generateFile("description.ipynb", '''
+		{
+		  "metadata" : {
+		    name: "description"
+		  },
+		  "nbformat": 4,
+		  "nbformat_minor": 0,
+		  "cells" : [
+		      {
+		           "cell_type": "markdown",
+		           "metadata": {},
+		           "source": [
+		            "«resource.allContents
+		            			.toIterable
+		            			.filter(NamedElement)
+		            			.map[mapModaToString]
+		            			.join("\n")»"
+		           ]
+		          }
+		  ],
+		}
+			
+			'''
 		)
 	}
 	
