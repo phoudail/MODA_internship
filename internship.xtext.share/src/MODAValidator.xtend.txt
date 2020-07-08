@@ -56,7 +56,7 @@ class MODAValidator extends AbstractMODAValidator {
 	}
 
 	@Check
-	def checkModaRelationIsUnique(ModaRelation modaRel) {
+	def checkModaRelationIsSingleton(ModaRelation modaRel) {
 		if (!(modaRel instanceof DataPurpose)) {
 			val moda = modaRel.eContainer as MODA
 			var index = 0
@@ -72,7 +72,7 @@ class MODAValidator extends AbstractMODAValidator {
 
 // Stop prescriptive model generation ? (G arrow)
 	@Check
-	def checkModelRoleIsUnique(ModelRole modelRole) {
+	def checkModelRoleIsSingleton(ModelRole modelRole) {
 		val moda = modelRole.eContainer as MODA
 		var index = 0
 		for (other : moda.modelrole) {
@@ -81,6 +81,13 @@ class MODAValidator extends AbstractMODAValidator {
 					Fig1Package.Literals.MODA__MODELROLE, index)
 			}
 			index++
+		}
+	}
+	
+	def checkPrescriptiveGenerationIsntReflective(PrescriptiveModel prescr) {
+		if(prescr.outgoingGeneration == prescr.incomingGeneration) {
+			"A prescriptive model's generation should not target itself".error(
+				Fig1Package.Literals.GENERATION__TARGET)
 		}
 	}
 
