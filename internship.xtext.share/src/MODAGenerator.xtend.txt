@@ -34,11 +34,12 @@ class MODAGenerator extends AbstractGenerator {
 		           "cell_type": "markdown",
 		           "metadata": {},
 		           "source": [
-		            "«resource.allContents
+		            «resource.allContents
 		            			.toIterable
 		            			.filter(NamedElement)
 		            			.map[mapModaToString]
-		            			.join("\n")»"
+		            			.join("\",\n")»
+		            ""
 		           ]
 		          }
 		  ],
@@ -89,13 +90,13 @@ class MODAGenerator extends AbstractGenerator {
 	
 	def String mapModaToString(NamedElement o) { '''
 		
-		###object «o.name» of class «o.classActualName»
-		**contains :** 
-		«o.eContents.map["\n* " + filterObjectReference].join(",\n")» 
+		"###object «o.name» of class «o.classActualName»",
+		"**contains :**",
+		«o.eContents.map["\",\n\"* " + filterObjectReference].join(",\"\n")»
 		
 		
-		**references :**
-		«o.eCrossReferences.map["\n* " + filterObjectReference].join(",\n")»
+		"**references :**",
+		«o.eCrossReferences.map["\",\n\"* " + filterObjectReference].join(",\",\n")»
 		'''
 	}
 }
