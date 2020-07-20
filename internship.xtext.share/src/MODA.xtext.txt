@@ -10,10 +10,10 @@ MODA returns MODA:
 	name=EString
 	':'
 	((sociotechnicalsystem=SocioTechnicalSystem | sociotechnicalsystem=SoftwareGen)? &
-	(data+=Data (";" data+=Data)*)? &
-	(model+=Model (";" model+=Model)*)? &
-	(modelrole+=ModelRole (";" modelrole+=ModelRole)*)? &
-	(relations+=ModaRelation (";" relations+=ModaRelation)*)?);
+	(data+=Data (data+=Data)*)? &
+	(model+=Model (model+=Model)*)? &
+	(modelrole+=ModelRole (modelrole+=ModelRole)*)? &
+	(relations+=ModaRelation (relations+=ModaRelation)*)?);
 
 ModelRole returns ModelRole:
 	DescriptiveModel | PredictiveModel | PrescriptiveModel;
@@ -30,56 +30,48 @@ EString returns ecore::EString:
 Analysis returns Analysis:
 	{Analysis}
 	'Analysis'
+	name=EString
 	':'
 	(source=[ModaNode|EString])?
-	'-[' name=EString ']->'
-	(target=[PrescriptiveModel|EString])?;
+	'->'
+	(target=[PrescriptiveModel|EString])? ";";
 
 Preparation returns Preparation:
 	{Preparation}
 	'Preparation'
+	name=EString
 	':'
 	(source=[ModaNode|EString])?
-	'-[' name=EString ']->'
-	(target=[PredictiveModel|EString])?;
+	'->'
+	(target=[PredictiveModel|EString])? ";";
 
 SoftwareGen returns SocioTechnicalSystem:
 	{SocioTechnicalSystem}
-	software=Software;
+	software=Software ';';
 
 SocioTechnicalSystem returns SocioTechnicalSystem:
 	{SocioTechnicalSystem}
-	'SocioTechnicalSystem'
-	name=EString
-	(':'
-	('otherinterplay' otherinterplay=[OtherInterplay|EString])? &
-	('incomingEnactment' incomingEnactment=[Enactment|EString])? &
-	('software' software=Software)?)?;
+	(software=Software 'within')? name=EString 'as' 'SocioTechnicalSystem' ';';
 
 Software returns Software:
 	{Software}
-	'Software'
-	name=EString
-	(':'
-	('processing' '(' processing+=[DataPurpose|EString] ("," processing+=[DataPurpose|EString])* ')')? &
-	('incomingDeployment' incomingDeployment=[Deployment|EString])?)?
+	name=EString 'as' 'Software'
+//	(':'
+//	('processing' '(' processing+=[DataPurpose|EString] ("," processing+=[DataPurpose|EString])* ')')? &
+//	('incomingDeployment' incomingDeployment=[Deployment|EString])?)?
 	;
 
 Data returns Data:
 	{Data}
-	'Data'
-	name=EString(':' 
-	('outgoingAnalysis' outgoingAnalysis=[Analysis|EString])? &
-	('outgoingPreparation' outgoingPreparation=[Preparation|EString])? &
-	('processing' datapurpose=[DataPurpose|EString])? &
-	('generalization' generalization=[Generalization|EString])? &
-	('otherinterplay' '(' otherinterplay+=[OtherInterplay|EString] ("," otherinterplay+=[OtherInterplay|EString])* ')')?)?;
+	name=EString "as" ("Data" | (datapurpose=[DataPurpose|EString]) ) ';';
+	
+DataPurposeGen returns DataPurpose:
+	{DataPurpose}
+;
 
 Model returns Model:
 	{Model}
-	'Model'
-	name=EString
-	(':' modelrole+=[ModelRole|EString] ("," modelrole+=[ModelRole|EString])* ';')?;
+	name=EString "as" ('Model' | (modelrole+=[ModelRole|EString] ("," modelrole+=[ModelRole|EString])*))';';
 
 PrescriptiveModel returns PrescriptiveModel:
 	{PrescriptiveModel}
@@ -96,33 +88,37 @@ PrescriptiveModel returns PrescriptiveModel:
 Enactment returns Enactment:
 	{Enactment}
 	'Enactment'
+	name=EString
 	':'
 	(source=[PrescriptiveModel|EString])?
-	'-[' name=EString ']->'
-	(target=[SocioTechnicalSystem|EString])?;
+	'->'
+	(target=[SocioTechnicalSystem|EString])? ";";
 
 Deployment returns Deployment:
 	{Deployment}
 	'Deployment'
+	name=EString
 	':'
 	(source=[PrescriptiveModel|EString])?
-	'-[' name=EString ']->'
-	(target=[Software|EString])?;
+	'->'
+	(target=[Software|EString])? ";";
 
 Generation returns Generation:
 	{Generation}
 	'Generation'
+	name=EString
 	':'
 	(source=[PrescriptiveModel|EString])?
-	'-[' name=EString ']->'
-	(target=[PrescriptiveModel|EString])?;
+	'->'
+	(target=[PrescriptiveModel|EString])? ";";
 
 DataPurpose returns DataPurpose:
 	{DataPurpose}
-	'DataPurpose'
+	'process'
+	name=EString
 	':'
-	((data=[Data|EString])? '-[' name=EString ('|' dataKind=DataKind)? ']->' (software=[Software|EString])?) |
-	(((software=[Software|EString])?) '-[' name=EString ('|' dataKind=DataKind)? ']->' (data=[Data|EString])?);
+	((data=[Data|EString] ('as' dataKind=DataKind)?)? '->' (software=[Software|EString])?) ";" |
+	((software=[Software|EString])? '->' (data=[Data|EString] ('as' dataKind=DataKind)?)?) ";";
 
 enum DataKind returns DataKind:
 	InputData='InputData' | OutputData='OutputData' | ExternalData='ExternalData' | MeasuredData='MeasuredData';
@@ -148,15 +144,17 @@ PredictiveModel returns PredictiveModel:
 Generalization returns Generalization:
 	{Generalization}
 	'Generalization'
+	name=EString
 	':'
 	(source+=[Data|EString] ("," source+=[Data|EString])*)?
-	'-[' name=EString ']->'
-	(target=[DescriptiveModel|EString])?;
+	'->'
+	(target=[DescriptiveModel|EString])? ";";
 
 OtherInterplay returns OtherInterplay:
 	'OtherInterplay'
+	name=EString
 	':'
-	data+=[Data|EString] ("," data+=[Data|EString])*
-	'-[' name=EString ']->'
-	(sociotechnicalsystem=[SocioTechnicalSystem|EString])?;
+	(data+=[Data|EString] ("," data+=[Data|EString])*)?
+	'->'
+	(sociotechnicalsystem=[SocioTechnicalSystem|EString])? ";";
 
