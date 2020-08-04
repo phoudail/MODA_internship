@@ -12,6 +12,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link internship.moda.fig1.Data} object.
@@ -44,6 +46,10 @@ public class DataItemProvider extends ModaNodeItemProvider {
 			addOtherinterplayPropertyDescriptor(object);
 			addDatapurposePropertyDescriptor(object);
 			addGeneralizationPropertyDescriptor(object);
+			addInputDataPropertyDescriptor(object);
+			addOutputDataPropertyDescriptor(object);
+			addExternalDataPropertyDescriptor(object);
+			addMeasuredDataPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,6 +100,68 @@ public class DataItemProvider extends ModaNodeItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Input Data feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputDataPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Data_inputData_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_inputData_feature", "_UI_Data_type"),
+						Fig1Package.Literals.DATA__INPUT_DATA, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Output Data feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutputDataPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Data_outputData_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_outputData_feature", "_UI_Data_type"),
+						Fig1Package.Literals.DATA__OUTPUT_DATA, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the External Data feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addExternalDataPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Data_externalData_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_externalData_feature",
+								"_UI_Data_type"),
+						Fig1Package.Literals.DATA__EXTERNAL_DATA, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Measured Data feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMeasuredDataPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Data_measuredData_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Data_measuredData_feature",
+								"_UI_Data_type"),
+						Fig1Package.Literals.DATA__MEASURED_DATA, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns Data.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -137,6 +205,15 @@ public class DataItemProvider extends ModaNodeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Data.class)) {
+		case Fig1Package.DATA__INPUT_DATA:
+		case Fig1Package.DATA__OUTPUT_DATA:
+		case Fig1Package.DATA__EXTERNAL_DATA:
+		case Fig1Package.DATA__MEASURED_DATA:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

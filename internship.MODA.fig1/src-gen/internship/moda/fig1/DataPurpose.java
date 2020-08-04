@@ -79,6 +79,7 @@ public interface DataPurpose extends ModaRelation {
 
 	/**
 	 * Returns the value of the '<em><b>Data Kind</b></em>' attribute.
+	 * The default value is <code>"InputData"</code>.
 	 * The literals are from the enumeration {@link internship.moda.fig1.DataKind}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -90,7 +91,7 @@ public interface DataPurpose extends ModaRelation {
 	 * @see internship.moda.fig1.DataKind
 	 * @see #setDataKind(DataKind)
 	 * @see internship.moda.fig1.Fig1Package#getDataPurpose_DataKind()
-	 * @model
+	 * @model default="InputData"
 	 * @generated
 	 */
 	DataKind getDataKind();

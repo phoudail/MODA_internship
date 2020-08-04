@@ -356,7 +356,7 @@ public interface Fig1Package extends EPackage {
 	int DATA__OTHERINTERPLAY = MODA_NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Datapurpose</b></em>' reference.
+	 * The feature id for the '<em><b>Datapurpose</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -374,13 +374,49 @@ public interface Fig1Package extends EPackage {
 	int DATA__GENERALIZATION = MODA_NODE_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Input Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__INPUT_DATA = MODA_NODE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Output Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__OUTPUT_DATA = MODA_NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>External Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__EXTERNAL_DATA = MODA_NODE_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Measured Data</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA__MEASURED_DATA = MODA_NODE_FEATURE_COUNT + 6;
+
+	/**
 	 * The number of structural features of the '<em>Data</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_FEATURE_COUNT = MODA_NODE_FEATURE_COUNT + 3;
+	int DATA_FEATURE_COUNT = MODA_NODE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>Data</em>' class.
@@ -1387,10 +1423,10 @@ public interface Fig1Package extends EPackage {
 	EReference getData_Otherinterplay();
 
 	/**
-	 * Returns the meta object for the reference '{@link internship.moda.fig1.Data#getDatapurpose <em>Datapurpose</em>}'.
+	 * Returns the meta object for the reference list '{@link internship.moda.fig1.Data#getDatapurpose <em>Datapurpose</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Datapurpose</em>'.
+	 * @return the meta object for the reference list '<em>Datapurpose</em>'.
 	 * @see internship.moda.fig1.Data#getDatapurpose()
 	 * @see #getData()
 	 * @generated
@@ -1407,6 +1443,50 @@ public interface Fig1Package extends EPackage {
 	 * @generated
 	 */
 	EReference getData_Generalization();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Data#isInputData <em>Input Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Input Data</em>'.
+	 * @see internship.moda.fig1.Data#isInputData()
+	 * @see #getData()
+	 * @generated
+	 */
+	EAttribute getData_InputData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Data#isOutputData <em>Output Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Output Data</em>'.
+	 * @see internship.moda.fig1.Data#isOutputData()
+	 * @see #getData()
+	 * @generated
+	 */
+	EAttribute getData_OutputData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Data#isExternalData <em>External Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>External Data</em>'.
+	 * @see internship.moda.fig1.Data#isExternalData()
+	 * @see #getData()
+	 * @generated
+	 */
+	EAttribute getData_ExternalData();
+
+	/**
+	 * Returns the meta object for the attribute '{@link internship.moda.fig1.Data#isMeasuredData <em>Measured Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Measured Data</em>'.
+	 * @see internship.moda.fig1.Data#isMeasuredData()
+	 * @see #getData()
+	 * @generated
+	 */
+	EAttribute getData_MeasuredData();
 
 	/**
 	 * Returns the meta object for class '{@link internship.moda.fig1.ModelRole <em>Model Role</em>}'.
@@ -2079,7 +2159,7 @@ public interface Fig1Package extends EPackage {
 		EReference DATA__OTHERINTERPLAY = eINSTANCE.getData_Otherinterplay();
 
 		/**
-		 * The meta object literal for the '<em><b>Datapurpose</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Datapurpose</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2093,6 +2173,38 @@ public interface Fig1Package extends EPackage {
 		 * @generated
 		 */
 		EReference DATA__GENERALIZATION = eINSTANCE.getData_Generalization();
+
+		/**
+		 * The meta object literal for the '<em><b>Input Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA__INPUT_DATA = eINSTANCE.getData_InputData();
+
+		/**
+		 * The meta object literal for the '<em><b>Output Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA__OUTPUT_DATA = eINSTANCE.getData_OutputData();
+
+		/**
+		 * The meta object literal for the '<em><b>External Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA__EXTERNAL_DATA = eINSTANCE.getData_ExternalData();
+
+		/**
+		 * The meta object literal for the '<em><b>Measured Data</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA__MEASURED_DATA = eINSTANCE.getData_MeasuredData();
 
 		/**
 		 * The meta object literal for the '{@link internship.moda.fig1.impl.ModelRoleImpl <em>Model Role</em>}' class.

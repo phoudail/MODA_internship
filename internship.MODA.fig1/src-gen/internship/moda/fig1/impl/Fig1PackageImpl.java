@@ -292,6 +292,42 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getData_InputData() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_OutputData() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_ExternalData() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getData_MeasuredData() {
+		return (EAttribute) dataEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getModelRole() {
 		return modelRoleEClass;
 	}
@@ -858,6 +894,10 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		createEReference(dataEClass, DATA__OTHERINTERPLAY);
 		createEReference(dataEClass, DATA__DATAPURPOSE);
 		createEReference(dataEClass, DATA__GENERALIZATION);
+		createEAttribute(dataEClass, DATA__INPUT_DATA);
+		createEAttribute(dataEClass, DATA__OUTPUT_DATA);
+		createEAttribute(dataEClass, DATA__EXTERNAL_DATA);
+		createEAttribute(dataEClass, DATA__MEASURED_DATA);
 
 		modelRoleEClass = createEClass(MODEL_ROLE);
 		createEReference(modelRoleEClass, MODEL_ROLE__MODEL);
@@ -1006,11 +1046,19 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 				"otherinterplay", null, 0, -1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getData_Datapurpose(), this.getDataPurpose(), this.getDataPurpose_Data(), "datapurpose", null, 0,
-				1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				-1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getData_Generalization(), this.getGeneralization(), this.getGeneralization_Source(),
 				"generalization", null, 0, 1, Data.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_InputData(), ecorePackage.getEBoolean(), "inputData", null, 0, 1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_OutputData(), ecorePackage.getEBoolean(), "outputData", null, 0, 1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_ExternalData(), ecorePackage.getEBoolean(), "externalData", null, 0, 1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getData_MeasuredData(), ecorePackage.getEBoolean(), "measuredData", null, 0, 1, Data.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(modelRoleEClass, ModelRole.class, "ModelRole", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1105,7 +1153,7 @@ public class Fig1PackageImpl extends EPackageImpl implements Fig1Package {
 		initEReference(getDataPurpose_Software(), this.getSoftware(), this.getSoftware_Processing(), "software", null,
 				0, 1, DataPurpose.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDataPurpose_DataKind(), this.getDataKind(), "dataKind", null, 0, 1, DataPurpose.class,
+		initEAttribute(getDataPurpose_DataKind(), this.getDataKind(), "dataKind", "InputData", 0, 1, DataPurpose.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enactmentEClass, Enactment.class, "Enactment", !IS_ABSTRACT, !IS_INTERFACE,

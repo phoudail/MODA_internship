@@ -16,10 +16,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Data" eSuperTypes="#//ModaNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="otherinterplay" upperBound="-1"
         eType="#//OtherInterplay" eOpposite="#//OtherInterplay/data"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="datapurpose" eType="#//DataPurpose"
-        eOpposite="#//DataPurpose/data"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapurpose" upperBound="-1"
+        eType="#//DataPurpose" eOpposite="#//DataPurpose/data"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="generalization" eType="#//Generalization"
         eOpposite="#//Generalization/source"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inputData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="outputData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measuredData" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModelRole" abstract="true" eSuperTypes="#//ModaNode">
     <eStructuralFeatures xsi:type="ecore:EReference" name="model" eType="#//Model"
@@ -86,7 +90,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="data" eType="#//Data" eOpposite="#//Data/datapurpose"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="software" eType="#//Software"
         eOpposite="#//Software/processing"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataKind" eType="#//DataKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataKind" eType="#//DataKind"
+        defaultValueLiteral="InputData"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Enactment" eSuperTypes="#//ModaRelation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" eType="#//PrescriptiveModel"
