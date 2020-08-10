@@ -1,10 +1,9 @@
 MODA mymoda :
-	data1 as Data;
+	data1 as externalData, outputData;
 	soft1 as Software;
-	DescriptiveModel descr1
-	PrescriptiveModel prescr1 : model model1
-	PredictiveModel pred1
-	PrescriptiveModel prescr2
 	model1 as Model;
-	Analysis a1 : descr1 -> prescr1
-	process p1 : data1 -> soft1
+	model1 as Descriptive descr1;
+	model1 as PrescriptiveModel prescr1;
+	Analysis a1 : descr1 -> prescr1;
+	process p1 : data1 as ExternalData -> soft1;
+	process p2 : data1 as OutputData -> soft1;
