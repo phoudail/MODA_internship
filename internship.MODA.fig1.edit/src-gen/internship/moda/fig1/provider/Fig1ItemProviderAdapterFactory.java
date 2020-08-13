@@ -96,75 +96,6 @@ public class Fig1ItemProviderAdapterFactory extends Fig1AdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.DescriptiveModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected DescriptiveModelItemProvider descriptiveModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link internship.moda.fig1.DescriptiveModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createDescriptiveModelAdapter() {
-		if (descriptiveModelItemProvider == null) {
-			descriptiveModelItemProvider = new DescriptiveModelItemProvider(this);
-		}
-
-		return descriptiveModelItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.PredictiveModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PredictiveModelItemProvider predictiveModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link internship.moda.fig1.PredictiveModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPredictiveModelAdapter() {
-		if (predictiveModelItemProvider == null) {
-			predictiveModelItemProvider = new PredictiveModelItemProvider(this);
-		}
-
-		return predictiveModelItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.PrescriptiveModel} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PrescriptiveModelItemProvider prescriptiveModelItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link internship.moda.fig1.PrescriptiveModel}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPrescriptiveModelAdapter() {
-		if (prescriptiveModelItemProvider == null) {
-			prescriptiveModelItemProvider = new PrescriptiveModelItemProvider(this);
-		}
-
-		return prescriptiveModelItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link internship.moda.fig1.Software} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,12 +474,6 @@ public class Fig1ItemProviderAdapterFactory extends Fig1AdapterFactory
 			modaItemProvider.dispose();
 		if (dataItemProvider != null)
 			dataItemProvider.dispose();
-		if (descriptiveModelItemProvider != null)
-			descriptiveModelItemProvider.dispose();
-		if (predictiveModelItemProvider != null)
-			predictiveModelItemProvider.dispose();
-		if (prescriptiveModelItemProvider != null)
-			prescriptiveModelItemProvider.dispose();
 		if (softwareItemProvider != null)
 			softwareItemProvider.dispose();
 		if (socioTechnicalSystemItemProvider != null)

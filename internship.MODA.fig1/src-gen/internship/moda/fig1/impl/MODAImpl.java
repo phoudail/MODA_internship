@@ -7,7 +7,6 @@ import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.MODA;
 import internship.moda.fig1.ModaRelation;
 import internship.moda.fig1.Model;
-import internship.moda.fig1.ModelRole;
 import internship.moda.fig1.SocioTechnicalSystem;
 import java.util.Collection;
 
@@ -34,7 +33,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getData <em>Data</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getModel <em>Model</em>}</li>
- *   <li>{@link internship.moda.fig1.impl.MODAImpl#getModelrole <em>Modelrole</em>}</li>
  *   <li>{@link internship.moda.fig1.impl.MODAImpl#getRelations <em>Relations</em>}</li>
  * </ul>
  *
@@ -70,16 +68,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 	 * @ordered
 	 */
 	protected EList<Model> model;
-
-	/**
-	 * The cached value of the '{@link #getModelrole() <em>Modelrole</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getModelrole()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ModelRole> modelrole;
 
 	/**
 	 * The cached value of the '{@link #getRelations() <em>Relations</em>}' containment reference list.
@@ -190,18 +178,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModelRole> getModelrole() {
-		if (modelrole == null) {
-			modelrole = new EObjectContainmentEList<ModelRole>(ModelRole.class, this, Fig1Package.MODA__MODELROLE);
-		}
-		return modelrole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<ModaRelation> getRelations() {
 		if (relations == null) {
 			relations = new EObjectContainmentEList<ModaRelation>(ModaRelation.class, this,
@@ -224,8 +200,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			return ((InternalEList<?>) getData()).basicRemove(otherEnd, msgs);
 		case Fig1Package.MODA__MODEL:
 			return ((InternalEList<?>) getModel()).basicRemove(otherEnd, msgs);
-		case Fig1Package.MODA__MODELROLE:
-			return ((InternalEList<?>) getModelrole()).basicRemove(otherEnd, msgs);
 		case Fig1Package.MODA__RELATIONS:
 			return ((InternalEList<?>) getRelations()).basicRemove(otherEnd, msgs);
 		}
@@ -246,8 +220,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			return getData();
 		case Fig1Package.MODA__MODEL:
 			return getModel();
-		case Fig1Package.MODA__MODELROLE:
-			return getModelrole();
 		case Fig1Package.MODA__RELATIONS:
 			return getRelations();
 		}
@@ -274,10 +246,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			getModel().clear();
 			getModel().addAll((Collection<? extends Model>) newValue);
 			return;
-		case Fig1Package.MODA__MODELROLE:
-			getModelrole().clear();
-			getModelrole().addAll((Collection<? extends ModelRole>) newValue);
-			return;
 		case Fig1Package.MODA__RELATIONS:
 			getRelations().clear();
 			getRelations().addAll((Collection<? extends ModaRelation>) newValue);
@@ -303,9 +271,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 		case Fig1Package.MODA__MODEL:
 			getModel().clear();
 			return;
-		case Fig1Package.MODA__MODELROLE:
-			getModelrole().clear();
-			return;
 		case Fig1Package.MODA__RELATIONS:
 			getRelations().clear();
 			return;
@@ -327,8 +292,6 @@ public class MODAImpl extends ModaNodeImpl implements MODA {
 			return data != null && !data.isEmpty();
 		case Fig1Package.MODA__MODEL:
 			return model != null && !model.isEmpty();
-		case Fig1Package.MODA__MODELROLE:
-			return modelrole != null && !modelrole.isEmpty();
 		case Fig1Package.MODA__RELATIONS:
 			return relations != null && !relations.isEmpty();
 		}

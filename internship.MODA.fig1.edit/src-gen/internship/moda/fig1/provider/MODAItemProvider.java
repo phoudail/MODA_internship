@@ -95,7 +95,6 @@ public class MODAItemProvider extends ModaNodeItemProvider {
 			childrenFeatures.add(Fig1Package.Literals.MODA__SOCIOTECHNICALSYSTEM);
 			childrenFeatures.add(Fig1Package.Literals.MODA__DATA);
 			childrenFeatures.add(Fig1Package.Literals.MODA__MODEL);
-			childrenFeatures.add(Fig1Package.Literals.MODA__MODELROLE);
 			childrenFeatures.add(Fig1Package.Literals.MODA__RELATIONS);
 		}
 		return childrenFeatures;
@@ -163,7 +162,6 @@ public class MODAItemProvider extends ModaNodeItemProvider {
 		case Fig1Package.MODA__SOCIOTECHNICALSYSTEM:
 		case Fig1Package.MODA__DATA:
 		case Fig1Package.MODA__MODEL:
-		case Fig1Package.MODA__MODELROLE:
 		case Fig1Package.MODA__RELATIONS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -190,15 +188,6 @@ public class MODAItemProvider extends ModaNodeItemProvider {
 
 		newChildDescriptors
 				.add(createChildParameter(Fig1Package.Literals.MODA__MODEL, Fig1Factory.eINSTANCE.createModel()));
-
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__MODELROLE,
-				Fig1Factory.eINSTANCE.createDescriptiveModel()));
-
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__MODELROLE,
-				Fig1Factory.eINSTANCE.createPredictiveModel()));
-
-		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__MODELROLE,
-				Fig1Factory.eINSTANCE.createPrescriptiveModel()));
 
 		newChildDescriptors.add(createChildParameter(Fig1Package.Literals.MODA__RELATIONS,
 				Fig1Factory.eINSTANCE.createOtherInterplay()));

@@ -12,6 +12,8 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link internship.moda.fig1.Model} object.
@@ -41,24 +43,171 @@ public class ModelItemProvider extends ModaNodeItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addModelrolePropertyDescriptor(object);
+			addIncomingPreparationPropertyDescriptor(object);
+			addIncomingGeneralizationPropertyDescriptor(object);
+			addIncomingAnalysisPropertyDescriptor(object);
+			addOutgoingDeploymentPropertyDescriptor(object);
+			addOutgoingGenerationPropertyDescriptor(object);
+			addIncomingGenerationPropertyDescriptor(object);
+			addOutgoingEnactmentPropertyDescriptor(object);
+			addPrescriptiveModelPropertyDescriptor(object);
+			addPredictiveModelPropertyDescriptor(object);
+			addDescriptiveModelPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Modelrole feature.
+	 * This adds a property descriptor for the Incoming Preparation feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addModelrolePropertyDescriptor(Object object) {
+	protected void addIncomingPreparationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Model_modelrole_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Model_modelrole_feature",
+						getResourceLocator(), getString("_UI_Model_incomingPreparation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_incomingPreparation_feature",
 								"_UI_Model_type"),
-						Fig1Package.Literals.MODEL__MODELROLE, true, false, true, null, null, null));
+						Fig1Package.Literals.MODEL__INCOMING_PREPARATION, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Incoming Generalization feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncomingGeneralizationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_incomingGeneralization_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_incomingGeneralization_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__INCOMING_GENERALIZATION, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Incoming Analysis feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncomingAnalysisPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_incomingAnalysis_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_incomingAnalysis_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__INCOMING_ANALYSIS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outgoing Deployment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutgoingDeploymentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_outgoingDeployment_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_outgoingDeployment_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__OUTGOING_DEPLOYMENT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outgoing Generation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutgoingGenerationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_outgoingGeneration_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_outgoingGeneration_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__OUTGOING_GENERATION, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Incoming Generation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIncomingGenerationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_incomingGeneration_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_incomingGeneration_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__INCOMING_GENERATION, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Outgoing Enactment feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOutgoingEnactmentPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_outgoingEnactment_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_outgoingEnactment_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__OUTGOING_ENACTMENT, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Prescriptive Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPrescriptiveModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_prescriptiveModel_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_prescriptiveModel_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__PRESCRIPTIVE_MODEL, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Predictive Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPredictiveModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_predictiveModel_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_predictiveModel_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__PREDICTIVE_MODEL, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Descriptive Model feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptiveModelPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Model_descriptiveModel_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Model_descriptiveModel_feature",
+								"_UI_Model_type"),
+						Fig1Package.Literals.MODEL__DESCRIPTIVE_MODEL, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -105,6 +254,14 @@ public class ModelItemProvider extends ModaNodeItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Model.class)) {
+		case Fig1Package.MODEL__PRESCRIPTIVE_MODEL:
+		case Fig1Package.MODEL__PREDICTIVE_MODEL:
+		case Fig1Package.MODEL__DESCRIPTIVE_MODEL:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -3,9 +3,9 @@
 package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Data;
-import internship.moda.fig1.DescriptiveModel;
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.Generalization;
+import internship.moda.fig1.Model;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -54,7 +54,7 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 	 * @generated
 	 * @ordered
 	 */
-	protected DescriptiveModel target;
+	protected Model target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -93,10 +93,10 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DescriptiveModel getTarget() {
+	public Model getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
-			target = (DescriptiveModel) eResolveProxy(oldTarget);
+			target = (Model) eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.GENERALIZATION__TARGET,
@@ -111,7 +111,7 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DescriptiveModel basicGetTarget() {
+	public Model basicGetTarget() {
 		return target;
 	}
 
@@ -120,8 +120,8 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTarget(DescriptiveModel newTarget, NotificationChain msgs) {
-		DescriptiveModel oldTarget = target;
+	public NotificationChain basicSetTarget(Model newTarget, NotificationChain msgs) {
+		Model oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -139,15 +139,15 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(DescriptiveModel newTarget) {
+	public void setTarget(Model newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, DescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_GENERALIZATION,
+						Model.class, msgs);
 			if (newTarget != null)
-				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
-						Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, DescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.MODEL__INCOMING_GENERALIZATION,
+						Model.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -169,9 +169,9 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSource()).basicAdd(otherEnd, msgs);
 		case Fig1Package.GENERALIZATION__TARGET:
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.DESCRIPTIVE_MODEL__INCOMING_GENERALIZATION, DescriptiveModel.class, msgs);
-			return basicSetTarget((DescriptiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_GENERALIZATION,
+						Model.class, msgs);
+			return basicSetTarget((Model) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -224,7 +224,7 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 			getSource().addAll((Collection<? extends Data>) newValue);
 			return;
 		case Fig1Package.GENERALIZATION__TARGET:
-			setTarget((DescriptiveModel) newValue);
+			setTarget((Model) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -242,7 +242,7 @@ public class GeneralizationImpl extends ModaRelationImpl implements Generalizati
 			getSource().clear();
 			return;
 		case Fig1Package.GENERALIZATION__TARGET:
-			setTarget((DescriptiveModel) null);
+			setTarget((Model) null);
 			return;
 		}
 		super.eUnset(featureID);

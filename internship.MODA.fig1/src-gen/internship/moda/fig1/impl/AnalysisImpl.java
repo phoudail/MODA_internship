@@ -5,8 +5,7 @@ package internship.moda.fig1.impl;
 import internship.moda.fig1.Analysis;
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.ModaNode;
-import internship.moda.fig1.PrescriptiveModel;
-
+import internship.moda.fig1.Model;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -38,7 +37,7 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel target;
+	protected Model target;
 
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
@@ -74,10 +73,10 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getTarget() {
+	public Model getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
-			target = (PrescriptiveModel) eResolveProxy(oldTarget);
+			target = (Model) eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ANALYSIS__TARGET, oldTarget,
@@ -92,7 +91,7 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetTarget() {
+	public Model basicGetTarget() {
 		return target;
 	}
 
@@ -101,8 +100,8 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTarget(PrescriptiveModel newTarget, NotificationChain msgs) {
-		PrescriptiveModel oldTarget = target;
+	public NotificationChain basicSetTarget(Model newTarget, NotificationChain msgs) {
+		Model oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Fig1Package.ANALYSIS__TARGET,
@@ -120,15 +119,15 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(PrescriptiveModel newTarget) {
+	public void setTarget(Model newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_ANALYSIS,
+						Model.class, msgs);
 			if (newTarget != null)
-				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.MODEL__INCOMING_ANALYSIS,
+						Model.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -213,9 +212,9 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 		switch (featureID) {
 		case Fig1Package.ANALYSIS__TARGET:
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_ANALYSIS, PrescriptiveModel.class, msgs);
-			return basicSetTarget((PrescriptiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_ANALYSIS,
+						Model.class, msgs);
+			return basicSetTarget((Model) otherEnd, msgs);
 		case Fig1Package.ANALYSIS__SOURCE:
 			if (source != null)
 				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODA_NODE__OUTGOING_ANALYSIS,
@@ -270,7 +269,7 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Fig1Package.ANALYSIS__TARGET:
-			setTarget((PrescriptiveModel) newValue);
+			setTarget((Model) newValue);
 			return;
 		case Fig1Package.ANALYSIS__SOURCE:
 			setSource((ModaNode) newValue);
@@ -288,7 +287,7 @@ public class AnalysisImpl extends ModaRelationImpl implements Analysis {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Fig1Package.ANALYSIS__TARGET:
-			setTarget((PrescriptiveModel) null);
+			setTarget((Model) null);
 			return;
 		case Fig1Package.ANALYSIS__SOURCE:
 			setSource((ModaNode) null);

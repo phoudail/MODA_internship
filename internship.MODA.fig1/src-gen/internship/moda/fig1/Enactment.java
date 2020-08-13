@@ -22,7 +22,7 @@ package internship.moda.fig1;
 public interface Enactment extends ModaRelation {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getOutgoingEnactment <em>Outgoing Enactment</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Model#getOutgoingEnactment <em>Outgoing Enactment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Source</em>' reference isn't clear,
@@ -30,13 +30,13 @@ public interface Enactment extends ModaRelation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(PrescriptiveModel)
+	 * @see #setSource(Model)
 	 * @see internship.moda.fig1.Fig1Package#getEnactment_Source()
-	 * @see internship.moda.fig1.PrescriptiveModel#getOutgoingEnactment
+	 * @see internship.moda.fig1.Model#getOutgoingEnactment
 	 * @model opposite="outgoingEnactment"
 	 * @generated
 	 */
-	PrescriptiveModel getSource();
+	Model getSource();
 
 	/**
 	 * Sets the value of the '{@link internship.moda.fig1.Enactment#getSource <em>Source</em>}' reference.
@@ -46,7 +46,7 @@ public interface Enactment extends ModaRelation {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(PrescriptiveModel value);
+	void setSource(Model value);
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.

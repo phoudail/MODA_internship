@@ -4,7 +4,7 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.Generation;
-import internship.moda.fig1.PrescriptiveModel;
+import internship.moda.fig1.Model;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
@@ -35,7 +35,7 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel source;
+	protected Model source;
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel target;
+	protected Model target;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -70,10 +70,10 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getSource() {
+	public Model getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject) source;
-			source = (PrescriptiveModel) eResolveProxy(oldSource);
+			source = (Model) eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.GENERATION__SOURCE, oldSource,
@@ -88,7 +88,7 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetSource() {
+	public Model basicGetSource() {
 		return source;
 	}
 
@@ -97,8 +97,8 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSource(PrescriptiveModel newSource, NotificationChain msgs) {
-		PrescriptiveModel oldSource = source;
+	public NotificationChain basicSetSource(Model newSource, NotificationChain msgs) {
+		Model oldSource = source;
 		source = newSource;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -116,15 +116,15 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(PrescriptiveModel newSource) {
+	public void setSource(Model newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
 			if (source != null)
-				msgs = ((InternalEObject) source).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODEL__OUTGOING_GENERATION,
+						Model.class, msgs);
 			if (newSource != null)
-				msgs = ((InternalEObject) newSource).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) newSource).eInverseAdd(this, Fig1Package.MODEL__OUTGOING_GENERATION,
+						Model.class, msgs);
 			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -138,10 +138,10 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getTarget() {
+	public Model getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
-			target = (PrescriptiveModel) eResolveProxy(oldTarget);
+			target = (Model) eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.GENERATION__TARGET, oldTarget,
@@ -156,7 +156,7 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetTarget() {
+	public Model basicGetTarget() {
 		return target;
 	}
 
@@ -165,8 +165,8 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTarget(PrescriptiveModel newTarget, NotificationChain msgs) {
-		PrescriptiveModel oldTarget = target;
+	public NotificationChain basicSetTarget(Model newTarget, NotificationChain msgs) {
+		Model oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -184,15 +184,15 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(PrescriptiveModel newTarget) {
+	public void setTarget(Model newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_GENERATION,
+						Model.class, msgs);
 			if (newTarget != null)
-				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.MODEL__INCOMING_GENERATION,
+						Model.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -212,14 +212,14 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 		switch (featureID) {
 		case Fig1Package.GENERATION__SOURCE:
 			if (source != null)
-				msgs = ((InternalEObject) source).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_GENERATION, PrescriptiveModel.class, msgs);
-			return basicSetSource((PrescriptiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODEL__OUTGOING_GENERATION,
+						Model.class, msgs);
+			return basicSetSource((Model) otherEnd, msgs);
 		case Fig1Package.GENERATION__TARGET:
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__INCOMING_GENERATION, PrescriptiveModel.class, msgs);
-			return basicSetTarget((PrescriptiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_GENERATION,
+						Model.class, msgs);
+			return basicSetTarget((Model) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -270,10 +270,10 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Fig1Package.GENERATION__SOURCE:
-			setSource((PrescriptiveModel) newValue);
+			setSource((Model) newValue);
 			return;
 		case Fig1Package.GENERATION__TARGET:
-			setTarget((PrescriptiveModel) newValue);
+			setTarget((Model) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -288,10 +288,10 @@ public class GenerationImpl extends ModaRelationImpl implements Generation {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Fig1Package.GENERATION__SOURCE:
-			setSource((PrescriptiveModel) null);
+			setSource((Model) null);
 			return;
 		case Fig1Package.GENERATION__TARGET:
-			setTarget((PrescriptiveModel) null);
+			setTarget((Model) null);
 			return;
 		}
 		super.eUnset(featureID);

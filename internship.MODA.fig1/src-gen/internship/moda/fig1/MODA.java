@@ -16,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link internship.moda.fig1.MODA#getSociotechnicalsystem <em>Sociotechnicalsystem</em>}</li>
  *   <li>{@link internship.moda.fig1.MODA#getData <em>Data</em>}</li>
  *   <li>{@link internship.moda.fig1.MODA#getModel <em>Model</em>}</li>
- *   <li>{@link internship.moda.fig1.MODA#getModelrole <em>Modelrole</em>}</li>
  *   <li>{@link internship.moda.fig1.MODA#getRelations <em>Relations</em>}</li>
  * </ul>
  *
@@ -82,22 +81,6 @@ public interface MODA extends ModaNode {
 	 * @generated
 	 */
 	EList<Model> getModel();
-
-	/**
-	 * Returns the value of the '<em><b>Modelrole</b></em>' containment reference list.
-	 * The list contents are of type {@link internship.moda.fig1.ModelRole}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Modelrole</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modelrole</em>' containment reference list.
-	 * @see internship.moda.fig1.Fig1Package#getMODA_Modelrole()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ModelRole> getModelrole();
 
 	/**
 	 * Returns the value of the '<em><b>Relations</b></em>' containment reference list.

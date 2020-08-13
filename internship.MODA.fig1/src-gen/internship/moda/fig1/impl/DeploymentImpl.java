@@ -4,7 +4,7 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Deployment;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.PrescriptiveModel;
+import internship.moda.fig1.Model;
 import internship.moda.fig1.Software;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -48,7 +48,7 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel source;
+	protected Model source;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,10 +142,10 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getSource() {
+	public Model getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject) source;
-			source = (PrescriptiveModel) eResolveProxy(oldSource);
+			source = (Model) eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.DEPLOYMENT__SOURCE, oldSource,
@@ -160,7 +160,7 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetSource() {
+	public Model basicGetSource() {
 		return source;
 	}
 
@@ -169,8 +169,8 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSource(PrescriptiveModel newSource, NotificationChain msgs) {
-		PrescriptiveModel oldSource = source;
+	public NotificationChain basicSetSource(Model newSource, NotificationChain msgs) {
+		Model oldSource = source;
 		source = newSource;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -188,15 +188,15 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(PrescriptiveModel newSource) {
+	public void setSource(Model newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
 			if (source != null)
-				msgs = ((InternalEObject) source).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODEL__OUTGOING_DEPLOYMENT,
+						Model.class, msgs);
 			if (newSource != null)
-				msgs = ((InternalEObject) newSource).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) newSource).eInverseAdd(this, Fig1Package.MODEL__OUTGOING_DEPLOYMENT,
+						Model.class, msgs);
 			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -220,9 +220,9 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 			return basicSetTarget((Software) otherEnd, msgs);
 		case Fig1Package.DEPLOYMENT__SOURCE:
 			if (source != null)
-				msgs = ((InternalEObject) source).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_DEPLOYMENT, PrescriptiveModel.class, msgs);
-			return basicSetSource((PrescriptiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODEL__OUTGOING_DEPLOYMENT,
+						Model.class, msgs);
+			return basicSetSource((Model) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -275,7 +275,7 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 			setTarget((Software) newValue);
 			return;
 		case Fig1Package.DEPLOYMENT__SOURCE:
-			setSource((PrescriptiveModel) newValue);
+			setSource((Model) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -293,7 +293,7 @@ public class DeploymentImpl extends ModaRelationImpl implements Deployment {
 			setTarget((Software) null);
 			return;
 		case Fig1Package.DEPLOYMENT__SOURCE:
-			setSource((PrescriptiveModel) null);
+			setSource((Model) null);
 			return;
 		}
 		super.eUnset(featureID);

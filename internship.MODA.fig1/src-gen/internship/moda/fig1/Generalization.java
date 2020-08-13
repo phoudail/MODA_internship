@@ -42,7 +42,7 @@ public interface Generalization extends ModaRelation {
 
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.DescriptiveModel#getIncomingGeneralization <em>Incoming Generalization</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Model#getIncomingGeneralization <em>Incoming Generalization</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target</em>' reference isn't clear,
@@ -50,13 +50,13 @@ public interface Generalization extends ModaRelation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(DescriptiveModel)
+	 * @see #setTarget(Model)
 	 * @see internship.moda.fig1.Fig1Package#getGeneralization_Target()
-	 * @see internship.moda.fig1.DescriptiveModel#getIncomingGeneralization
+	 * @see internship.moda.fig1.Model#getIncomingGeneralization
 	 * @model opposite="incomingGeneralization"
 	 * @generated
 	 */
-	DescriptiveModel getTarget();
+	Model getTarget();
 
 	/**
 	 * Sets the value of the '{@link internship.moda.fig1.Generalization#getTarget <em>Target</em>}' reference.
@@ -66,6 +66,6 @@ public interface Generalization extends ModaRelation {
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(DescriptiveModel value);
+	void setTarget(Model value);
 
 } // Generalization

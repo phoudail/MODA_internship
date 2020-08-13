@@ -88,56 +88,6 @@ public class Fig1Switch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case Fig1Package.MODEL_ROLE: {
-			ModelRole modelRole = (ModelRole) theEObject;
-			T result = caseModelRole(modelRole);
-			if (result == null)
-				result = caseModaNode(modelRole);
-			if (result == null)
-				result = caseNamedElement(modelRole);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.DESCRIPTIVE_MODEL: {
-			DescriptiveModel descriptiveModel = (DescriptiveModel) theEObject;
-			T result = caseDescriptiveModel(descriptiveModel);
-			if (result == null)
-				result = caseModelRole(descriptiveModel);
-			if (result == null)
-				result = caseModaNode(descriptiveModel);
-			if (result == null)
-				result = caseNamedElement(descriptiveModel);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.PREDICTIVE_MODEL: {
-			PredictiveModel predictiveModel = (PredictiveModel) theEObject;
-			T result = casePredictiveModel(predictiveModel);
-			if (result == null)
-				result = caseModelRole(predictiveModel);
-			if (result == null)
-				result = caseModaNode(predictiveModel);
-			if (result == null)
-				result = caseNamedElement(predictiveModel);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case Fig1Package.PRESCRIPTIVE_MODEL: {
-			PrescriptiveModel prescriptiveModel = (PrescriptiveModel) theEObject;
-			T result = casePrescriptiveModel(prescriptiveModel);
-			if (result == null)
-				result = caseModelRole(prescriptiveModel);
-			if (result == null)
-				result = caseModaNode(prescriptiveModel);
-			if (result == null)
-				result = caseNamedElement(prescriptiveModel);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
 		case Fig1Package.SOFTWARE: {
 			Software software = (Software) theEObject;
 			T result = caseSoftware(software);
@@ -301,66 +251,6 @@ public class Fig1Switch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseData(Data object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Model Role</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Model Role</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseModelRole(ModelRole object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Descriptive Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Descriptive Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDescriptiveModel(DescriptiveModel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Predictive Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Predictive Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePredictiveModel(PredictiveModel object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Prescriptive Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Prescriptive Model</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePrescriptiveModel(PrescriptiveModel object) {
 		return null;
 	}
 

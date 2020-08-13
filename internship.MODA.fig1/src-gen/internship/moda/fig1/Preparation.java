@@ -22,7 +22,7 @@ package internship.moda.fig1;
 public interface Preparation extends ModaRelation {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PredictiveModel#getIncomingPreparation <em>Incoming Preparation</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Model#getIncomingPreparation <em>Incoming Preparation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target</em>' reference isn't clear,
@@ -30,13 +30,13 @@ public interface Preparation extends ModaRelation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(PredictiveModel)
+	 * @see #setTarget(Model)
 	 * @see internship.moda.fig1.Fig1Package#getPreparation_Target()
-	 * @see internship.moda.fig1.PredictiveModel#getIncomingPreparation
+	 * @see internship.moda.fig1.Model#getIncomingPreparation
 	 * @model opposite="incomingPreparation"
 	 * @generated
 	 */
-	PredictiveModel getTarget();
+	Model getTarget();
 
 	/**
 	 * Sets the value of the '{@link internship.moda.fig1.Preparation#getTarget <em>Target</em>}' reference.
@@ -46,7 +46,7 @@ public interface Preparation extends ModaRelation {
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(PredictiveModel value);
+	void setTarget(Model value);
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.

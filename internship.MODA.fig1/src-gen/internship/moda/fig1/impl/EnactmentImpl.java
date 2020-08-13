@@ -4,7 +4,7 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Enactment;
 import internship.moda.fig1.Fig1Package;
-import internship.moda.fig1.PrescriptiveModel;
+import internship.moda.fig1.Model;
 import internship.moda.fig1.SocioTechnicalSystem;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,7 +38,7 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * @generated
 	 * @ordered
 	 */
-	protected PrescriptiveModel source;
+	protected Model source;
 
 	/**
 	 * The cached value of the '{@link #getTarget() <em>Target</em>}' reference.
@@ -74,10 +74,10 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel getSource() {
+	public Model getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject) source;
-			source = (PrescriptiveModel) eResolveProxy(oldSource);
+			source = (Model) eResolveProxy(oldSource);
 			if (source != oldSource) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.ENACTMENT__SOURCE, oldSource,
@@ -92,7 +92,7 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PrescriptiveModel basicGetSource() {
+	public Model basicGetSource() {
 		return source;
 	}
 
@@ -101,8 +101,8 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSource(PrescriptiveModel newSource, NotificationChain msgs) {
-		PrescriptiveModel oldSource = source;
+	public NotificationChain basicSetSource(Model newSource, NotificationChain msgs) {
+		Model oldSource = source;
 		source = newSource;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -120,15 +120,15 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSource(PrescriptiveModel newSource) {
+	public void setSource(Model newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
 			if (source != null)
-				msgs = ((InternalEObject) source).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODEL__OUTGOING_ENACTMENT,
+						Model.class, msgs);
 			if (newSource != null)
-				msgs = ((InternalEObject) newSource).eInverseAdd(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, PrescriptiveModel.class, msgs);
+				msgs = ((InternalEObject) newSource).eInverseAdd(this, Fig1Package.MODEL__OUTGOING_ENACTMENT,
+						Model.class, msgs);
 			msgs = basicSetSource(newSource, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -213,9 +213,9 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 		switch (featureID) {
 		case Fig1Package.ENACTMENT__SOURCE:
 			if (source != null)
-				msgs = ((InternalEObject) source).eInverseRemove(this,
-						Fig1Package.PRESCRIPTIVE_MODEL__OUTGOING_ENACTMENT, PrescriptiveModel.class, msgs);
-			return basicSetSource((PrescriptiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODEL__OUTGOING_ENACTMENT,
+						Model.class, msgs);
+			return basicSetSource((Model) otherEnd, msgs);
 		case Fig1Package.ENACTMENT__TARGET:
 			if (target != null)
 				msgs = ((InternalEObject) target).eInverseRemove(this,
@@ -270,7 +270,7 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Fig1Package.ENACTMENT__SOURCE:
-			setSource((PrescriptiveModel) newValue);
+			setSource((Model) newValue);
 			return;
 		case Fig1Package.ENACTMENT__TARGET:
 			setTarget((SocioTechnicalSystem) newValue);
@@ -288,7 +288,7 @@ public class EnactmentImpl extends ModaRelationImpl implements Enactment {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Fig1Package.ENACTMENT__SOURCE:
-			setSource((PrescriptiveModel) null);
+			setSource((Model) null);
 			return;
 		case Fig1Package.ENACTMENT__TARGET:
 			setTarget((SocioTechnicalSystem) null);

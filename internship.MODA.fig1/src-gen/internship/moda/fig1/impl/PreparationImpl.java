@@ -4,7 +4,7 @@ package internship.moda.fig1.impl;
 
 import internship.moda.fig1.Fig1Package;
 import internship.moda.fig1.ModaNode;
-import internship.moda.fig1.PredictiveModel;
+import internship.moda.fig1.Model;
 import internship.moda.fig1.Preparation;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,7 +38,7 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * @generated
 	 * @ordered
 	 */
-	protected PredictiveModel target;
+	protected Model target;
 
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
@@ -74,10 +74,10 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel getTarget() {
+	public Model getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
-			target = (PredictiveModel) eResolveProxy(oldTarget);
+			target = (Model) eResolveProxy(oldTarget);
 			if (target != oldTarget) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, Fig1Package.PREPARATION__TARGET,
@@ -92,7 +92,7 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PredictiveModel basicGetTarget() {
+	public Model basicGetTarget() {
 		return target;
 	}
 
@@ -101,8 +101,8 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTarget(PredictiveModel newTarget, NotificationChain msgs) {
-		PredictiveModel oldTarget = target;
+	public NotificationChain basicSetTarget(Model newTarget, NotificationChain msgs) {
+		Model oldTarget = target;
 		target = newTarget;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -120,15 +120,15 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTarget(PredictiveModel newTarget) {
+	public void setTarget(Model newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, PredictiveModel.class, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_PREPARATION,
+						Model.class, msgs);
 			if (newTarget != null)
-				msgs = ((InternalEObject) newTarget).eInverseAdd(this,
-						Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, PredictiveModel.class, msgs);
+				msgs = ((InternalEObject) newTarget).eInverseAdd(this, Fig1Package.MODEL__INCOMING_PREPARATION,
+						Model.class, msgs);
 			msgs = basicSetTarget(newTarget, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -215,9 +215,9 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 		switch (featureID) {
 		case Fig1Package.PREPARATION__TARGET:
 			if (target != null)
-				msgs = ((InternalEObject) target).eInverseRemove(this,
-						Fig1Package.PREDICTIVE_MODEL__INCOMING_PREPARATION, PredictiveModel.class, msgs);
-			return basicSetTarget((PredictiveModel) otherEnd, msgs);
+				msgs = ((InternalEObject) target).eInverseRemove(this, Fig1Package.MODEL__INCOMING_PREPARATION,
+						Model.class, msgs);
+			return basicSetTarget((Model) otherEnd, msgs);
 		case Fig1Package.PREPARATION__SOURCE:
 			if (source != null)
 				msgs = ((InternalEObject) source).eInverseRemove(this, Fig1Package.MODA_NODE__OUTGOING_PREPARATION,
@@ -272,7 +272,7 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case Fig1Package.PREPARATION__TARGET:
-			setTarget((PredictiveModel) newValue);
+			setTarget((Model) newValue);
 			return;
 		case Fig1Package.PREPARATION__SOURCE:
 			setSource((ModaNode) newValue);
@@ -290,7 +290,7 @@ public class PreparationImpl extends ModaRelationImpl implements Preparation {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case Fig1Package.PREPARATION__TARGET:
-			setTarget((PredictiveModel) null);
+			setTarget((Model) null);
 			return;
 		case Fig1Package.PREPARATION__SOURCE:
 			setSource((ModaNode) null);

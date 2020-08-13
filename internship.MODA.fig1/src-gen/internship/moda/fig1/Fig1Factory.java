@@ -31,33 +31,6 @@ public interface Fig1Factory extends EFactory {
 	Data createData();
 
 	/**
-	 * Returns a new object of class '<em>Descriptive Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Descriptive Model</em>'.
-	 * @generated
-	 */
-	DescriptiveModel createDescriptiveModel();
-
-	/**
-	 * Returns a new object of class '<em>Predictive Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Predictive Model</em>'.
-	 * @generated
-	 */
-	PredictiveModel createPredictiveModel();
-
-	/**
-	 * Returns a new object of class '<em>Prescriptive Model</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Prescriptive Model</em>'.
-	 * @generated
-	 */
-	PrescriptiveModel createPrescriptiveModel();
-
-	/**
 	 * Returns a new object of class '<em>Software</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

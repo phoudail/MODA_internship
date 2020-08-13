@@ -60,12 +60,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 			return createMODA();
 		case Fig1Package.DATA:
 			return createData();
-		case Fig1Package.DESCRIPTIVE_MODEL:
-			return createDescriptiveModel();
-		case Fig1Package.PREDICTIVE_MODEL:
-			return createPredictiveModel();
-		case Fig1Package.PRESCRIPTIVE_MODEL:
-			return createPrescriptiveModel();
 		case Fig1Package.SOFTWARE:
 			return createSoftware();
 		case Fig1Package.SOCIO_TECHNICAL_SYSTEM:
@@ -131,36 +125,6 @@ public class Fig1FactoryImpl extends EFactoryImpl implements Fig1Factory {
 	public Data createData() {
 		DataImpl data = new DataImpl();
 		return data;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DescriptiveModel createDescriptiveModel() {
-		DescriptiveModelImpl descriptiveModel = new DescriptiveModelImpl();
-		return descriptiveModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PredictiveModel createPredictiveModel() {
-		PredictiveModelImpl predictiveModel = new PredictiveModelImpl();
-		return predictiveModel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public PrescriptiveModel createPrescriptiveModel() {
-		PrescriptiveModelImpl prescriptiveModel = new PrescriptiveModelImpl();
-		return prescriptiveModel;
 	}
 
 	/**

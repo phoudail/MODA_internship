@@ -50,7 +50,7 @@ public interface Deployment extends ModaRelation {
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getOutgoingDeployment <em>Outgoing Deployment</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Model#getOutgoingDeployment <em>Outgoing Deployment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Source</em>' reference isn't clear,
@@ -58,13 +58,13 @@ public interface Deployment extends ModaRelation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
-	 * @see #setSource(PrescriptiveModel)
+	 * @see #setSource(Model)
 	 * @see internship.moda.fig1.Fig1Package#getDeployment_Source()
-	 * @see internship.moda.fig1.PrescriptiveModel#getOutgoingDeployment
+	 * @see internship.moda.fig1.Model#getOutgoingDeployment
 	 * @model opposite="outgoingDeployment"
 	 * @generated
 	 */
-	PrescriptiveModel getSource();
+	Model getSource();
 
 	/**
 	 * Sets the value of the '{@link internship.moda.fig1.Deployment#getSource <em>Source</em>}' reference.
@@ -74,6 +74,6 @@ public interface Deployment extends ModaRelation {
 	 * @see #getSource()
 	 * @generated
 	 */
-	void setSource(PrescriptiveModel value);
+	void setSource(Model value);
 
 } // Deployment

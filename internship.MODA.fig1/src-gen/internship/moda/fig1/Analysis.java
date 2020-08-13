@@ -22,7 +22,7 @@ package internship.moda.fig1;
 public interface Analysis extends ModaRelation {
 	/**
 	 * Returns the value of the '<em><b>Target</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.PrescriptiveModel#getIncomingAnalysis <em>Incoming Analysis</em>}'.
+	 * It is bidirectional and its opposite is '{@link internship.moda.fig1.Model#getIncomingAnalysis <em>Incoming Analysis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Target</em>' reference isn't clear,
@@ -30,13 +30,13 @@ public interface Analysis extends ModaRelation {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Target</em>' reference.
-	 * @see #setTarget(PrescriptiveModel)
+	 * @see #setTarget(Model)
 	 * @see internship.moda.fig1.Fig1Package#getAnalysis_Target()
-	 * @see internship.moda.fig1.PrescriptiveModel#getIncomingAnalysis
+	 * @see internship.moda.fig1.Model#getIncomingAnalysis
 	 * @model opposite="incomingAnalysis"
 	 * @generated
 	 */
-	PrescriptiveModel getTarget();
+	Model getTarget();
 
 	/**
 	 * Sets the value of the '{@link internship.moda.fig1.Analysis#getTarget <em>Target</em>}' reference.
@@ -46,7 +46,7 @@ public interface Analysis extends ModaRelation {
 	 * @see #getTarget()
 	 * @generated
 	 */
-	void setTarget(PrescriptiveModel value);
+	void setTarget(Model value);
 
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
