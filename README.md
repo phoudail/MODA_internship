@@ -6,3 +6,5 @@ There are two implementations of the language available in this project : the cu
 
 While the three first projects in the repository correspond to the EMF model tied  to the DSL, due to git errors it was impossible to also upload the xtext project without breaking everything on my end; thus instead, the xtext.share project contains the relevant modified files as .txt format.
 This means you have to generate an xtext project and its artifacts from the imported ecore model, and then paste the .txt files' code into the corresponding files in your actual project.
+
+The MODAGenerator file's purpose is to convert a .moda file into a .ipynb file, containing Jupyter markdown cells that describe the resulting structure.
