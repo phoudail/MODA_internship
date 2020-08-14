@@ -68,10 +68,10 @@ Data returns Data:
 	
 Model returns Model:
 	{Model}
-	name=EString 'as' ('Model' | (
+	name=EString 'as' ('Model' | ((
 		prescriptiveModel?=('PrescriptiveModel' | 'Prescriptive') |
 		descriptiveModel?=('DescriptiveModel' | 'Descriptive') |
-		predictiveModel?=('PredictiveModel' | 'Predictive') "," (
+		predictiveModel?=('PredictiveModel' | 'Predictive') )"," (
 		prescriptiveModel?=('PrescriptiveModel' | 'Prescriptive') |
 		descriptiveModel?=('DescriptiveModel' | 'Descriptive') |
 		predictiveModel?=('PredictiveModel' | 'Predictive'))*)
